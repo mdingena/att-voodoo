@@ -15,7 +15,7 @@ module.exports = {
     alias: {
       ['@']: path.resolve(__dirname, 'src')
     },
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js']
   },
   module: {
     rules: [
@@ -40,10 +40,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ],
+        use: ['style-loader', 'css-loader'],
         exclude: /\.module\.css$/
       }
     ]
