@@ -1,0 +1,7 @@
+{
+  "name": "application-name",
+  "description": "CLI app",
+  "author": "Me me me",
+  "version": "0.0.1",
+  "main": "main.js"
+}
