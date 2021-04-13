@@ -1,10 +1,14 @@
 {
   "name": "att-voodoo",
   "version": "0.1.0",
-  "description": "",
+  "description": "A community-made magic mod for A Township Tale, a VR MMORPG game.",
   "main": "build/ui/main.js",
   "scripts": {
-    "build": "rimraf ./build ./dist && webpack && electron-builder -w",
+    "build": "npm run build:speech && npm run build:ui",
+    "prebuild:speech": "rimraf ./build/speech",
+    "build:speech": "nuget restore src/speech && dotnet build --no-incremental --force --output build/speech src/speech ",
+    "prebuild:ui": "rimraf ./build/ui ./dist/ui",
+    "build:ui": "webpack && electron-builder -w",
     "react:dev": "webpack serve --mode=development",
     "electron:dev": "nodemon",
     "dev": "concurrently --kill-others \"npm run react:dev\" \"npm run electron:dev\"",

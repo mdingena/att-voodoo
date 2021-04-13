@@ -1,0 +1,11 @@
+<grammar version="1.0" xml:lang="en-US" root="jumpAction"
+ xmlns="http://www.w3.org/2001/06/grammar">
+
+  <rule id="jumpAction">
+    <one-of>
+      <item> jump </item>
+      <item> move </item>
+    </one-of>
+  </rule>
+
+</grammar>
