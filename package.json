@@ -2,7 +2,7 @@
   "name": "att-voodoo",
   "version": "0.1.0",
   "description": "",
-  "main": "build/main.js",
+  "main": "build/ui/main.js",
   "scripts": {
     "build": "rimraf ./build ./dist && webpack && electron-builder -w",
     "react:dev": "webpack serve --mode=development",
@@ -23,7 +23,7 @@
       "node_modules/**/*"
     ],
     "directories": {
-      "buildResources": "build"
+      "buildResources": "build/ui"
     }
   },
   "keywords": [],

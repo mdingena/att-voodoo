@@ -3,17 +3,17 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/renderer.tsx',
+  entry: './src/ui/renderer.tsx',
   target: 'electron-renderer',
   devtool: 'source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'dist/renderer.js'),
+    contentBase: path.join(__dirname, 'dist/ui/renderer.js'),
     compress: true,
     port: 9000
   },
   resolve: {
     alias: {
-      ['@']: path.resolve(__dirname, 'src')
+      '@': path.resolve(__dirname, 'src/ui')
     },
     extensions: ['.tsx', '.ts', '.js']
   },
@@ -46,12 +46,12 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'build/ui'),
     filename: 'renderer.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/ui/index.html'
     })
   ]
 };

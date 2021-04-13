@@ -12,7 +12,7 @@ const createWindow = (): void => {
     }
   });
   console.log({ isDev });
-  mainWindow.loadURL(isDev ? 'http://localhost:9000' : `file://${__dirname}/../build/index.html`);
+  mainWindow.loadURL(isDev ? 'http://localhost:9000' : `file://${__dirname}/../../build/ui/index.html`);
   mainWindow.on('closed', () => (mainWindow = null));
 };
 
