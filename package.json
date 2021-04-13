@@ -28,7 +28,16 @@
     ],
     "directories": {
       "buildResources": "build/ui"
-    }
+    },
+    "extraResources": [
+      {
+        "from": "build/speech",
+        "to": "speech",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
   },
   "keywords": [],
   "author": "Marc Dingena",
