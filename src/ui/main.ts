@@ -17,10 +17,6 @@ app.on('open-url', (e, data) => {
 const hasInstanceLock = app.requestSingleInstanceLock();
 if (!hasInstanceLock) {
   app.quit();
-} else {
-  app.on('second-instance', async (event, commandLine, workingDirectory) => {
-    console.log(commandLine);
-  });
 }
 
 let win: BrowserWindow | null = null;
@@ -50,10 +46,27 @@ const createWindow = async (): Promise<void> => {
   logger({ 'process args': process.argv });
   //}
 
-  await win.loadURL(isDev ? 'http://localhost:9000' : `file://${__dirname}/../../build/ui/index.html`);
+  await win.loadURL(isDev ? 'http://localhost:9000' : path.normalize(`file://${__dirname}/../../build/ui/index.html`));
 
   win.on('closed', terminate);
   win.once('ready-to-show', () => win?.show());
+  app.on('second-instance', async (event, commandLine, workingDirectory) => {
+    logger(event, commandLine, workingDirectory);
+    const url = commandLine.find(arg => arg.startsWith('att-voodoo://'));
+    const url2 = url?.replace('att-voodoo://', '');
+    logger(
+      isDev
+        ? `http://localhost:9000/${url2}`
+        : `${path.normalize(`file://${__dirname}/../../build/ui/index.html`)}#/${url2}`
+    );
+    setTimeout(() => {
+      win?.loadURL(
+        isDev
+          ? `http://localhost:9000/${url2}`
+          : `${path.normalize(`file://${__dirname}/../../build/ui/index.html`)}#/${url2}`
+      );
+    }, 1000);
+  });
 };
 
 const startListening = async (): Promise<void> => {

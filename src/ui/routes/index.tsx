@@ -1,12 +1,19 @@
-import { MemoryRouter, Switch, Route, Link } from 'react-router-dom';
+import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 import { AuthProvider } from 'oidc-react';
 
 export const Routes = () => (
-  <MemoryRouter>
+  <HashRouter>
     <AuthProvider
       authority='https://accounts.townshiptale.com/'
       clientId={process.env.ALTA_CLIENT_ID}
+      clientSecret={process.env.ALTA_CLIENT_SECRET}
       redirectUri='att-voodoo://auth-callback'
+      responseType='code'
+      onSignIn={async (user: any) => {
+        alert('woohoo');
+        console.log({ user });
+        window.location.hash = '';
+      }}
     >
       <Switch>
         <Route
@@ -36,5 +43,5 @@ export const Routes = () => (
         />
       </Switch>
     </AuthProvider>
-  </MemoryRouter>
+  </HashRouter>
 );
