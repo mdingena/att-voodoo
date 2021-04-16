@@ -1,30 +1,76 @@
 import path from 'path';
-import { execFile } from 'child_process';
+import { ChildProcess, execFile } from 'child_process';
 import { app, BrowserWindow } from 'electron';
 import isDev from 'electron-is-dev';
+import { config as configEnv } from 'dotenv';
+import { createDevToolsLogger } from './utils/createDevToolsLogger';
 
-let mainWindow: BrowserWindow | null = null;
+if (isDev) configEnv();
+
+app.setAsDefaultProtocolClient('att-voodoo');
+app.on('open-url', (e, data) => {
+  e.preventDefault();
+
+  console.log(data);
+});
+
+const hasInstanceLock = app.requestSingleInstanceLock();
+if (!hasInstanceLock) {
+  app.quit();
+} else {
+  app.on('second-instance', async (event, commandLine, workingDirectory) => {
+    console.log(commandLine);
+  });
+}
+
+let win: BrowserWindow | null = null;
+let speech: ChildProcess | null = null;
+
+const terminate = () => {
+  win = null;
+  speech?.kill();
+  speech = null;
+};
 
 const createWindow = async (): Promise<void> => {
-  mainWindow = new BrowserWindow({
-    width: 800,
+  win = new BrowserWindow({
+    width: 1440,
     height: 600,
     webPreferences: {
+      contextIsolation: false,
       nodeIntegration: true
-    }
+    },
+    show: false
   });
-  console.log({ isDev });
-  await mainWindow.loadURL(isDev ? 'http://localhost:9000' : `file://${__dirname}/../../build/ui/index.html`);
-  mainWindow.on('closed', () => (mainWindow = null));
 
+  const logger = createDevToolsLogger(win);
+
+  //if (isDev) {
+  win.webContents.openDevTools();
+  logger({ 'process args': process.argv });
+  //}
+
+  await win.loadURL(isDev ? 'http://localhost:9000' : `file://${__dirname}/../../build/ui/index.html`);
+
+  win.on('closed', terminate);
+  win.once('ready-to-show', () => win?.show());
+};
+
+const startListening = async (): Promise<void> => {
   const exePath = isDev
     ? path.join(__dirname, '../../build/speech/VoodooListener.exe')
     : path.join(process.resourcesPath, 'speech/VoodooListener.exe');
 
-  const speech = execFile(exePath);
-  speech.on('exit', exitCode => console.log({ exitCode }));
-  speech.stdout?.on('data', data => console.log({ data }));
-  speech.stderr?.on('data', error => console.error({ error }));
+  speech = await execFile(exePath);
+
+  speech.on('exit', exitCode => win?.webContents.send('speechExited', { exitCode }));
+  speech.stderr?.on('data', error => win?.webContents.send('speechError', { error }));
+  speech.stdout?.on('data', data => win?.webContents.send('speechData', { data }));
 };
 
-app.on('ready', createWindow);
+const initialiseApp = async (): Promise<void> => {
+  await createWindow();
+  startListening();
+};
+
+app.on('ready', initialiseApp);
