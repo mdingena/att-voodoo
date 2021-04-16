@@ -7,7 +7,13 @@ import { createDevToolsLogger } from './utils/createDevToolsLogger';
 
 if (isDev) configEnv();
 
-app.setAsDefaultProtocolClient('att-voodoo');
+app.removeAsDefaultProtocolClient('att-voodoo');
+
+if (process.env.NODE_ENV === 'development' && process.platform === 'win32') {
+  app.setAsDefaultProtocolClient('att-voodoo', process.execPath, [path.resolve(process.argv[1])]);
+} else {
+  app.setAsDefaultProtocolClient('att-voodoo');
+}
 
 const hasInstanceLock = app.requestSingleInstanceLock();
 if (!hasInstanceLock) {
