@@ -8,11 +8,6 @@ import { createDevToolsLogger } from './utils/createDevToolsLogger';
 if (isDev) configEnv();
 
 app.setAsDefaultProtocolClient('att-voodoo');
-app.on('open-url', (e, data) => {
-  e.preventDefault();
-
-  console.log(data);
-});
 
 const hasInstanceLock = app.requestSingleInstanceLock();
 if (!hasInstanceLock) {
@@ -41,32 +36,35 @@ const createWindow = async (): Promise<void> => {
 
   const logger = createDevToolsLogger(win);
 
-  //if (isDev) {
-  win.webContents.openDevTools();
-  logger({ 'process args': process.argv });
-  //}
+  if (isDev) {
+    win.webContents.openDevTools();
+  }
 
-  await win.loadURL(isDev ? 'http://localhost:9000' : path.normalize(`file://${__dirname}/../../build/ui/index.html`));
+  await win.loadURL(isDev ? 'http://localhost:9000/#' : path.resolve(`file://${__dirname}/../../build/ui/index.html#`));
 
   win.on('closed', terminate);
   win.once('ready-to-show', () => win?.show());
-  app.on('second-instance', async (event, commandLine, workingDirectory) => {
-    logger(event, commandLine, workingDirectory);
-    const url = commandLine.find(arg => arg.startsWith('att-voodoo://'));
-    const url2 = url?.replace('att-voodoo://', '');
-    logger(
-      isDev
-        ? `http://localhost:9000/${url2}`
-        : `${path.normalize(`file://${__dirname}/../../build/ui/index.html`)}#/${url2}`
-    );
-    setTimeout(() => {
-      win?.loadURL(
-        isDev
-          ? `http://localhost:9000/${url2}`
-          : `${path.normalize(`file://${__dirname}/../../build/ui/index.html`)}#/${url2}`
-      );
-    }, 1000);
+  app.on('open-url', (_, data) => data.startsWith('att-voodoo://') && loadDeepLinkUrl(data));
+  app.on('second-instance', async (_, cliArgs) => {
+    const url = findDeepLinkUrl(cliArgs);
+    logger(url);
+    url && loadDeepLinkUrl(url);
   });
+};
+
+const findDeepLinkUrl = (deeplink: string[]) => deeplink.find(arg => arg.startsWith('att-voodoo://'));
+
+const loadDeepLinkUrl = (deeplink: string): void => {
+  const url: string = deeplink?.replace('att-voodoo://', '');
+
+  const loadURL = isDev
+    ? `http://localhost:9000/#/${url}`
+    : `${path.resolve(`file://${__dirname}/../../build/ui/index.html`)}#/${url}`;
+
+  console.log({ loadURL });
+  setTimeout(() => {
+    win?.loadURL(loadURL);
+  }, 1000);
 };
 
 const startListening = async (): Promise<void> => {
