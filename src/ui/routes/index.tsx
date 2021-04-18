@@ -1,19 +1,16 @@
 import { HashRouter, Switch, Route, Link } from 'react-router-dom';
-import { AuthProvider } from 'oidc-react';
+import { AuthProvider, LoginButton } from '@/components/AltaAuth';
+import { Authenticating } from '@/components/Authenticating';
 
 export const Routes = () => (
   <HashRouter>
     <AuthProvider
-      authority='https://accounts.townshiptale.com/'
-      clientId={process.env.ALTA_CLIENT_ID}
-      clientSecret={process.env.ALTA_CLIENT_SECRET}
-      redirectUri='att-voodoo://auth-callback'
-      responseType='code'
-      onSignIn={async (user: any) => {
-        alert('woohoo');
-        console.log({ user });
-        window.location.hash = '';
+      config={{
+        client_id: 'client_30dd429d-6d00-4d83-98c1-c159f5ec2b92',
+        scope: 'openid',
+        redirect_uri: 'att-voodoo://auth-callback'
       }}
+      autoSignIn
     >
       <Switch>
         <Route
@@ -21,26 +18,11 @@ export const Routes = () => (
           path='/'
           render={() => (
             <div>
-              Home <Link to='/login'>Go to Login</Link>
+              Home <LoginButton />
             </div>
           )}
         />
-        <Route
-          path='/login'
-          render={() => (
-            <div>
-              Login <Link to='/'>Go Home</Link>
-            </div>
-          )}
-        />
-        <Route
-          path='/auth-callback'
-          render={() => (
-            <div>
-              Auth Callback <Link to='/'>Go Home</Link>
-            </div>
-          )}
-        />
+        <Route path='/auth-callback' component={Authenticating} />
       </Switch>
     </AuthProvider>
   </HashRouter>

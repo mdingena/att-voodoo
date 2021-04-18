@@ -1,6 +1,7 @@
 import path from 'path';
 import { ChildProcess, execFile } from 'child_process';
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
+import fetch from 'electron-fetch';
 import isDev from 'electron-is-dev';
 import { config as configEnv } from 'dotenv';
 import { createDevToolsLogger } from './utils/createDevToolsLogger';
@@ -91,3 +92,19 @@ const initialiseApp = async (): Promise<void> => {
 };
 
 app.on('ready', initialiseApp);
+
+ipcMain.handle('session', async (_, { account_id, access_token }) => {
+  try {
+    const response = await fetch('https://att-voodoo-server.herokuapp.com/token', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${access_token}` },
+      body: JSON.stringify({ account_id })
+    });
+
+    if (response.status !== 200) return { success: false, error: response.statusText };
+
+    return { success: true, result: await response.json() };
+  } catch (error) {
+    return { success: false, error: error.code };
+  }
+});
