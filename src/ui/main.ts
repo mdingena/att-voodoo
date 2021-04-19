@@ -36,7 +36,7 @@ const terminate = () => {
   speech = null;
 };
 
-const createWindow = async (): Promise<void> => {
+const createWindow = async (): Promise<any> => {
   win = new BrowserWindow({
     width: 1440,
     height: 600,
@@ -53,8 +53,6 @@ const createWindow = async (): Promise<void> => {
     win.webContents.openDevTools();
   }
 
-  await win.loadURL(isDev ? 'http://localhost:9000/#' : path.resolve(`file://${__dirname}/../../build/ui/index.html#`));
-
   win.on('closed', terminate);
   win.once('ready-to-show', () => win?.show());
   app.on('open-url', (_, data) => data.startsWith('att-voodoo://') && loadDeepLinkUrl(data));
@@ -63,6 +61,12 @@ const createWindow = async (): Promise<void> => {
     logger(url);
     url && loadDeepLinkUrl(url);
   });
+
+  await win.loadURL(
+    isDev ? 'http://localhost:9000/#' : `file://${path.resolve(__dirname, '../../build/ui/index.html')}#`
+  );
+
+  return logger;
 };
 
 const findDeepLinkUrl = (deeplink: string[]) => deeplink.find(arg => arg.startsWith('att-voodoo://'));
@@ -72,7 +76,7 @@ const loadDeepLinkUrl = (deeplink: string): void => {
 
   const loadURL = isDev
     ? `http://localhost:9000/#/${url}`
-    : `${path.resolve(`file://${__dirname}/../../build/ui/index.html`)}#/${url}`;
+    : `file://${path.resolve(__dirname, '../../build/ui/index.html')}#/${url}`;
 
   console.log({ loadURL });
   setTimeout(() => {
@@ -80,10 +84,11 @@ const loadDeepLinkUrl = (deeplink: string): void => {
   }, 1000);
 };
 
-const startListening = async (): Promise<void> => {
+const startListening = async (logger: any): Promise<void> => {
   const exePath = isDev
-    ? path.join(__dirname, '../../build/speech/VoodooListener.exe')
-    : path.join(process.resourcesPath, 'speech/VoodooListener.exe');
+    ? path.resolve(__dirname, '../../build/speech/VoodooListener.exe')
+    : path.resolve(process.resourcesPath, 'speech/VoodooListener.exe');
+
 
   speech = await execFile(exePath);
 
@@ -101,8 +106,31 @@ const startListening = async (): Promise<void> => {
   });
 };
 
-const initialiseApp = (): void => {
-  createWindow();
+const initialiseApp = async (): Promise<void> => {
+  const windowLogger = await createWindow();
+
+  ipcMain.handle('session', async (_, { accessToken }) => {
+    try {
+      const response = await fetch(voodooServerTokenApiUrl, {
+        method: 'GET',
+        headers: { Authorization: `Bearer ${accessToken}` }
+      });
+
+      if (response.status !== 200 || !response.ok) return { ok: false, error: response.statusText };
+
+      if (heartbeatHandle === null) {
+        startListening(windowLogger);
+
+        heartbeatHandle = setInterval(() => {
+          heartbeat(accessToken);
+        }, heartbeatInterval);
+      }
+
+      return await response.json();
+    } catch (error) {
+      return { ok: false, error: error.code };
+    }
+  });
 };
 
 app.on('ready', initialiseApp);
@@ -129,26 +157,3 @@ const heartbeat = async (accessToken: string): Promise<HeartbeatResponse> => {
     return { ok: false, error: error.code };
   }
 };
-
-ipcMain.handle('session', async (_, { accessToken }) => {
-  try {
-    const response = await fetch(voodooServerTokenApiUrl, {
-      method: 'GET',
-      headers: { Authorization: `Bearer ${accessToken}` }
-    });
-
-    if (response.status !== 200 || !response.ok) return { ok: false, error: response.statusText };
-
-    if (heartbeatHandle === null) {
-      startListening();
-
-      heartbeatHandle = setInterval(() => {
-        heartbeat(accessToken);
-      }, heartbeatInterval);
-    }
-
-    return await response.json();
-  } catch (error) {
-    return { ok: false, error: error.code };
-  }
-});
