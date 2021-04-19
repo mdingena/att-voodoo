@@ -1,6 +1,6 @@
 import path from 'path';
 import { ChildProcess, execFile } from 'child_process';
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow, shell, ipcMain } from 'electron';
 import fetch from 'electron-fetch';
 import isDev from 'electron-is-dev';
 import { config as configEnv } from 'dotenv';
@@ -53,12 +53,18 @@ const createWindow = async (): Promise<any> => {
     win.webContents.openDevTools();
   }
 
+  win.webContents.on('will-navigate', (event, url) => {
+    if (url.startsWith('https://accounts.townshiptale.com/')) {
+      event.preventDefault();
+      shell.openExternal(url);
+    }
+  });
   win.on('closed', terminate);
   win.once('ready-to-show', () => win?.show());
   app.on('open-url', (_, data) => data.startsWith('att-voodoo://') && loadDeepLinkUrl(data));
   app.on('second-instance', async (_, cliArgs) => {
     const url = findDeepLinkUrl(cliArgs);
-    logger(url);
+    logger({ secondInstance: url });
     url && loadDeepLinkUrl(url);
   });
 
@@ -72,13 +78,12 @@ const createWindow = async (): Promise<any> => {
 const findDeepLinkUrl = (deeplink: string[]) => deeplink.find(arg => arg.startsWith('att-voodoo://'));
 
 const loadDeepLinkUrl = (deeplink: string): void => {
-  const url: string = deeplink?.replace('att-voodoo://', '');
+  const url = deeplink?.replace('att-voodoo://', '');
 
   const loadURL = isDev
     ? `http://localhost:9000/#/${url}`
     : `file://${path.resolve(__dirname, '../../build/ui/index.html')}#/${url}`;
 
-  console.log({ loadURL });
   setTimeout(() => {
     win?.loadURL(loadURL);
   }, 1000);
@@ -98,15 +103,15 @@ const startListening = async (logger: any): Promise<void> => {
   speech = await execFile(exePath, exeArgs);
 
   speech.on('exit', exitCode => {
-    console.log('### SPEECH EXIT CODE', exitCode);
+    logger('### SPEECH EXIT CODE', exitCode);
     win?.webContents.send('speechExited', { exitCode });
   });
   speech.stderr?.on('data', error => {
-    console.log('### SPEECH ERROR', error);
+    logger('### SPEECH ERROR', error);
     win?.webContents.send('speechError', { error });
   });
   speech.stdout?.on('data', data => {
-    console.log('### SPEECH DATA', data);
+    logger('### SPEECH DATA', data);
     win?.webContents.send('speechData', { data });
   });
 };
