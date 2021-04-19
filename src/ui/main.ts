@@ -7,6 +7,9 @@ import { config as configEnv } from 'dotenv';
 import { createDevToolsLogger } from './utils/createDevToolsLogger';
 
 if (isDev) configEnv();
+const voodooServerTokenApiUrl = isDev
+  ? 'http://localhost:3000/session'
+  : 'https://att-voodoo-server.herokuapp.com/session';
 
 app.removeAsDefaultProtocolClient('att-voodoo');
 
@@ -93,18 +96,17 @@ const initialiseApp = async (): Promise<void> => {
 
 app.on('ready', initialiseApp);
 
-ipcMain.handle('session', async (_, { account_id, access_token }) => {
+ipcMain.handle('session', async (_, { accessToken }) => {
   try {
-    const response = await fetch('https://att-voodoo-server.herokuapp.com/token', {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${access_token}` },
-      body: JSON.stringify({ account_id })
+    const response = await fetch(voodooServerTokenApiUrl, {
+      method: 'GET',
+      headers: { Authorization: `Bearer ${accessToken}` }
     });
 
-    if (response.status !== 200) return { success: false, error: response.statusText };
+    if (response.status !== 200 || !response.ok) return { ok: false, error: response.statusText };
 
-    return { success: true, result: await response.json() };
+    return await response.json();
   } catch (error) {
-    return { success: false, error: error.code };
+    return { ok: false, error: error.code };
   }
 });

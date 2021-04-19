@@ -9,6 +9,7 @@ export const Authenticating = () => {
   const handle = useRef<NodeJS.Timeout | null>(null);
   const isFetching = useRef(false);
   const [accountId, setAccountId] = useState<number | null>(null);
+  const [fatalError, setFatalError] = useState<string | null>(null);
 
   useEffect(() => {
     if (auth?.userData) {
@@ -22,30 +23,29 @@ export const Authenticating = () => {
 
   if (auth?.userData && !isFetching.current) {
     isFetching.current = true;
-    /*
-    fetch('https://att-voodoo-server.herokuapp.com/token', {
-      method: 'POST',
-      headers: new Headers({
-        Authentication: `Bearer ${auth.userData?.access_token}`
-      }),
-      body: JSON.stringify({
-        account_id: auth.userData?.profile?.sub
-      })
-    })
-    */
     ipcRenderer
       .invoke('session', {
-        account_id: auth.userData?.profile?.sub,
-        access_token: auth.userData?.access_token
+        accountId: auth.userData?.profile?.sub,
+        accessToken: auth.userData?.access_token
       })
       .then(response => {
         console.log({ response });
-        if (response.success) {
-          setAccountId(response.result.token);
+        if (response.ok) {
+          setAccountId(response.result.accountId);
         } else {
           console.error(response.error);
+          setFatalError(response.error);
         }
       });
+  }
+
+  if (fatalError) {
+    return (
+      <>
+        <big>Something went wrong. Please restart Voodoo.</big>
+        <pre>{fatalError}</pre>
+      </>
+    );
   }
 
   if (accountId) {
