@@ -4,6 +4,7 @@ module.exports = {
   mode: 'development',
   entry: './src/ui/main.ts',
   target: 'electron-main',
+  devtool: 'source-map',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src/ui')
