@@ -6,20 +6,28 @@ import { useAuth } from '../AltaAuth';
 export const Authenticating = () => {
   const history = useHistory();
   const auth = useAuth();
-  const handle = useRef<NodeJS.Timeout | null>(null);
+  const timeout = useRef<NodeJS.Timeout | null>(null);
   const isFetching = useRef(false);
   const [accountId, setAccountId] = useState<number | null>(null);
   const [fatalError, setFatalError] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (auth?.userData) {
-      /*handle.current = setTimeout(() => {
-        history.replace('/');
-      }, 1700);*/
-    }
-  }, [auth?.userData]);
+  if (fatalError) {
+    return (
+      <>
+        <big>Something went wrong. Please restart Voodoo.</big>
+        <pre>{fatalError}</pre>
+      </>
+    );
+  }
 
-  console.log('rerendered', { auth });
+  if (accountId) {
+    if (!timeout.current) {
+      timeout.current = setTimeout(() => {
+        history.replace('/');
+      }, 1700);
+    }
+    return <big>All done. Redirecting to dashboard now!</big>;
+  }
 
   if (auth?.userData && !isFetching.current) {
     isFetching.current = true;
@@ -39,30 +47,9 @@ export const Authenticating = () => {
       });
   }
 
-  if (fatalError) {
-    return (
-      <>
-        <big>Something went wrong. Please restart Voodoo.</big>
-        <pre>{fatalError}</pre>
-      </>
-    );
-  }
-
-  if (accountId) {
-    console.log('### GOT ACCOUNT ID');
-    if (!handle.current) {
-      handle.current = setTimeout(() => {
-        history.replace('/');
-      }, 3000);
-    }
-    return <big>All done. Redirecting to dashboard now!</big>;
-  }
-
   if (auth?.userData) {
-    console.log('### AUTHED');
     return <big>Retrieving account details&hellip; Almost there.</big>;
   }
 
-  console.log('### AUTHING');
   return <big>Authenticating&hellip; Hang on.</big>;
 };

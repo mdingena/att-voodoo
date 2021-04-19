@@ -87,14 +87,22 @@ const startListening = async (): Promise<void> => {
 
   speech = await execFile(exePath);
 
-  speech.on('exit', exitCode => win?.webContents.send('speechExited', { exitCode }));
-  speech.stderr?.on('data', error => win?.webContents.send('speechError', { error }));
-  speech.stdout?.on('data', data => win?.webContents.send('speechData', { data }));
+  speech.on('exit', exitCode => {
+    console.log('### SPEECH EXIT CODE', exitCode);
+    win?.webContents.send('speechExited', { exitCode });
+  });
+  speech.stderr?.on('data', error => {
+    console.log('### SPEECH ERROR', error);
+    win?.webContents.send('speechError', { error });
+  });
+  speech.stdout?.on('data', data => {
+    console.log('### SPEECH DATA', data);
+    win?.webContents.send('speechData', { data });
+  });
 };
 
-const initialiseApp = async (): Promise<void> => {
-  await createWindow();
-  startListening();
+const initialiseApp = (): void => {
+  createWindow();
 };
 
 app.on('ready', initialiseApp);
@@ -132,6 +140,8 @@ ipcMain.handle('session', async (_, { accessToken }) => {
     if (response.status !== 200 || !response.ok) return { ok: false, error: response.statusText };
 
     if (heartbeatHandle === null) {
+      startListening();
+
       heartbeatHandle = setInterval(() => {
         heartbeat(accessToken);
       }, heartbeatInterval);
