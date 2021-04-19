@@ -8,7 +8,7 @@
     "prebuild:speech": "rimraf ./build/speech",
     "build:speech": "nuget restore src/speech && dotnet build --no-incremental --force --output build/speech src/speech && cp src/speech/grammar.xml build/speech",
     "prebuild:ui": "rimraf ./build/ui ./dist",
-    "build:ui": "webpack && electron-builder -w",
+    "build:ui": "webpack --mode=production && electron-builder -w",
     "react:dev": "webpack serve --mode=development",
     "electron:dev": "nodemon",
     "dev": "concurrently --kill-others \"npm run react:dev\" \"npm run electron:dev\"",
