@@ -1,10 +1,6 @@
 import { ipcRenderer } from 'electron';
 import { Routes } from '@/routes';
 
-ipcRenderer.on('exePath', (_, data) => {
-  console.log({ data });
-});
-
 ipcRenderer.on('speechExit', (_, { exitCode }) => {
   console.log({ exitCode });
 });
