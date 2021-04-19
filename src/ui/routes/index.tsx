@@ -10,7 +10,6 @@ export const Routes = () => (
         scope: 'openid',
         redirect_uri: 'att-voodoo://auth-callback'
       }}
-      autoSignIn
     >
       <Switch>
         <Route
