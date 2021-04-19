@@ -51,5 +51,7 @@ export const Authenticating = () => {
     return <big>Retrieving account details&hellip; Almost there.</big>;
   }
 
+  window.altaApi.oidc.signinCallback();
+
   return <big>Authenticating&hellip; Hang on.</big>;
 };
