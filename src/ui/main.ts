@@ -10,6 +10,9 @@ if (isDev) configEnv();
 const voodooServerTokenApiUrl = isDev
   ? 'http://localhost:3000/session'
   : 'https://att-voodoo-server.herokuapp.com/session';
+const voodooServerHeartbeatApiUrl = isDev
+  ? 'http://localhost:3000/heartbeat'
+  : 'https://att-voodoo-server.herokuapp.com/heartbeat';
 
 app.removeAsDefaultProtocolClient('att-voodoo');
 
@@ -96,6 +99,29 @@ const initialiseApp = async (): Promise<void> => {
 
 app.on('ready', initialiseApp);
 
+let heartbeatHandle: NodeJS.Timer | null = null;
+const heartbeatInterval = 60000;
+
+type HeartbeatResponse = {
+  ok: boolean;
+  error?: string;
+};
+
+const heartbeat = async (accessToken: string): Promise<HeartbeatResponse> => {
+  try {
+    const response = await fetch(voodooServerHeartbeatApiUrl, {
+      method: 'GET',
+      headers: { Authorization: `Bearer ${accessToken}` }
+    });
+
+    if (response.status !== 200 || !response.ok) return { ok: false, error: response.statusText };
+
+    return await response.json();
+  } catch (error) {
+    return { ok: false, error: error.code };
+  }
+};
+
 ipcMain.handle('session', async (_, { accessToken }) => {
   try {
     const response = await fetch(voodooServerTokenApiUrl, {
@@ -104,6 +130,12 @@ ipcMain.handle('session', async (_, { accessToken }) => {
     });
 
     if (response.status !== 200 || !response.ok) return { ok: false, error: response.statusText };
+
+    if (heartbeatHandle === null) {
+      heartbeatHandle = setInterval(() => {
+        heartbeat(accessToken);
+      }, heartbeatInterval);
+    }
 
     return await response.json();
   } catch (error) {
