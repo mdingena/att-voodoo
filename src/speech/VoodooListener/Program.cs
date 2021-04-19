@@ -68,10 +68,11 @@ namespace VoodooListener
 	{
 		public static void Main(string[] args)
 		{
-			Run().GetAwaiter().GetResult();
+			string grammarFilePath = Path.GetFullPath(args[0]);
+			Run(grammarFilePath).GetAwaiter().GetResult();
 		}
 
-		static async Task Run()
+		static async Task Run(string grammarFilePath)
 		{
 			// await LogIntoAlta();
 
@@ -103,7 +104,7 @@ namespace VoodooListener
 				try
 				{
 					//await listener.ConnectAndListen(serverNumber);
-					await listener.ConnectAndListen(1483589932);
+					await listener.ConnectAndListen(1483589932, grammarFilePath);
 				}
 				catch (Exception e)
 				{
@@ -173,11 +174,11 @@ namespace VoodooListener
 			// 	}
 			// }
 
-			public async Task ConnectAndListen(int serverIdentifier)
+			public async Task ConnectAndListen(int serverIdentifier, string grammarFilePath)
 			{
 			// 	await ConnectToServer(serverIdentifier);
 
-				SetupVoiceRecognizer();
+				SetupVoiceRecognizer(grammarFilePath);
 
 				StartVoiceRecognition();
 
@@ -236,16 +237,16 @@ namespace VoodooListener
 				// }
 			}
 
-			void SetupVoiceRecognizer()
+			void SetupVoiceRecognizer(string grammarFilePath)
 			{
 				recognizer = new SpeechRecognitionEngine(new CultureInfo("en-US"/*Config.Current.Language*/));
 
 				// Create and load a dictation grammar.  
 				//recognizer.LoadGrammar(new DictationGrammar());
 
-				string filePath = "grammar.xml"; // Config.Current.GrammarFilePath;
+				//string filePath = "grammar.xml"; // Config.Current.GrammarFilePath;
 
-				SrgsDocument doc = new SrgsDocument(filePath);
+				SrgsDocument doc = new SrgsDocument(grammarFilePath);
 
 				Grammar grammar = new Grammar(doc);
 

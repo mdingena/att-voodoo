@@ -89,8 +89,13 @@ const startListening = async (logger: any): Promise<void> => {
     ? path.resolve(__dirname, '../../build/speech/VoodooListener.exe')
     : path.resolve(process.resourcesPath, 'speech/VoodooListener.exe');
 
+  const exeArgs = [
+    isDev
+      ? path.resolve(__dirname, '../../build/speech/grammar.xml')
+      : path.resolve(process.resourcesPath, 'speech/grammar.xml')
+  ];
 
-  speech = await execFile(exePath);
+  speech = await execFile(exePath, exeArgs);
 
   speech.on('exit', exitCode => {
     console.log('### SPEECH EXIT CODE', exitCode);
