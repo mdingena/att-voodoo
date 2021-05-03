@@ -1,10 +1,61 @@
-<grammar version="1.0" xml:lang="en-US" root="jumpAction" xmlns="http://www.w3.org/2001/06/grammar">
+<grammar version="1.0" xml:lang="en-US" root="root" xmlns="http://www.w3.org/2001/06/grammar">
 
-  <rule id="jumpAction">
+  <rule id="root">
     <one-of>
-      <item> jump </item>
-      <item> move </item>
-      <item> quit </item>
+      <item> <ruleref uri="#command" /> </item>
+      <item> <ruleref uri="#trigger" /> </item>
+      <item> <ruleref uri="#incantation" /> </item>
+    </one-of>
+  </rule>
+
+  <rule id="command">
+    <one-of>
+      <item> voodoo idle </item>
+      <item> voodoo listen </item>
+    </one-of>
+  </rule>
+
+  <rule id="incantation">
+    <ruleref uri="#property" />
+    <item> of </item>
+    <ruleref uri="#source" />
+  </rule>
+
+  <rule id="property">
+    <one-of>
+      <item> fiber </item>
+      <item> aspect </item>
+      <item> aether </item>
+      <item> essence </item>
+      <item> grain </item>
+      <item> pinch </item>
+      <item> hint </item>
+      <item> essence </item>
+      <item> juice </item>
+      <item> extract </item>
+      <item> flesh </item>
+    </one-of>
+  </rule>
+
+  <rule id="source">
+    <one-of>
+      <item> wyrm skin </item>
+      <item> flight </item>
+      <item> gemstone </item>
+      <item> pyre </item>
+      <item> salt </item>
+      <item> embers </item>
+      <item> glass </item>
+      <item> harvest </item>
+      <item> fungi </item>
+      <item> fowl </item>
+    </one-of>
+  </rule>
+
+  <rule id="trigger">
+    <one-of>
+      <item> acid bolt </item>
+      <item> crystal bolt </item>
     </one-of>
   </rule>
 
