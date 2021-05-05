@@ -1,16 +1,16 @@
 import { ipcRenderer } from 'electron';
 import { Routes } from '@/routes';
 
-ipcRenderer.on('speechExit', (_, { exitCode }) => {
-  console.log({ exitCode });
+ipcRenderer.on('speechExit', (_, reason) => {
+  console.log(reason);
 });
 
-ipcRenderer.on('speechError', (_, { error }) => {
-  console.log({ error });
+ipcRenderer.on('speechError', (_, reason, error) => {
+  console.log(reason, error);
 });
 
-ipcRenderer.on('speechData', (_, { data }) => {
-  console.log({ data });
+ipcRenderer.on('speechData', (_, recognisedSpeech) => {
+  console.log({ recognisedSpeech });
 });
 
 export const App = () => {
