@@ -1,5 +1,5 @@
 import { ChildProcess } from 'child_process';
-import { app, shell } from 'electron';
+import { app, shell, BrowserWindow } from 'electron';
 import isDev from 'electron-is-dev';
 import { config as configEnv } from 'dotenv';
 import {
@@ -22,7 +22,7 @@ setUriScheme(app);
 const initialiseApp = async (): Promise<void> => {
   /* Create processes. */
   let speech: ChildProcess | null = null;
-  let ui: Electron.BrowserWindow | null = new Electron.BrowserWindow({
+  let ui: BrowserWindow | null = new BrowserWindow({
     width: 1440,
     height: 600,
     webPreferences: {

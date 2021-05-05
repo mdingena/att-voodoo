@@ -1,8 +1,9 @@
+import { BrowserWindow } from 'electron';
 import { ChildProcess, execFile } from 'child_process';
 import config from '../config';
 
 export const startListening = async (
-  ui: Electron.BrowserWindow | null,
+  ui: BrowserWindow | null,
   speech: ChildProcess | null,
   logger: (...args: any) => void
 ): Promise<void> => {
