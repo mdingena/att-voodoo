@@ -3,15 +3,26 @@
   <rule id="root">
     <one-of>
       <item> <ruleref uri="#command" /> </item>
-      <item> <ruleref uri="#trigger" /> </item>
       <item> <ruleref uri="#incantation" /> </item>
     </one-of>
   </rule>
 
   <rule id="command">
     <one-of>
-      <item> voodoo idle </item>
-      <item> voodoo listen </item>
+      <item> suppress voodoo </item> <!-- Disable sending recognised speech to Voodoo Server. -->
+      <item> awaken voodoo </item> <!-- Enable sending recognised speech to Voodoo Server. -->
+      <item> attune voodoo </item> <!-- Begin incanting. -->
+      <item> fizzle </item> <!-- Abort incantation. -->
+      <item> seal </item> <!-- Confirm short incantation. -->
+      <item> <ruleref uri="#trigger" /> </item>
+    </one-of>
+  </rule>
+
+  <rule id="trigger">
+    <item> cast </item>
+    <one-of>
+      <item> acid bolt </item>
+      <item> crystal bolt </item>
     </one-of>
   </rule>
 
@@ -49,13 +60,6 @@
       <item> harvest </item>
       <item> fungi </item>
       <item> fowl </item>
-    </one-of>
-  </rule>
-
-  <rule id="trigger">
-    <one-of>
-      <item> acid bolt </item>
-      <item> crystal bolt </item>
     </one-of>
   </rule>
 
