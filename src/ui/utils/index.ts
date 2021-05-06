@@ -5,3 +5,6 @@ export { handleWindowsSecondInstance } from './handleWindowsSecondInstance';
 export { setupIPC } from './setupIPC';
 export { setUriScheme } from './setUriScheme';
 export { singleInstanceLock } from './singleInstanceLock';
+export { voodooDelete } from './voodooDelete';
+export { voodooGet } from './voodooGet';
+export { voodooPost } from './voodooPost';
