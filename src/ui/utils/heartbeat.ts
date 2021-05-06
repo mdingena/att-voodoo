@@ -1,4 +1,4 @@
-import fetch from 'electron-fetch';
+import { voodooGet } from './voodooGet';
 import config from '../config';
 
 type HeartbeatResponse = {
@@ -8,15 +8,8 @@ type HeartbeatResponse = {
 
 export const heartbeat = async (accessToken: string): Promise<HeartbeatResponse> => {
   try {
-    const response = await fetch(config.API_ENDPOINTS.HEARTBEAT, {
-      method: 'GET',
-      headers: { Authorization: `Bearer ${accessToken}` }
-    });
-
-    if (response.status !== 200 || !response.ok) return { ok: false, error: response.statusText };
-
-    return await response.json();
+    return await voodooGet(accessToken, config.API_ENDPOINTS.HEARTBEAT);
   } catch (error) {
-    return { ok: false, error: error.code };
+    return { ok: false, error: error.message };
   }
 };
