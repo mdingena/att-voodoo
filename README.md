@@ -70,6 +70,6 @@ Prepared spells are **stored** in a spell preparation slot after successfully in
 
 ## Spellcrafting Conduits
 
-Voodoo magic is very strong near emerald beryl, which are crystals found in large cluster formations deep in the mines. Emerald beryl acts as a conduit for invoking Voodoo spells, and you must be near one of these clusters to access its power and invoke spells.
+Voodoo magic is very strong near emerald beryl, which are green crystals found in large cluster formations deep in the mines. Emerald beryl acts as a conduit for invoking Voodoo spells, and you must be near one of these clusters to access its power and invoke spells.
 
 Some towns have hauled these crystals from the mines and erected **Spellcrafting Conduits** around town for easier access to Voodoo magic.
