@@ -1,4 +1,4 @@
-# Voodoo Client
+# 🔮 Voodoo Client
 
 **Voodoo** is a community-made magic mod for [_A Township Tale_](https://townshiptale.com/), a VR MMORPG game.
 
