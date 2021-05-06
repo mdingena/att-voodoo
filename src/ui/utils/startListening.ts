@@ -1,10 +1,12 @@
 import { BrowserWindow } from 'electron';
 import { ChildProcess, execFile } from 'child_process';
+import { handleSpeech } from './handleSpeech';
 import config from '../config';
 
 export const startListening = async (
   ui: BrowserWindow | null,
   speech: ChildProcess | null,
+  accessToken: string,
   logger: (...args: any) => void
 ): Promise<void> => {
   /* Launch VoodooListener.exe child process. */
@@ -24,6 +26,7 @@ export const startListening = async (
 
   /* Handle Voodoo speech recognition. */
   speech.stdout?.on('data', data => {
+    handleSpeech(data, accessToken, logger);
     logger(`Voodoo speech recognised`, data);
     ui?.webContents.send('speechData', data);
   });

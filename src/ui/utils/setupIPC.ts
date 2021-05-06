@@ -14,7 +14,7 @@ export const setupIPC = (ui: BrowserWindow | null, speech: ChildProcess | null, 
 
     if (response.ok) {
       if (heartbeatHandle === null) {
-        startListening(ui, speech, logger);
+        startListening(ui, speech, accessToken, logger);
 
         heartbeatHandle = setInterval(() => {
           heartbeat(accessToken);
