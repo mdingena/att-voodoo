@@ -15,8 +15,6 @@
 
 </details>
 
----
-
 <details>
 <summary>👩‍🔧 Guide for server owners</summary>
 
