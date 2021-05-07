@@ -48,7 +48,7 @@
 
   <rule id="source">
     <one-of>
-      <item> babu </hide>
+      <item> babu </item>
       <item> dais </item>
       <item> embers </item>
       <item> gems </item>
@@ -56,10 +56,13 @@
       <item> fungi </item>
       <item> glass </item>
       <item> incendiary </item>
+      <item> nature </item>
       <item> produce </item>
       <item> pyre </item>
+      <item> revenant </item>
       <item> salt </item>
       <item> spriggull </item>
+      <item> turabada </item>
       <item> wyrm </item>
     </one-of>
   </rule>
