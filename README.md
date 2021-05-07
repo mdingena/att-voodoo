@@ -22,7 +22,7 @@ See [Casting spells](#-casting-spells) for details on how to use Voodoo magic.
 </details>
 
 <details>
-<summary>👩‍🔧 Guide for server owners</summary>
+<summary>🧰 Guide for server owners</summary>
 
 Adding Voodoo to your server is really easy!
 
@@ -54,7 +54,7 @@ Generally speaking, players will not be able to create a high volume of items ou
 
 </details>
 
-# 👩‍🎓 Casting spells
+# ✨ Casting spells
 
 Casting spells requires your patience and resources.
 
