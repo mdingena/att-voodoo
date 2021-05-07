@@ -31,11 +31,11 @@ namespace VoodooListener
 
 				try
 				{
-					await listener.ConnectAndListen(1483589932, grammarFilePath);
+					await listener.ConnectAndListen(grammarFilePath);
 				}
 				catch (Exception e)
 				{
-					Console.WriteLine(e.Message);
+					// Console.WriteLine(e.Message);
 				}
 			}
 		}
@@ -55,13 +55,13 @@ namespace VoodooListener
 				aliases.Add("everyone", _ => "*");
 			}
 
-			public async Task ConnectAndListen(int serverIdentifier, string grammarFilePath)
+			public async Task ConnectAndListen(string grammarFilePath)
 			{
 				SetupVoiceRecognizer(grammarFilePath);
 
 				StartVoiceRecognition();
 
-				Console.WriteLine("Start Speaking, say quit to stop the application");
+				// Console.WriteLine("Start Speaking, say quit to stop the application");
 
 				await Task.Delay(-1, cancellation.Token);
 			}
@@ -80,7 +80,7 @@ namespace VoodooListener
 
 				Grammar grammar = new Grammar(doc);
 
-				Console.WriteLine("Loaded Grammar: {0}", grammar.Name);
+				// Console.WriteLine("Loaded Grammar: {0}", grammar.Name);
 
 				recognizer.LoadGrammar(grammar);
 
@@ -104,10 +104,10 @@ namespace VoodooListener
 				{
 					HandleRecognisedVoice(text);
 				}
-				else
-				{
-					Console.WriteLine("Failed recognizing phrase: {0}, confidence: {1}", text, e.Result.Confidence);
-				}
+				// else
+				// {
+				// 	Console.WriteLine("Failed recognizing phrase: {0}, confidence: {1}", text, e.Result.Confidence);
+				// }
 			}
 
 			void HandleRecognisedVoice(string text)
@@ -121,12 +121,12 @@ namespace VoodooListener
 					return;
 				}
 
-				Console.WriteLine(text);
+				Console.Write(text);
 			}
 
 			public void Stop()
 			{
-				Console.WriteLine("Stopping...");
+				// Console.WriteLine("Stopping...");
 
 				StopRecordingVoice();
 
