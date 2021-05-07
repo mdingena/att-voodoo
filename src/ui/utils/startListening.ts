@@ -25,9 +25,8 @@ export const startListening = async (
   });
 
   /* Handle Voodoo speech recognition. */
-  speech.stdout?.on('data', data => {
-    handleSpeech(data, accessToken, logger);
-    logger(`Voodoo speech recognised`, data);
-    ui?.webContents.send('speechData', data);
+  speech.stdout?.on('data', speech => {
+    handleSpeech(speech, accessToken, logger);
+    ui?.webContents.send('speechData', speech);
   });
 };
