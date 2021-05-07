@@ -24,10 +24,10 @@ const PHRASES = {
   INCANTATION: {
     START: 'attune voodoo',
     CONFIRM: 'seal',
-    ABORT: 'fizzle'
+    ABORT: 'nullify'
   },
   SUPPRESS: 'suppress voodoo',
-  TRIGGER: 'cast'
+  TRIGGER: 'evoke'
 };
 
 let mode = MODES.SUPPRESSED;
