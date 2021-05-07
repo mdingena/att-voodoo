@@ -4,7 +4,10 @@ export const voodooPost = async (accessToken: string, endpoint: string, data: an
   try {
     const response = await fetch(endpoint, {
       method: 'POST',
-      headers: { Authorization: `Bearer ${accessToken}` },
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify(data)
     });
 
