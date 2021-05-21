@@ -61,7 +61,8 @@ export const handleSpeech = async (speech: string, accessToken: string, logger: 
 
         default:
           if (isTriggerPhrase) {
-            const response = await voodooPost(accessToken, config.API_ENDPOINTS.TRIGGER, [speech]);
+            const verbalTrigger = speech.replace(`${PHRASES.TRIGGER} `, '');
+            const response = await voodooPost(accessToken, config.API_ENDPOINTS.TRIGGER, [verbalTrigger]);
 
             if (response.ok) {
               preparedSpells = response.result;
