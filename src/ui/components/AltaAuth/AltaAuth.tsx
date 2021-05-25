@@ -1,6 +1,8 @@
 import React from 'react';
 import { User } from 'oidc-client';
 import { AuthContextProps, AuthProviderProps, RequireAuthProps, LoginButtonProps } from './interfaces';
+import { useAtom } from 'jotai';
+import { appStageAtom, AppStage } from '@/atoms';
 
 declare global {
   interface Window {
@@ -149,6 +151,7 @@ export const RequireAuth: React.FC<RequireAuthProps> = ({ LoggingInComponent, ch
 };
 
 export const LoginButton: React.FC<LoginButtonProps> = ({ small = false, style, type = 'auto' }) => {
+  const [appStage, setAppStage] = useAtom(appStageAtom);
   var auth = useAuth();
 
   var isLogin = type === 'auto' ? !auth?.userData : type === 'login';
@@ -160,6 +163,8 @@ export const LoginButton: React.FC<LoginButtonProps> = ({ small = false, style, 
       console.error("Can't login until alta login library is loaded.");
       return;
     }
+
+    setAppStage(AppStage.Authenticating);
 
     var login = isLogin ? auth.signIn : auth.signOut;
 

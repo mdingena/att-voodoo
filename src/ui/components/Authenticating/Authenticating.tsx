@@ -1,7 +1,9 @@
 import { ipcRenderer } from 'electron';
 import { useRef, useState } from 'react';
+import { useAtom } from 'jotai';
 import { useHistory } from 'react-router-dom';
-import { useAuth } from '../AltaAuth';
+import { appStageAtom, AppStage } from '@/atoms';
+import { useAuth } from '@/components/AltaAuth';
 
 export const Authenticating = () => {
   const history = useHistory();
@@ -10,6 +12,7 @@ export const Authenticating = () => {
   const isFetching = useRef(false);
   const [accountId, setAccountId] = useState<number | null>(null);
   const [fatalError, setFatalError] = useState<string | null>(null);
+  const [appStage, setAppStage] = useAtom(appStageAtom);
 
   if (fatalError) {
     return (
@@ -22,6 +25,7 @@ export const Authenticating = () => {
 
   if (accountId) {
     if (!timeout.current) {
+      setAppStage(AppStage.WaitingForServer);
       timeout.current = setTimeout(() => {
         history.replace('/');
       }, 1700);
