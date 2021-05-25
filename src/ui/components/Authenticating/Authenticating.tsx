@@ -1,6 +1,6 @@
 import { ipcRenderer } from 'electron';
-import { useRef, useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useRef, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useAuth } from '../AltaAuth';
 
 export const Authenticating = () => {
