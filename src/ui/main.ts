@@ -23,6 +23,7 @@ const initialiseApp = async (): Promise<void> => {
   /* Create processes. */
   let speech: ChildProcess | null = null;
   let ui: BrowserWindow | null = new BrowserWindow({
+    title: 'Voodoo',
     width: 1440,
     height: 600,
     webPreferences: {
