@@ -24,8 +24,13 @@ const initialiseApp = async (): Promise<void> => {
   let speech: ChildProcess | null = null;
   let ui: BrowserWindow | null = new BrowserWindow({
     title: 'Voodoo',
-    width: 1440,
-    height: 600,
+    width: 360,
+    height: 640,
+    useContentSize: true,
+    resizable: false,
+    maximizable: false,
+    fullscreenable: false,
+    backgroundColor: '#021220',
     webPreferences: {
       contextIsolation: false,
       nodeIntegration: true

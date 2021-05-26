@@ -3,6 +3,7 @@ import { Providers } from '@/providers';
 import { Switch, Route } from 'react-router-dom';
 import { DashboardRoute } from '@/routes';
 import { AuthCallbackRoute } from '@/routes';
+import styles from './App.module.css';
 
 ipcRenderer.on('speechExit', (_, reason) => {
   console.log(reason);
@@ -18,9 +19,14 @@ ipcRenderer.on('speechData', (_, recognisedSpeech) => {
 
 export const App = () => (
   <Providers>
-    <Switch>
-      <Route exact path='/' component={DashboardRoute} />
-      <Route path='/auth-callback' component={AuthCallbackRoute} />
-    </Switch>
+    <div className={styles.root}>
+      <div className={styles.content}>
+        <Switch>
+          <Route exact path='/' component={DashboardRoute} />
+          <Route path='/auth-callback' component={AuthCallbackRoute} />
+        </Switch>
+      </div>
+      <div className={styles.navigation}>Nav</div>
+    </div>
   </Providers>
 );

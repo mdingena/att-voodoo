@@ -1,0 +1,14 @@
+.root {
+  display: grid;
+  grid-template-rows: 1fr 64px;
+  height: 100%;
+}
+
+.content {
+  background: red;
+  align-items: center;
+}
+
+.navigation {
+  background-color: blue;
+}
