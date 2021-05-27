@@ -10,7 +10,6 @@ type HeartbeatDelay = { current: number };
 let heartbeatHandle: NodeJS.Timer | null = null;
 
 export const scheduleHeartbeat = (accessToken: string, delay: HeartbeatDelay) => {
-  console.log(`scheduling heartbeat in ${delay.current} ms`);
   return setTimeout(() => {
     heartbeat(accessToken);
     heartbeatHandle = scheduleHeartbeat(accessToken, delay);
