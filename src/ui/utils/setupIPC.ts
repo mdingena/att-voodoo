@@ -5,8 +5,17 @@ import { heartbeat } from './heartbeat';
 import { voodooGet } from './voodooGet';
 import config from '../config';
 
+type HeartbeatDelay = { current: number };
+
 let heartbeatHandle: NodeJS.Timer | null = null;
-const heartbeatInterval = 60000;
+
+export const scheduleHeartbeat = (accessToken: string, delay: HeartbeatDelay) => {
+  console.log(`scheduling heartbeat in ${delay.current} ms`);
+  return setTimeout(() => {
+    heartbeat(accessToken);
+    heartbeatHandle = scheduleHeartbeat(accessToken, delay);
+  }, delay.current);
+};
 
 export const setupIPC = (ui: BrowserWindow | null, speech: ChildProcess | null, logger: (...args: any) => void) => {
   ipcMain.handle('session', async (_, { accessToken }) => {
@@ -16,9 +25,7 @@ export const setupIPC = (ui: BrowserWindow | null, speech: ChildProcess | null, 
       if (heartbeatHandle === null) {
         startListening(ui, speech, accessToken, logger);
 
-        heartbeatHandle = setInterval(() => {
-          heartbeat(accessToken);
-        }, heartbeatInterval);
+        heartbeatHandle = scheduleHeartbeat(accessToken, config.INTERVALS);
       }
     }
 

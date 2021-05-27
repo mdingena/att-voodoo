@@ -11,6 +11,11 @@ const development = {
     INCANTATION: 'http://localhost:3000/incantation',
     SEAL: 'http://localhost:3000/seal',
     TRIGGER: 'http://localhost:3000/trigger'
+  },
+  INTERVALS: {
+    current: 60000,
+    SERVER_WAIT: 10000,
+    HEARTBEAT: 20000
   }
 };
 
@@ -24,6 +29,11 @@ const production = {
     INCANTATION: 'https://att-voodoo-server.herokuapp.com/incantation',
     SEAL: 'https://att-voodoo-server.herokuapp.com/seal',
     TRIGGER: 'https://att-voodoo-server.herokuapp.com/trigger'
+  },
+  INTERVALS: {
+    current: 60000,
+    SERVER_WAIT: 15000,
+    HEARTBEAT: 60000
   }
 };
 
