@@ -1,0 +1,16 @@
+.center {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 2em;
+}
+
+.subtitle {
+  margin-bottom: 32px;
+}
