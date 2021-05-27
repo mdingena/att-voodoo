@@ -34,6 +34,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({
 }) => {
   const [loaded, setLoaded] = React.useState(false);
   const [userData, setUserData] = React.useState<User | null>(null);
+  const [appStage, setAppStage] = useAtom(appStageAtom);
+
+  React.useEffect(() => {
+    if (loaded) setAppStage(AppStage.Ready);
+  }, [loaded]);
 
   React.useEffect(() => {
     loadScript(() => {

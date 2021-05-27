@@ -1,10 +1,11 @@
 import { atom } from 'jotai';
 
 export enum AppStage {
-  Anonymous,
+  Loading,
+  Ready,
   Authenticating,
   WaitingForServer,
-  Ready
+  Connected
 }
 
-export const appStageAtom = atom<AppStage>(AppStage.Anonymous);
+export const appStageAtom = atom<AppStage>(AppStage.Loading);
