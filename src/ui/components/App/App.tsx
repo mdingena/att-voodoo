@@ -1,7 +1,7 @@
 import { ipcRenderer } from 'electron';
 import { Providers } from '@/providers';
 import { Switch, Route } from 'react-router-dom';
-import { DashboardRoute } from '@/routes';
+import { RootRoute } from '@/routes';
 import { AuthCallbackRoute } from '@/routes';
 import styles from './App.module.css';
 
@@ -22,7 +22,7 @@ export const App = () => (
     <div className={styles.root}>
       <div className={styles.content}>
         <Switch>
-          <Route exact path='/' component={DashboardRoute} />
+          <Route exact path='/' component={RootRoute} />
           <Route path='/auth-callback' component={AuthCallbackRoute} />
         </Switch>
       </div>
