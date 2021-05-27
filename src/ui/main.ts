@@ -30,7 +30,7 @@ const initialiseApp = async (): Promise<void> => {
     resizable: false,
     maximizable: false,
     fullscreenable: false,
-    backgroundColor: '#021220',
+    backgroundColor: '#062724',
     webPreferences: {
       contextIsolation: false,
       nodeIntegration: true
