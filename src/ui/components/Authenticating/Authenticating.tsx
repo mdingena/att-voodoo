@@ -1,5 +1,5 @@
 import { ipcRenderer } from 'electron';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { useAtom } from 'jotai';
 import { useHistory } from 'react-router-dom';
 import { appStageAtom, AppStage } from '@/atoms';
@@ -14,6 +14,14 @@ export const Authenticating = () => {
   const [fatalError, setFatalError] = useState<string | null>(null);
   const [appStage, setAppStage] = useAtom(appStageAtom);
 
+  useEffect(() => {
+    if (appStage === AppStage.WaitingForServer && !timeout.current) {
+      timeout.current = setTimeout(() => {
+        history.replace('/');
+      }, 1700);
+    }
+  }, [appStage]);
+
   if (fatalError) {
     return (
       <>
@@ -23,13 +31,8 @@ export const Authenticating = () => {
     );
   }
 
-  if (accountId) {
-    if (!timeout.current) {
-      setAppStage(AppStage.WaitingForServer);
-      timeout.current = setTimeout(() => {
-        history.replace('/');
-      }, 1700);
-    }
+  if (appStage !== AppStage.WaitingForServer && accountId) {
+    setAppStage(AppStage.WaitingForServer);
     return <big>All done. Redirecting to dashboard now!</big>;
   }
 
