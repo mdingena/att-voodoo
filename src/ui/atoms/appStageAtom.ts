@@ -2,6 +2,7 @@ import { atom } from 'jotai';
 
 export enum AppStage {
   Loading,
+  Splash,
   Ready,
   Authenticating,
   WaitingForServer,

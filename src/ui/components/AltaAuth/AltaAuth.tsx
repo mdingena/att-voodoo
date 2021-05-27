@@ -37,7 +37,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({
   const [appStage, setAppStage] = useAtom(appStageAtom);
 
   React.useEffect(() => {
-    if (loaded) setAppStage(AppStage.Ready);
+    if (loaded) setAppStage(AppStage.Splash);
   }, [loaded]);
 
   React.useEffect(() => {
