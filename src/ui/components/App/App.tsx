@@ -20,13 +20,10 @@ ipcRenderer.on('speechData', (_, recognisedSpeech) => {
 export const App = () => (
   <Providers>
     <div className={styles.root}>
-      <div className={styles.content}>
-        <Switch>
-          <Route exact path='/' component={RootRoute} />
-          <Route path='/auth-callback' component={AuthCallbackRoute} />
-        </Switch>
-      </div>
-      <div className={styles.navigation}>Nav</div>
+      <Switch>
+        <Route exact path='/' component={RootRoute} />
+        <Route path='/auth-callback' component={AuthCallbackRoute} />
+      </Switch>
     </div>
   </Providers>
 );
