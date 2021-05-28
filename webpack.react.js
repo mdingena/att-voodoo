@@ -25,6 +25,17 @@ module.exports = {
         use: [{ loader: 'ts-loader' }]
       },
       {
+        test: /\.ttf$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: './font/[hash].[ext]'
+            }
+          }
+        ]
+      },
+      {
         test: /\.css$/,
         use: [
           'style-loader',
