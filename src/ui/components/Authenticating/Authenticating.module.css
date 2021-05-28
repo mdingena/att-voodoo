@@ -2,5 +2,15 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
   height: 100%;
+  padding: 32px;
+}
+
+.instructions {
+  text-align: center;
+}
+
+.error {
+  color: var(--font-colour-tertiary);
 }

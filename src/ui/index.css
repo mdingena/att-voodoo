@@ -7,11 +7,19 @@
   --colour-green-100: #010a09;
   --colour-green-200: #041816;
   --colour-green-300: #062724;
+  --colour-green-500: #147f76;
+  --colour-green-800: #dcfaf7;
+  --colour-green-900: #fafefe;
+
+  --font-colour-primary: var(--colour-green-900);
+  --font-colour-secondary: var(--colour-green-800);
+  --font-colour-tertiary: var(--colour-green-500);
 
   --font-family: 'Press Start 2P', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Fira Sans', 'Helvetica Neue', Arial,
     sans-serif;
 
-  --text-shadow: 0 3px 0 var(--colour-green-100);
+  --text-shadow-normal: 0 3px 2px var(--colour-green-100);
+  --text-shadow-small: 0 2px 2px var(--colour-green-100);
 }
 
 *,
@@ -31,9 +39,18 @@ html {
   font-family: var(--font-family);
   font-size: 8px; /* Pixel font must be scaled in 8px increments. */
   line-height: 1.5;
-  color: #fafefe;
-  text-shadow: var(--text-shadow);
+  color: var(--font-colour-primary);
+  text-shadow: var(--text-shadow-normal);
   -webkit-font-smoothing: none;
+}
+
+body {
+  font-size: 2rem;
+}
+
+small {
+  font-size: 1rem;
+  text-shadow: var(--text-shadow-small);
 }
 
 *:not(button):not(a) {

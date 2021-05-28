@@ -4,6 +4,7 @@ import { useAtom } from 'jotai';
 import { useHistory } from 'react-router-dom';
 import { appStageAtom, AppStage } from '@/atoms';
 import { useAuth } from '@/components/AltaAuth';
+import { Authenticating, AuthenticatingStage } from '@/components/Authenticating';
 
 export const AuthCallbackRoute = () => {
   const history = useHistory();
@@ -14,31 +15,27 @@ export const AuthCallbackRoute = () => {
   const [fatalError, setFatalError] = useState<string | null>(null);
   const [appStage, setAppStage] = useAtom(appStageAtom);
 
+  /* Call Alta auth library. */
   useEffect(() => {
     window.altaApi.oidc.signinCallback();
   }, []);
 
+  /* Automatically redirect shortly after completing auth flow. */
   useEffect(() => {
-    if (appStage === AppStage.WaitingForServer && !timeout.current) {
+    if (accountId && appStage !== AppStage.WaitingForServer) {
+      setAppStage(AppStage.WaitingForServer);
+    } else if (accountId && appStage === AppStage.WaitingForServer && !timeout.current) {
       timeout.current = setTimeout(() => {
         history.replace('/');
       }, 1700);
     }
-  }, [appStage]);
+  }, [accountId, appStage]);
 
-  if (fatalError) {
-    return (
-      <>
-        <big>Something went wrong. Please restart Voodoo.</big>
-        <pre>{fatalError}</pre>
-      </>
-    );
-  }
+  if (fatalError) return <Authenticating stage={AuthenticatingStage.FatalError} error={fatalError} />;
 
-  if (appStage !== AppStage.WaitingForServer && accountId) {
-    setAppStage(AppStage.WaitingForServer);
-    return <big>All done. Redirecting to dashboard now!</big>;
-  }
+  if (appStage === AppStage.WaitingForServer) return <Authenticating stage={AuthenticatingStage.Ready} />;
+
+  if (accountId) return <Authenticating stage={AuthenticatingStage.CreatingSession} />;
 
   if (auth?.userData && !isFetching.current) {
     isFetching.current = true;
@@ -48,7 +45,6 @@ export const AuthCallbackRoute = () => {
         accessToken: auth.userData?.access_token
       })
       .then(response => {
-        console.log({ response });
         if (response.ok) {
           setAccountId(response.result.accountId);
         } else {
@@ -58,9 +54,7 @@ export const AuthCallbackRoute = () => {
       });
   }
 
-  if (auth?.userData) {
-    return <big>Retrieving account details&hellip; Almost there.</big>;
-  }
+  if (auth?.userData) return <Authenticating stage={AuthenticatingStage.ExchangingToken} />;
 
-  return <big>Authenticating&hellip; Hang on.</big>;
+  return <Authenticating stage={AuthenticatingStage.Authenticating} />;
 };
