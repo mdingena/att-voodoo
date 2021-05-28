@@ -1,1 +1,1 @@
-export { Authenticating } from './Authenticating';
+export { Authenticating, AuthenticatingStage } from './Authenticating';
