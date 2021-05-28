@@ -4,8 +4,14 @@
 }
 
 :root {
+  --colour-green-100: #010a09;
+  --colour-green-200: #041816;
+  --colour-green-300: #062724;
+
   --font-family: 'Press Start 2P', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Fira Sans', 'Helvetica Neue', Arial,
     sans-serif;
+
+  --text-shadow: 0 3px 0 var(--colour-green-100);
 }
 
 *,
@@ -26,5 +32,6 @@ html {
   font-size: 8px; /* Pixel font must be scaled in 8px increments. */
   line-height: 1.5;
   color: #fafefe;
+  text-shadow: var(--text-shadow);
   -webkit-font-smoothing: none;
 }

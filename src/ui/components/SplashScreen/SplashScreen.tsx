@@ -25,5 +25,9 @@ export const SplashScreen = () => {
     }
   }, [isSplashFinished, appStage]);
 
-  return <div className={styles.center}>{loadingMessage}</div>;
+  return (
+    <div className={styles.center}>
+      <span className={styles.message}>{loadingMessage}</span>
+    </div>
+  );
 };
