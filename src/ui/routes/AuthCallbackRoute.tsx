@@ -27,7 +27,7 @@ export const AuthCallbackRoute = () => {
     } else if (accountId && appStage === AppStage.WaitingForServer && !timeout.current) {
       timeout.current = setTimeout(() => {
         history.replace('/');
-      }, 1700);
+      }, 2700);
     }
   }, [accountId, appStage]);
 
