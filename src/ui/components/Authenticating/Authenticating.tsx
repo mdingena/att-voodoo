@@ -18,7 +18,7 @@ export const Authenticating = ({ stage, error }: AuthenticatingProps) => {
     case AuthenticatingStage.Authenticating:
       return (
         <div className={styles.center}>
-          <span className={styles.message}>Authenticating&hellip;</span>
+          <span>Authenticating&hellip;</span>
           <small className={styles.instructions}>
             <br />
             Please check your browser window to sign in to your Alta Account.
@@ -29,7 +29,7 @@ export const Authenticating = ({ stage, error }: AuthenticatingProps) => {
     case AuthenticatingStage.ExchangingToken:
       return (
         <div className={styles.center}>
-          <span className={styles.message}>Exchanging token&hellip;</span>
+          <span>Exchanging token&hellip;</span>
           <small className={styles.instructions}>
             <br />
             Voodoo is retrieving an access token from Alta.
@@ -40,7 +40,7 @@ export const Authenticating = ({ stage, error }: AuthenticatingProps) => {
     case AuthenticatingStage.CreatingSession:
       return (
         <div className={styles.center}>
-          <span className={styles.message}>Creating session&hellip;</span>
+          <span>Creating session&hellip;</span>
           <small className={styles.instructions}>
             <br />
             Voodoo is creating your play session.
@@ -51,7 +51,7 @@ export const Authenticating = ({ stage, error }: AuthenticatingProps) => {
     case AuthenticatingStage.Ready:
       return (
         <div className={styles.center}>
-          <span className={styles.message}>Ready!</span>
+          <span>Ready!</span>
           <small className={styles.instructions}>
             <br />
             What Voodoo will you do?
@@ -62,7 +62,7 @@ export const Authenticating = ({ stage, error }: AuthenticatingProps) => {
     case AuthenticatingStage.FatalError:
       return (
         <div className={styles.center}>
-          <span className={styles.message}>Oops!</span>
+          <span>Oops!</span>
           <small className={styles.instructions}>
             <br />
             Something went wrong.
