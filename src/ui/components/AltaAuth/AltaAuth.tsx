@@ -180,7 +180,7 @@ export const LoginButton: React.FC<LoginButtonProps> = ({ small = false, style, 
 
   return (
     <div className={className} style={style}>
-      <button onClick={onClick}>
+      <button onClick={onClick} style={{ WebkitFontSmoothing: 'initial' }}>
         <img alt='icon1' src='https://accounts.townshiptale.com/icon.svg' />
         <img alt='icon2' src='https://accounts.townshiptale.com/icon.svg' />
         <span className='alta_noHover'>{isLogin ? (small ? 'Login' : 'Login with Alta') : username}</span>
