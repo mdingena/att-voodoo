@@ -35,3 +35,7 @@ html {
   text-shadow: var(--text-shadow);
   -webkit-font-smoothing: none;
 }
+
+*:not(button):not(a) {
+  cursor: default;
+}
