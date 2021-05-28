@@ -1,8 +1,8 @@
 .root {
-  display: flex;
-  flex-flow: column nowrap;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: flex-start;
   align-items: center;
-  height: 100%;
+  min-height: 100%;
   box-shadow: inset 50px 0 50px -50px #010a09, inset -50px 0 50px -50px #010a09;
 }
