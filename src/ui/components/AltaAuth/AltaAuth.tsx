@@ -47,12 +47,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({
         configureManager && configureManager(window.altaApi.oidc);
 
         window.altaApi.oidc.events.addUserLoaded((user: any) => {
-          console.log('User loaded');
-          console.log({ user });
+          // console.log('User loaded');
+          // console.log({ user });
           setUserData(user);
         });
         window.altaApi.oidc.events.addUserUnloaded(() => {
-          console.log('User unloaded');
+          // console.log('User unloaded');
           setUserData(null);
         });
 
@@ -75,12 +75,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({
         if (!!user && !user.expired && !userData) {
           setUserData(user);
         } else if ((!user || user.expired) && autoSignIn) {
-          console.log('SIGNIN');
-          console.log({ user });
+          // console.log('SIGNIN');
+          // console.log({ user });
 
           window.altaApi
             .signIn()
-            .then((result: any) => console.log({ result }))
+            // .then((result: any) => console.log({ result }))
             .catch((error: any) => console.error({ error }));
         }
       };
@@ -123,7 +123,7 @@ export const RequireAuth: React.FC<RequireAuthProps> = ({ LoggingInComponent, ch
     if (!!auth?.oidc && !auth.userData) {
       auth
         ?.signIn()
-        .then(result => console.log({ useEffectResult: result }))
+        // .then(result => console.log({ useEffectResult: result }))
         .catch(error => console.error({ useEffectError: error }));
     }
   }, [!!auth?.oidc, auth?.userData]);
@@ -141,7 +141,7 @@ export const RequireAuth: React.FC<RequireAuthProps> = ({ LoggingInComponent, ch
             onClick={() =>
               auth
                 ?.signIn()
-                .then(result => console.log({ buttonClickResult: result }))
+                // .then(result => console.log({ buttonClickResult: result }))
                 .catch(error => console.error({ buttonClickError: error }))
             }
           >
@@ -173,7 +173,7 @@ export const LoginButton: React.FC<LoginButtonProps> = ({ small = false, style, 
 
     var login = isLogin ? auth.signIn : auth.signOut;
 
-    login().then(console.log).catch(console.error);
+    login().catch(console.error);
   };
 
   var className = isLogin ? 'alta_loginWithAlta' : 'alta_loginWithAlta alta_loggedIn';
