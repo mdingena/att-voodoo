@@ -5,15 +5,15 @@ import { RootRoute } from '@/routes';
 import { AuthCallbackRoute } from '@/routes';
 import styles from './App.module.css';
 
-ipcRenderer.on('speechExit', (_, reason) => {
+ipcRenderer.on('speech-exit', (_, reason) => {
   console.log(reason);
 });
 
-ipcRenderer.on('speechError', (_, reason, error) => {
+ipcRenderer.on('speech-error', (_, reason, error) => {
   console.log(reason, error);
 });
 
-ipcRenderer.on('speechData', (_, recognisedSpeech) => {
+ipcRenderer.on('speech-recognised', (_, recognisedSpeech) => {
   console.log({ recognisedSpeech });
 });
 
