@@ -1,1 +1,1 @@
-export { ServersScreen } from './ServersScreen';
+export { ServersScreen, ServersUpdate } from './ServersScreen';

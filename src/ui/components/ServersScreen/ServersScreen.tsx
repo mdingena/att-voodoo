@@ -4,7 +4,7 @@ import { useAtom } from 'jotai';
 import { appStageAtom, AppStage, serversAtom, Servers } from '@/atoms';
 import styles from './ServersScreen.module.css';
 
-type ServersUpdate = {
+export type ServersUpdate = {
   playerJoined: number | null;
   servers: Servers;
 };
