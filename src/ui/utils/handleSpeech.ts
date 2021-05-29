@@ -1,4 +1,4 @@
-import { BrowserWindow } from 'electron';
+import { ipcMain, BrowserWindow } from 'electron';
 import { voodooDelete } from './voodooDelete';
 import { voodooGet } from './voodooGet';
 import { voodooPost } from './voodooPost';
@@ -30,6 +30,16 @@ const PHRASES = {
   TRIGGER: 'evoke'
 };
 
+let hasServerConnection = false;
+
+ipcMain.handle('server-connected', () => {
+  hasServerConnection = true;
+});
+
+ipcMain.handle('server-disconnected', () => {
+  hasServerConnection = false;
+});
+
 let mode = MODES.SUPPRESSED;
 let incantations: string[] = [];
 let preparedSpells: PreparedSpell[] = [];
@@ -40,6 +50,8 @@ export const handleSpeech = async (
   accessToken: string,
   logger: (...args: any) => void
 ) => {
+  if (!hasServerConnection) return;
+
   logger('Recognised speech:', speech);
   const isAwakenPhrase = speech === PHRASES.AWAKEN;
   const isTriggerPhrase = speech.split(' ')[0] === PHRASES.TRIGGER;

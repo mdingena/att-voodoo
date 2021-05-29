@@ -19,10 +19,14 @@ export const ServersScreen = () => {
   const handleUpdateServers = (_: Event, { playerJoined, servers: updatedServers }: ServersUpdate) => {
     setServers(updatedServers);
 
-    if (playerJoined) setAppStage(AppStage.Connected);
+    if (playerJoined) {
+      ipcRenderer.invoke('server-connected');
+      setAppStage(AppStage.Connected);
+    }
   };
 
   useEffect(() => {
+    ipcRenderer.invoke('server-disconnected');
     ipcRenderer.on('update-servers', handleUpdateServers);
 
     return () => {
