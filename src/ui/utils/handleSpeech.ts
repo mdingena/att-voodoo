@@ -1,3 +1,4 @@
+import { BrowserWindow } from 'electron';
 import { voodooDelete } from './voodooDelete';
 import { voodooGet } from './voodooGet';
 import { voodooPost } from './voodooPost';
@@ -6,12 +7,11 @@ import config from '../config';
 
 type Incantation = [string, number];
 
-type PreparedSpells = [
-  {
-    verbalTrigger: string;
-    incantations: Incantation[];
-  }
-];
+type PreparedSpell = {
+  name: string;
+  verbalTrigger: string;
+  incantations: Incantation[];
+};
 
 const MODES = {
   AWAKE: 'AWAKE',
@@ -32,10 +32,15 @@ const PHRASES = {
 
 let mode = MODES.SUPPRESSED;
 let incantations: string[] = [];
-let preparedSpells: PreparedSpells[] = [];
+let preparedSpells: PreparedSpell[] = [];
 
-export const handleSpeech = async (speech: string, accessToken: string, logger: (...args: any) => void) => {
-  logger(`Voodoo recognised:`, speech);
+export const handleSpeech = async (
+  ui: BrowserWindow | null,
+  speech: string,
+  accessToken: string,
+  logger: (...args: any) => void
+) => {
+  logger('Recognised speech:', speech);
   const isAwakenPhrase = speech === PHRASES.AWAKEN;
   const isTriggerPhrase = speech.split(' ')[0] === PHRASES.TRIGGER;
 
@@ -43,6 +48,7 @@ export const handleSpeech = async (speech: string, accessToken: string, logger: 
     case MODES.SUPPRESSED:
       if (isAwakenPhrase) {
         mode = MODES.AWAKE;
+        ui?.webContents.send('voodoo-awake');
         logger({ mode });
       }
       break;
@@ -51,11 +57,13 @@ export const handleSpeech = async (speech: string, accessToken: string, logger: 
       switch (speech) {
         case PHRASES.SUPPRESS:
           mode = MODES.SUPPRESSED;
+          ui?.webContents.send('voodoo-suppressed');
           logger({ mode });
           break;
 
         case PHRASES.INCANTATION.START:
           mode = MODES.INCANTING;
+          ui?.webContents.send('voodoo-incantation-started');
           logger({ mode });
           break;
 
@@ -66,8 +74,8 @@ export const handleSpeech = async (speech: string, accessToken: string, logger: 
 
             if (response.ok) {
               preparedSpells = response.result;
+              ui?.webContents.send('voodoo-prepared-spell-triggered', preparedSpells);
               logger({ preparedSpells });
-              // @todo show preparedSpells in UI
             } else {
               logger(response.error);
             }
@@ -80,18 +88,21 @@ export const handleSpeech = async (speech: string, accessToken: string, logger: 
       switch (speech) {
         case PHRASES.SUPPRESS:
           mode = MODES.SUPPRESSED;
+          ui?.webContents.send('voodoo-suppressed');
           logger({ mode });
           break;
 
         case PHRASES.INCANTATION.ABORT:
           mode = MODES.AWAKE;
+          ui?.webContents.send('voodoo-awake');
           logger({ mode });
+
           const abortResponse = await voodooDelete(accessToken, config.API_ENDPOINTS.INCANTATION);
 
           if (abortResponse.ok) {
             incantations = abortResponse.result;
+            ui?.webContents.send('voodoo-incantation-aborted', incantations);
             logger({ incantations });
-            // @todo show incantations in UI
           } else {
             logger(abortResponse.error);
           }
@@ -99,14 +110,16 @@ export const handleSpeech = async (speech: string, accessToken: string, logger: 
 
         case PHRASES.INCANTATION.CONFIRM:
           mode = MODES.AWAKE;
+          ui?.webContents.send('voodoo-awake');
           logger({ mode });
+
           const confirmResponse = await voodooGet(accessToken, config.API_ENDPOINTS.SEAL);
 
           if (confirmResponse.ok) {
             incantations = confirmResponse.result.incantations;
             preparedSpells = confirmResponse.result.preparedSpells;
+            ui?.webContents.send('voodoo-incantation-confirmed', incantations, preparedSpells);
             logger({ incantations, preparedSpells });
-            // @todo show incantations & preparedSpells in UI
           } else {
             logger(confirmResponse.error);
           }
@@ -122,12 +135,14 @@ export const handleSpeech = async (speech: string, accessToken: string, logger: 
             if (response.ok) {
               if (response.result.incantations.length === 4) {
                 mode = MODES.AWAKE;
+                ui?.webContents.send('voodoo-awake');
                 logger({ mode });
               }
+
               incantations = response.result.incantations;
               preparedSpells = response.result.preparedSpells;
+              ui?.webContents.send('voodoo-incantation', incantations, preparedSpells);
               logger({ incantations, preparedSpells });
-              // @todo show incantations & preparedSpells in UI
             } else {
               logger(response.error);
             }
