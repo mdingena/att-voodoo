@@ -7,12 +7,18 @@ import config from '../config';
 
 type HeartbeatDelay = { current: number };
 
-let heartbeatHandle: NodeJS.Timer | null = null;
+let heartbeatHandle: NodeJS.Timeout | null = null;
 
-export const scheduleHeartbeat = (accessToken: string, delay: HeartbeatDelay) => {
+export const scheduleHeartbeat = (ui: BrowserWindow | null, accessToken: string, delay: HeartbeatDelay) => {
   return setTimeout(() => {
-    heartbeat(accessToken);
-    heartbeatHandle = scheduleHeartbeat(accessToken, delay);
+    /**
+     * The heartbeat checks in which server you are playing.
+     * It also get a cached copy of the server list with number of players.
+     * This copy is refreshed server-side independently of these heartbeats.
+     */
+
+    heartbeat(ui, accessToken);
+    heartbeatHandle = scheduleHeartbeat(ui, accessToken, delay);
   }, delay.current);
 };
 
@@ -24,7 +30,7 @@ export const setupIPC = (ui: BrowserWindow | null, speech: ChildProcess | null, 
       if (heartbeatHandle === null) {
         startListening(ui, speech, accessToken, logger);
 
-        heartbeatHandle = scheduleHeartbeat(accessToken, config.INTERVALS);
+        heartbeatHandle = scheduleHeartbeat(ui, accessToken, config.INTERVALS);
       }
     }
 
