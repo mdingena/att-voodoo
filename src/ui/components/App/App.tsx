@@ -13,10 +13,6 @@ ipcRenderer.on('speech-error', (_, reason, error) => {
   console.log(reason, error);
 });
 
-ipcRenderer.on('speech-recognised', (_, recognisedSpeech) => {
-  console.log({ recognisedSpeech });
-});
-
 export const App = () => (
   <Providers>
     <div className={styles.root}>
