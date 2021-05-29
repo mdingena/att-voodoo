@@ -2,7 +2,7 @@ import { ipcRenderer } from 'electron';
 import { useRef, useState, useEffect } from 'react';
 import { useAtom } from 'jotai';
 import { useHistory } from 'react-router-dom';
-import { appStageAtom, AppStage } from '@/atoms';
+import { appStageAtom, AppStage, activeServerAtom, serversAtom } from '@/atoms';
 import { useAuth } from '@/components/AltaAuth';
 import { Authenticating, AuthenticatingStage } from '@/components/Authenticating';
 
@@ -14,6 +14,8 @@ export const AuthCallbackRoute = () => {
   const [accountId, setAccountId] = useState<number | null>(null);
   const [fatalError, setFatalError] = useState<string | null>(null);
   const [appStage, setAppStage] = useAtom(appStageAtom);
+  const [activeServer, setActiveServer] = useAtom(activeServerAtom);
+  const [servers, setServers] = useAtom(serversAtom);
 
   /* Call Alta auth library. */
   useEffect(() => {
@@ -46,6 +48,8 @@ export const AuthCallbackRoute = () => {
       })
       .then(response => {
         if (response.ok) {
+          setActiveServer(response.result.playerJoined);
+          setServers(response.result.servers);
           setAccountId(response.result.accountId);
         } else {
           console.error(response.error);
