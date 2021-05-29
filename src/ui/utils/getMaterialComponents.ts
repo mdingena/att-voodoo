@@ -173,12 +173,6 @@ export const getMaterialComponents = (speech: string): number[] => {
     case 'embers':
       return [Coal];
 
-    case 'gems':
-      return [CrystalGemBlue, CrystalShardBlue];
-
-    case 'gotera':
-      return [GoteraSeedlingOrb, RedwoodGoteraCore];
-
     case 'fungi':
       return [
         MushroomBrownFullBurnt,
@@ -192,8 +186,14 @@ export const getMaterialComponents = (speech: string): number[] => {
         MushroomRedHalfBurnt
       ];
 
+    case 'gems':
+      return [CrystalGemBlue, CrystalShardBlue];
+
     case 'glass':
-      return [PotionMedium];
+      return [PotionMedium, SandstoneStone];
+
+    case 'gotera':
+      return [GoteraSeedlingOrb, RedwoodGoteraCore];
 
     case 'produce':
       return [
