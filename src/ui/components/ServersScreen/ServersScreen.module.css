@@ -1,0 +1,41 @@
+.root {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding: 32px;
+}
+
+.message,
+.instructions {
+  text-align: center;
+}
+
+.servers {
+  width: 100%;
+  font-size: 1rem;
+  vertical-align: top;
+  text-shadow: var(--text-shadow-small);
+}
+
+.servers thead {
+  background: var(--colour-green-400);
+}
+
+.servers th {
+  padding: 0.5rem;
+  color: var(--font-colour-primary);
+  text-shadow: none;
+  font-weight: normal;
+}
+
+.servers td {
+  padding: 0.5rem;
+  vertical-align: top;
+}
+
+.servers .offline,
+.noServers {
+  color: var(--font-colour-tertiary);
+}

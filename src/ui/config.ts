@@ -13,9 +13,9 @@ const development = {
     TRIGGER: 'http://localhost:3000/trigger'
   },
   INTERVALS: {
-    current: 60000,
-    SERVER_WAIT: 10000,
-    HEARTBEAT: 20000
+    current: 15000,
+    SERVER_WAIT: 15000,
+    HEARTBEAT: 60000
   }
 };
 
@@ -31,7 +31,7 @@ const production = {
     TRIGGER: 'https://att-voodoo-server.herokuapp.com/trigger'
   },
   INTERVALS: {
-    current: 60000,
+    current: 15000,
     SERVER_WAIT: 15000,
     HEARTBEAT: 60000
   }
