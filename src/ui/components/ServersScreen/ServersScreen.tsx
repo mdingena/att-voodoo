@@ -31,13 +31,15 @@ export const ServersScreen = () => {
   }, []);
 
   useEffect(() => {
-    clearInterval(intervalHandle);
-
     setTimeLeft(t => Math.min(15, t + 15));
 
     intervalHandle = window.setInterval(() => {
       setTimeLeft(t => (t > 0 ? t - 1 : 0));
     }, 980);
+
+    return () => {
+      clearInterval(intervalHandle);
+    };
   }, [servers]);
 
   const timer = timeLeft ? `${timeLeft}s` : <>refreshing&hellip;</>;
