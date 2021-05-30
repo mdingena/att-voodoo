@@ -1,4 +1,5 @@
 export { activeServerAtom } from './activeServerAtom';
 export { appStageAtom, AppStage } from './appStageAtom';
+export { incantationsAtom, Incantation } from './incantationsAtom';
 export { loadingMessageAtom } from './loadingMessageAtom';
 export { serversAtom, Servers } from './serversAtom';
