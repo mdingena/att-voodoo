@@ -145,7 +145,7 @@ export const handleSpeech = async (
             ]);
 
             if (response.ok) {
-              if (response.result.incantations.length === 4) {
+              if (response.result.incantations.length === 0) {
                 mode = MODES.AWAKE;
                 ui?.webContents.send('voodoo-awake');
                 logger({ mode });
