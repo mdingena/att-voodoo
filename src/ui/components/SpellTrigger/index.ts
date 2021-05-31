@@ -1,0 +1,1 @@
+export { SpellTrigger } from './SpellTrigger';

@@ -1,0 +1,20 @@
+.root {
+  position: relative;
+  height: 3rem;
+  padding: 0 32px;
+  font-size: 1rem;
+  text-shadow: var(--text-shadow-small);
+}
+
+.trigger {
+  color: var(--colour-green-600);
+}
+
+.root::before {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  content: '>';
+  font-size: 2rem;
+  color: var(--colour-green-400);
+}
