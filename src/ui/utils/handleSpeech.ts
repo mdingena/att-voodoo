@@ -75,7 +75,7 @@ export const handleSpeech = async (
 
         case PHRASES.INCANTATION.START:
           mode = MODES.INCANTING;
-          ui?.webContents.send('voodoo-incantation-started');
+          ui?.webContents.send('voodoo-incantating');
           logger({ mode });
           break;
 
