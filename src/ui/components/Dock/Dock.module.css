@@ -1,0 +1,66 @@
+.root {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1rem;
+  text-shadow: var(--text-shadow-small);
+}
+
+.disabled,
+.empty,
+.active,
+.filled {
+  composes: root;
+}
+
+.dock {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 0 2rem;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50px;
+}
+
+.disabled .dock {
+  border-color: var(--colour-green-400);
+  box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--colour-green-400);
+  color: var(--colour-green-400);
+}
+
+.empty .dock {
+  border-color: var(--colour-green-500);
+  box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--colour-green-500);
+  color: var(--colour-green-500);
+}
+
+.active .dock {
+  border-color: var(--colour-green-700);
+  box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--colour-green-700);
+  color: var(--colour-green-700);
+}
+
+.filled .dock {
+  border-color: var(--colour-green-900);
+  box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--colour-green-900);
+  color: var(--colour-green-900);
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.disabled .description {
+  color: var(--colour-green-400);
+}
+
+.active .description {
+  color: var(--colour-green-700);
+}
+
+.filled .description {
+  color: var(--colour-green-900);
+}
