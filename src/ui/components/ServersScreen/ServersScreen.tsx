@@ -1,7 +1,7 @@
 import { ipcRenderer } from 'electron';
 import { useState, useEffect } from 'react';
 import { useAtom } from 'jotai';
-import { appStageAtom, AppStage, serversAtom, Servers } from '@/atoms';
+import { appStageAtom, AppStage, serversAtom, Servers, speechModeAtom, SpeechMode } from '@/atoms';
 import styles from './ServersScreen.module.css';
 
 export type ServersUpdate = {
@@ -15,6 +15,7 @@ export const ServersScreen = () => {
   const [timeLeft, setTimeLeft] = useState(-3);
   const [servers, setServers] = useAtom(serversAtom);
   const [appStage, setAppStage] = useAtom(appStageAtom);
+  const [speechMode, setSpeechMode] = useAtom(speechModeAtom);
 
   const handleUpdateServers = (_: Event, { playerJoined, servers: updatedServers }: ServersUpdate) => {
     setServers(updatedServers);
@@ -25,12 +26,18 @@ export const ServersScreen = () => {
     }
   };
 
+  const handleVoodooSuppressed = () => {
+    setSpeechMode(SpeechMode.Suppressed);
+  };
+
   useEffect(() => {
     ipcRenderer.invoke('server-disconnected');
     ipcRenderer.on('update-servers', handleUpdateServers);
+    ipcRenderer.on('voodoo-suppressed', handleVoodooSuppressed);
 
     return () => {
       ipcRenderer.removeListener('update-server', handleUpdateServers);
+      ipcRenderer.removeListener('voodoo-suppressed', handleVoodooSuppressed);
     };
   }, []);
 

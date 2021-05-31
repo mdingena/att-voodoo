@@ -50,7 +50,11 @@ export const handleSpeech = async (
   accessToken: string,
   logger: (...args: any) => void
 ) => {
-  if (!hasServerConnection) return;
+  if (!hasServerConnection) {
+    mode = MODES.SUPPRESSED;
+    ui?.webContents.send('voodoo-suppressed');
+    return;
+  }
 
   logger('Recognised speech:', speech);
   const isAwakenPhrase = speech === PHRASES.AWAKEN;
