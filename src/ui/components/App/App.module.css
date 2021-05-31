@@ -3,6 +3,8 @@
   grid-template-columns: 1fr;
   justify-content: flex-start;
   align-items: center;
+  width: 100vw;
   min-height: 100%;
   box-shadow: inset 50px 0 50px -50px var(--colour-green-100), inset -50px 0 50px -50px var(--colour-green-100);
+  overflow-x: hidden;
 }
