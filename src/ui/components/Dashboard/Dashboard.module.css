@@ -1,0 +1,54 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content min-content 1fr;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.header {
+  line-height: 2;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: inset 50px 0 50px -50px var(--colour-green-200), inset -50px 0 50px -50px var(--colour-green-200),
+    var(--text-shadow-small);
+}
+
+.mode {
+  composes: header;
+  margin-bottom: 16px;
+}
+
+.suppressed,
+.awake {
+  composes: mode;
+  background: var(--colour-green-400);
+  color: var(--colour-green-700);
+}
+
+.incanting {
+  composes: mode;
+  background: var(--colour-green-600);
+  color: var(--colour-green-900);
+}
+
+.incantations {
+  display: grid;
+  gap: 8px;
+  padding: 0 32px;
+}
+
+.spellsHeader {
+  composes: awake;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.spells {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  gap: 8px;
+  height: 100%;
+  overflow-y: auto;
+}
