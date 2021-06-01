@@ -1,6 +1,7 @@
 import { useCallback, useEffect } from 'react';
 import { ipcRenderer } from 'electron';
 import { useAtom } from 'jotai';
+import { useAtomCallback } from 'jotai/utils';
 import {
   speechModeAtom,
   SpeechMode,
@@ -16,6 +17,31 @@ import { ServersUpdate } from '@/components/ServersScreen';
 import { Dock } from '@/components/Dock';
 import { SpellTrigger } from '@/components/SpellTrigger';
 import styles from './Dashboard.module.css';
+import chimeAudioFile from './chime.wav';
+import pingAudioFile from './ping.wav';
+import dockAudioFile from './dock.wav';
+import castAudioFile from './cast.wav';
+import droneAudioFile from './drone.wav';
+
+const VOLUME_EXPONENT = 3; /* Linear volume adjustments are evil! */
+
+const chimeAudio = new Audio(chimeAudioFile);
+chimeAudio.volume = Math.pow(0.5, VOLUME_EXPONENT);
+
+const pingAudio = new Audio(pingAudioFile);
+pingAudio.volume = Math.pow(0.5, VOLUME_EXPONENT);
+
+const dockAudio = new Audio(dockAudioFile);
+dockAudio.volume = Math.pow(0.5, VOLUME_EXPONENT);
+dockAudio.playbackRate = 1.25;
+
+const castAudio = new Audio(castAudioFile);
+castAudio.volume = Math.pow(0.4, VOLUME_EXPONENT);
+castAudio.playbackRate = 2.5;
+
+const droneAudio = new Audio(droneAudioFile);
+droneAudio.volume = Math.pow(0.5, VOLUME_EXPONENT);
+droneAudio.playbackRate = 1.5;
 
 enum Mode {
   Suppressed = SpeechMode.Suppressed,
@@ -25,46 +51,68 @@ enum Mode {
 
 export const Dashboard = () => {
   const [speechMode, setSpeechMode] = useAtom(speechModeAtom);
-  const [activeServer] = useAtom(activeServerAtom);
+  const [activeServer, setActiveServer] = useAtom(activeServerAtom);
   const [appStage, setAppStage] = useAtom(appStageAtom);
   const [incantations, setIncantations] = useAtom(incantationsAtom);
   const [preparedSpells, setPreparedSpells] = useAtom(preparedSpellsAtom);
 
-  const handleUpdateServers = useCallback(
-    (_: Event, { playerJoined }: ServersUpdate) => {
-      if (playerJoined !== activeServer) setAppStage(AppStage.WaitingForServer);
-    },
-    [activeServer]
-  );
+  // @todo test this
+  const handleUpdateServers = (_: Event, { playerJoined }: ServersUpdate) => {
+    setActiveServer(playerJoined);
+  };
 
   const handleVoodooSuppressed = () => {
     setSpeechMode(SpeechMode.Suppressed);
+    droneAudio.currentTime = 0;
+    droneAudio.play();
   };
 
-  const handleVoodooAwake = () => {
-    setSpeechMode(SpeechMode.Awake);
-  };
+  const handleVoodooAwake = useAtomCallback(
+    useCallback(get => {
+      const speechMode = get(speechModeAtom);
+      if (speechMode === SpeechMode.Suppressed) {
+        chimeAudio.currentTime = 0;
+        chimeAudio.play();
+      }
+      setSpeechMode(SpeechMode.Awake);
+    }, [])
+  );
 
   const handleVoodooIncanting = () => {
     setSpeechMode(SpeechMode.Incanting);
+    pingAudio.currentTime = 0;
+    pingAudio.play();
   };
 
   const handleVoodooPreparedSpellTriggered = (_: Event, preparedSpells: PreparedSpell[]) => {
     setPreparedSpells(preparedSpells);
+    castAudio.currentTime = 0;
+    castAudio.play();
   };
 
   const handleVoodooIncantationAborted = (_: Event, incantations: Incantation[]) => {
     setIncantations(incantations);
+    droneAudio.currentTime = 0;
+    droneAudio.play();
   };
 
   const handleVoodooIncantationConfirmed = (_: Event, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
     setIncantations(incantations);
     setPreparedSpells(preparedSpells);
+    castAudio.currentTime = 0;
+    castAudio.play();
   };
 
   const handleVoodooIncantation = (_: Event, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
     setIncantations(incantations);
     setPreparedSpells(preparedSpells);
+    if (incantations.length === 0) {
+      castAudio.currentTime = 0;
+      castAudio.play();
+    } else {
+      dockAudio.currentTime = 0;
+      dockAudio.play();
+    }
   };
 
   useEffect(() => {
@@ -93,6 +141,10 @@ export const Dashboard = () => {
       ipcRenderer.removeListener('voodoo-incantation', handleVoodooIncantation);
     };
   }, []);
+
+  useEffect(() => {
+    setAppStage(AppStage.WaitingForServer);
+  }, [activeServer]);
 
   const modeStyle = SpeechMode[speechMode].toLowerCase();
 
