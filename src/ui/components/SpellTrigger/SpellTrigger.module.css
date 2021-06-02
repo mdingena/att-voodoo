@@ -7,7 +7,9 @@
 }
 
 .trigger {
+  transition: opacity 1500ms var(--timing-function);
   color: var(--colour-green-600);
+  opacity: 1;
 }
 
 .root::before {

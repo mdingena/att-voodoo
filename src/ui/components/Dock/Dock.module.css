@@ -3,6 +3,7 @@
   grid-template-columns: min-content 1fr;
   gap: 1rem;
   text-shadow: var(--text-shadow-small);
+  --duration: 1500ms;
 }
 
 .disabled,
@@ -21,6 +22,10 @@
   border-width: 2px;
   border-style: solid;
   border-radius: 50px;
+  transition-property: border box-shadow color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+  will-change: border box-shadow color;
 }
 
 .disabled .dock {
@@ -30,37 +35,49 @@
 }
 
 .empty .dock {
-  border-color: var(--colour-green-500);
-  box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--colour-green-500);
-  color: var(--colour-green-500);
+  border-color: var(--font-colour-tertiary);
+  box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--font-colour-tertiary);
+  color: var(--font-colour-tertiary);
 }
 
 .active .dock {
-  border-color: var(--colour-green-700);
-  box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--colour-green-700);
-  color: var(--colour-green-700);
+  border-color: var(--font-colour-secondary);
+  box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--font-colour-secondary);
+  color: var(--font-colour-secondary);
 }
 
 .filled .dock {
-  border-color: var(--colour-green-900);
-  box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--colour-green-900);
-  color: var(--colour-green-900);
+  border-color: var(--font-colour-primary);
+  box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--font-colour-primary);
+  color: var(--font-colour-primary);
 }
 
 .description {
   display: flex;
   align-items: center;
   font-size: 1rem;
+  transition-property: opacity color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+  will-change: opacity color;
 }
 
 .disabled .description {
   color: var(--colour-green-400);
+  opacity: 1;
+}
+
+.empty .description {
+  color: var(--font-colour-tertiary);
+  opacity: 0;
 }
 
 .active .description {
-  color: var(--colour-green-700);
+  color: var(--font-colour-secondary);
+  opacity: 1;
 }
 
 .filled .description {
-  color: var(--colour-green-900);
+  color: var(--font-colour-primary);
+  opacity: 1;
 }

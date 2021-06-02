@@ -23,6 +23,8 @@
 
   --text-shadow-normal: 0 3px 2px var(--colour-green-100);
   --text-shadow-small: 0 2px 2px var(--colour-green-100);
+
+  --timing-function: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 *,

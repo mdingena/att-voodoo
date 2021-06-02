@@ -10,12 +10,14 @@ export const SpellTrigger = ({ spell }: SpellTriggerProps) => {
   const [speechMode] = useAtom(speechModeAtom);
 
   const { name, verbalTrigger } = spell;
-  const trigger = speechMode === SpeechMode.Awake ? `Cast with “EVOKE ${verbalTrigger.toUpperCase()}”` : null;
+  const triggerStyle = { opacity: Number(speechMode === SpeechMode.Awake) };
 
   return (
     <div className={styles.root}>
       <div className={styles.name}>{name}</div>
-      <div className={styles.trigger}>{trigger}</div>
+      <div className={styles.trigger} style={triggerStyle}>
+        Cast with “EVOKE {verbalTrigger.toUpperCase()}”
+      </div>
     </div>
   );
 };

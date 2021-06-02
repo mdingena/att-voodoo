@@ -7,27 +7,26 @@
 }
 
 .header {
+  margin-bottom: 16px;
   line-height: 2;
   text-align: center;
   text-transform: uppercase;
   box-shadow: inset 50px 0 50px -50px var(--colour-green-200), inset -50px 0 50px -50px var(--colour-green-200),
     var(--text-shadow-small);
-}
-
-.mode {
-  composes: header;
-  margin-bottom: 16px;
+  transition-property: background-color color;
+  transition-duration: 300ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .suppressed,
 .awake {
-  composes: mode;
+  composes: header;
   background: var(--colour-green-400);
   color: var(--colour-green-700);
 }
 
 .incanting {
-  composes: mode;
+  composes: header;
   background: var(--colour-green-600);
   color: var(--colour-green-900);
 }
