@@ -3,21 +3,21 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Acid Bolt ⚠️](#acid-bolt-)
-- [Conjure Teleportation Potion ⚠️](#conjure-teleportation-potion-)
-- [Conjure Water ✔️](#conjure-water-)
-- [Craft Flask ✔️](#craft-flask-)
-- [Flask of Endless Teleportation ⚠️](#flask-of-endless-teleportation-)
-- [Flask of Endless Water ⚠️](#flask-of-endless-water-)
-- [Frost Bolt ⚠️](#frost-bolt-)
-- [Repair Copper Weapon ⚠️](#repair-copper-weapon-)
-- [Repair Valyan Weapon ⚠️](#repair-valyan-weapon-)
+- [Acid Bolt](#acid-bolt)
+- [Conjure Teleportation Potion](#conjure-teleportation-potion)
+- [Conjure Water](#conjure-water)
+- [Craft Flask](#craft-flask)
+- [Flask of Endless Teleportation](#flask-of-endless-teleportation)
+- [Flask of Endless Water](#flask-of-endless-water)
+- [Frost Bolt](#frost-bolt)
+- [Repair Copper Weapon](#repair-copper-weapon)
+- [Repair Valyan Weapon](#repair-valyan-weapon)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ---
 
-# Acid Bolt ⚠️
+# Acid Bolt
 
 Launches a large ball of acid from the palm of your hand.
 
@@ -27,7 +27,7 @@ Launches a large ball of acid from the palm of your hand.
 
 ⚠️ **Incantations unknown!**
 
-# Conjure Teleportation Potion ⚠️
+# Conjure Teleportation Potion
 
 Conjures a single serving of teleportation potion inside of an empty flask.
 
@@ -37,7 +37,7 @@ Conjures a single serving of teleportation potion inside of an empty flask.
 
 ⚠️ **Incantations unknown!**
 
-# Conjure Water ✔️
+# Conjure Water
 
 Conjures a single serving of water inside of an empty flask.
 
@@ -46,7 +46,7 @@ Conjures a single serving of water inside of an empty flask.
 | Conjuration | Instant | Main hand  | None         |
 
 <details>
-<summary>Incantations</b></summary>
+<summary>Incantations ✔️</summary>
 
 Discovered by **Ethyn Wyrmbane**.
 
@@ -57,7 +57,7 @@ Discovered by **Ethyn Wyrmbane**.
 
 </details>
 
-# Craft Flask ✔️
+# Craft Flask
 
 Conjures a small glass container used to hold various liquids.
 
@@ -66,7 +66,7 @@ Conjures a small glass container used to hold various liquids.
 | Conjuration | Instant | Main hand  | None         |
 
 <details>
-<summary>Incantations</b></summary>
+<summary>Incantations ✔️</summary>
 
 Discovered by **Ethyn Wyrmbane**.
 
@@ -77,7 +77,7 @@ Discovered by **Ethyn Wyrmbane**.
 
 </details>
 
-# Flask of Endless Teleportation ⚠️
+# Flask of Endless Teleportation
 
 Conjures additional servings of teleportation potion inside of a flask already containing teleportation potion.
 
@@ -87,7 +87,7 @@ Conjures additional servings of teleportation potion inside of a flask already c
 
 ⚠️ **Incantations unknown!**
 
-# Flask of Endless Water ⚠️
+# Flask of Endless Water
 
 Conjures additional servings of water inside of a flask already containing water.
 
@@ -97,7 +97,7 @@ Conjures additional servings of water inside of a flask already containing water
 
 ⚠️ **Incantations unknown!**
 
-# Frost Bolt ⚠️
+# Frost Bolt
 
 Launches a large ball of icy crystals from the palm of your hand.
 
@@ -107,7 +107,7 @@ Launches a large ball of icy crystals from the palm of your hand.
 
 ⚠️ **Incantations unknown!**
 
-# Repair Copper Weapon ⚠️
+# Repair Copper Weapon
 
 Restores some of the integrity of all copper parts in a weapon.
 
@@ -117,7 +117,7 @@ Restores some of the integrity of all copper parts in a weapon.
 
 ⚠️ **Incantations unknown!**
 
-# Repair Valyan Weapon ⚠️
+# Repair Valyan Weapon
 
 Restores some of the integrity of all valyan parts in a weapon.
 
