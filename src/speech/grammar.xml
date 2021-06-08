@@ -35,6 +35,7 @@
   <rule id="property">
     <one-of>
       <item> aether </item>
+      <item> bonds </item>
       <item> essence </item>
       <item> extract </item>
       <item> fluid </item>
@@ -62,6 +63,7 @@
       <item> salt </item>
       <item> spriggull </item>
       <item> turabada </item>
+      <item> weapon </item>
       <item> wyrm </item>
     </one-of>
   </rule>
