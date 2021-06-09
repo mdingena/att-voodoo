@@ -137,7 +137,7 @@ export const Dashboard = () => {
   }, []);
 
   useEffect(() => {
-    setAppStage(AppStage.WaitingForServer);
+    if (activeServer === null) setAppStage(AppStage.WaitingForServer);
   }, [activeServer]);
 
   const modeStyle = SpeechMode[speechMode].toLowerCase();
