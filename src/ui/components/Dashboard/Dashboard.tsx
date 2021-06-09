@@ -116,12 +116,6 @@ export const Dashboard = () => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      ipcRenderer.invoke('session', {
-        accountId: 12345,
-        accessToken: '12345'
-      });
-    }, 6000);
     ipcRenderer.on('update-servers', handleUpdateServers);
     ipcRenderer.on('voodoo-suppressed', handleVoodooSuppressed);
     ipcRenderer.on('voodoo-awake', handleVoodooAwake);
@@ -143,7 +137,7 @@ export const Dashboard = () => {
   }, []);
 
   useEffect(() => {
-    setAppStage(AppStage.WaitingForServer);
+    if (activeServer === null) setAppStage(AppStage.WaitingForServer);
   }, [activeServer]);
 
   const modeStyle = SpeechMode[speechMode].toLowerCase();
