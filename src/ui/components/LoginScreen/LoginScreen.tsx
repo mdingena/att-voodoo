@@ -49,9 +49,7 @@ export const LoginScreen = () => {
         </div>
       )}
       <div className={styles.footer}>
-        <div className={styles.version}>
-          v{packageJson.version} ({process.env.REACT_APP_BUILD}) by&nbsp;Ethyn&nbsp;Wyrmbane
-        </div>
+        <div className={styles.version}>v{packageJson.version} by&nbsp;Ethyn&nbsp;Wyrmbane</div>
         <div>
           Crystal art by{' '}
           <a className={styles.link} href='https://twitter.com/ubizozo' title="UbiZoZo's Twitter">
