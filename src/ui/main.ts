@@ -1,5 +1,5 @@
 import { ChildProcess } from 'child_process';
-import { app, shell, BrowserWindow } from 'electron';
+import { app, shell, BrowserWindow, Menu } from 'electron';
 import isDev from 'electron-is-dev';
 import { config as configEnv } from 'dotenv';
 import {
@@ -44,6 +44,12 @@ const initialiseApp = async (): Promise<void> => {
     speech?.kill();
     speech = null;
   };
+
+  /* Prevent window refesh. */
+  if (!isDev) {
+    if (process.platform === 'win32') ui.removeMenu(); // Windows
+    if (process.platform === 'darwin') Menu.setApplicationMenu(Menu.buildFromTemplate([]));
+  }
 
   /* On application quit, terminate processes. */
   ui.on('closed', terminateProcesses);

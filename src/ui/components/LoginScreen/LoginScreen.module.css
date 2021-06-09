@@ -1,10 +1,34 @@
-.center {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.root {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.logo {
+  align-self: flex-end;
+  z-index: -1;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.login {
+  display: flex;
+  flex-flow: column nowrap;
+  align-self: flex-start;
+  align-items: center;
+  animation: reveal 2s ease-in-out;
 }
 
 .title {
@@ -15,4 +39,31 @@
 .subtitle {
   margin-bottom: 5rem;
   text-align: center;
+}
+
+.loading {
+  align-self: flex-start;
+  margin-top: 3rem;
+  text-align: center;
+  transition: opacity 2s ease-out;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--font-colour-tertiary);
+  text-shadow: var(--text-shadow-small);
+}
+
+.link {
+  color: var(--font-colour-tertiary);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--font-colour-secondary);
 }

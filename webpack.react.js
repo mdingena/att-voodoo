@@ -36,6 +36,17 @@ module.exports = {
         ]
       },
       {
+        test: /\.png$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: './images/[hash].[ext]'
+            }
+          }
+        ]
+      },
+      {
         test: /\.wav$/,
         use: [
           {
