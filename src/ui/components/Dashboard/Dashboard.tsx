@@ -63,16 +63,16 @@ export const Dashboard = () => {
 
   const handleVoodooSuppressed = () => {
     setSpeechMode(SpeechMode.Suppressed);
-    droneAudio.currentTime = 0;
-    droneAudio.play();
+    pingAudio.currentTime = 0;
+    pingAudio.play();
   };
 
   const handleVoodooAwake = useAtomCallback(
     useCallback(get => {
       const speechMode = get(speechModeAtom);
       if (speechMode === SpeechMode.Suppressed) {
-        chimeAudio.currentTime = 0;
-        chimeAudio.play();
+        pingAudio.currentTime = 0;
+        pingAudio.play();
       }
       setSpeechMode(SpeechMode.Awake);
     }, [])
@@ -80,8 +80,8 @@ export const Dashboard = () => {
 
   const handleVoodooIncanting = () => {
     setSpeechMode(SpeechMode.Incanting);
-    pingAudio.currentTime = 0;
-    pingAudio.play();
+    chimeAudio.currentTime = 0;
+    chimeAudio.play();
   };
 
   const handleVoodooPreparedSpellTriggered = (_: Event, preparedSpells: PreparedSpell[]) => {
