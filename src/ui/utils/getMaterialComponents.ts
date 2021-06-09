@@ -1,119 +1,163 @@
 import { Prefab } from '@/prefabs';
 
-export const getMaterialComponents = (speech: string): number[] => {
+export const getMaterialComponents = (speech: string): string[] => {
   const source = speech.split(' ').reverse()[0];
 
   switch (source) {
     case 'babu':
       return [
-        Prefab.BabuLegBone,
-        Prefab.BabuLegFullBurnt,
-        Prefab.BabuLegHalfBurnt,
-        Prefab.SoftFabricMediumRoll,
-        Prefab.SoftFabricMediumStrips
+        'babu leg bone',
+        'burnt babu leg',
+        'burnt babu chop',
+        'cooked babu leg',
+        'cooked babu chop',
+        'uncooked babu leg',
+        'uncooked babu chop'
       ];
 
     case 'dais':
       return [
-        Prefab.DaisMeatFullBurnt,
-        Prefab.DaisMeatHalfBurnt,
-        Prefab.SoftFabricMediumRoll,
-        Prefab.SoftFabricMediumStrips
+        'burnt dais leg',
+        'burnt dais chop',
+        'cooked dais leg',
+        'cooked dais chop',
+        'uncooked dais leg',
+        'uncooked dais chop',
+        'tan leather strips',
+        'tan leather roll',
+        'large tan leather roll',
+        'brown leather strips',
+        'brown leather roll',
+        'large brown leather roll'
       ];
 
     case 'earth':
       return [
-        Prefab.CarsiIngot,
-        Prefab.CopperIngot,
-        Prefab.EvinonSteelIngot,
-        Prefab.GoldIngot,
-        Prefab.IronIngot,
-        Prefab.OrchiIngot,
-        Prefab.RedIronIngot,
-        Prefab.SilverIngot
+        'copper ingot',
+        'gold ingot',
+        'iron ingot',
+        'silver ingot',
+        'mythril ingot',
+        'red iron ingot',
+        'electrum ingot',
+        'palladium ingot',
+        'viridium ingot',
+        'valyan ingot'
       ];
 
     case 'embers':
-      return [Prefab.Coal];
+      return ['coal'];
 
     case 'fungi':
       return [
-        Prefab.MushroomBrownFullBurnt,
-        Prefab.MushroomBrownHalfBurnt,
-        Prefab.MushroomCaveLargeHalfBurnt,
-        Prefab.MushroomCaveSmallFullBurnt,
-        Prefab.MushroomCaveSmallHalfBurnt,
-        Prefab.MushroomGlowingFullBurnt,
-        Prefab.MushroomGlowingHalfBurnt,
-        Prefab.MushroomRedFullBurnt,
-        Prefab.MushroomRedHalfBurnt
+        'burnt brown mushroom',
+        'cooked brown mushroom',
+        'ripe brown mushroom',
+        'burnt cave mushroom',
+        'cooked cave mushroom',
+        'ripe cave mushroom',
+        'burnt glowing mushroom',
+        'cooked glowing mushroom',
+        'ripe glowing mushroom',
+        'burnt red mushroom',
+        'cooked red mushroom',
+        'ripe red mushroom'
       ];
 
     case 'gems':
-      return [Prefab.CrystalGemBlue, Prefab.CrystalShardBlue];
+      return ['blue crystal gem', 'blue crystal shard'];
 
     case 'glass':
-      return [Prefab.PotionMedium, Prefab.SandstoneStone];
+      return ['sandstone', 'empty flask', 'flask containing water', 'flask containing teleportation potion'];
 
     case 'gotera':
-      return [Prefab.GoteraSeedlingOrb, Prefab.RedwoodGoteraCore];
+      return ['gotera seedling', 'redwood gotera core'];
 
     case 'produce':
       return [
-        Prefab.AppleCoreBurnt,
-        Prefab.AppleFullBurnt,
-        Prefab.AppleHalfBurnt,
-        Prefab.BlueberryFullBurnt,
-        Prefab.CarrotFullBurnt,
-        Prefab.CarrotHalfBurnt,
-        Prefab.CarrotLeaves,
-        Prefab.EggplantFullBurnt,
-        Prefab.EggplantHalfBurnt,
-        Prefab.GarlicFullBurnt,
-        Prefab.GarlicHalfBurnt,
-        Prefab.GarlicLeaves,
-        Prefab.GarlicRoots,
-        Prefab.OnionFullBurnt,
-        Prefab.OnionHalfBurnt,
-        Prefab.OnionLeaves,
-        Prefab.OnionRoots,
-        Prefab.PotatoFullBurnt,
-        Prefab.PotatoHalfBurnt,
-        Prefab.PotatoSapling,
-        Prefab.PumpkinFullBurnt,
-        Prefab.PumpkinHalfBurnt,
-        Prefab.PumpkinPieceBurnt,
-        Prefab.TomatoFullBurnt,
-        Prefab.TomatoHalfBurnt
+        'burnt apple core',
+        'cooked apple core',
+        'ripe apple core',
+        'unripe apple core',
+        'burnt apple',
+        'cooked apple',
+        'ripe apple',
+        'unripe apple',
+        'burnt blueberry',
+        'cooked blueberry',
+        'ripe blueberry',
+        'unripe blueberry',
+        'burnt carrot',
+        'cooked carrot',
+        'ripe carrot',
+        'unripe carrot',
+        'carrot leaves',
+        'burnt eggplant',
+        'cooked eggplant',
+        'ripe eggplant',
+        'unripe eggplant',
+        'burnt garlic',
+        'cooked garlic',
+        'ripe garlic',
+        'unripe garlic',
+        'garlic leaves',
+        'garlic roots',
+        'burnt onion',
+        'cooked onion',
+        'ripe onion',
+        'unripe onion',
+        'onion leaves',
+        'onion roots',
+        'burnt potato',
+        'cooked potato',
+        'ripe potato',
+        'unripe potato',
+        'potato sapling',
+        'burnt pumpkin',
+        'cooked pumpkin',
+        'ripe pumpkin',
+        'unripe pumpkin',
+        'burnt pumpkin piece',
+        'cooked pumpkin piece',
+        'ripe pumpkin piece',
+        'unripe pumpkin piece',
+        'burnt tomato',
+        'cooked tomato',
+        'ripe tomato',
+        'unripe tomato'
       ];
 
     case 'pyre':
-      return [Prefab.Dynamite, Prefab.Firework];
+      return ['dynamite', 'firework'];
 
     case 'revenant':
-      return [Prefab.PhantomGuard];
+      return ['cursed hand guard'];
 
     case 'salt':
-      return [Prefab.Salt];
+      return ['salt'];
 
     case 'spriggull':
       return [
-        Prefab.SpriggullDrumstickBone,
-        Prefab.SpriggullDrumstickFullBurnt,
-        Prefab.SpriggullDrumstickHalfBurnt,
-        Prefab.SpriggullFeatherBlue,
-        Prefab.SpriggullFeatherGreen,
-        Prefab.SpriggullFeatherPurple,
-        Prefab.SpriggullFeatherRed,
-        Prefab.SpriggullFletchingBlue,
-        Prefab.SpriggullFletchingRed
+        'spriggull leg bone',
+        'burnt spriggull leg',
+        'burnt spriggull chop',
+        'cooked spriggull leg',
+        'cooked spriggull chop',
+        'uncooked spriggull leg',
+        'uncooked spriggull chop',
+        'blue spriggull feather',
+        'blue spriggull fletching',
+        'green spriggull feather',
+        'purple spriggull feather',
+        'red spriggull feather',
+        'red spriggull fletching'
       ];
 
     case 'turabada':
-      return [Prefab.ExplosiveSpike];
+      return ['turabada eye'];
 
     case 'wyrm':
-      return [Prefab.SoftFabricMediumRoll, Prefab.SoftFabricMediumStrips];
+      return ['green leather strips', 'green leather roll', 'large green leather roll'];
 
     default:
       return [];
