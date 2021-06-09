@@ -7,7 +7,7 @@
     "build": "npm run build:speech && npm run build:ui",
     "prebuild:speech": "rimraf ./build/speech",
     "build:speech": "nuget restore src/speech && dotnet build --no-incremental --force --output build/speech src/speech && cp src/speech/grammar.xml build/speech",
-    "prebuild:ui": "rimraf ./build/ui ./dist && mkdir build/ui && cp src/ui/images/Voodoo.png build/ui/icon.png",
+    "prebuild:ui": "rimraf ./build/ui ./dist && mkdir build/ui && cp src/ui/images/icon.png build/ui/icon.png",
     "build:ui": "webpack --mode=production && electron-builder -w",
     "react:dev": "webpack serve --mode=development",
     "electron:dev": "nodemon",
