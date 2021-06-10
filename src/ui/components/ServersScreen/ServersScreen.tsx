@@ -1,7 +1,7 @@
 import { ipcRenderer } from 'electron';
 import { useState, useEffect } from 'react';
 import { useAtom } from 'jotai';
-import { appStageAtom, AppStage, serversAtom, Servers, speechModeAtom, SpeechMode } from '@/atoms';
+import { appStageAtom, AppStage, serversAtom, Servers, activeServerAtom, speechModeAtom, SpeechMode } from '@/atoms';
 import styles from './ServersScreen.module.css';
 
 export type ServersUpdate = {
@@ -14,6 +14,7 @@ let intervalHandle: number | undefined;
 export const ServersScreen = () => {
   const [timeLeft, setTimeLeft] = useState(-3);
   const [servers, setServers] = useAtom(serversAtom);
+  const [activeServer, setActiveServer] = useAtom(activeServerAtom);
   const [appStage, setAppStage] = useAtom(appStageAtom);
   const [speechMode, setSpeechMode] = useAtom(speechModeAtom);
 
@@ -21,6 +22,7 @@ export const ServersScreen = () => {
     setServers(updatedServers);
 
     if (playerJoined) {
+      setActiveServer(playerJoined);
       ipcRenderer.invoke('server-connected');
       setAppStage(AppStage.Connected);
     }
