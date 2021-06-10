@@ -98,14 +98,14 @@ export const Dashboard = () => {
 
   const handleVoodooIncantationConfirmed = (_: Event, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
     setIncantations(incantations);
-    setPreparedSpells(preparedSpells);
+    if (preparedSpells) setPreparedSpells(preparedSpells);
     castAudio.currentTime = 0;
     castAudio.play();
   };
 
   const handleVoodooIncantation = (_: Event, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
     setIncantations(incantations);
-    setPreparedSpells(preparedSpells);
+    if (preparedSpells) setPreparedSpells(preparedSpells);
     if (incantations.length === 0) {
       castAudio.currentTime = 0;
       castAudio.play();
