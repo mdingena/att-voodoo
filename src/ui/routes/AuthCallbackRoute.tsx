@@ -24,9 +24,7 @@ export const AuthCallbackRoute = () => {
 
   /* Automatically redirect shortly after completing auth flow. */
   useEffect(() => {
-    if (accountId && appStage !== AppStage.WaitingForServer) {
-      setAppStage(AppStage.WaitingForServer);
-    } else if (accountId && appStage === AppStage.WaitingForServer && !timeout.current) {
+    if (accountId && appStage > AppStage.Authenticating && !timeout.current) {
       timeout.current = setTimeout(() => {
         history.replace('/');
       }, 2700);
@@ -35,12 +33,13 @@ export const AuthCallbackRoute = () => {
 
   if (fatalError) return <Authenticating stage={AuthenticatingStage.FatalError} error={fatalError} />;
 
-  if (appStage === AppStage.WaitingForServer) return <Authenticating stage={AuthenticatingStage.Ready} />;
+  if (appStage > AppStage.Authenticating) return <Authenticating stage={AuthenticatingStage.Ready} />;
 
   if (accountId) return <Authenticating stage={AuthenticatingStage.CreatingSession} />;
 
   if (auth?.userData && !isFetching.current) {
     isFetching.current = true;
+    setAccountId(Number(auth.userData?.profile?.sub ?? 0));
     ipcRenderer
       .invoke('session', {
         accountId: auth.userData?.profile?.sub,
@@ -48,13 +47,22 @@ export const AuthCallbackRoute = () => {
       })
       .then(response => {
         if (response.ok) {
-          setActiveServer(response.result.playerJoined);
           setServers(response.result.servers);
-          setAccountId(response.result.accountId);
+          if (response.result.playerJoined) {
+            ipcRenderer.invoke('server-connected');
+            setActiveServer(response.result.playerJoined);
+            setAppStage(AppStage.Connected);
+          } else {
+            setAppStage(AppStage.WaitingForServer);
+          }
         } else {
           console.error(response.error);
           setFatalError(response.error);
         }
+      })
+      .catch(error => {
+        console.error(error);
+        setFatalError(error);
       });
   }
 
