@@ -50,10 +50,10 @@ Conjures a single serving of water inside of an empty flask.
 
 Discovered by **Ethyn Wyrmbane**.
 
-|     Dock | ζ                | δ                  | λ      |
-| -------: | ---------------- | ------------------ | ------ |
-| Material | Empty flask      | Ripe blueberry     |        |
-|    Speak | `bonds of glass` | `fluid of produce` | `seal` |
+|     Dock | ζ                 | δ                  | λ      |
+| -------: | ----------------- | ------------------ | ------ |
+| Material | Empty flask       | Ripe blueberry     |        |
+|    Speak | `bonds of silica` | `fluid of produce` | `seal` |
 
 </details>
 
@@ -70,10 +70,10 @@ Conjures a small glass container used to hold various liquids.
 
 Discovered by **Ethyn Wyrmbane**.
 
-|     Dock | ζ                  | δ                 | λ      |
-| -------: | ------------------ | ----------------- | ------ |
-| Material | Sandstone          | Coal              |        |
-|    Speak | `essence of glass` | `heart of embers` | `seal` |
+|     Dock | ζ                   | δ                 | λ      |
+| -------: | ------------------- | ----------------- | ------ |
+| Material | Sandstone           | Coal              |        |
+|    Speak | `essence of silica` | `heart of embers` | `seal` |
 
 </details>
 

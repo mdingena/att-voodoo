@@ -67,9 +67,6 @@ export const getMaterialComponents = (speech: string): string[] => {
     case 'gems':
       return ['blue crystal gem', 'blue crystal shard'];
 
-    case 'glass':
-      return ['sandstone', 'empty flask', 'flask containing water', 'flask containing teleportation potion'];
-
     case 'gotera':
       return ['gotera seedling', 'redwood gotera core'];
 
@@ -135,6 +132,9 @@ export const getMaterialComponents = (speech: string): string[] => {
 
     case 'salt':
       return ['salt'];
+
+    case 'silica':
+      return ['sandstone', 'empty flask', 'flask containing water', 'flask containing teleportation potion'];
 
     case 'spriggull':
       return [
