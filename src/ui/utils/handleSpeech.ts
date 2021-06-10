@@ -149,15 +149,18 @@ export const handleSpeech = async (
             ]);
 
             if (response.ok) {
-              if (response.result.incantations.length === 0) {
-                mode = MODES.AWAKE;
-                ui?.webContents.send('voodoo-awake');
-                logger({ mode });
-              }
-
               incantations = response.result.incantations;
               preparedSpells = response.result.preparedSpells;
-              ui?.webContents.send('voodoo-incantation', incantations, preparedSpells);
+
+              if (response.result.incantations.length === 4) {
+                mode = MODES.AWAKE;
+                ui?.webContents.send('voodoo-incantation-confirmed', incantations, preparedSpells);
+                ui?.webContents.send('voodoo-awake');
+                logger({ mode });
+              } else {
+                ui?.webContents.send('voodoo-incantation', incantations, preparedSpells);
+              }
+
               logger({ incantations, preparedSpells });
             } else {
               logger(response.error);

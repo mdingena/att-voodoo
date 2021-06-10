@@ -97,7 +97,11 @@ export const Dashboard = () => {
   };
 
   const handleVoodooIncantationConfirmed = (_: Event, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
-    setIncantations(incantations);
+    // @todo The returned incantations are not the up-to-date incantations on the server,
+    // @todo but the incantations used to trigger the spell. This makes it easier to have
+    // @todo a log of incantations later.
+    // setIncantations(incantations);
+    setIncantations([]);
     if (preparedSpells) setPreparedSpells(preparedSpells);
     castAudio.currentTime = 0;
     castAudio.play();
@@ -106,13 +110,8 @@ export const Dashboard = () => {
   const handleVoodooIncantation = (_: Event, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
     setIncantations(incantations);
     if (preparedSpells) setPreparedSpells(preparedSpells);
-    if (incantations.length === 0) {
-      castAudio.currentTime = 0;
-      castAudio.play();
-    } else {
-      dockAudio.currentTime = 0;
-      dockAudio.play();
-    }
+    dockAudio.currentTime = 0;
+    dockAudio.play();
   };
 
   useEffect(() => {
