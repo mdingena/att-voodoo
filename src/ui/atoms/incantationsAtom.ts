@@ -1,6 +1,5 @@
 import { atom } from 'jotai';
-import { Prefab } from '@/prefabs';
 
-export type Incantation = [string, Prefab];
+export type Incantation = [string, string];
 
 export const incantationsAtom = atom<Incantation[]>([]);
