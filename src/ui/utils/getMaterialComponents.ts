@@ -156,6 +156,9 @@ export const getMaterialComponents = (speech: string): string[] => {
     case 'turabada':
       return ['turabada eye'];
 
+    case 'weapon':
+      return ['hilted apparatus'];
+
     case 'wyrm':
       return ['green leather strips', 'green leather roll', 'large green leather roll'];
 
