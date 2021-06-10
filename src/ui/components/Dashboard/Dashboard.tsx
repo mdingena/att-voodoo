@@ -26,21 +26,21 @@ import droneAudioFile from './drone.wav';
 const VOLUME_EXPONENT = 3; /* Linear volume adjustments are evil! */
 
 const chimeAudio = new Audio(chimeAudioFile);
-chimeAudio.volume = Math.pow(0.5, VOLUME_EXPONENT);
+chimeAudio.volume = Math.pow(0.6, VOLUME_EXPONENT);
 
 const pingAudio = new Audio(pingAudioFile);
-pingAudio.volume = Math.pow(0.5, VOLUME_EXPONENT);
+pingAudio.volume = Math.pow(0.6, VOLUME_EXPONENT);
 
 const dockAudio = new Audio(dockAudioFile);
-dockAudio.volume = Math.pow(0.5, VOLUME_EXPONENT);
+dockAudio.volume = Math.pow(0.6, VOLUME_EXPONENT);
 dockAudio.playbackRate = 1.25;
 
 const castAudio = new Audio(castAudioFile);
-castAudio.volume = Math.pow(0.4, VOLUME_EXPONENT);
+castAudio.volume = Math.pow(0.5, VOLUME_EXPONENT);
 castAudio.playbackRate = 2.5;
 
 const droneAudio = new Audio(droneAudioFile);
-droneAudio.volume = Math.pow(0.5, VOLUME_EXPONENT);
+droneAudio.volume = Math.pow(0.6, VOLUME_EXPONENT);
 droneAudio.playbackRate = 1.5;
 
 enum Mode {
