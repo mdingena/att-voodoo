@@ -2,7 +2,15 @@
   <img width="240" src="./src/ui/images/Voodoo.png" alt="Voodoo Logo" />
 </p>
 
-# 🔮 Voodoo — Magic Mod for _A Township Tale_
+<h1 align="center">Voodoo — Magic mod for <i>A Township Tale</i></h3></h1>
+
+<p align="center">
+  <img alt="CodeQL" src="https://github.com/mdingena/att-voodoo/actions/workflows/codeql-analysis.yml/badge.svg" />
+</p>
+
+---
+
+# 🔮 What is Voodoo?
 
 **Voodoo** is a community-made magic mod for [_A Township Tale_](https://townshiptale.com/), a VR MMORPG game.
 
