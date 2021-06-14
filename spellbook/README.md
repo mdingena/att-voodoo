@@ -142,7 +142,17 @@ Conjures additional servings of water inside of a flask already containing water
 | :---------- | :------ | :--------- |
 | Conjuration | Instant | Right hand |
 
-⚠️ **Incantations unknown!**
+<details>
+<summary>Incantations ✔️</summary>
+
+Discovered by **Syren_DM**.
+
+|     Dock | ζ                      | δ                  | λ      |
+| -------: | ---------------------- | ------------------ | ------ |
+| Material | Flask containing water | Ripe blueberry     |        |
+|    Speak | `fluid of silica`      | `fluid of produce` | `seal` |
+
+</details>
 
 # Frost Bolt
 
