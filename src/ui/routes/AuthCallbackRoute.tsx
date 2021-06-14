@@ -20,8 +20,12 @@ export const AuthCallbackRoute = () => {
 
   /* Call Alta auth library. */
   useEffect(() => {
-    window.altaApi.oidc.signinCallback();
-  }, []);
+    if (hasSession) {
+      history.replace('/');
+    } else {
+      window.altaApi.oidc.signinCallback();
+    }
+  }, [hasSession, history]);
 
   /* Automatically redirect shortly after completing auth flow. */
   useEffect(() => {

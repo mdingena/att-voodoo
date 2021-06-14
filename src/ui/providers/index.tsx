@@ -5,8 +5,8 @@ import { StateProvider } from './StateProvider';
 
 export const Providers = ({ children }: ProviderChildren) => (
   <StateProvider>
-    <RouterProvider>
-      <AuthProvider>{children}</AuthProvider>
-    </RouterProvider>
+    <AuthProvider>
+      <RouterProvider>{children}</RouterProvider>
+    </AuthProvider>
   </StateProvider>
 );
