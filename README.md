@@ -33,6 +33,7 @@
 - [🕹️ Guide for players](./guides/PLAYERS.md)
 - [🧰 Guide for server owners](./guides/SERVER-OWNERS.md)
 - [✨ Casting spells](./guides/SPELLCASTING.MD)
+- [📖 Spellbook](./spellbook/README.md)
 
 # Maintainers
 
