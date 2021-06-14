@@ -22,6 +22,9 @@
     <item> evoke </item>
     <one-of>
       <item> acid bolt </item>
+      <item> crystal lance </item>
+      <item> crystal pick </item>
+      <item> crystal sword </item>
       <item> frost bolt </item>
     </one-of>
   </rule>
