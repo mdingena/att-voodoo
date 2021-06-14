@@ -24,7 +24,7 @@
 
 # ⚠️ Known issues
 
-- After acquiring a session in Voodoo, the app can sometimes jump back to the `Ready!` screen and get stuck here. We're currently still investigating what is causing this.  
+- After acquiring a session in Voodoo, the app can sometimes jump back to the `Ready!` screen and get stuck here. [We're currently still investigating](https://github.com/mdingena/att-voodoo/issues/7) what is causing this.  
   **Work-around:** restart Voodoo.
 
 # 🚀 Installation & usage
