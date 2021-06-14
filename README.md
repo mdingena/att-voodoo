@@ -34,6 +34,7 @@
 - [🧰 Guide for server owners](./guides/SERVER-OWNERS.md)
 - [✨ Casting spells](./guides/SPELLCASTING.MD)
 - [📖 Spellbook](./spellbook/README.md)
+- [👩🏻‍🎓 Voodoo Vocabulary](./guides/VOCABULARY.md)
 
 # Maintainers
 
