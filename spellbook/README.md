@@ -139,7 +139,17 @@ Conjures additional servings of teleportation potion inside of a flask already c
 | :---------- | :------ | :--------- |
 | Conjuration | Instant | Right hand |
 
-⚠️ **Incantations unknown!**
+<details>
+<summary>Incantations ✔️</summary>
+
+Discovered by **Nael Mossweep**.
+
+|     Dock | ζ                                     | δ                  | λ      |
+| -------: | ------------------------------------- | ------------------ | ------ |
+| Material | Flask containing teleportation potion | Burnt red mushroom |        |
+|    Speak | `fluid of silica`                     | `essence of fungi` | `seal` |
+
+</details>
 
 # Flask of Endless Water
 
