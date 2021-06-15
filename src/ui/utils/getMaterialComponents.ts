@@ -164,6 +164,7 @@ export const getMaterialComponents = (speech: string): string[] => {
         'fist handle',
         'medium straight wooden handle',
         'short wooden handle',
+        'kunai handle',
         'handle'
       ];
 
