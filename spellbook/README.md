@@ -188,9 +188,9 @@ Discovered by **Syren_DM**.
 
 Launches a large ball of icy crystals from the palm of your hand.
 
-| School      | Type     | Casts from |
-| :---------- | :------- | :--------- |
-| Conjuration | Prepared | Right hand |
+| School    | Type     | Casts from |
+| :-------- | :------- | :--------- |
+| Evocation | Prepared | Right hand |
 
 <details>
 <summary>Incantations ✔️</summary>
