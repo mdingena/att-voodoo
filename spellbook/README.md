@@ -197,10 +197,10 @@ Launches a large ball of icy crystals from the palm of your hand.
 
 Discovered by **Nael Mossweep**, **Syren_DM** and **JoshuaTheTeacup**.
 
-|     Dock | ζ                  | δ                     | λ                | Ω                 |
-| -------: | ------------------ | --------------------- | ---------------- | ----------------- |
-| Material | Green leather roll | Red spriggull feather | Salt             | Firework          |
-|    Speak | `skin of wyrm`     | `tuft of spriggull`   | `sliver of salt` | `essence of pyre` |
+|     Dock | ζ                  | δ                      | λ                | Ω                 |
+| -------: | ------------------ | ---------------------- | ---------------- | ----------------- |
+| Material | Green leather roll | Blue spriggull feather | Blue crystal gem | Dynamite          |
+|    Speak | `skin of wyrm`     | `tuft of spriggull`    | `aether of gems` | `essence of pyre` |
 
 </details>
 
