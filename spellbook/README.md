@@ -192,7 +192,17 @@ Launches a large ball of icy crystals from the palm of your hand.
 | :---------- | :------- | :--------- |
 | Conjuration | Prepared | Right hand |
 
-⚠️ **Incantations unknown! (hint: 4 incantations)**
+<details>
+<summary>Incantations ✔️</summary>
+
+Discovered by **Nael Mossweep**, **Syren_DM** and **JoshuaTheTeacup**.
+
+|     Dock | ζ                  | δ                     | λ                | Ω                 |
+| -------: | ------------------ | --------------------- | ---------------- | ----------------- |
+| Material | Green leather roll | Red spriggull feather | Salt             | Firework          |
+|    Speak | `skin of wyrm`     | `tuft of spriggull`   | `sliver of salt` | `essence of pyre` |
+
+</details>
 
 # Repair Copper Weapon
 
