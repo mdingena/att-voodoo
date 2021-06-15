@@ -46,7 +46,7 @@ Conjures a blue crystal lance that can be wielded like a weapon.
 | :---------- | :------- | :--------- |
 | Conjuration | Prepared | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (currently broken, do not attempt)**
 
 # Conjure Crystal Pick
 
@@ -56,7 +56,7 @@ Conjures a blue crystal pickaxe that can be wielded like a weapon.
 | :---------- | :------- | :--------- |
 | Conjuration | Prepared | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (currently broken, do not attempt)**
 
 # Conjure Crystal Sword
 
@@ -66,7 +66,7 @@ Conjures a blue crystal sword that can be wielded like a weapon.
 | :---------- | :------- | :--------- |
 | Conjuration | Prepared | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (currently broken, do not attempt)**
 
 # Conjure Teleportation Potion
 
@@ -182,7 +182,7 @@ Launches a large ball of icy crystals from the palm of your hand.
 | :---------- | :------- | :--------- |
 | Conjuration | Prepared | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (hint: 4 incantations)**
 
 # Repair Copper Weapon
 
@@ -192,7 +192,7 @@ Restores some of the integrity of all copper parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (hint: 4 incantations)**
 
 # Repair Electrum Weapon
 
@@ -202,7 +202,7 @@ Restores some of the integrity of all electrum parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (hint: 4 incantations)**
 
 # Repair Gold Weapon
 
@@ -212,7 +212,7 @@ Restores some of the integrity of all gold parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (hint: 4 incantations)**
 
 # Repair Iron Weapon
 
@@ -222,7 +222,7 @@ Restores some of the integrity of all iron parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (hint: 4 incantations)**
 
 # Repair Mythril Weapon
 
@@ -232,7 +232,7 @@ Restores some of the integrity of all mythril parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (hint: 4 incantations)**
 
 # Repair Palladium Weapon
 
@@ -242,7 +242,7 @@ Restores some of the integrity of all palladium parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (hint: 4 incantations)**
 
 # Repair Red Iron Weapon
 
@@ -252,7 +252,7 @@ Restores some of the integrity of all red iron parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (hint: 4 incantations)**
 
 # Repair Silver Weapon
 
@@ -262,7 +262,7 @@ Restores some of the integrity of all silver parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (hint: 4 incantations)**
 
 # Repair Valyan Weapon
 
@@ -272,7 +272,7 @@ Restores some of the integrity of all valyan parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (hint: 4 incantations)**
 
 # Repair Viridium Weapon
 
@@ -282,4 +282,4 @@ Restores some of the integrity of all viridium parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (hint: 4 incantations)**
