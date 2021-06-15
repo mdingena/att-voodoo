@@ -36,7 +36,7 @@ Launches a large ball of acid from the palm of your hand.
 | :-------- | :------- | :--------- |
 | Evocation | Prepared | Right hand |
 
-⚠️ **Incantations unknown!**
+⚠️ **Incantations unknown! (hint: 4 incantations)**
 
 # Conjure Crystal Lance
 
