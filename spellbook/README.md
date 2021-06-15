@@ -76,7 +76,17 @@ Conjures a single serving of teleportation potion inside of an empty flask.
 | :---------- | :------ | :--------- |
 | Conjuration | Instant | Right hand |
 
-⚠️ **Incantations unknown!**
+<details>
+<summary>Incantations ✔️</summary>
+
+Discovered by **Syren_DM**.
+
+|     Dock | ζ                      | δ                  | λ      |
+| -------: | ---------------------- | ------------------ | ------ |
+| Material | Flask containing water | Burnt red mushroom |        |
+|    Speak | `fluid of silica`      | `essence of fungi` | `seal` |
+
+</details>
 
 # Conjure Water
 
