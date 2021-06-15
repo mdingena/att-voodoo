@@ -157,7 +157,15 @@ export const getMaterialComponents = (speech: string): string[] => {
       return ['turabada eye'];
 
     case 'weapon':
-      return ['hilted apparatus'];
+      return [
+        'hilted apparatus',
+        'curled wooden handle',
+        'bow handle',
+        'fist handle',
+        'medium straight wooden handle',
+        'short wooden handle',
+        'handle'
+      ];
 
     case 'wyrm':
       return ['green leather strips', 'green leather roll', 'large green leather roll'];
