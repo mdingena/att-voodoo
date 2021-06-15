@@ -36,7 +36,17 @@ Launches a large ball of acid from the palm of your hand.
 | :-------- | :------- | :--------- |
 | Evocation | Prepared | Right hand |
 
-⚠️ **Incantations unknown! (hint: 4 incantations)**
+<details>
+<summary>Incantations ✔️</summary>
+
+Discovered by **Nael Mossweep** and **Syren_DM**.
+
+|     Dock | ζ                  | δ                     | λ                | Ω                 |
+| -------: | ------------------ | --------------------- | ---------------- | ----------------- |
+| Material | Green leather roll | Red spriggull feather | Salt             | Firework          |
+|    Speak | `skin of wyrm`     | `tuft of spriggull`   | `sliver of salt` | `essence of pyre` |
+
+</details>
 
 # Conjure Crystal Lance
 
