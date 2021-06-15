@@ -56,7 +56,12 @@ Conjures a blue crystal lance that can be wielded like a weapon.
 | :---------- | :------- | :--------- |
 | Conjuration | Prepared | Right hand |
 
-⚠️ **Incantations unknown! (currently broken, do not attempt)**
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Has 3 incantations.
+- Requires some form of blue crystal.
+- The crystal is a `δ` incantation.
+- Requires a precious metal.
 
 # Conjure Crystal Pick
 
@@ -66,7 +71,12 @@ Conjures a blue crystal pickaxe that can be wielded like a weapon.
 | :---------- | :------- | :--------- |
 | Conjuration | Prepared | Right hand |
 
-⚠️ **Incantations unknown! (currently broken, do not attempt)**
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Has 3 incantations.
+- Requires some form of blue crystal.
+- The crystal is a `δ` incantation.
+- Requires a precious metal.
 
 # Conjure Crystal Sword
 
@@ -76,7 +86,12 @@ Conjures a blue crystal sword that can be wielded like a weapon.
 | :---------- | :------- | :--------- |
 | Conjuration | Prepared | Right hand |
 
-⚠️ **Incantations unknown! (currently broken, do not attempt)**
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Has 3 incantations.
+- Requires some form of blue crystal.
+- The crystal is a `δ` incantation.
+- Requires a precious metal.
 
 # Conjure Teleportation Potion
 
@@ -212,7 +227,12 @@ Restores some of the integrity of all copper parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! (hint: 4 incantations)**
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Has 4 incantations.
+- Weapons are always a `ζ` incantation.
+- Requires a precious metal.
+- Requires a form of adhesive.
 
 # Repair Electrum Weapon
 
@@ -222,7 +242,12 @@ Restores some of the integrity of all electrum parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! (hint: 4 incantations)**
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Has 4 incantations.
+- Weapons are always a `ζ` incantation.
+- Requires a precious metal.
+- Requires a form of adhesive.
 
 # Repair Gold Weapon
 
@@ -232,7 +257,12 @@ Restores some of the integrity of all gold parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! (hint: 4 incantations)**
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Has 4 incantations.
+- Weapons are always a `ζ` incantation.
+- Requires a precious metal.
+- Requires a form of adhesive.
 
 # Repair Iron Weapon
 
@@ -242,7 +272,12 @@ Restores some of the integrity of all iron parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! (hint: 4 incantations)**
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Has 4 incantations.
+- Weapons are always a `ζ` incantation.
+- Requires a precious metal.
+- Requires a form of adhesive.
 
 # Repair Mythril Weapon
 
@@ -252,7 +287,12 @@ Restores some of the integrity of all mythril parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! (hint: 4 incantations)**
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Has 4 incantations.
+- Weapons are always a `ζ` incantation.
+- Requires a precious metal.
+- Requires a form of adhesive.
 
 # Repair Palladium Weapon
 
@@ -262,7 +302,12 @@ Restores some of the integrity of all palladium parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! (hint: 4 incantations)**
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Has 4 incantations.
+- Weapons are always a `ζ` incantation.
+- Requires a precious metal.
+- Requires a form of adhesive.
 
 # Repair Red Iron Weapon
 
@@ -272,7 +317,12 @@ Restores some of the integrity of all red iron parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! (hint: 4 incantations)**
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Has 4 incantations.
+- Weapons are always a `ζ` incantation.
+- Requires a precious metal.
+- Requires a form of adhesive.
 
 # Repair Silver Weapon
 
@@ -282,7 +332,12 @@ Restores some of the integrity of all silver parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! (hint: 4 incantations)**
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Has 4 incantations.
+- Weapons are always a `ζ` incantation.
+- Requires a precious metal.
+- Requires a form of adhesive.
 
 # Repair Valyan Weapon
 
@@ -292,7 +347,12 @@ Restores some of the integrity of all valyan parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! (hint: 4 incantations)**
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Has 4 incantations.
+- Weapons are always a `ζ` incantation.
+- Requires a precious metal.
+- Requires a form of adhesive.
 
 # Repair Viridium Weapon
 
@@ -302,4 +362,9 @@ Restores some of the integrity of all viridium parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! (hint: 4 incantations)**
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Has 4 incantations.
+- Weapons are always a `ζ` incantation.
+- Requires a precious metal.
+- Requires a form of adhesive.
