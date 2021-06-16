@@ -138,6 +138,7 @@ export const getMaterialComponents = (speech: string): string[] => {
 
     case 'spriggull':
       return [
+        'spriggull bone shard',
         'spriggull leg bone',
         'burnt spriggull leg',
         'burnt spriggull chop',
