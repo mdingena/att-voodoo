@@ -227,12 +227,17 @@ Restores some of the integrity of all copper parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations ✔️</summary>
 
-- Has 4 incantations.
-- Weapons are always a `ζ` incantation.
-- Requires a precious metal.
-- Requires a form of adhesive.
+Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+
+|     Dock | ζ                 | δ                  | λ                 | Ω                       |
+| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
+| Material | Any weapon        | Copper ingot       | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+
+</details>
 
 # Repair Electrum Weapon
 
@@ -242,12 +247,17 @@ Restores some of the integrity of all electrum parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations ✔️</summary>
 
-- Has 4 incantations.
-- Weapons are always a `ζ` incantation.
-- Requires a precious metal.
-- Requires a form of adhesive.
+Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+
+|     Dock | ζ                 | δ                  | λ                 | Ω                       |
+| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
+| Material | Any weapon        | Electrum ingot     | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+
+</details>
 
 # Repair Gold Weapon
 
@@ -257,12 +267,17 @@ Restores some of the integrity of all gold parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations ✔️</summary>
 
-- Has 4 incantations.
-- Weapons are always a `ζ` incantation.
-- Requires a precious metal.
-- Requires a form of adhesive.
+Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+
+|     Dock | ζ                 | δ                  | λ                 | Ω                       |
+| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
+| Material | Any weapon        | Gold ingot         | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+
+</details>
 
 # Repair Iron Weapon
 
@@ -272,12 +287,17 @@ Restores some of the integrity of all iron parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations ✔️</summary>
 
-- Has 4 incantations.
-- Weapons are always a `ζ` incantation.
-- Requires a precious metal.
-- Requires a form of adhesive.
+Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+
+|     Dock | ζ                 | δ                  | λ                 | Ω                       |
+| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
+| Material | Any weapon        | Iron ingot         | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+
+</details>
 
 # Repair Mythril Weapon
 
@@ -287,12 +307,17 @@ Restores some of the integrity of all mythril parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations ✔️</summary>
 
-- Has 4 incantations.
-- Weapons are always a `ζ` incantation.
-- Requires a precious metal.
-- Requires a form of adhesive.
+Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+
+|     Dock | ζ                 | δ                  | λ                 | Ω                       |
+| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
+| Material | Any weapon        | Mythril ingot      | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+
+</details>
 
 # Repair Palladium Weapon
 
@@ -302,12 +327,17 @@ Restores some of the integrity of all palladium parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations ✔️</summary>
 
-- Has 4 incantations.
-- Weapons are always a `ζ` incantation.
-- Requires a precious metal.
-- Requires a form of adhesive.
+Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+
+|     Dock | ζ                 | δ                  | λ                 | Ω                       |
+| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
+| Material | Any weapon        | Palladium ingot    | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+
+</details>
 
 # Repair Red Iron Weapon
 
@@ -317,12 +347,17 @@ Restores some of the integrity of all red iron parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations ✔️</summary>
 
-- Has 4 incantations.
-- Weapons are always a `ζ` incantation.
-- Requires a precious metal.
-- Requires a form of adhesive.
+Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+
+|     Dock | ζ                 | δ                  | λ                 | Ω                       |
+| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
+| Material | Any weapon        | Red iron ingot     | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+
+</details>
 
 # Repair Silver Weapon
 
@@ -332,12 +367,17 @@ Restores some of the integrity of all silver parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations ✔️</summary>
 
-- Has 4 incantations.
-- Weapons are always a `ζ` incantation.
-- Requires a precious metal.
-- Requires a form of adhesive.
+Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+
+|     Dock | ζ                 | δ                  | λ                 | Ω                       |
+| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
+| Material | Any weapon        | Silver ingot       | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+
+</details>
 
 # Repair Valyan Weapon
 
@@ -347,12 +387,17 @@ Restores some of the integrity of all valyan parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations ✔️</summary>
 
-- Has 4 incantations.
-- Weapons are always a `ζ` incantation.
-- Requires a precious metal.
-- Requires a form of adhesive.
+Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+
+|     Dock | ζ                 | δ                  | λ                 | Ω                       |
+| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
+| Material | Any weapon        | Valyan ingot       | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+
+</details>
 
 # Repair Viridium Weapon
 
@@ -362,9 +407,14 @@ Restores some of the integrity of all viridium parts in a weapon.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations ✔️</summary>
 
-- Has 4 incantations.
-- Weapons are always a `ζ` incantation.
-- Requires a precious metal.
-- Requires a form of adhesive.
+Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+
+|     Dock | ζ                 | δ                  | λ                 | Ω                       |
+| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
+| Material | Any weapon        | Viridium ingot     | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+
+</details>
