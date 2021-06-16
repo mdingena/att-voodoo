@@ -1,5 +1,5 @@
 import { ChildProcess } from 'child_process';
-import { app, shell, BrowserWindow, Menu } from 'electron';
+import { app, shell, powerSaveBlocker, BrowserWindow, Menu } from 'electron';
 import isDev from 'electron-is-dev';
 import { config as configEnv } from 'dotenv';
 import {
@@ -33,16 +33,24 @@ const initialiseApp = async (): Promise<void> => {
     backgroundColor: '#062724',
     webPreferences: {
       contextIsolation: false,
-      nodeIntegration: true
+      nodeIntegration: true,
+      backgroundThrottling: false
     },
     show: false
   });
+
+  /**
+   * Prevent throttling in an attempt to keep VoodooListener working and the UI updating
+   * even when the Voodoo window isn't focused.
+   */
+  const psb = powerSaveBlocker.start('prevent-app-suspension');
 
   /* Handle process termination. */
   const terminateProcesses = () => {
     ui = null;
     speech?.kill();
     speech = null;
+    powerSaveBlocker.stop(psb);
   };
 
   /* Prevent window refesh. */
@@ -60,6 +68,7 @@ const initialiseApp = async (): Promise<void> => {
   ui.webContents.on('will-navigate', handleNavigation(shell));
 
   /* Display UI window when finished loading. */
+  ui.on('show', () => setTimeout(() => ui?.focus(), 200));
   ui.once('ready-to-show', () => ui?.show());
 
   /* Create a logger for both Electron and renderer processes. */
