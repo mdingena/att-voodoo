@@ -2,6 +2,6 @@
   "name": "att-voodoo",
   "description": "A community-made magic mod for A Township Tale, a VR MMORPG game.",
   "author": "Marc Dingena",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-beta.4",
   "main": "main.js"
 }
