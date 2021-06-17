@@ -56,12 +56,17 @@ Conjures a blue crystal lance that can be wielded like a weapon.
 | :---------- | :------- | :--------- |
 | Conjuration | Prepared | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations ✔️</summary>
 
-- Has 3 incantations.
-- Requires some form of blue crystal.
-- The crystal is a `δ` incantation.
-- Requires a precious metal.
+Discovered by **Gasher**.
+
+|     Dock | ζ                             | δ                  | λ                  | Ω      |
+| -------: | ----------------------------- | ------------------ | ------------------ | ------ |
+| Material | Medium straight wooden handle | Blue crystal gem   | Electrum ingot     |        |
+|    Speak | `heart of weapon`             | `fragment of gems` | `extract of earth` | `seal` |
+
+</details>
 
 # Conjure Crystal Pick
 
@@ -71,12 +76,17 @@ Conjures a blue crystal pickaxe that can be wielded like a weapon.
 | :---------- | :------- | :--------- |
 | Conjuration | Prepared | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations ✔️</summary>
 
-- Has 3 incantations.
-- Requires some form of blue crystal.
-- The crystal is a `δ` incantation.
-- Requires a precious metal.
+Discovered by **Gasher**.
+
+|     Dock | ζ                    | δ                  | λ                  | Ω      |
+| -------: | -------------------- | ------------------ | ------------------ | ------ |
+| Material | Curled wooden handle | Blue crystal gem   | Silver ingot       |        |
+|    Speak | `heart of weapon`    | `fragment of gems` | `extract of earth` | `seal` |
+
+</details>
 
 # Conjure Crystal Sword
 
@@ -86,12 +96,17 @@ Conjures a blue crystal sword that can be wielded like a weapon.
 | :---------- | :------- | :--------- |
 | Conjuration | Prepared | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations ✔️</summary>
 
-- Has 3 incantations.
-- Requires some form of blue crystal.
-- The crystal is a `δ` incantation.
-- Requires a precious metal.
+Discovered by **Gasher**.
+
+|     Dock | ζ                   | δ                  | λ                  | Ω      |
+| -------: | ------------------- | ------------------ | ------------------ | ------ |
+| Material | Short wooden handle | Blue crystal gem   | Palladium ingot    |        |
+|    Speak | `heart of weapon`   | `fragment of gems` | `extract of earth` | `seal` |
+
+</details>
 
 # Conjure Teleportation Potion
 
