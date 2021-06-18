@@ -32,7 +32,7 @@
 
 - [🕹️ Guide for players](./guides/PLAYERS.md)
 - [🧰 Guide for server owners](./guides/SERVER-OWNERS.md)
-- [✨ Casting spells](./guides/SPELLCASTING.MD)
+- [✨ Casting spells](./guides/SPELLCASTING.md)
 - [📖 Spellbook](./spellbook/README.md)
 - [👩🏻‍🎓 Voodoo Vocabulary](./guides/VOCABULARY.md)
 
