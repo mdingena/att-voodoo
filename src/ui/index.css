@@ -52,6 +52,7 @@ html {
 
 body {
   font-size: 2rem;
+  overflow-x: hidden;
 }
 
 small {
