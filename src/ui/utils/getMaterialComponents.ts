@@ -42,7 +42,8 @@ export const getMaterialComponents = (speech: string): string[] => {
         'electrum ingot',
         'palladium ingot',
         'viridium ingot',
-        'valyan ingot'
+        'valyan ingot',
+        'rock'
       ];
 
     case 'embers':
@@ -125,7 +126,7 @@ export const getMaterialComponents = (speech: string): string[] => {
       ];
 
     case 'pyre':
-      return ['dynamite', 'firework'];
+      return ['dynamite', 'firework', 'flint'];
 
     case 'revenant':
       return ['cursed hand guard'];
