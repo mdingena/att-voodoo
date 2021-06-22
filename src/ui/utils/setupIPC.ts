@@ -42,4 +42,7 @@ export const setupIPC = (ui: BrowserWindow | null, speech: ChildProcess | null, 
   ipcMain.handle('update-player', async (_, { accessToken }) => {
     return await voodooGet(accessToken, config.API_ENDPOINTS.PLAYER);
   });
+
+  /* Handle UI focus. */
+  ipcMain.handle('focus', () => ui?.focus());
 };

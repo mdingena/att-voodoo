@@ -24,6 +24,7 @@ export const AuthCallbackRoute = () => {
     if (hasSession) {
       history.replace('/');
     } else {
+      ipcRenderer.invoke('focus');
       window.altaApi.oidc.signinCallback();
     }
   }, [hasSession, history]);
