@@ -166,7 +166,12 @@ export const getMaterialComponents = (speech: string): string[] => {
         'medium straight wooden handle',
         'short wooden handle',
         'kunai handle',
-        'handle'
+        'shield handle',
+        'handle',
+        'rusty axe',
+        'rusty pickaxe',
+        'rusty shortsword',
+        'rusty pitchfork'
       ];
 
     case 'wyrm':
