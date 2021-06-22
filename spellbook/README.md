@@ -214,6 +214,19 @@ Discovered by **Nael Mossweep**, **Syren_DM** and **JoshuaTheTeacup**.
 
 </details>
 
+# Liquate Alloy
+
+Splits an alloy into its base metals.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Both hands |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 3 incantations.
+- `ζ` must contain an alloy.
+
 # Repair Copper Weapon
 
 Restores some of the integrity of all copper parts in a weapon.
@@ -413,6 +426,71 @@ Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 |    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
+
+# Transmute Copper To Iron
+
+Transmutes a copper ingot to an iron ingot.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 2 incantations.
+- `ζ` must contain a copper ingot.
+
+# Transmute Gold To Silver
+
+Transmutes a gold ingot to a silver ingot.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 2 incantations.
+- `ζ` must contain a gold ingot.
+
+# Transmute Ingot To Ore
+
+Transmutes any non-alloy ingot to ore at a ratio of 1 ingot to 2 ore.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Both hands |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 2 incantations.
+- `ζ` must contain any non-alloy ingot.
+
+# Transmute Iron To Gold
+
+Transmutes an iron ingot to a gold ingot.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 2 incantations.
+- `ζ` must contain an iron ingot.
+
+# Transmute Silver To Mythril
+
+Transmutes a silver ingot to a mythril ingot.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 2 incantations.
+- `ζ` must contain a silver ingot.
 
 # Transmute Teleportation Potion
 
