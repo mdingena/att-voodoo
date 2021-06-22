@@ -101,26 +101,6 @@ Conjures a blue crystal sword that can be wielded like a weapon.
 
 Discovered by **Gasher**.
 
-
-</details>
-
-# Conjure Teleportation Potion
-
-Conjures a single serving of teleportation potion inside of an empty flask.
-
-| School      | Type    | Casts from |
-| :---------- | :------ | :--------- |
-| Conjuration | Instant | Right hand |
-
-<details>
-<summary>Incantations ✔️</summary>
-
-Discovered by **Syren_DM**.
-
-|     Dock | ζ                      | δ                  | λ      |
-| -------: | ---------------------- | ------------------ | ------ |
-| Material | Flask containing water | Burnt red mushroom |        |
-|    Speak | `fluid of silica`      | `essence of fungi` | `seal` |
 |     Dock | ζ                 | δ                  | λ                  | Ω      |
 | -------: | ----------------- | ------------------ | ------------------ | ------ |
 | Material | Rusty shortsword  | Blue crystal gem   | Palladium ingot    |        |
@@ -431,5 +411,25 @@ Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 | -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
 | Material | Any weapon        | Viridium ingot     | Coal              | Spriggull bone shard    |
 |    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+
+</details>
+
+# Transmute Teleportation Potion
+
+Transmutes a flask containing one or more servings of water into teleportation potion.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+<details>
+<summary>Incantations ✔️</summary>
+
+Discovered by **Syren_DM**.
+
+|     Dock | ζ                      | δ                  | λ      |
+| -------: | ---------------------- | ------------------ | ------ |
+| Material | Flask containing water | Burnt red mushroom |        |
+|    Speak | `fluid of silica`      | `essence of fungi` | `seal` |
 
 </details>
