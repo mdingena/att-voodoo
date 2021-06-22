@@ -7,6 +7,7 @@ const development = {
   APP_URL: 'http://localhost:9000/#',
   API_ENDPOINTS: {
     SESSION: 'http://localhost:3000/session',
+    PLAYER: 'http://localhost:3000/player',
     HEARTBEAT: 'http://localhost:3000/heartbeat',
     INCANTATION: 'http://localhost:3000/incantation',
     SEAL: 'http://localhost:3000/seal',
@@ -25,6 +26,7 @@ const production = {
   APP_URL: `file://${path.resolve(__dirname, '../../build/ui/index.html')}#`,
   API_ENDPOINTS: {
     SESSION: 'https://att-voodoo-server.herokuapp.com/session',
+    PLAYER: 'https://att-voodoo-server.herokuapp.com/player',
     HEARTBEAT: 'https://att-voodoo-server.herokuapp.com/heartbeat',
     INCANTATION: 'https://att-voodoo-server.herokuapp.com/incantation',
     SEAL: 'https://att-voodoo-server.herokuapp.com/seal',

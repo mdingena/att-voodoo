@@ -23,6 +23,7 @@ export const scheduleHeartbeat = (ui: BrowserWindow | null, accessToken: string,
 };
 
 export const setupIPC = (ui: BrowserWindow | null, speech: ChildProcess | null, logger: (...args: any) => void) => {
+  /* Handle session creation. */
   ipcMain.handle('session', async (_, { accessToken }) => {
     const response = await voodooGet(accessToken, config.API_ENDPOINTS.SESSION);
 
@@ -36,4 +37,12 @@ export const setupIPC = (ui: BrowserWindow | null, speech: ChildProcess | null, 
 
     return response;
   });
+
+  /* Handle player update. */
+  ipcMain.handle('update-player', async (_, { accessToken }) => {
+    return await voodooGet(accessToken, config.API_ENDPOINTS.PLAYER);
+  });
+
+  /* Handle UI focus. */
+  ipcMain.handle('focus', () => ui?.focus());
 };

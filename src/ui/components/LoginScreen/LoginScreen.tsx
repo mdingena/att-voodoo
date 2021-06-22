@@ -25,7 +25,7 @@ export const LoginScreen = () => {
     if (!transition.current && isSplashFinished && appStage === AppStage.Splash) {
       transition.current = setTimeout(() => {
         setAppStage(AppStage.Ready);
-      }, 2000);
+      }, 1000);
     }
   }, [isSplashFinished, appStage]);
 

@@ -2,7 +2,7 @@ import { ipcRenderer } from 'electron';
 import { useRef, useState, useEffect } from 'react';
 import { useAtom } from 'jotai';
 import { useHistory } from 'react-router-dom';
-import { appStageAtom, AppStage, activeServerAtom, serversAtom, hasSessionAtom } from '@/atoms';
+import { appStageAtom, AppStage, activeServerAtom, serversAtom, hasSessionAtom, accessTokenAtom } from '@/atoms';
 import { useAuth } from '@/components/AltaAuth';
 import { Authenticating, AuthenticatingStage } from '@/components/Authenticating';
 
@@ -17,12 +17,14 @@ export const AuthCallbackRoute = () => {
   const [activeServer, setActiveServer] = useAtom(activeServerAtom);
   const [servers, setServers] = useAtom(serversAtom);
   const [hasSession, setHasSession] = useAtom(hasSessionAtom);
+  const [accessToken, setAccessToken] = useAtom(accessTokenAtom);
 
   /* Call Alta auth library. */
   useEffect(() => {
     if (hasSession) {
       history.replace('/');
     } else {
+      ipcRenderer.invoke('focus');
       window.altaApi.oidc.signinCallback();
     }
   }, [hasSession, history]);
@@ -44,7 +46,6 @@ export const AuthCallbackRoute = () => {
 
   if (auth?.userData && !isFetching.current) {
     isFetching.current = true;
-    setAccountId(Number(auth.userData?.profile?.sub ?? 0));
     ipcRenderer
       .invoke('session', {
         accountId: auth.userData?.profile?.sub,
@@ -53,6 +54,8 @@ export const AuthCallbackRoute = () => {
       .then(response => {
         if (response.ok) {
           setHasSession(true);
+          setAccessToken(auth.userData?.access_token ?? null);
+          setAccountId(Number(auth.userData?.profile?.sub ?? 0));
           setServers(response.result.servers);
           if (response.result.playerJoined) {
             ipcRenderer.invoke('server-connected');

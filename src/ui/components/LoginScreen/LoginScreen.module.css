@@ -45,7 +45,7 @@
   align-self: flex-start;
   margin-top: 3rem;
   text-align: center;
-  transition: opacity 2s ease-out;
+  transition: opacity 1s ease-out;
 }
 
 .footer {

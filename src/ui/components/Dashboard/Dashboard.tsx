@@ -8,6 +8,7 @@ import {
   activeServerAtom,
   appStageAtom,
   AppStage,
+  accessTokenAtom,
   incantationsAtom,
   Incantation,
   preparedSpellsAtom,
@@ -53,10 +54,10 @@ export const Dashboard = () => {
   const [speechMode, setSpeechMode] = useAtom(speechModeAtom);
   const [activeServer, setActiveServer] = useAtom(activeServerAtom);
   const [appStage, setAppStage] = useAtom(appStageAtom);
+  const [accessToken] = useAtom(accessTokenAtom);
   const [incantations, setIncantations] = useAtom(incantationsAtom);
   const [preparedSpells, setPreparedSpells] = useAtom(preparedSpellsAtom);
 
-  // @todo test this
   const handleUpdateServers = (_: Event, { playerJoined }: ServersUpdate) => {
     setActiveServer(playerJoined);
   };
@@ -124,6 +125,19 @@ export const Dashboard = () => {
     ipcRenderer.on('voodoo-incantation-confirmed', handleVoodooIncantationConfirmed);
     ipcRenderer.on('voodoo-incantation', handleVoodooIncantation);
 
+    ipcRenderer
+      .invoke('update-player', { accessToken })
+      .then(response => {
+        if (response.ok) {
+          setPreparedSpells(response.result.preparedSpells);
+        } else {
+          console.error(response.error);
+        }
+      })
+      .catch(error => {
+        console.error(error.message);
+      });
+
     return () => {
       ipcRenderer.removeListener('update-server', handleUpdateServers);
       ipcRenderer.removeListener('voodoo-suppressed', handleVoodooSuppressed);
@@ -136,7 +150,10 @@ export const Dashboard = () => {
   }, []);
 
   useEffect(() => {
-    if (activeServer === null) setAppStage(AppStage.WaitingForServer);
+    if (activeServer === null) {
+      setPreparedSpells([]);
+      setAppStage(AppStage.WaitingForServer);
+    }
   }, [activeServer]);
 
   const modeStyle = SpeechMode[speechMode].toLowerCase();
