@@ -37,7 +37,7 @@ Launches a large ball of acid from the palm of your hand.
 | Evocation | Prepared | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Nael Mossweep** and **Syren_DM**.
 
@@ -57,7 +57,7 @@ Conjures a blue crystal lance that can be wielded like a weapon.
 | Conjuration | Prepared | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**.
 
@@ -77,7 +77,7 @@ Conjures a blue crystal pickaxe that can be wielded like a weapon.
 | Conjuration | Prepared | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**.
 
@@ -97,7 +97,7 @@ Conjures a blue crystal sword that can be wielded like a weapon.
 | Conjuration | Prepared | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**.
 
@@ -117,7 +117,7 @@ Conjures a single serving of water inside of an empty flask.
 | Conjuration | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Ethyn Wyrmbane**.
 
@@ -137,7 +137,7 @@ Conjures a small glass container used to hold various liquids.
 | Conjuration | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Ethyn Wyrmbane**.
 
@@ -160,7 +160,7 @@ Conjures additional servings of teleportation potion inside of a flask already c
 | Conjuration | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Nael Mossweep**.
 
@@ -183,7 +183,7 @@ Conjures additional servings of water inside of a flask already containing water
 | Conjuration | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Syren_DM**.
 
@@ -203,7 +203,7 @@ Launches a large ball of icy crystals from the palm of your hand.
 | Evocation | Prepared | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Nael Mossweep**, **Syren_DM** and **JoshuaTheTeacup**.
 
@@ -223,7 +223,7 @@ Restores some of the integrity of all copper parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -243,7 +243,7 @@ Restores some of the integrity of all electrum parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -263,7 +263,7 @@ Restores some of the integrity of all gold parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -283,7 +283,7 @@ Restores some of the integrity of all iron parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -303,7 +303,7 @@ Restores some of the integrity of all mythril parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -323,7 +323,7 @@ Restores some of the integrity of all palladium parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -343,7 +343,7 @@ Restores some of the integrity of all red iron parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -363,7 +363,7 @@ Restores some of the integrity of all silver parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -383,7 +383,7 @@ Restores some of the integrity of all valyan parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -403,7 +403,7 @@ Restores some of the integrity of all viridium parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -423,7 +423,7 @@ Transmutes a flask containing one or more servings of water into teleportation p
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Syren_DM**.
 
