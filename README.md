@@ -27,6 +27,8 @@
 
 - After acquiring a session in Voodoo, the app can sometimes jump back to the `Ready!` screen and get stuck here. [We're currently still investigating](https://github.com/mdingena/att-voodoo/issues/7) what is causing this.  
   **Work-around:** restart Voodoo.
+- Voodoo can say "Not near a Spellcrafting Conduit" even when you're standing next to a green crystal cluster. When this happens it means the ATT server's `select find <player>` command has broken and the server needs to be restarted. Joel is aware of this bug.
+- Acid Bolt rarely connects with players or enemies. This doesn't appear to be a bug with Voodoo, as the mod doesn't change any wyrm spit properties.
 
 # 🚀 Installation & usage
 
@@ -35,6 +37,58 @@
 - [✨ Casting spells](./guides/SPELLCASTING.md)
 - [📖 Spellbook](./spellbook/README.md)
 - [👩🏻‍🎓 Voodoo Vocabulary](./guides/VOCABULARY.md)
+
+# Frequently Asked Questions
+
+<details>
+<summary>Why is Voodoo not authenticating? It's stuck.</summary>
+
+Make sure your system time is correct. Voodoo validates tokens retrieved from Alta and it compares the token's expiration date with your system time.
+
+</details>
+
+<details>
+<summary>I can't awaken Voodoo. Why is it not picking up my voice?</summary>
+
+Voodoo currently relies on Windows speech recognition which uses Windows language packs. Make sure you have **English (United States)** configured as one of your Windows languages. To configure your Windows languages:
+
+1. Go to **Windows Settings**.
+1. Click the **Time & Language** tile.
+1. Click the **Language** tab.
+1. In the **Preferred Languages** section, add **English (United States)**.
+1. Restart Voodoo.
+
+</details>
+
+<details>
+<summary>Why can't I see my server in the list? I just added Voodoo Mod.</summary>
+
+There is a known issue with bot events that causes Voodoo to be unaware of certain changes.
+
+- Try leaving and entering your server. We've implemented a work-around that listens to `PlayerLeft` and `PlayerJoined` events.
+- Try restarting your game server. This will toggle its state and might inform Voodoo.
+- Kick Voodoo Mod from your server group and re-invite it. Don't forget to give it console permissions.
+
+If you still can't see your server, restart your Voodoo Client just to make sure. If that doesn't help, [create an issue](https://github.com/mdingena/att-voodoo/issues).
+
+</details>
+
+<details>
+<summary>Why has Voodoo misheard what I said?</summary>
+
+Speech recognition is tricky. Your accent might play a role as well (I'm not a native English speaker myself and it doesn't always correctly recognise what I said). The good news is, **Windows speech recognition can be trained**. Search online for ideas on how to train your speech recognition to more accurately understand the way **you** speak English.
+
+</details>
+
+# 🎩 Special thanks
+
+## Poi
+
+Poi's work unraveling the mysteries of _A Township Tale_'s save strings was instrumental in building Voodoo. Poi didn't directly work on Voodoo, but Voodoo would not exist without his help. Thank you for sharing your secrets!
+
+## CJ (Siege)
+
+CJ's mountain of experience with speech recognition helped shape the way you interact with Voodoo. His knowledge has informed the best way to deal with voice commands and how to handle or work around false positives.
 
 # Maintainers
 
