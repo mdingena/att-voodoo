@@ -41,10 +41,10 @@ Launches a large ball of acid from the palm of your hand.
 
 Discovered by **Nael Mossweep** and **Syren_DM**.
 
-|     Dock | ζ                  | δ                     | λ                | Ω                 |
-| -------: | ------------------ | --------------------- | ---------------- | ----------------- |
-| Material | Green leather roll | Red spriggull feather | Salt             | Firework          |
-|    Speak | `skin of wyrm`     | `tuft of spriggull`   | `sliver of salt` | `essence of pyre` |
+|     Dock | ζ                    | δ                     | λ                | Ω                 |
+| -------: | -------------------- | --------------------- | ---------------- | ----------------- |
+| Material | Green leather strips | Red spriggull feather | Salt             | Firework          |
+|    Speak | `skin of wyrm`       | `tuft of spriggull`   | `sliver of salt` | `essence of pyre` |
 
 </details>
 
@@ -61,10 +61,10 @@ Conjures a blue crystal lance that can be wielded like a weapon.
 
 Discovered by **Gasher**.
 
-|     Dock | ζ                             | δ                  | λ                  | Ω      |
-| -------: | ----------------------------- | ------------------ | ------------------ | ------ |
-| Material | Medium straight wooden handle | Blue crystal gem   | Electrum ingot     |        |
-|    Speak | `heart of weapon`             | `fragment of gems` | `extract of earth` | `seal` |
+|     Dock | ζ                 | δ                  | λ                  | Ω      |
+| -------: | ----------------- | ------------------ | ------------------ | ------ |
+| Material | Rusty pitchfork   | Blue crystal gem   | Electrum ingot     |        |
+|    Speak | `heart of weapon` | `fragment of gems` | `extract of earth` | `seal` |
 
 </details>
 
@@ -81,10 +81,10 @@ Conjures a blue crystal pickaxe that can be wielded like a weapon.
 
 Discovered by **Gasher**.
 
-|     Dock | ζ                    | δ                  | λ                  | Ω      |
-| -------: | -------------------- | ------------------ | ------------------ | ------ |
-| Material | Curled wooden handle | Blue crystal gem   | Silver ingot       |        |
-|    Speak | `heart of weapon`    | `fragment of gems` | `extract of earth` | `seal` |
+|     Dock | ζ                 | δ                  | λ                  | Ω      |
+| -------: | ----------------- | ------------------ | ------------------ | ------ |
+| Material | Rusty pickaxe     | Blue crystal gem   | Silver ingot       |        |
+|    Speak | `heart of weapon` | `fragment of gems` | `extract of earth` | `seal` |
 
 </details>
 
@@ -101,10 +101,6 @@ Conjures a blue crystal sword that can be wielded like a weapon.
 
 Discovered by **Gasher**.
 
-|     Dock | ζ                   | δ                  | λ                  | Ω      |
-| -------: | ------------------- | ------------------ | ------------------ | ------ |
-| Material | Short wooden handle | Blue crystal gem   | Palladium ingot    |        |
-|    Speak | `heart of weapon`   | `fragment of gems` | `extract of earth` | `seal` |
 
 </details>
 
@@ -125,6 +121,10 @@ Discovered by **Syren_DM**.
 | -------: | ---------------------- | ------------------ | ------ |
 | Material | Flask containing water | Burnt red mushroom |        |
 |    Speak | `fluid of silica`      | `essence of fungi` | `seal` |
+|     Dock | ζ                 | δ                  | λ                  | Ω      |
+| -------: | ----------------- | ------------------ | ------------------ | ------ |
+| Material | Rusty shortsword  | Blue crystal gem   | Palladium ingot    |        |
+|    Speak | `heart of weapon` | `fragment of gems` | `extract of earth` | `seal` |
 
 </details>
 
