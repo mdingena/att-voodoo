@@ -46,7 +46,6 @@ export const AuthCallbackRoute = () => {
 
   if (auth?.userData && !isFetching.current) {
     isFetching.current = true;
-    setAccountId(Number(auth.userData?.profile?.sub ?? 0));
     ipcRenderer
       .invoke('session', {
         accountId: auth.userData?.profile?.sub,
@@ -56,6 +55,7 @@ export const AuthCallbackRoute = () => {
         if (response.ok) {
           setHasSession(true);
           setAccessToken(auth.userData?.access_token ?? null);
+          setAccountId(Number(auth.userData?.profile?.sub ?? 0));
           setServers(response.result.servers);
           if (response.result.playerJoined) {
             ipcRenderer.invoke('server-connected');
