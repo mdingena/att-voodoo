@@ -441,10 +441,17 @@ Transmutes a copper ingot to an iron ingot.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 2 incantations.
-- `ζ` must contain a copper ingot.
+Discovered by **The Kronk Creed**.
+
+|     Dock | ζ                  | δ                  | λ      |
+| -------: | ------------------ | ------------------ | ------ |
+| Material | Copper ingot       | Blue crystal shard |        |
+|    Speak | `extract of earth` | `fragment of gems` | `seal` |
+
+</details>
 
 # Transmute Gold To Silver
 
@@ -454,10 +461,17 @@ Transmutes a gold ingot to a silver ingot.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 2 incantations.
-- `ζ` must contain a gold ingot.
+Discovered by **The Kronk Creed**.
+
+|     Dock | ζ                  | δ                | λ      |
+| -------: | ------------------ | ---------------- | ------ |
+| Material | Gold ingot         | Blue crystal gem |        |
+|    Speak | `extract of earth` | `aether of gems` | `seal` |
+
+</details>
 
 # Transmute Ingot To Ore
 
@@ -480,10 +494,17 @@ Transmutes an iron ingot to a gold ingot.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 2 incantations.
-- `ζ` must contain an iron ingot.
+Discovered by **The Kronk Creed**.
+
+|     Dock | ζ                  | δ                  | λ      |
+| -------: | ------------------ | ------------------ | ------ |
+| Material | Iron ingot         | Blue crystal shard |        |
+|    Speak | `extract of earth` | `fragment of gems` | `seal` |
+
+</details>
 
 # Transmute Silver To Mythril
 
@@ -493,10 +514,17 @@ Transmutes a silver ingot to a mythril ingot.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 2 incantations.
-- `ζ` must contain a silver ingot.
+Discovered by **The Kronk Creed**.
+
+|     Dock | ζ                  | δ                | λ      |
+| -------: | ------------------ | ---------------- | ------ |
+| Material | Silver ingot       | Blue crystal gem |        |
+|    Speak | `extract of earth` | `aether of gems` | `seal` |
+
+</details>
 
 # Transmute Teleportation Potion
 
