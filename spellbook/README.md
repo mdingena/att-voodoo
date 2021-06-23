@@ -7,12 +7,12 @@
 - [Conjure Crystal Lance](#conjure-crystal-lance)
 - [Conjure Crystal Pick](#conjure-crystal-pick)
 - [Conjure Crystal Sword](#conjure-crystal-sword)
-- [Conjure Teleportation Potion](#conjure-teleportation-potion)
 - [Conjure Water](#conjure-water)
 - [Craft Flask](#craft-flask)
 - [Flask of Endless Teleportation](#flask-of-endless-teleportation)
 - [Flask of Endless Water](#flask-of-endless-water)
 - [Frost Bolt](#frost-bolt)
+- [Liquate Alloy](#liquate-alloy)
 - [Repair Copper Weapon](#repair-copper-weapon)
 - [Repair Electrum Weapon](#repair-electrum-weapon)
 - [Repair Gold Weapon](#repair-gold-weapon)
@@ -23,6 +23,12 @@
 - [Repair Silver Weapon](#repair-silver-weapon)
 - [Repair Valyan Weapon](#repair-valyan-weapon)
 - [Repair Viridium Weapon](#repair-viridium-weapon)
+- [Transmute Copper To Iron](#transmute-copper-to-iron)
+- [Transmute Gold To Silver](#transmute-gold-to-silver)
+- [Transmute Ingot To Ore](#transmute-ingot-to-ore)
+- [Transmute Iron To Gold](#transmute-iron-to-gold)
+- [Transmute Silver To Mythril](#transmute-silver-to-mythril)
+- [Transmute Teleportation Potion](#transmute-teleportation-potion)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
