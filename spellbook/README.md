@@ -7,12 +7,12 @@
 - [Conjure Crystal Lance](#conjure-crystal-lance)
 - [Conjure Crystal Pick](#conjure-crystal-pick)
 - [Conjure Crystal Sword](#conjure-crystal-sword)
-- [Conjure Teleportation Potion](#conjure-teleportation-potion)
 - [Conjure Water](#conjure-water)
 - [Craft Flask](#craft-flask)
 - [Flask of Endless Teleportation](#flask-of-endless-teleportation)
 - [Flask of Endless Water](#flask-of-endless-water)
 - [Frost Bolt](#frost-bolt)
+- [Liquate Alloy](#liquate-alloy)
 - [Repair Copper Weapon](#repair-copper-weapon)
 - [Repair Electrum Weapon](#repair-electrum-weapon)
 - [Repair Gold Weapon](#repair-gold-weapon)
@@ -23,6 +23,12 @@
 - [Repair Silver Weapon](#repair-silver-weapon)
 - [Repair Valyan Weapon](#repair-valyan-weapon)
 - [Repair Viridium Weapon](#repair-viridium-weapon)
+- [Transmute Copper To Iron](#transmute-copper-to-iron)
+- [Transmute Gold To Silver](#transmute-gold-to-silver)
+- [Transmute Ingot To Ore](#transmute-ingot-to-ore)
+- [Transmute Iron To Gold](#transmute-iron-to-gold)
+- [Transmute Silver To Mythril](#transmute-silver-to-mythril)
+- [Transmute Teleportation Potion](#transmute-teleportation-potion)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -37,14 +43,14 @@ Launches a large ball of acid from the palm of your hand.
 | Evocation | Prepared | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Nael Mossweep** and **Syren_DM**.
 
-|     Dock | ζ                  | δ                     | λ                | Ω                 |
-| -------: | ------------------ | --------------------- | ---------------- | ----------------- |
-| Material | Green leather roll | Red spriggull feather | Salt             | Firework          |
-|    Speak | `skin of wyrm`     | `tuft of spriggull`   | `sliver of salt` | `essence of pyre` |
+|     Dock | ζ                    | δ                     | λ                | Ω                 |
+| -------: | -------------------- | --------------------- | ---------------- | ----------------- |
+| Material | Green leather strips | Red spriggull feather | Salt             | Firework          |
+|    Speak | `skin of wyrm`       | `tuft of spriggull`   | `sliver of salt` | `essence of pyre` |
 
 </details>
 
@@ -57,14 +63,14 @@ Conjures a blue crystal lance that can be wielded like a weapon.
 | Conjuration | Prepared | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**.
 
-|     Dock | ζ                             | δ                  | λ                  | Ω      |
-| -------: | ----------------------------- | ------------------ | ------------------ | ------ |
-| Material | Medium straight wooden handle | Blue crystal gem   | Electrum ingot     |        |
-|    Speak | `heart of weapon`             | `fragment of gems` | `extract of earth` | `seal` |
+|     Dock | ζ                 | δ                | λ                  | Ω      |
+| -------: | ----------------- | ---------------- | ------------------ | ------ |
+| Material | Rusty pitchfork   | Blue crystal gem | Electrum ingot     |        |
+|    Speak | `heart of weapon` | `aether of gems` | `extract of earth` | `seal` |
 
 </details>
 
@@ -77,14 +83,14 @@ Conjures a blue crystal pickaxe that can be wielded like a weapon.
 | Conjuration | Prepared | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**.
 
-|     Dock | ζ                    | δ                  | λ                  | Ω      |
-| -------: | -------------------- | ------------------ | ------------------ | ------ |
-| Material | Curled wooden handle | Blue crystal gem   | Silver ingot       |        |
-|    Speak | `heart of weapon`    | `fragment of gems` | `extract of earth` | `seal` |
+|     Dock | ζ                 | δ                | λ                  | Ω      |
+| -------: | ----------------- | ---------------- | ------------------ | ------ |
+| Material | Rusty pickaxe     | Blue crystal gem | Silver ingot       |        |
+|    Speak | `heart of weapon` | `aether of gems` | `extract of earth` | `seal` |
 
 </details>
 
@@ -97,34 +103,14 @@ Conjures a blue crystal sword that can be wielded like a weapon.
 | Conjuration | Prepared | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**.
 
-|     Dock | ζ                   | δ                  | λ                  | Ω      |
-| -------: | ------------------- | ------------------ | ------------------ | ------ |
-| Material | Short wooden handle | Blue crystal gem   | Palladium ingot    |        |
-|    Speak | `heart of weapon`   | `fragment of gems` | `extract of earth` | `seal` |
-
-</details>
-
-# Conjure Teleportation Potion
-
-Conjures a single serving of teleportation potion inside of an empty flask.
-
-| School      | Type    | Casts from |
-| :---------- | :------ | :--------- |
-| Conjuration | Instant | Right hand |
-
-<details>
-<summary>Incantations ✔️</summary>
-
-Discovered by **Syren_DM**.
-
-|     Dock | ζ                      | δ                  | λ      |
-| -------: | ---------------------- | ------------------ | ------ |
-| Material | Flask containing water | Burnt red mushroom |        |
-|    Speak | `fluid of silica`      | `essence of fungi` | `seal` |
+|     Dock | ζ                 | δ                | λ                  | Ω      |
+| -------: | ----------------- | ---------------- | ------------------ | ------ |
+| Material | Rusty shortsword  | Blue crystal gem | Palladium ingot    |        |
+|    Speak | `heart of weapon` | `aether of gems` | `extract of earth` | `seal` |
 
 </details>
 
@@ -137,7 +123,7 @@ Conjures a single serving of water inside of an empty flask.
 | Conjuration | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Ethyn Wyrmbane**.
 
@@ -157,7 +143,7 @@ Conjures a small glass container used to hold various liquids.
 | Conjuration | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Ethyn Wyrmbane**.
 
@@ -180,7 +166,7 @@ Conjures additional servings of teleportation potion inside of a flask already c
 | Conjuration | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Nael Mossweep**.
 
@@ -203,7 +189,7 @@ Conjures additional servings of water inside of a flask already containing water
 | Conjuration | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Syren_DM**.
 
@@ -223,7 +209,7 @@ Launches a large ball of icy crystals from the palm of your hand.
 | Evocation | Prepared | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Nael Mossweep**, **Syren_DM** and **JoshuaTheTeacup**.
 
@@ -234,6 +220,19 @@ Discovered by **Nael Mossweep**, **Syren_DM** and **JoshuaTheTeacup**.
 
 </details>
 
+# Liquate Alloy
+
+Splits an alloy into its base metals.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Both hands |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 3 incantations.
+- `ζ` must contain an alloy.
+
 # Repair Copper Weapon
 
 Restores some of the integrity of all copper parts in a weapon.
@@ -243,7 +242,7 @@ Restores some of the integrity of all copper parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -263,7 +262,7 @@ Restores some of the integrity of all electrum parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -283,7 +282,7 @@ Restores some of the integrity of all gold parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -303,7 +302,7 @@ Restores some of the integrity of all iron parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -323,7 +322,7 @@ Restores some of the integrity of all mythril parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -343,7 +342,7 @@ Restores some of the integrity of all palladium parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -363,7 +362,7 @@ Restores some of the integrity of all red iron parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -383,7 +382,7 @@ Restores some of the integrity of all silver parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -403,7 +402,7 @@ Restores some of the integrity of all valyan parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -423,7 +422,7 @@ Restores some of the integrity of all viridium parts in a weapon.
 | Transmutation | Instant | Right hand |
 
 <details>
-<summary>Incantations ✔️</summary>
+<summary>Incantations</summary>
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
@@ -431,5 +430,90 @@ Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 | -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
 | Material | Any weapon        | Viridium ingot     | Coal              | Spriggull bone shard    |
 |    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+
+</details>
+
+# Transmute Copper To Iron
+
+Transmutes a copper ingot to an iron ingot.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 2 incantations.
+- `ζ` must contain a copper ingot.
+
+# Transmute Gold To Silver
+
+Transmutes a gold ingot to a silver ingot.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 2 incantations.
+- `ζ` must contain a gold ingot.
+
+# Transmute Ingot To Ore
+
+Transmutes any non-alloy ingot to ore at a ratio of 1 ingot to 2 ore.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Both hands |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 2 incantations.
+- `ζ` must contain any non-alloy ingot.
+
+# Transmute Iron To Gold
+
+Transmutes an iron ingot to a gold ingot.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 2 incantations.
+- `ζ` must contain an iron ingot.
+
+# Transmute Silver To Mythril
+
+Transmutes a silver ingot to a mythril ingot.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 2 incantations.
+- `ζ` must contain a silver ingot.
+
+# Transmute Teleportation Potion
+
+Transmutes a flask containing one or more servings of water into teleportation potion.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+<details>
+<summary>Incantations</summary>
+
+Discovered by **Syren_DM**.
+
+|     Dock | ζ                      | δ                  | λ      |
+| -------: | ---------------------- | ------------------ | ------ |
+| Material | Flask containing water | Burnt red mushroom |        |
+|    Speak | `fluid of silica`      | `essence of fungi` | `seal` |
 
 </details>
