@@ -38,9 +38,9 @@
   <rule id="property">
     <one-of>
       <item> aether </item>
+      <item> artifact </item>
       <item> bonds </item>
       <item> essence </item>
-      <item> extract </item>
       <item> fluid </item>
       <item> fragment </item>
       <item> heart </item>
