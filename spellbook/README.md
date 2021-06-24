@@ -448,17 +448,13 @@ Transmutes a copper ingot to an iron ingot.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-<details>
-<summary>Incantations</summary>
+Originally discovered by **The Kronk Creed**.
 
-Discovered by **The Kronk Creed**.
+⚠️ **Rebalanced incantations unknown! Research discoveries made so far:**
 
-|     Dock | ζ                   | δ                  | λ      |
-| -------: | ------------------- | ------------------ | ------ |
-| Material | Copper ingot        | Blue crystal shard |        |
-|    Speak | `artifact of earth` | `fragment of gems` | `seal` |
-
-</details>
+- Requires 3 incantations.
+- `ζ` must contain any non-alloy ingot.
+- Transmutation process requires heat.
 
 # Transmute Gold To Silver
 
@@ -468,17 +464,13 @@ Transmutes a gold ingot to a silver ingot.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-<details>
-<summary>Incantations</summary>
+Originally discovered by **The Kronk Creed**.
 
-Discovered by **The Kronk Creed**.
+⚠️ **Rebalanced incantations unknown! Research discoveries made so far:**
 
-|     Dock | ζ                   | δ                | λ      |
-| -------: | ------------------- | ---------------- | ------ |
-| Material | Gold ingot          | Blue crystal gem |        |
-|    Speak | `artifact of earth` | `aether of gems` | `seal` |
-
-</details>
+- Requires 3 incantations.
+- `ζ` must contain any non-alloy ingot.
+- Transmutation process requires _intense_ heat.
 
 # Transmute Ingot To Ore
 
@@ -508,17 +500,13 @@ Transmutes an iron ingot to a gold ingot.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-<details>
-<summary>Incantations</summary>
+Originally discovered by **The Kronk Creed**.
 
-Discovered by **The Kronk Creed**.
+⚠️ **Rebalanced incantations unknown! Research discoveries made so far:**
 
-|     Dock | ζ                   | δ                  | λ      |
-| -------: | ------------------- | ------------------ | ------ |
-| Material | Iron ingot          | Blue crystal shard |        |
-|    Speak | `artifact of earth` | `fragment of gems` | `seal` |
-
-</details>
+- Requires 3 incantations.
+- `ζ` must contain any non-alloy ingot.
+- Transmutation process requires heat.
 
 # Transmute Silver To Mythril
 
@@ -528,17 +516,13 @@ Transmutes a silver ingot to a mythril ingot.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-<details>
-<summary>Incantations</summary>
+Originally discovered by **The Kronk Creed**.
 
-Discovered by **The Kronk Creed**.
+⚠️ **Rebalanced incantations unknown! Research discoveries made so far:**
 
-|     Dock | ζ                   | δ                | λ      |
-| -------: | ------------------- | ---------------- | ------ |
-| Material | Silver ingot        | Blue crystal gem |        |
-|    Speak | `artifact of earth` | `aether of gems` | `seal` |
-
-</details>
+- Requires 3 incantations.
+- `ζ` must contain any non-alloy ingot.
+- Transmutation process requires _intense_ heat.
 
 # Transmute Teleportation Potion
 
