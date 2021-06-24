@@ -45,7 +45,7 @@ export const getMaterialComponents = (speech: string): string[] => {
       ];
 
     case 'embers':
-      return ['coal', 'fuel core'];
+      return ['coal', 'fuel core', 'molten core'];
 
     case 'fungi':
       return [
@@ -124,7 +124,7 @@ export const getMaterialComponents = (speech: string): string[] => {
       ];
 
     case 'pyre':
-      return ['dynamite', 'firework', 'flint', 'fuel core'];
+      return ['dynamite', 'firework', 'flint', 'fuel core', 'molten core'];
 
     case 'revenant':
       return ['cursed hand guard'];
