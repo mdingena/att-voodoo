@@ -67,10 +67,10 @@ Conjures a blue crystal lance that can be wielded like a weapon.
 
 Discovered by **Gasher**.
 
-|     Dock | ζ                 | δ                | λ                  | Ω      |
-| -------: | ----------------- | ---------------- | ------------------ | ------ |
-| Material | Rusty pitchfork   | Blue crystal gem | Electrum ingot     |        |
-|    Speak | `heart of weapon` | `aether of gems` | `extract of earth` | `seal` |
+|     Dock | ζ                 | δ                | λ                   | Ω      |
+| -------: | ----------------- | ---------------- | ------------------- | ------ |
+| Material | Rusty pitchfork   | Blue crystal gem | Electrum ingot      |        |
+|    Speak | `heart of weapon` | `aether of gems` | `artifact of earth` | `seal` |
 
 </details>
 
@@ -87,10 +87,10 @@ Conjures a blue crystal pickaxe that can be wielded like a weapon.
 
 Discovered by **Gasher**.
 
-|     Dock | ζ                 | δ                | λ                  | Ω      |
-| -------: | ----------------- | ---------------- | ------------------ | ------ |
-| Material | Rusty pickaxe     | Blue crystal gem | Silver ingot       |        |
-|    Speak | `heart of weapon` | `aether of gems` | `extract of earth` | `seal` |
+|     Dock | ζ                 | δ                | λ                   | Ω      |
+| -------: | ----------------- | ---------------- | ------------------- | ------ |
+| Material | Rusty pickaxe     | Blue crystal gem | Silver ingot        |        |
+|    Speak | `heart of weapon` | `aether of gems` | `artifact of earth` | `seal` |
 
 </details>
 
@@ -107,10 +107,10 @@ Conjures a blue crystal sword that can be wielded like a weapon.
 
 Discovered by **Gasher**.
 
-|     Dock | ζ                 | δ                | λ                  | Ω      |
-| -------: | ----------------- | ---------------- | ------------------ | ------ |
-| Material | Rusty shortsword  | Blue crystal gem | Palladium ingot    |        |
-|    Speak | `heart of weapon` | `aether of gems` | `extract of earth` | `seal` |
+|     Dock | ζ                 | δ                | λ                   | Ω      |
+| -------: | ----------------- | ---------------- | ------------------- | ------ |
+| Material | Rusty shortsword  | Blue crystal gem | Palladium ingot     |        |
+|    Speak | `heart of weapon` | `aether of gems` | `artifact of earth` | `seal` |
 
 </details>
 
@@ -233,10 +233,10 @@ Splits an alloy into its base metals.
 
 Discovered by **The Pumpking**.
 
-|     Dock | ζ                  | δ                  | λ                 |
-| -------: | ------------------ | ------------------ | ----------------- |
-| Material | Any alloy ingot    | Blue crystal shard | Coal              |
-|    Speak | `extract of earth` | `fragment of gems` | `heart of embers` |
+|     Dock | ζ                   | δ                  | λ                 |
+| -------: | ------------------- | ------------------ | ----------------- |
+| Material | Any alloy ingot     | Blue crystal shard | Coal              |
+|    Speak | `artifact of earth` | `fragment of gems` | `heart of embers` |
 
 </details>
 
@@ -253,10 +253,10 @@ Restores some of the integrity of all copper parts in a weapon.
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
-|     Dock | ζ                 | δ                  | λ                 | Ω                       |
-| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
-| Material | Any weapon        | Copper ingot       | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+|     Dock | ζ                 | δ                   | λ                 | Ω                       |
+| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
+| Material | Any weapon        | Copper ingot        | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
@@ -273,10 +273,10 @@ Restores some of the integrity of all electrum parts in a weapon.
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
-|     Dock | ζ                 | δ                  | λ                 | Ω                       |
-| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
-| Material | Any weapon        | Electrum ingot     | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+|     Dock | ζ                 | δ                   | λ                 | Ω                       |
+| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
+| Material | Any weapon        | Electrum ingot      | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
@@ -293,10 +293,10 @@ Restores some of the integrity of all gold parts in a weapon.
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
-|     Dock | ζ                 | δ                  | λ                 | Ω                       |
-| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
-| Material | Any weapon        | Gold ingot         | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+|     Dock | ζ                 | δ                   | λ                 | Ω                       |
+| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
+| Material | Any weapon        | Gold ingot          | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
@@ -313,10 +313,10 @@ Restores some of the integrity of all iron parts in a weapon.
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
-|     Dock | ζ                 | δ                  | λ                 | Ω                       |
-| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
-| Material | Any weapon        | Iron ingot         | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+|     Dock | ζ                 | δ                   | λ                 | Ω                       |
+| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
+| Material | Any weapon        | Iron ingot          | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
@@ -333,10 +333,10 @@ Restores some of the integrity of all mythril parts in a weapon.
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
-|     Dock | ζ                 | δ                  | λ                 | Ω                       |
-| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
-| Material | Any weapon        | Mythril ingot      | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+|     Dock | ζ                 | δ                   | λ                 | Ω                       |
+| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
+| Material | Any weapon        | Mythril ingot       | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
@@ -353,10 +353,10 @@ Restores some of the integrity of all palladium parts in a weapon.
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
-|     Dock | ζ                 | δ                  | λ                 | Ω                       |
-| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
-| Material | Any weapon        | Palladium ingot    | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+|     Dock | ζ                 | δ                   | λ                 | Ω                       |
+| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
+| Material | Any weapon        | Palladium ingot     | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
@@ -373,10 +373,10 @@ Restores some of the integrity of all red iron parts in a weapon.
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
-|     Dock | ζ                 | δ                  | λ                 | Ω                       |
-| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
-| Material | Any weapon        | Red iron ingot     | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+|     Dock | ζ                 | δ                   | λ                 | Ω                       |
+| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
+| Material | Any weapon        | Red iron ingot      | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
@@ -393,10 +393,10 @@ Restores some of the integrity of all silver parts in a weapon.
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
-|     Dock | ζ                 | δ                  | λ                 | Ω                       |
-| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
-| Material | Any weapon        | Silver ingot       | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+|     Dock | ζ                 | δ                   | λ                 | Ω                       |
+| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
+| Material | Any weapon        | Silver ingot        | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
@@ -413,10 +413,10 @@ Restores some of the integrity of all valyan parts in a weapon.
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
-|     Dock | ζ                 | δ                  | λ                 | Ω                       |
-| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
-| Material | Any weapon        | Valyan ingot       | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+|     Dock | ζ                 | δ                   | λ                 | Ω                       |
+| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
+| Material | Any weapon        | Valyan ingot        | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
@@ -433,10 +433,10 @@ Restores some of the integrity of all viridium parts in a weapon.
 
 Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
-|     Dock | ζ                 | δ                  | λ                 | Ω                       |
-| -------: | ----------------- | ------------------ | ----------------- | ----------------------- |
-| Material | Any weapon        | Viridium ingot     | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `extract of earth` | `heart of embers` | `fragment of spriggull` |
+|     Dock | ζ                 | δ                   | λ                 | Ω                       |
+| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
+| Material | Any weapon        | Viridium ingot      | Coal              | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
@@ -453,10 +453,10 @@ Transmutes a copper ingot to an iron ingot.
 
 Discovered by **The Kronk Creed**.
 
-|     Dock | ζ                  | δ                  | λ      |
-| -------: | ------------------ | ------------------ | ------ |
-| Material | Copper ingot       | Blue crystal shard |        |
-|    Speak | `extract of earth` | `fragment of gems` | `seal` |
+|     Dock | ζ                   | δ                  | λ      |
+| -------: | ------------------- | ------------------ | ------ |
+| Material | Copper ingot        | Blue crystal shard |        |
+|    Speak | `artifact of earth` | `fragment of gems` | `seal` |
 
 </details>
 
@@ -473,10 +473,10 @@ Transmutes a gold ingot to a silver ingot.
 
 Discovered by **The Kronk Creed**.
 
-|     Dock | ζ                  | δ                | λ      |
-| -------: | ------------------ | ---------------- | ------ |
-| Material | Gold ingot         | Blue crystal gem |        |
-|    Speak | `extract of earth` | `aether of gems` | `seal` |
+|     Dock | ζ                   | δ                | λ      |
+| -------: | ------------------- | ---------------- | ------ |
+| Material | Gold ingot          | Blue crystal gem |        |
+|    Speak | `artifact of earth` | `aether of gems` | `seal` |
 
 </details>
 
@@ -496,7 +496,7 @@ Discovered by **Apolo**.
 |     Dock | ζ                   | δ                |
 | -------: | ------------------- | ---------------- |
 | Material | Any non-alloy ingot | Rock             |
-|    Speak | `extract of earth`  | `bonds of earth` |
+|    Speak | `artifact of earth` | `bonds of earth` |
 
 </details>
 
@@ -513,10 +513,10 @@ Transmutes an iron ingot to a gold ingot.
 
 Discovered by **The Kronk Creed**.
 
-|     Dock | ζ                  | δ                  | λ      |
-| -------: | ------------------ | ------------------ | ------ |
-| Material | Iron ingot         | Blue crystal shard |        |
-|    Speak | `extract of earth` | `fragment of gems` | `seal` |
+|     Dock | ζ                   | δ                  | λ      |
+| -------: | ------------------- | ------------------ | ------ |
+| Material | Iron ingot          | Blue crystal shard |        |
+|    Speak | `artifact of earth` | `fragment of gems` | `seal` |
 
 </details>
 
@@ -533,10 +533,10 @@ Transmutes a silver ingot to a mythril ingot.
 
 Discovered by **The Kronk Creed**.
 
-|     Dock | ζ                  | δ                | λ      |
-| -------: | ------------------ | ---------------- | ------ |
-| Material | Silver ingot       | Blue crystal gem |        |
-|    Speak | `extract of earth` | `aether of gems` | `seal` |
+|     Dock | ζ                   | δ                | λ      |
+| -------: | ------------------- | ---------------- | ------ |
+| Material | Silver ingot        | Blue crystal gem |        |
+|    Speak | `artifact of earth` | `aether of gems` | `seal` |
 
 </details>
 

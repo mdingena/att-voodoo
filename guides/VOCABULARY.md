@@ -17,9 +17,9 @@ You must always connect a property word with a source word using `of`.
 All possible property words are:
 
 - `aether` (like "eater")
+- `artifact`
 - `bonds`
 - `essence`
-- `extract`
 - `fluid`
 - `fragment`
 - `heart`
