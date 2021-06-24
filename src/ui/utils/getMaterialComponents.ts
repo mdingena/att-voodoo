@@ -45,7 +45,7 @@ export const getMaterialComponents = (speech: string): string[] => {
       ];
 
     case 'embers':
-      return ['coal'];
+      return ['coal', 'fuel core'];
 
     case 'fungi':
       return [
