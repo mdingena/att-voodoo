@@ -16,7 +16,7 @@ You must always connect a property word with a source word using `of`.
 
 All possible property words are:
 
-- `aether`
+- `aether` (like "eater")
 - `bonds`
 - `essence`
 - `extract`
@@ -30,14 +30,14 @@ All possible property words are:
 All possible source words are:
 
 - `babu`
-- `dais`
+- `dais` (like "dice")
 - `earth`
 - `embers`
 - `gems`
 - `gotera`
 - `fungi`
 - `produce`
-- `pyre`
+- `pyre` (like "fire")
 - `revenant`
 - `salt`
 - `silica`
