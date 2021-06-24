@@ -1,5 +1,3 @@
-import { Prefab } from '@/prefabs';
-
 export const getMaterialComponents = (speech: string): string[] => {
   const source = speech.split(' ').reverse()[0];
 
