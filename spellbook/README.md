@@ -228,10 +228,17 @@ Splits an alloy into its base metals.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Both hands |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 3 incantations.
-- `ζ` must contain an alloy.
+Discovered by **The Pumpking**.
+
+|     Dock | ζ                  | δ                  | λ                 |
+| -------: | ------------------ | ------------------ | ----------------- |
+| Material | Any alloy ingot    | Blue crystal shard | Coal              |
+|    Speak | `extract of earth` | `fragment of gems` | `heart of embers` |
+
+</details>
 
 # Repair Copper Weapon
 
