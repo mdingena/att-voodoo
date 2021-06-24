@@ -124,7 +124,7 @@ export const getMaterialComponents = (speech: string): string[] => {
       ];
 
     case 'pyre':
-      return ['dynamite', 'firework', 'flint'];
+      return ['dynamite', 'firework', 'flint', 'fuel core'];
 
     case 'revenant':
       return ['cursed hand guard'];
