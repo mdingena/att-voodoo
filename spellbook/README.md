@@ -488,10 +488,17 @@ Transmutes any non-alloy ingot to ore at a ratio of 1 ingot to 2 ore.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Both hands |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 2 incantations.
-- `ζ` must contain any non-alloy ingot.
+Discovered by **Apolo**.
+
+|     Dock | ζ                   | δ                |
+| -------: | ------------------- | ---------------- |
+| Material | Any non-alloy ingot | Rock             |
+|    Speak | `extract of earth`  | `bonds of earth` |
+
+</details>
 
 # Transmute Iron To Gold
 
