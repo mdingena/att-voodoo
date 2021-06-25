@@ -464,13 +464,18 @@ Transmutes a gold ingot to a silver ingot.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-Originally discovered by **The Kronk Creed**.
+<details>
+<summary>Incantations</summary>
 
-⚠️ **Rebalanced incantations unknown! Research discoveries made so far:**
+Originally discovered by **The Kronk Creed**.  
+Rediscovered by **Pink** after balancing update.
 
-- Requires 3 incantations.
-- `ζ` must contain a gold ingot.
-- Transmutation process requires _intense_ heat.
+|     Dock | ζ                   | δ                | λ               | Ω      |
+| -------: | ------------------- | ---------------- | --------------- | ------ |
+| Material | Gold ingot          | Blue crystal gem | Molten core     |        |
+|    Speak | `artifact of earth` | `aether of gems` | `heart of pyre` | `seal` |
+
+</details>
 
 # Transmute Ingot To Ore
 
