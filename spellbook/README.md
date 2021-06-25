@@ -519,7 +519,7 @@ Transmutes a silver ingot to a mythril ingot.
 <details>
 <summary>Incantations</summary>
 
-Originally discovered by **The Kronk Creed**.
+Originally discovered by **The Kronk Creed**.  
 Rediscovered by **Pink** after balancing update.
 
 |     Dock | ζ                   | δ                | λ               | Ω      |
