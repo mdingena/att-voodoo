@@ -37,6 +37,7 @@
 - [✨ Casting spells](./guides/SPELLCASTING.md)
 - [📖 Spellbook](./spellbook/README.md)
 - [👩🏻‍🎓 Voodoo Vocabulary](./guides/VOCABULARY.md)
+- [💬 Discord server](https://discord.gg/THy2AVBPHX)
 
 # Frequently Asked Questions
 
