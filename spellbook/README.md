@@ -516,13 +516,18 @@ Transmutes a silver ingot to a mythril ingot.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
+<details>
+<summary>Incantations</summary>
+
 Originally discovered by **The Kronk Creed**.
+Rediscovered by **Pink** after balancing update.
 
-⚠️ **Rebalanced incantations unknown! Research discoveries made so far:**
+|     Dock | ζ                   | δ                | λ               | Ω      |
+| -------: | ------------------- | ---------------- | --------------- | ------ |
+| Material | Silver ingot        | Blue crystal gem | Fuel core       |        |
+|    Speak | `artifact of earth` | `aether of gems` | `heart of pyre` | `seal` |
 
-- Requires 3 incantations.
-- `ζ` must contain a silver ingot.
-- Transmutation process requires _intense_ heat.
+</details>
 
 # Transmute Teleportation Potion
 
