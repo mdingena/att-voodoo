@@ -453,7 +453,7 @@ Originally discovered by **The Kronk Creed**.
 ⚠️ **Rebalanced incantations unknown! Research discoveries made so far:**
 
 - Requires 3 incantations.
-- `ζ` must contain any non-alloy ingot.
+- `ζ` must contain a copper ingot.
 - Transmutation process requires heat.
 
 # Transmute Gold To Silver
@@ -469,7 +469,7 @@ Originally discovered by **The Kronk Creed**.
 ⚠️ **Rebalanced incantations unknown! Research discoveries made so far:**
 
 - Requires 3 incantations.
-- `ζ` must contain any non-alloy ingot.
+- `ζ` must contain a gold ingot.
 - Transmutation process requires _intense_ heat.
 
 # Transmute Ingot To Ore
@@ -505,7 +505,7 @@ Originally discovered by **The Kronk Creed**.
 ⚠️ **Rebalanced incantations unknown! Research discoveries made so far:**
 
 - Requires 3 incantations.
-- `ζ` must contain any non-alloy ingot.
+- `ζ` must contain an iron ingot.
 - Transmutation process requires heat.
 
 # Transmute Silver To Mythril
@@ -521,7 +521,7 @@ Originally discovered by **The Kronk Creed**.
 ⚠️ **Rebalanced incantations unknown! Research discoveries made so far:**
 
 - Requires 3 incantations.
-- `ζ` must contain any non-alloy ingot.
+- `ζ` must contain a silver ingot.
 - Transmutation process requires _intense_ heat.
 
 # Transmute Teleportation Potion
