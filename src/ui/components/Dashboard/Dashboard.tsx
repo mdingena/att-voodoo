@@ -12,11 +12,14 @@ import {
   incantationsAtom,
   Incantation,
   preparedSpellsAtom,
-  PreparedSpell
+  PreparedSpell,
+  Panel,
+  panelAtom
 } from '@/atoms';
 import { ServersUpdate } from '@/components/ServersScreen';
 import { Dock } from '@/components/Dock';
 import { SpellTrigger } from '@/components/SpellTrigger';
+import { SettingsPanel } from '../SettingsPanel';
 import styles from './Dashboard.module.css';
 import chimeAudioFile from './chime.wav';
 import pingAudioFile from './ping.wav';
@@ -45,18 +48,24 @@ droneAudio.volume = Math.pow(0.6, VOLUME_EXPONENT);
 droneAudio.playbackRate = 1.5;
 
 enum Mode {
+  Locked = SpeechMode.Locked,
   Suppressed = SpeechMode.Suppressed,
   Ready = SpeechMode.Awake,
   Attuning = SpeechMode.Incanting
 }
 
-export const Dashboard = () => {
+export const Dashboard = (): JSX.Element => {
   const [speechMode, setSpeechMode] = useAtom(speechModeAtom);
   const [activeServer, setActiveServer] = useAtom(activeServerAtom);
   const [appStage, setAppStage] = useAtom(appStageAtom);
   const [accessToken] = useAtom(accessTokenAtom);
   const [incantations, setIncantations] = useAtom(incantationsAtom);
   const [preparedSpells, setPreparedSpells] = useAtom(preparedSpellsAtom);
+  const [panel, setPanel] = useAtom(panelAtom);
+
+  const openSettingsPanel = () => {
+    setPanel(Panel.Settings);
+  };
 
   const handleUpdateServers = (_: Event, { playerJoined }: ServersUpdate) => {
     setActiveServer(playerJoined);
@@ -158,21 +167,34 @@ export const Dashboard = () => {
 
   const modeStyle = SpeechMode[speechMode].toLowerCase();
 
+  console.log(modeStyle);
+
+  const isPanelOpen = panel !== Panel.None;
+
   return (
-    <div className={styles.root}>
-      <div className={styles[modeStyle]}>{Mode[speechMode]}</div>
-      <div className={styles.incantations}>
-        <Dock slot={0} />
-        <Dock slot={1} />
-        <Dock slot={2} />
-        <Dock slot={3} />
+    <>
+      <div className={isPanelOpen ? styles.blur : styles.root}>
+        <div className={styles[modeStyle]}>{Mode[speechMode]}</div>
+        <div className={styles.incantations}>
+          <Dock slot={0} />
+          <Dock slot={1} />
+          <Dock slot={2} />
+          <Dock slot={3} />
+        </div>
+        <div className={styles.spellsHeader}>Prepared Spells</div>
+        <div className={styles.spells}>
+          {preparedSpells.map((spell, index) => (
+            <SpellTrigger key={`spell-${index}`} spell={spell} />
+          ))}
+        </div>
+        <div className={styles.actionsHeader}>
+          <button className={styles.action} onClick={openSettingsPanel}>
+            Settings
+          </button>
+          <button className={styles.action}>Upgrades</button>
+        </div>
       </div>
-      <div className={styles.spellsHeader}>Prepared Spells</div>
-      <div className={styles.spells}>
-        {preparedSpells.map((spell, index) => (
-          <SpellTrigger key={`spell-${index}`} spell={spell} />
-        ))}
-      </div>
-    </div>
+      <SettingsPanel />
+    </>
   );
 };
