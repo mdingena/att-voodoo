@@ -1,0 +1,25 @@
+.root {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  background-color: var(--colour-green-400);
+  box-shadow: var(--text-shadow-normal);
+  color: var(--font-colour-secondary);
+  font-family: var(--font-family);
+  font-size: 2rem;
+  line-height: 2;
+  text-shadow: var(--text-shadow-small);
+  cursor: pointer;
+  outline: none;
+}
+
+.root:hover {
+  color: var(--font-colour-primary);
+}
+
+.small {
+  composes: root;
+  font-size: 1rem;
+}

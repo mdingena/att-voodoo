@@ -6,6 +6,7 @@
   grid-template-rows: 1fr min-content;
   width: 100%;
   height: 100vh;
+  font-size: 1rem;
   overflow-x: hidden;
   transition: transform 600ms var(--timing-function);
   backdrop-filter: blur(6px);
@@ -14,6 +15,16 @@
 .open {
   composes: closed;
   transform: translateX(100%);
+}
+
+.settings {
+  padding: 30px;
+}
+
+.description {
+  font-size: 1rem;
+  margin-top: 8px;
+  margin-bottom: 24px;
 }
 
 .close {
