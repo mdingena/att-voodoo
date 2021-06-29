@@ -7,7 +7,8 @@
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
-  transition: transform 300ms var(--timing-function);
+  transition: transform 600ms var(--timing-function);
+  backdrop-filter: blur(6px);
 }
 
 .open {

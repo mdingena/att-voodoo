@@ -4,13 +4,14 @@
   grid-template-rows: min-content min-content min-content 1fr min-content;
   justify-content: flex-start;
   height: 100vh;
-  transition: filter 300ms var(--timing-function);
+  background-color: var(--colour-green-300);
+  transition: filter 600ms var(--timing-function);
   will-change: filter;
 }
 
 .blur {
   composes: root;
-  filter: blur(6px);
+  filter: brightness(50%);
 }
 
 .header {
