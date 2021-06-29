@@ -19,15 +19,18 @@ export const SettingsPanel = (): JSX.Element => {
 
   return (
     <div className={isOpen ? styles.open : styles.closed}>
-      <div className={styles.settings}>
-        <Button onClick={toggleLock}>{speechMode === SpeechMode.Locked ? 'Unlock' : 'Lock'} Voodoo</Button>
-        <div className={styles.description}>
-          Stops all speech recognition. Useful if you notice Voodoo keeps awakening when you don&apos;t want it to.
+      <div>
+        <div className={styles.header}>Settings</div>
+        <div className={styles.settings}>
+          <Button onClick={toggleLock}>{speechMode === SpeechMode.Locked ? 'Unlock' : 'Lock'} Voodoo</Button>
+          <div className={styles.description}>
+            Stops all speech recognition. Useful if you notice Voodoo keeps awakening when you don&apos;t want it to.
+          </div>
         </div>
       </div>
       <div>
         <button className={styles.close} onClick={closePanel}>
-          &lt;- Close
+          &lt; Close
         </button>
       </div>
     </div>

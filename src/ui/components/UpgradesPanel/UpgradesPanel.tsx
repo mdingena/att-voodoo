@@ -13,10 +13,12 @@ export const UpgradesPanel = (): JSX.Element => {
 
   return (
     <div className={isOpen ? styles.open : styles.closed}>
-      <div>Upgrades</div>
+      <div>
+        <div className={styles.header}>Upgrades</div>
+      </div>
       <div>
         <button className={styles.close} onClick={closePanel}>
-          Close -&gt;
+          Close &gt;
         </button>
       </div>
     </div>
