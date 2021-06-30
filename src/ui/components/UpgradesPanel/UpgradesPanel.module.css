@@ -30,6 +30,18 @@
   z-index: 1;
 }
 
+.upgrades {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.description {
+  padding: 0 16px;
+  font-size: 1rem;
+}
+
 .close {
   width: 100%;
   line-height: 2;
