@@ -70,3 +70,11 @@ abbr,
 abbr * {
   cursor: help;
 }
+
+p {
+  margin: 0 0 1.5em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
