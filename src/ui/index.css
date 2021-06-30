@@ -32,6 +32,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  cursor: default;
 }
 
 html,
@@ -60,10 +61,12 @@ small {
   text-shadow: var(--text-shadow-small);
 }
 
-*:not(button):not(a):not(abbr) {
-  cursor: default;
+button,
+button * {
+  cursor: pointer;
 }
 
-abbr {
+abbr,
+abbr * {
   cursor: help;
 }
