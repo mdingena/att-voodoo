@@ -34,8 +34,11 @@ export const UpgradesPanel = (): JSX.Element => {
           <div className={styles.header}>Upgrades</div>
           <div className={styles.upgrades}>
             <div className={styles.description}>
-              You gain experience every time you cast a spell. The type and amount of XP you gain depends on the number
-              of incantations and the spell&apos;s school of magic.
+              <p>
+                You gain experience every time you cast a spell. The type and amount of XP you gain depends on the
+                number of incantations and the spell&apos;s school of magic.
+              </p>
+              <p>Use the upgrade tracks below to find spells to upgrade.</p>
             </div>
             <Experience onClick={selectAbjuration} school='Abjuration' total={0} spent={0} />
             <Experience onClick={selectConjuration} school='Conjuration' total={13150} spent={13000} />
