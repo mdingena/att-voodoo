@@ -1,0 +1,1 @@
+export { SpellFinder } from './SpellFinder';

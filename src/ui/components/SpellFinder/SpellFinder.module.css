@@ -1,0 +1,35 @@
+.root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  backdrop-filter: blur(6px) brightness(50%);
+}
+
+.spells {
+  padding: 16px;
+  font-size: 1rem;
+  overflow-y: auto;
+}
+
+.close {
+  width: 100%;
+  line-height: 2;
+  border: 0;
+  background: transparent;
+  background-color: var(--colour-green-400);
+  font-family: var(--font-family);
+  color: var(--font-colour-secondary);
+  text-shadow: var(--text-shadow-normal);
+  cursor: pointer;
+  outline: none;
+  vertical-align: top;
+}
+
+.close:hover {
+  color: var(--font-colour-primary);
+}
