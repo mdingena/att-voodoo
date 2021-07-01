@@ -13,7 +13,7 @@ export const UpgradesPanel = (): JSX.Element => {
     setPanel(Panel.None);
   };
 
-  const closeSpellFinger = () => {
+  const closeSpellFinder = () => {
     setSelectedSchool(null);
   };
 
@@ -49,7 +49,7 @@ export const UpgradesPanel = (): JSX.Element => {
           </button>
         </div>
       </div>
-      {selectedSchool && <SpellFinder school={selectedSchool} onClose={closeSpellFinger} />}
+      {selectedSchool && <SpellFinder school={selectedSchool} onClose={closeSpellFinder} />}
     </>
   );
 };
