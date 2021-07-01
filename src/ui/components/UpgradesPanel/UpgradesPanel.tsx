@@ -1,29 +1,26 @@
 import { useState } from 'react';
 import { useAtom } from 'jotai';
-import { Panel, panelAtom } from '@/atoms';
+import { Panel, panelAtom, School } from '@/atoms';
 import { Experience } from '../Experience';
+import { SpellFinder } from '../SpellFinder';
 import styles from './UpgradesPanel.module.css';
 
-enum School {
-  None,
-  Abjuration,
-  Conjuration,
-  Evocation,
-  Transmutation
-}
-
 export const UpgradesPanel = (): JSX.Element => {
-  const [selectedSchool, setSelectedSchool] = useState<School>(School.None);
+  const [selectedSchool, setSelectedSchool] = useState<School | null>(null);
   const [panel, setPanel] = useAtom(panelAtom);
 
   const closePanel = () => {
     setPanel(Panel.None);
   };
 
-  const selectAbjuration = () => setSelectedSchool(School.Abjuration);
-  const selectConjuration = () => setSelectedSchool(School.Conjuration);
-  const selectEvocation = () => setSelectedSchool(School.Evocation);
-  const selectTransmutation = () => setSelectedSchool(School.Transmutation);
+  const closeSpellFinger = () => {
+    setSelectedSchool(null);
+  };
+
+  const selectAbjuration = () => setSelectedSchool('abjuration');
+  const selectConjuration = () => setSelectedSchool('conjuration');
+  const selectEvocation = () => setSelectedSchool('evocation');
+  const selectTransmutation = () => setSelectedSchool('transmutation');
 
   const isOpen = panel === Panel.Upgrades;
 
@@ -52,6 +49,7 @@ export const UpgradesPanel = (): JSX.Element => {
           </button>
         </div>
       </div>
+      {selectedSchool && <SpellFinder school={selectedSchool} onClose={closeSpellFinger} />}
     </>
   );
 };
