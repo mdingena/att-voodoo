@@ -3,23 +3,27 @@ import { atom } from 'jotai';
 export type School = 'abjuration' | 'conjuration' | 'evocation' | 'transmutation';
 
 type UpgradeConfig = {
-  [key: string]: {
-    name: string;
-    description: string;
-    isStepFunction: boolean;
-    min: number;
-    max: number;
-    constant: number;
-  };
+  name: string;
+  description: string;
+  isStepFunction: boolean;
+  min: number;
+  max: number;
+  constant: number;
+};
+
+type UpgradeConfigs = {
+  [key: string]: UpgradeConfig;
+};
+
+export type Spell = {
+  name: string;
+  school: School;
+  requiresPreparation: boolean;
+  upgrades: UpgradeConfigs;
 };
 
 type Spellbook = {
-  [key: string]: {
-    name: string;
-    school: School;
-    requiresPreparation: boolean;
-    upgrades: UpgradeConfig;
-  };
+  [key: string]: Spell;
 };
 
 export const spellbookAtom = atom<Spellbook>({});

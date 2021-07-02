@@ -8,4 +8,4 @@ export { panelAtom, Panel } from './panelAtom';
 export { preparedSpellsAtom, PreparedSpell } from './preparedSpellsAtom';
 export { serversAtom, Servers } from './serversAtom';
 export { speechModeAtom, SpeechMode } from './speechModeAtom';
-export { spellbookAtom, School } from './spellbookAtom';
+export { spellbookAtom, School, Spell } from './spellbookAtom';
