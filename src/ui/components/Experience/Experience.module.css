@@ -23,7 +23,7 @@
 
 .level {
   width: 4rem;
-  text-align: right;
+  color: var(--font-colour-secondary);
 }
 
 .experience {
