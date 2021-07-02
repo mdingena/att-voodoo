@@ -1,9 +1,9 @@
 import { atom } from 'jotai';
 
-type Upgrade = { [key: string]: number };
+export type SpellUpgrades = { [upgradeName: string]: number };
 
 type Upgrades = {
-  [key: string]: Upgrade;
+  [spellName: string]: SpellUpgrades;
 };
 
 export type Experience = {

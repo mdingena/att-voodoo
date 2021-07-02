@@ -1,7 +1,7 @@
 export { accessTokenAtom } from './accessTokenAtom';
 export { activeServerAtom } from './activeServerAtom';
 export { appStageAtom, AppStage } from './appStageAtom';
-export { experienceAtom, Experience } from './experienceAtom';
+export { experienceAtom, Experience, SpellUpgrades } from './experienceAtom';
 export { hasSessionAtom } from './hasSessionAtom';
 export { incantationsAtom, Incantation } from './incantationsAtom';
 export { panelAtom, Panel } from './panelAtom';
