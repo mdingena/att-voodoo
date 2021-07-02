@@ -1,0 +1,1 @@
+export { UpgradeSpell } from './UpgradeSpell';
