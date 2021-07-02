@@ -23,7 +23,7 @@
   text-align: center;
   text-transform: uppercase;
   box-shadow: inset 50px 0 50px -50px var(--colour-green-200), inset -50px 0 50px -50px var(--colour-green-200),
-    var(--text-shadow-small), 0 8px 16px 0 var(--colour-green-300), 0 -8px 16px 0 var(--colour-green-300);
+    var(--text-shadow-small), 0 8px 16px 0 var(--colour-green-100), 0 -8px 16px 0 var(--colour-green-100);
   transition-property: background-color, color;
   transition-duration: 300ms;
   transition-timing-function: var(--timing-function);
@@ -43,6 +43,10 @@
 }
 
 .close {
+  z-index: 1;
+}
+
+.close button {
   width: 100%;
   line-height: 2;
   border: 0;
@@ -51,11 +55,13 @@
   font-family: var(--font-family);
   color: var(--font-colour-secondary);
   text-shadow: var(--text-shadow-normal);
+  box-shadow: inset 50px 0 50px -50px var(--colour-green-200), inset -50px 0 50px -50px var(--colour-green-200),
+    var(--text-shadow-small), 0 8px 16px 0 var(--colour-green-100), 0 -8px 16px 0 var(--colour-green-100);
   cursor: pointer;
   outline: none;
   vertical-align: top;
 }
 
-.close:hover {
+.close button:hover {
   color: var(--font-colour-primary);
 }

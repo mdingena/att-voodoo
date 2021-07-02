@@ -43,10 +43,8 @@ export const UpgradesPanel = (): JSX.Element => {
             <Experience onClick={selectTransmutation} school='Transmutation' total={7750} spent={4000} />
           </div>
         </div>
-        <div>
-          <button className={styles.close} onClick={closePanel}>
-            Close &gt;
-          </button>
+        <div className={styles.close}>
+          <button onClick={closePanel}>Close &gt;</button>
         </div>
       </div>
       {selectedSchool && <SpellFinder school={selectedSchool} onClose={closeSpellFinder} />}
