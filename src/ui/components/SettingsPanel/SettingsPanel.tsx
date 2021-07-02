@@ -28,10 +28,8 @@ export const SettingsPanel = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <div>
-        <button className={styles.close} onClick={closePanel}>
-          &lt; Close
-        </button>
+      <div className={styles.close}>
+        <button onClick={closePanel}>&lt; Close</button>
       </div>
     </div>
   );
