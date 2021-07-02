@@ -33,8 +33,6 @@ export const UpgradeModal = ({ upgradeConfig, currentLevel, onClose }: UpgradeMo
 
   const upgradesRequired = upgradeLevel - currentLevel;
 
-  console.log({ currentLevel, upgradeLevel, upgradedAttribute });
-
   return (
     <div className={styles.root}>
       <div className={styles.modal}>
