@@ -2,13 +2,15 @@ import { atom } from 'jotai';
 
 export type School = 'abjuration' | 'conjuration' | 'evocation' | 'transmutation';
 
-type UpgradeConfig = {
+export type UpgradeConfig = {
   name: string;
   description: string;
   isStepFunction: boolean;
   min: number;
   max: number;
   constant: number;
+  unit: string;
+  units: string;
 };
 
 type UpgradeConfigs = {
