@@ -40,6 +40,8 @@ export const UpgradeSpell = ({ spell, upgrades, onClose }: UpgradeSpellProps): J
       </div>
       {selectedUpgrade && (
         <UpgradeModal
+          school={spell.school}
+          spell={spell.name}
           upgradeConfig={selectedUpgrade}
           currentLevel={upgrades[selectedUpgradeKey] ?? 0}
           onClose={closeModal}

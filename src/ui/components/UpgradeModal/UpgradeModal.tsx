@@ -1,4 +1,6 @@
-import { UpgradeConfig } from '@/atoms';
+import { useState, useEffect } from 'react';
+import { ipcRenderer } from 'electron';
+import { School, UpgradeConfig } from '@/atoms';
 import styles from './UpgradeModal.module.css';
 
 const upgradeAttribute = (upgrades: number, { isStepFunction, min, max, constant }: UpgradeConfig): number => {
@@ -7,12 +9,27 @@ const upgradeAttribute = (upgrades: number, { isStepFunction, min, max, constant
 };
 
 interface UpgradeModalProps {
+  school: School;
+  spell: string;
   upgradeConfig: UpgradeConfig;
   currentLevel: number;
   onClose: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export const UpgradeModal = ({ upgradeConfig, currentLevel, onClose }: UpgradeModalProps): JSX.Element => {
+interface SubmitUpgrade {
+  school: School;
+  spell: string;
+  upgrade: string;
+}
+
+export const UpgradeModal = ({
+  school,
+  spell,
+  upgradeConfig,
+  currentLevel,
+  onClose
+}: UpgradeModalProps): JSX.Element => {
+  const [isUpgrading, setIsUpgrading] = useState<boolean>(false);
   const currentAttribute = upgradeAttribute(currentLevel, upgradeConfig);
   let upgradedAttribute = currentAttribute;
   let upgradeLevel = currentLevel;
@@ -20,6 +37,15 @@ export const UpgradeModal = ({ upgradeConfig, currentLevel, onClose }: UpgradeMo
   const { isStepFunction, max, unit, units } = upgradeConfig;
   const maxAttribute = isStepFunction ? Math.round(max) : max;
   const isMaxed = currentAttribute === maxAttribute;
+
+  useEffect(() => {
+    setIsUpgrading(false);
+  }, [currentLevel]);
+
+  const submitUpgrade = ({ school, spell, upgrade }: SubmitUpgrade) => () => {
+    setIsUpgrading(true);
+    ipcRenderer.invoke('upgrade', { school, spell, upgrade });
+  };
 
   if (!isMaxed) {
     if (isStepFunction) {
@@ -65,10 +91,14 @@ export const UpgradeModal = ({ upgradeConfig, currentLevel, onClose }: UpgradeMo
           )}
         </div>
         <div className={styles.actions}>
-          <button className={styles.action} onClick={onClose}>
+          <button className={styles.action} onClick={onClose} disabled={isUpgrading}>
             Close
           </button>
-          <button className={styles.action} disabled={isMaxed}>
+          <button
+            className={styles.action}
+            onClick={submitUpgrade({ school, spell, upgrade: upgradeConfig.name })}
+            disabled={isMaxed || isUpgrading}
+          >
             {upgradesRequired > 1 ? 'Boost' : 'Upgrade'}
           </button>
         </div>
