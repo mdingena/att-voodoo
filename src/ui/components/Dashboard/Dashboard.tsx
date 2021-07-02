@@ -172,8 +172,6 @@ export const Dashboard = (): JSX.Element => {
 
   const modeStyle = SpeechMode[speechMode].toLowerCase();
 
-  console.log(modeStyle);
-
   const isPanelOpen = panel !== Panel.None;
 
   return (
