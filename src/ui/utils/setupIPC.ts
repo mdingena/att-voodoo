@@ -3,6 +3,7 @@ import { ChildProcess } from 'child_process';
 import { startListening } from './startListening';
 import { heartbeat } from './heartbeat';
 import { voodooGet } from './voodooGet';
+import { voodooPost } from './voodooPost';
 import config from '../config';
 
 type HeartbeatDelay = { current: number };
@@ -41,6 +42,11 @@ export const setupIPC = (ui: BrowserWindow | null, speech: ChildProcess | null, 
   /* Handle player update. */
   ipcMain.handle('update-player', async (_, { accessToken }) => {
     return await voodooGet(accessToken, config.API_ENDPOINTS.PLAYER);
+  });
+
+  /* Handle spell upgrade. */
+  ipcMain.handle('upgrade', async (_, { accessToken, school, spell, upgrade }) => {
+    return await voodooPost(accessToken, config.API_ENDPOINTS.UPGRADE, { school, spell, upgrade });
   });
 
   /* Handle UI focus. */
