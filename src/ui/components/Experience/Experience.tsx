@@ -6,18 +6,17 @@ interface ExperienceProps {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   school: string;
   total: number;
-  spent: number;
+  upgrades: number;
 }
 
-export const Experience = ({ onClick, school, total, spent }: ExperienceProps): JSX.Element => {
-  const budget = Math.floor(Math.max(0, total - spent) / XP_PER_LEVEL);
+export const Experience = ({ onClick, school, total, upgrades }: ExperienceProps): JSX.Element => {
   const level = Math.floor(total / XP_PER_LEVEL);
   const progress = total - level * XP_PER_LEVEL;
   const width = (progress / XP_PER_LEVEL) * 100;
 
   return (
     <button className={styles.root} onClick={onClick}>
-      <div className={styles.level}>{level}</div>
+      <div className={styles.upgrades}>{upgrades}</div>
       <div className={styles.experience}>
         <div className={styles.school}>{school}</div>
         <div className={styles.progress}>
@@ -26,11 +25,11 @@ export const Experience = ({ onClick, school, total, spent }: ExperienceProps): 
           </div>
           <div className={styles.xp}>
             {progress}
-            <span>xp</span>
+            <span>XP</span>
           </div>
-          <div className={styles.budget}>
-            {budget}
-            <span>+</span>
+          <div className={styles.level}>
+            <span>Lvl</span>
+            {level}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useAtom } from 'jotai';
-import { experienceAtom, Panel, panelAtom, School } from '@/atoms';
+import { experienceAtom, Panel, panelAtom, School, spellbookAtom } from '@/atoms';
 import { Experience } from '../Experience';
 import { SpellFinder } from '../SpellFinder';
 import styles from './UpgradesPanel.module.css';
@@ -8,6 +8,7 @@ import styles from './UpgradesPanel.module.css';
 export const UpgradesPanel = (): JSX.Element => {
   const [selectedSchool, setSelectedSchool] = useState<School | null>(null);
   const [experience] = useAtom(experienceAtom);
+  const [spellbook] = useAtom(spellbookAtom);
   const [panel, setPanel] = useAtom(panelAtom);
 
   const closePanel = () => {
@@ -21,16 +22,24 @@ export const UpgradesPanel = (): JSX.Element => {
   const selectEvocation = () => setSelectedSchool('evocation');
   const selectTransmutation = () => setSelectedSchool('transmutation');
 
-  const {
-    abjurationXpSpent,
-    abjurationXpTotal,
-    conjurationXpSpent,
-    conjurationXpTotal,
-    evocationXpSpent,
-    evocationXpTotal,
-    transmutationXpSpent,
-    transmutationXpTotal
-  } = experience;
+  const { abjurationXpTotal, conjurationXpTotal, evocationXpTotal, transmutationXpTotal, upgrades } = experience;
+
+  const schoolUpgrades = useMemo(
+    () => (school: School) =>
+      Object.entries(upgrades)
+        .filter(([spellName]) => spellbook[spellName].school === school)
+        .reduce(
+          (sum, [, spellUpgrades]) =>
+            sum + Object.values(spellUpgrades).reduce((upgrades, upgrade) => upgrades + upgrade, 0),
+          0
+        ),
+    [upgrades, spellbook]
+  );
+
+  const abjurationUpgrades = schoolUpgrades('abjuration');
+  const conjurationUpgrades = schoolUpgrades('conjuration');
+  const evocationUpgrades = schoolUpgrades('evocation');
+  const transmutationUpgrades = schoolUpgrades('transmutation');
 
   const isOpen = panel === Panel.Upgrades;
 
@@ -51,25 +60,25 @@ export const UpgradesPanel = (): JSX.Element => {
               onClick={selectAbjuration}
               school='Abjuration'
               total={abjurationXpTotal}
-              spent={abjurationXpSpent}
+              upgrades={abjurationUpgrades}
             />
             <Experience
               onClick={selectConjuration}
               school='Conjuration'
               total={conjurationXpTotal}
-              spent={conjurationXpSpent}
+              upgrades={conjurationUpgrades}
             />
             <Experience
               onClick={selectEvocation}
               school='Evocation'
               total={evocationXpTotal}
-              spent={evocationXpSpent}
+              upgrades={evocationUpgrades}
             />
             <Experience
               onClick={selectTransmutation}
               school='Transmutation'
               total={transmutationXpTotal}
-              spent={transmutationXpSpent}
+              upgrades={transmutationUpgrades}
             />
           </div>
         </div>

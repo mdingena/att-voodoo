@@ -21,7 +21,7 @@
   border-bottom: 1px solid var(--colour-green-600);
 }
 
-.level {
+.upgrades {
   width: 4rem;
   color: var(--font-colour-secondary);
 }
@@ -61,12 +61,12 @@
   background-color: var(--colour-green-700);
 }
 
-.budget {
-  width: 3rem;
-  text-align: right;
+.level,
+.xp {
+  width: 5rem;
 }
 
 .xp span,
-.budget span {
+.level span {
   color: var(--font-colour-tertiary);
 }
