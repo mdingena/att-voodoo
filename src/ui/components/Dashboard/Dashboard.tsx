@@ -13,6 +13,7 @@ import {
   Incantation,
   preparedSpellsAtom,
   PreparedSpell,
+  experienceAtom,
   Panel,
   panelAtom
 } from '@/atoms';
@@ -62,6 +63,7 @@ export const Dashboard = (): JSX.Element => {
   const [accessToken] = useAtom(accessTokenAtom);
   const [incantations, setIncantations] = useAtom(incantationsAtom);
   const [preparedSpells, setPreparedSpells] = useAtom(preparedSpellsAtom);
+  const [, setExperience] = useAtom(experienceAtom);
   const [panel, setPanel] = useAtom(panelAtom);
 
   const openSettingsPanel = () => {
@@ -144,6 +146,7 @@ export const Dashboard = (): JSX.Element => {
       .then(response => {
         if (response.ok) {
           setPreparedSpells(response.result.preparedSpells);
+          setExperience(response.result.experience);
         } else {
           console.error(response.error);
         }
