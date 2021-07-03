@@ -59,9 +59,9 @@ enum Mode {
 export const Dashboard = (): JSX.Element => {
   const [speechMode, setSpeechMode] = useAtom(speechModeAtom);
   const [activeServer, setActiveServer] = useAtom(activeServerAtom);
-  const [appStage, setAppStage] = useAtom(appStageAtom);
+  const [, setAppStage] = useAtom(appStageAtom);
   const [accessToken] = useAtom(accessTokenAtom);
-  const [incantations, setIncantations] = useAtom(incantationsAtom);
+  const [, setIncantations] = useAtom(incantationsAtom);
   const [preparedSpells, setPreparedSpells] = useAtom(preparedSpellsAtom);
   const [, setExperience] = useAtom(experienceAtom);
   const [panel, setPanel] = useAtom(panelAtom);
