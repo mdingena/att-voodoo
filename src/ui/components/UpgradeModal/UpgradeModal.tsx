@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ipcRenderer } from 'electron';
-import { School, UpgradeConfig } from '@/atoms';
+import { useAtom } from 'jotai';
+import { accessTokenAtom, experienceAtom, School, UpgradeConfig } from '@/atoms';
 import styles from './UpgradeModal.module.css';
 
 const upgradeAttribute = (upgrades: number, { isStepFunction, min, max, constant }: UpgradeConfig): number => {
@@ -29,6 +30,10 @@ export const UpgradeModal = ({
   currentLevel,
   onClose
 }: UpgradeModalProps): JSX.Element => {
+  const [accessToken] = useAtom(accessTokenAtom);
+  const [, setExperience] = useAtom(experienceAtom);
+
+  const [fatalError, setFatalError] = useState<string | null>(null);
   const [isUpgrading, setIsUpgrading] = useState<boolean>(false);
   const currentAttribute = upgradeAttribute(currentLevel, upgradeConfig);
   let upgradedAttribute = currentAttribute;
@@ -43,8 +48,29 @@ export const UpgradeModal = ({
   }, [currentLevel]);
 
   const submitUpgrade = ({ school, spell, upgrade }: SubmitUpgrade) => () => {
+    setFatalError(null);
     setIsUpgrading(true);
-    ipcRenderer.invoke('upgrade', { school, spell, upgrade });
+    ipcRenderer
+      .invoke('upgrade', { accessToken, school, spell, upgrade })
+      .then(response => {
+        if (response.ok) {
+          if (response.result === false) {
+            console.error('Not enough XP.');
+            setFatalError('Not enough XP.');
+          } else {
+            setExperience(response.result);
+          }
+        } else {
+          console.error(response.error);
+          setFatalError(response.error);
+        }
+        setIsUpgrading(false);
+      })
+      .catch(error => {
+        console.error(JSON.stringify(error, null, 2));
+        setFatalError(error.message);
+        setIsUpgrading(false);
+      });
   };
 
   if (!isMaxed) {
@@ -73,21 +99,23 @@ export const UpgradeModal = ({
           </div>
           {isMaxed ? (
             <div>
-              <span className={styles.effect}>!</span> This effect is maxed out!
+              <span className={styles.effect}>Upgrade</span> This effect is fully upgraded!
             </div>
           ) : (
-            <>
-              <div>
-                <span className={styles.effect}>Upgrade</span>{' '}
-                {isStepFunction ? upgradedAttribute : upgradedAttribute.toFixed(2)}{' '}
-                {upgradedAttribute === 1 ? unit : units}
-              </div>
-              {isStepFunction && upgradesRequired > 1 && (
-                <div>
-                  <span className={styles.effect}>!</span> You need {upgradesRequired} more boosts to upgrade.
-                </div>
-              )}
-            </>
+            <div>
+              <span className={styles.effect}>Upgrade</span>{' '}
+              {isStepFunction ? upgradedAttribute : upgradedAttribute.toFixed(2)}{' '}
+              {upgradedAttribute === 1 ? unit : units}
+            </div>
+          )}
+          {fatalError ? (
+            <div className={styles.error}>{fatalError}</div>
+          ) : isStepFunction && upgradesRequired > 1 ? (
+            <div>
+              <span className={styles.effect}>!</span> You need {upgradesRequired} more boosts to upgrade.
+            </div>
+          ) : (
+            <div className={styles.empty}>&nbsp;</div>
           )}
         </div>
         <div className={styles.actions}>
@@ -99,7 +127,7 @@ export const UpgradeModal = ({
             onClick={submitUpgrade({ school, spell, upgrade: upgradeConfig.name })}
             disabled={isMaxed || isUpgrading}
           >
-            {upgradesRequired > 1 ? 'Boost' : 'Upgrade'}
+            {fatalError ? 'Retry' : upgradesRequired > 1 ? 'Boost' : 'Upgrade'}
           </button>
         </div>
       </div>

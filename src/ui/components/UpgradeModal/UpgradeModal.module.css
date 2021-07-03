@@ -38,8 +38,10 @@
   display: flex;
   flex-flow: column nowrap;
   gap: 8px;
+  max-height: calc(100vh - 160px);
   padding: 8px;
   font-size: 1rem;
+  overflow-y: auto;
 }
 
 .big {
@@ -54,6 +56,15 @@
   color: var(--colour-green-300);
   text-transform: uppercase;
   text-shadow: none;
+}
+
+.empty,
+.error {
+  padding: 2px 0;
+}
+
+.error {
+  color: var(--font-colour-tertiary);
 }
 
 .actions {
