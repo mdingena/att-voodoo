@@ -6,15 +6,17 @@ interface SpellTriggerProps {
   spell: PreparedSpell;
 }
 
-export const SpellTrigger = ({ spell }: SpellTriggerProps) => {
+export const SpellTrigger = ({ spell }: SpellTriggerProps): JSX.Element => {
   const [speechMode] = useAtom(speechModeAtom);
 
-  const { name, verbalTrigger } = spell;
+  const { name, verbalTrigger, charges } = spell;
   const triggerStyle = { opacity: Number(speechMode === SpeechMode.Awake) };
 
   return (
     <div className={styles.root}>
-      <div className={styles.name}>{name}</div>
+      <div className={styles.name}>
+        {name} <span className={styles.charges}>×{charges ?? 1}</span>
+      </div>
       <div className={styles.trigger} style={triggerStyle}>
         Cast with “EVOKE {verbalTrigger.toUpperCase()}”
       </div>

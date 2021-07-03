@@ -1,9 +1,14 @@
 .root {
   position: relative;
   height: 3rem;
-  padding: 0 32px;
+  padding-left: 32px;
+  padding-right: 16px;
   font-size: 1rem;
   text-shadow: var(--text-shadow-small);
+}
+
+.charges {
+  color: var(--font-colour-secondary);
 }
 
 .trigger {
