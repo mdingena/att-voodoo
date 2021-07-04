@@ -45,8 +45,12 @@ export const setupIPC = (ui: BrowserWindow | null, speech: ChildProcess | null, 
   });
 
   /* Handle spell upgrade. */
-  ipcMain.handle('upgrade', async (_, { accessToken, school, spell, upgrade }) => {
-    return await voodooPost(accessToken, config.API_ENDPOINTS.UPGRADE, { school, spell, upgrade });
+  ipcMain.handle('upgrade', async (_, { accessToken, school, spellKey, upgradeKey }) => {
+    return await voodooPost(accessToken, config.API_ENDPOINTS.UPGRADE, {
+      school,
+      spell: spellKey,
+      upgrade: upgradeKey
+    });
   });
 
   /* Handle UI focus. */

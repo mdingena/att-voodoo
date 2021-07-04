@@ -27,7 +27,7 @@ export const UpgradesPanel = (): JSX.Element => {
   const schoolUpgrades = useMemo(
     () => (school: School) =>
       Object.entries(upgrades)
-        .filter(([spellName]) => spellbook[spellName].school === school)
+        .filter(([spellKey]) => spellbook[spellKey]?.school === school)
         .reduce(
           (sum, [, spellUpgrades]) =>
             sum + Object.values(spellUpgrades).reduce((upgrades, upgrade) => upgrades + upgrade, 0),

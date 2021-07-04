@@ -9,17 +9,22 @@ interface SpellFinderProps {
   onClose: React.MouseEventHandler<HTMLButtonElement>;
 }
 
+type SelectedSpell = {
+  key: string;
+  spell: Spell;
+};
+
 export const SpellFinder = ({ school, onClose }: SpellFinderProps): JSX.Element => {
-  const [selectedSpell, setSelectedSpell] = useState<Spell | null>(null);
+  const [selectedSpell, setSelectedSpell] = useState<SelectedSpell | null>(null);
   const [spellbook] = useAtom(spellbookAtom);
   const [experience] = useAtom(experienceAtom);
 
   const closeSpellUpgrade = () => setSelectedSpell(null);
 
-  const selectSpellUpgrade = (spell: Spell) => () => setSelectedSpell(spell);
+  const selectSpellUpgrade = (selection: SelectedSpell) => () => setSelectedSpell(selection);
 
-  const spells = Object.values(spellbook).filter(
-    upgradeConfig => upgradeConfig.school === school && Object.keys(upgradeConfig.upgrades).length
+  const spells = Object.entries(spellbook).filter(
+    ([, spell]) => spell.school === school && Object.keys(spell.upgrades).length
   );
 
   return (
@@ -27,14 +32,14 @@ export const SpellFinder = ({ school, onClose }: SpellFinderProps): JSX.Element 
       <div className={styles.root}>
         <div className={styles.header}>{school}</div>
         <div className={styles.spells}>
-          {spells.map(spell => {
-            const upgrades = Object.values(experience.upgrades[spell.name] ?? {}).reduce(
+          {spells.map(([spellKey, spell]) => {
+            const upgrades = Object.values(experience.upgrades[spellKey] ?? {}).reduce(
               (sum, upgrade) => sum + upgrade,
               0
             );
 
             return (
-              <button key={spell.name} className={styles.spell} onClick={selectSpellUpgrade(spell)}>
+              <button key={spellKey} className={styles.spell} onClick={selectSpellUpgrade({ key: spellKey, spell })}>
                 <span className={styles.upgrades}>{upgrades}</span>
                 <span className={styles.name}>{spell.name}</span>
               </button>
@@ -47,8 +52,9 @@ export const SpellFinder = ({ school, onClose }: SpellFinderProps): JSX.Element 
       </div>
       {selectedSpell && (
         <UpgradeSpell
-          spell={selectedSpell}
-          upgrades={experience.upgrades[selectedSpell.name] ?? {}}
+          spellKey={selectedSpell.key}
+          spell={selectedSpell.spell}
+          upgrades={experience.upgrades[selectedSpell.key] ?? {}}
           onClose={closeSpellUpgrade}
         />
       )}

@@ -11,7 +11,8 @@ const upgradeAttribute = (upgrades: number, { isStepFunction, min, max, constant
 
 interface UpgradeModalProps {
   school: School;
-  spell: string;
+  spellKey: string;
+  upgradeKey: string;
   upgradeConfig: UpgradeConfig;
   currentLevel: number;
   onClose: React.MouseEventHandler<HTMLButtonElement>;
@@ -19,13 +20,14 @@ interface UpgradeModalProps {
 
 interface SubmitUpgrade {
   school: School;
-  spell: string;
-  upgrade: string;
+  spellKey: string;
+  upgradeKey: string;
 }
 
 export const UpgradeModal = ({
   school,
-  spell,
+  spellKey,
+  upgradeKey,
   upgradeConfig,
   currentLevel,
   onClose
@@ -47,11 +49,11 @@ export const UpgradeModal = ({
     setIsUpgrading(false);
   }, [currentLevel]);
 
-  const submitUpgrade = ({ school, spell, upgrade }: SubmitUpgrade) => () => {
+  const submitUpgrade = (submitUpgrade: SubmitUpgrade) => () => {
     setFatalError(null);
     setIsUpgrading(true);
     ipcRenderer
-      .invoke('upgrade', { accessToken, school, spell, upgrade })
+      .invoke('upgrade', { accessToken, ...submitUpgrade })
       .then(response => {
         if (response.ok) {
           if (response.result === false) {
@@ -124,7 +126,7 @@ export const UpgradeModal = ({
           </button>
           <button
             className={styles.action}
-            onClick={submitUpgrade({ school, spell, upgrade: upgradeConfig.name })}
+            onClick={submitUpgrade({ school, spellKey, upgradeKey })}
             disabled={isMaxed || isUpgrading}
           >
             {fatalError ? 'Retry' : upgradesRequired > 1 ? 'Boost' : 'Upgrade'}

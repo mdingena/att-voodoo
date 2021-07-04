@@ -4,20 +4,23 @@ import { UpgradeModal } from '../UpgradeModal';
 import styles from './UpgradeSpell.module.css';
 
 interface UpgradeSpellProps {
+  spellKey: string;
   spell: Spell;
   upgrades: SpellUpgrades;
   onClose: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export const UpgradeSpell = ({ spell, upgrades, onClose }: UpgradeSpellProps): JSX.Element => {
-  const [selectedUpgrade, setSelectedUpgrade] = useState<UpgradeConfig | null>(null);
-  const selectedUpgradeKey =
-    (selectedUpgrade && Object.entries(spell.upgrades).find(([, { name }]) => name === selectedUpgrade.name)?.[0]) ??
-    '';
+type SelectedUpgrade = {
+  key: string;
+  upgradeConfig: UpgradeConfig;
+};
+
+export const UpgradeSpell = ({ spellKey, spell, upgrades, onClose }: UpgradeSpellProps): JSX.Element => {
+  const [selectedUpgrade, setSelectedUpgrade] = useState<SelectedUpgrade | null>(null);
 
   const closeModal = () => setSelectedUpgrade(null);
 
-  const selectUpgrade = (upgradeConfig: UpgradeConfig) => () => setSelectedUpgrade(upgradeConfig);
+  const selectUpgrade = (selection: SelectedUpgrade) => () => setSelectedUpgrade(selection);
 
   return (
     <>
@@ -25,7 +28,11 @@ export const UpgradeSpell = ({ spell, upgrades, onClose }: UpgradeSpellProps): J
         <div className={styles.header}>{spell.name}</div>
         <div className={styles.upgrades}>
           {Object.entries(spell.upgrades).map(([upgradeKey, upgradeConfig]) => (
-            <button key={upgradeConfig.name} className={styles.upgrade} onClick={selectUpgrade(upgradeConfig)}>
+            <button
+              key={upgradeKey}
+              className={styles.upgrade}
+              onClick={selectUpgrade({ key: upgradeKey, upgradeConfig })}
+            >
               <div className={styles.title}>
                 <span className={styles.level}>{upgrades[upgradeKey] ?? 0}</span>
                 <span className={styles.name}>{upgradeConfig.name}</span>
@@ -41,9 +48,10 @@ export const UpgradeSpell = ({ spell, upgrades, onClose }: UpgradeSpellProps): J
       {selectedUpgrade && (
         <UpgradeModal
           school={spell.school}
-          spell={spell.name}
-          upgradeConfig={selectedUpgrade}
-          currentLevel={upgrades[selectedUpgradeKey] ?? 0}
+          spellKey={spellKey}
+          upgradeKey={selectedUpgrade.key}
+          upgradeConfig={selectedUpgrade.upgradeConfig}
+          currentLevel={upgrades[selectedUpgrade.key] ?? 0}
           onClose={closeModal}
         />
       )}
