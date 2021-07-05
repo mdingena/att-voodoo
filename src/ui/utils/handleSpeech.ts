@@ -1,4 +1,5 @@
 import { ipcMain, BrowserWindow } from 'electron';
+import { Experience } from '@/atoms';
 import { voodooDelete } from './voodooDelete';
 import { voodooGet } from './voodooGet';
 import { voodooPost } from './voodooPost';
@@ -40,7 +41,15 @@ ipcMain.handle('server-disconnected', () => {
   hasServerConnection = false;
 });
 
+let isLocked = false;
+
+/* Handle speech recognition lock. */
+ipcMain.handle('speech-lock', (_, state) => {
+  isLocked = state;
+});
+
 let mode = MODES.SUPPRESSED;
+let experience: Experience;
 let incantations: string[] = [];
 let preparedSpells: PreparedSpell[] = [];
 
@@ -50,6 +59,11 @@ export const handleSpeech = async (
   accessToken: string,
   logger: (...args: any) => void
 ) => {
+  if (isLocked) {
+    mode = MODES.SUPPRESSED;
+    return;
+  }
+
   if (!hasServerConnection) {
     mode = MODES.SUPPRESSED;
     ui?.webContents.send('voodoo-suppressed');
@@ -89,9 +103,10 @@ export const handleSpeech = async (
             const response = await voodooPost(accessToken, config.API_ENDPOINTS.TRIGGER, [verbalTrigger]);
 
             if (response.ok) {
-              preparedSpells = response.result;
-              ui?.webContents.send('voodoo-prepared-spell-triggered', preparedSpells);
-              logger({ preparedSpells });
+              experience = response.result.experience;
+              preparedSpells = response.result.preparedSpells;
+              ui?.webContents.send('voodoo-prepared-spell-triggered', experience, preparedSpells);
+              logger({ experience, preparedSpells });
             } else {
               logger(response.error);
             }
@@ -132,10 +147,11 @@ export const handleSpeech = async (
           const confirmResponse = await voodooGet(accessToken, config.API_ENDPOINTS.SEAL);
 
           if (confirmResponse.ok) {
+            experience = confirmResponse.result.experience;
             incantations = confirmResponse.result.incantations;
             preparedSpells = confirmResponse.result.preparedSpells;
-            ui?.webContents.send('voodoo-incantation-confirmed', incantations, preparedSpells);
-            logger({ incantations, preparedSpells });
+            ui?.webContents.send('voodoo-incantation-confirmed', experience, incantations, preparedSpells);
+            logger({ experience, incantations, preparedSpells });
           } else {
             logger(confirmResponse.error);
           }
@@ -149,19 +165,20 @@ export const handleSpeech = async (
             ]);
 
             if (response.ok) {
+              experience = response.result.experience;
               incantations = response.result.incantations;
               preparedSpells = response.result.preparedSpells;
 
               if (response.result.incantations.length === 4) {
                 mode = MODES.AWAKE;
-                ui?.webContents.send('voodoo-incantation-confirmed', incantations, preparedSpells);
+                ui?.webContents.send('voodoo-incantation-confirmed', experience, incantations, preparedSpells);
                 ui?.webContents.send('voodoo-awake');
                 logger({ mode });
               } else {
                 ui?.webContents.send('voodoo-incantation', incantations, preparedSpells);
               }
 
-              logger({ incantations, preparedSpells });
+              logger({ experience, incantations, preparedSpells });
             } else {
               logger(response.error);
             }

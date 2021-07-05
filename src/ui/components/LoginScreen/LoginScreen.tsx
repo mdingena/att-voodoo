@@ -49,6 +49,11 @@ export const LoginScreen = () => {
         </div>
       )}
       <div className={styles.footer}>
+        <div className={styles.discord}>
+          <a className={styles.link} href='https://discord.gg/THy2AVBPHX' title='Join the Voodoo Discord server'>
+            Join the Voodoo community on Discord
+          </a>
+        </div>
         <div className={styles.version}>v{packageJson.version} by&nbsp;Ethyn&nbsp;Wyrmbane</div>
         <div>
           Crystal art by{' '}

@@ -3,6 +3,7 @@ import { ChildProcess } from 'child_process';
 import { startListening } from './startListening';
 import { heartbeat } from './heartbeat';
 import { voodooGet } from './voodooGet';
+import { voodooPost } from './voodooPost';
 import config from '../config';
 
 type HeartbeatDelay = { current: number };
@@ -25,9 +26,12 @@ export const scheduleHeartbeat = (ui: BrowserWindow | null, accessToken: string,
 export const setupIPC = (ui: BrowserWindow | null, speech: ChildProcess | null, logger: (...args: any) => void) => {
   /* Handle session creation. */
   ipcMain.handle('session', async (_, { accessToken }) => {
-    const response = await voodooGet(accessToken, config.API_ENDPOINTS.SESSION);
+    const [sessionResponse, spellbookResponse] = await Promise.all([
+      voodooGet(accessToken, config.API_ENDPOINTS.SESSION),
+      voodooGet(accessToken, config.API_ENDPOINTS.SPELLBOOK)
+    ]);
 
-    if (response.ok) {
+    if (sessionResponse.ok) {
       if (heartbeatHandle === null) {
         startListening(ui, speech, accessToken, logger);
 
@@ -35,12 +39,24 @@ export const setupIPC = (ui: BrowserWindow | null, speech: ChildProcess | null, 
       }
     }
 
-    return response;
+    return {
+      session: sessionResponse,
+      spellbook: spellbookResponse
+    };
   });
 
   /* Handle player update. */
   ipcMain.handle('update-player', async (_, { accessToken }) => {
     return await voodooGet(accessToken, config.API_ENDPOINTS.PLAYER);
+  });
+
+  /* Handle spell upgrade. */
+  ipcMain.handle('upgrade', async (_, { accessToken, school, spellKey, upgradeKey }) => {
+    return await voodooPost(accessToken, config.API_ENDPOINTS.UPGRADE, {
+      school,
+      spell: spellKey,
+      upgrade: upgradeKey
+    });
   });
 
   /* Handle UI focus. */

@@ -8,6 +8,8 @@ const development = {
   API_ENDPOINTS: {
     SESSION: 'http://localhost:3000/session',
     PLAYER: 'http://localhost:3000/player',
+    SPELLBOOK: 'http://localhost:3000/spellbook',
+    UPGRADE: 'http://localhost:3000/upgrade',
     HEARTBEAT: 'http://localhost:3000/heartbeat',
     INCANTATION: 'http://localhost:3000/incantation',
     SEAL: 'http://localhost:3000/seal',
@@ -27,6 +29,8 @@ const production = {
   API_ENDPOINTS: {
     SESSION: 'https://att-voodoo-server.herokuapp.com/session',
     PLAYER: 'https://att-voodoo-server.herokuapp.com/player',
+    SPELLBOOK: 'https://att-voodoo-server.herokuapp.com/spellbook',
+    UPGRADE: 'https://att-voodoo-server.herokuapp.com/upgrade',
     HEARTBEAT: 'https://att-voodoo-server.herokuapp.com/heartbeat',
     INCANTATION: 'https://att-voodoo-server.herokuapp.com/incantation',
     SEAL: 'https://att-voodoo-server.herokuapp.com/seal',

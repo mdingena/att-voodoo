@@ -32,6 +32,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  cursor: default;
 }
 
 html,
@@ -60,10 +61,22 @@ small {
   text-shadow: var(--text-shadow-small);
 }
 
-*:not(button):not(a):not(abbr) {
-  cursor: default;
+a,
+a *,
+button,
+button * {
+  cursor: pointer;
 }
 
-abbr {
+abbr,
+abbr * {
   cursor: help;
+}
+
+p {
+  margin: 0 0 1.5em;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
