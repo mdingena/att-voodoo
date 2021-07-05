@@ -91,10 +91,10 @@ export const handleSpeech = async (
             const response = await voodooPost(accessToken, config.API_ENDPOINTS.TRIGGER, [verbalTrigger]);
 
             if (response.ok) {
-              experience = response.result.experiece;
+              experience = response.result.experience;
               preparedSpells = response.result.preparedSpells;
               ui?.webContents.send('voodoo-prepared-spell-triggered', experience, preparedSpells);
-              logger({ preparedSpells });
+              logger({ experience, preparedSpells });
             } else {
               logger(response.error);
             }
@@ -135,11 +135,11 @@ export const handleSpeech = async (
           const confirmResponse = await voodooGet(accessToken, config.API_ENDPOINTS.SEAL);
 
           if (confirmResponse.ok) {
-            experience = confirmResponse.result.experiece;
+            experience = confirmResponse.result.experience;
             incantations = confirmResponse.result.incantations;
             preparedSpells = confirmResponse.result.preparedSpells;
             ui?.webContents.send('voodoo-incantation-confirmed', experience, incantations, preparedSpells);
-            logger({ incantations, preparedSpells });
+            logger({ experience, incantations, preparedSpells });
           } else {
             logger(confirmResponse.error);
           }
@@ -153,7 +153,7 @@ export const handleSpeech = async (
             ]);
 
             if (response.ok) {
-              experience = response.result.experiece;
+              experience = response.result.experience;
               incantations = response.result.incantations;
               preparedSpells = response.result.preparedSpells;
 
@@ -166,7 +166,7 @@ export const handleSpeech = async (
                 ui?.webContents.send('voodoo-incantation', incantations, preparedSpells);
               }
 
-              logger({ incantations, preparedSpells });
+              logger({ experience, incantations, preparedSpells });
             } else {
               logger(response.error);
             }
