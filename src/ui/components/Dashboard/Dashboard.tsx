@@ -30,6 +30,19 @@ import dockAudioFile from './dock.wav';
 import castAudioFile from './cast.wav';
 import droneAudioFile from './drone.wav';
 
+const PREPARED_SPELLS_CONFIG = {
+  min: 10,
+  max: 25,
+  constant: 0.0000343
+};
+
+const calcPreparedSpells = (xpTotal: number): number => {
+  const { min, max, constant } = PREPARED_SPELLS_CONFIG;
+  const preparedSpells = max - (max - min) * Math.exp(-constant * xpTotal);
+
+  return Math.round(preparedSpells);
+};
+
 const VOLUME_EXPONENT = 3; /* Linear volume adjustments are evil! */
 
 const chimeAudio = new Audio(chimeAudioFile);
@@ -64,7 +77,7 @@ export const Dashboard = (): JSX.Element => {
   const [accessToken] = useAtom(accessTokenAtom);
   const [, setIncantations] = useAtom(incantationsAtom);
   const [preparedSpells, setPreparedSpells] = useAtom(preparedSpellsAtom);
-  const [, setExperience] = useAtom(experienceAtom);
+  const [experience, setExperience] = useAtom(experienceAtom);
   const [panel, setPanel] = useAtom(panelAtom);
 
   const openSettingsPanel = () => {
@@ -102,8 +115,8 @@ export const Dashboard = (): JSX.Element => {
     chimeAudio.play();
   };
 
-  const handleVoodooPreparedSpellTriggered = (_: Event, experience: Experience, preparedSpells: PreparedSpell[]) => {
-    setExperience(experience);
+  const handleVoodooPreparedSpellTriggered = (_: Event, newExperience: Experience, preparedSpells: PreparedSpell[]) => {
+    setExperience(newExperience);
     setPreparedSpells(preparedSpells);
     castAudio.currentTime = 0;
     castAudio.play();
@@ -117,11 +130,11 @@ export const Dashboard = (): JSX.Element => {
 
   const handleVoodooIncantationConfirmed = (
     _: Event,
-    experience: Experience,
+    newExperience: Experience,
     incantations: Incantation[],
     preparedSpells: PreparedSpell[]
   ) => {
-    setExperience(experience);
+    setExperience(newExperience);
     // @todo The returned incantations are not the up-to-date incantations on the server,
     // @todo but the incantations used to trigger the spell. This makes it easier to have
     // @todo a log of incantations later.
@@ -181,6 +194,9 @@ export const Dashboard = (): JSX.Element => {
     }
   }, [activeServer]);
 
+  const { conjurationXpTotal, evocationXpTotal, transmutationXpTotal } = experience;
+  const xpTotal = conjurationXpTotal + evocationXpTotal + transmutationXpTotal;
+
   const modeStyle = SpeechMode[speechMode].toLowerCase();
 
   const isPanelOpen = panel !== Panel.None;
@@ -195,7 +211,12 @@ export const Dashboard = (): JSX.Element => {
           <Dock slot={2} />
           <Dock slot={3} />
         </div>
-        <div className={styles.spellsHeader}>Prepared Spells</div>
+        <div className={styles.spellsHeader}>
+          Prepared Spells{' '}
+          <span className={styles.spellSlots}>
+            {preparedSpells.length}/{calcPreparedSpells(xpTotal)}
+          </span>
+        </div>
         <div className={styles.spells}>
           {preparedSpells.map((spell, index) => (
             <SpellTrigger key={`spell-${index}`} spell={spell} />

@@ -59,6 +59,11 @@
   color: var(--colour-green-700);
 }
 
+.spellSlots {
+  font-size: 1rem;
+  vertical-align: text-bottom;
+}
+
 .spells {
   display: flex;
   flex-flow: column nowrap;
