@@ -15,7 +15,8 @@ import {
   PreparedSpell,
   experienceAtom,
   Panel,
-  panelAtom
+  panelAtom,
+  Experience
 } from '@/atoms';
 import { ServersUpdate } from '@/components/ServersScreen';
 import { Dock } from '@/components/Dock';
@@ -101,7 +102,8 @@ export const Dashboard = (): JSX.Element => {
     chimeAudio.play();
   };
 
-  const handleVoodooPreparedSpellTriggered = (_: Event, preparedSpells: PreparedSpell[]) => {
+  const handleVoodooPreparedSpellTriggered = (_: Event, experience: Experience, preparedSpells: PreparedSpell[]) => {
+    setExperience(experience);
     setPreparedSpells(preparedSpells);
     castAudio.currentTime = 0;
     castAudio.play();
@@ -113,7 +115,13 @@ export const Dashboard = (): JSX.Element => {
     droneAudio.play();
   };
 
-  const handleVoodooIncantationConfirmed = (_: Event, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
+  const handleVoodooIncantationConfirmed = (
+    _: Event,
+    experience: Experience,
+    incantations: Incantation[],
+    preparedSpells: PreparedSpell[]
+  ) => {
+    setExperience(experience);
     // @todo The returned incantations are not the up-to-date incantations on the server,
     // @todo but the incantations used to trigger the spell. This makes it easier to have
     // @todo a log of incantations later.
