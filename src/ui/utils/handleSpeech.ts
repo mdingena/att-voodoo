@@ -59,7 +59,10 @@ export const handleSpeech = async (
   accessToken: string,
   logger: (...args: any) => void
 ) => {
-  if (isLocked) return;
+  if (isLocked) {
+    mode = MODES.SUPPRESSED;
+    return;
+  }
 
   if (!hasServerConnection) {
     mode = MODES.SUPPRESSED;
