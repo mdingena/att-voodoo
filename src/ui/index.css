@@ -61,6 +61,8 @@ small {
   text-shadow: var(--text-shadow-small);
 }
 
+a,
+a *,
 button,
 button * {
   cursor: pointer;
