@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { ipcRenderer } from 'electron';
 import { useAtom } from 'jotai';
 import { Panel, panelAtom, SpeechMode, speechModeAtom } from '@/atoms';
 import { Button } from '../Button';
@@ -14,6 +16,10 @@ export const SettingsPanel = (): JSX.Element => {
   const toggleLock = () => {
     setSpeechMode(mode => (mode === SpeechMode.Locked ? SpeechMode.Suppressed : SpeechMode.Locked));
   };
+
+  useEffect(() => {
+    ipcRenderer.invoke('speech-lock', speechMode === SpeechMode.Locked);
+  }, [speechMode]);
 
   const isOpen = panel === Panel.Settings;
 

@@ -41,6 +41,13 @@ ipcMain.handle('server-disconnected', () => {
   hasServerConnection = false;
 });
 
+let isLocked = false;
+
+/* Handle speech recognition lock. */
+ipcMain.handle('speech-lock', (_, state) => {
+  isLocked = state;
+});
+
 let mode = MODES.SUPPRESSED;
 let experience: Experience;
 let incantations: string[] = [];
@@ -52,6 +59,8 @@ export const handleSpeech = async (
   accessToken: string,
   logger: (...args: any) => void
 ) => {
+  if (isLocked) return;
+
   if (!hasServerConnection) {
     mode = MODES.SUPPRESSED;
     ui?.webContents.send('voodoo-suppressed');
