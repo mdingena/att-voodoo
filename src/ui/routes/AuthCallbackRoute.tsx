@@ -2,7 +2,15 @@ import { ipcRenderer } from 'electron';
 import { useRef, useState, useEffect } from 'react';
 import { useAtom } from 'jotai';
 import { useHistory } from 'react-router-dom';
-import { appStageAtom, AppStage, activeServerAtom, serversAtom, hasSessionAtom, accessTokenAtom } from '@/atoms';
+import {
+  appStageAtom,
+  AppStage,
+  activeServerAtom,
+  serversAtom,
+  hasSessionAtom,
+  accessTokenAtom,
+  spellbookAtom
+} from '@/atoms';
 import { useAuth } from '@/components/AltaAuth';
 import { Authenticating, AuthenticatingStage } from '@/components/Authenticating';
 
@@ -14,10 +22,11 @@ export const AuthCallbackRoute = () => {
   const [accountId, setAccountId] = useState<number | null>(null);
   const [fatalError, setFatalError] = useState<string | null>(null);
   const [appStage, setAppStage] = useAtom(appStageAtom);
-  const [activeServer, setActiveServer] = useAtom(activeServerAtom);
-  const [servers, setServers] = useAtom(serversAtom);
+  const [, setActiveServer] = useAtom(activeServerAtom);
+  const [, setServers] = useAtom(serversAtom);
   const [hasSession, setHasSession] = useAtom(hasSessionAtom);
-  const [accessToken, setAccessToken] = useAtom(accessTokenAtom);
+  const [, setAccessToken] = useAtom(accessTokenAtom);
+  const [, setSpellbook] = useAtom(spellbookAtom);
 
   /* Call Alta auth library. */
   useEffect(() => {
@@ -51,22 +60,30 @@ export const AuthCallbackRoute = () => {
         accountId: auth.userData?.profile?.sub,
         accessToken: auth.userData?.access_token
       })
-      .then(response => {
-        if (response.ok) {
+      .then(({ session, spellbook }) => {
+        if (session.ok) {
           setHasSession(true);
           setAccessToken(auth.userData?.access_token ?? null);
           setAccountId(Number(auth.userData?.profile?.sub ?? 0));
-          setServers(response.result.servers);
-          if (response.result.playerJoined) {
-            ipcRenderer.invoke('server-connected');
-            setActiveServer(response.result.playerJoined);
-            setAppStage(AppStage.Connected);
+          setServers(session.result.servers);
+
+          if (spellbook.ok) {
+            setSpellbook(spellbook.result);
+
+            if (session.result.playerJoined) {
+              ipcRenderer.invoke('server-connected');
+              setActiveServer(session.result.playerJoined);
+              setAppStage(AppStage.Connected);
+            } else {
+              setAppStage(AppStage.WaitingForServer);
+            }
           } else {
-            setAppStage(AppStage.WaitingForServer);
+            console.error(spellbook.error);
+            setFatalError(spellbook.error);
           }
         } else {
-          console.error(response.error);
-          setFatalError(response.error);
+          console.error(session.error);
+          setFatalError(session.error);
         }
       })
       .catch(error => {
