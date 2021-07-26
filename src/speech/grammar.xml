@@ -57,7 +57,6 @@
       <item> earth </item>
       <item> embers </item>
       <item> gems </item>
-      <item> gotera </item>
       <item> fungi </item>
       <item> produce </item>
       <item> pyre </item>
@@ -65,8 +64,8 @@
       <item> salt </item>
       <item> silica </item>
       <item> spriggull </item>
+      <item> tera </item>
       <item> turabada </item>
-      <item> vermin </item>
       <item> weapon </item>
       <item> wyrm </item>
     </one-of>

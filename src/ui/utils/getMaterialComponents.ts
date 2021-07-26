@@ -45,7 +45,7 @@ export const getMaterialComponents = (speech: string): string[] => {
       ];
 
     case 'embers':
-      return ['coal', 'fuel core', 'molten core'];
+      return ['grass clump', 'coal', 'fuel core', 'molten core'];
 
     case 'fungi':
       return [
@@ -65,9 +65,6 @@ export const getMaterialComponents = (speech: string): string[] => {
 
     case 'gems':
       return ['blue crystal gem', 'blue crystal shard'];
-
-    case 'gotera':
-      return ['gotera seedling', 'redwood gotera core'];
 
     case 'produce':
       return [
@@ -109,10 +106,6 @@ export const getMaterialComponents = (speech: string): string[] => {
         'ripe potato',
         'unripe potato',
         'potato sapling',
-        'burnt pumpkin',
-        'cooked pumpkin',
-        'ripe pumpkin',
-        'unripe pumpkin',
         'burnt pumpkin piece',
         'cooked pumpkin piece',
         'ripe pumpkin piece',
@@ -151,6 +144,17 @@ export const getMaterialComponents = (speech: string): string[] => {
         'purple spriggull feather',
         'red spriggull feather',
         'red spriggull fletching'
+      ];
+
+    case 'tera':
+      return [
+        'oak wedge',
+        'birch wedge',
+        'walnut wedge',
+        'ash wedge',
+        'redwood wedge',
+        'gotera seedling',
+        'redwood gotera core'
       ];
 
     case 'turabada':
