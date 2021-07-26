@@ -16,7 +16,7 @@ Instant spells do not require an available spell preparation slot.
 
 Prepared spells are **stored** in a spell preparation slot after successfully invoking them. Most combat spells are prepared spells. You must prepare these spells near a **Spellcrafting Conduit**, but once prepared, you may go anywhere and cast it by speaking the spell's fast trigger phrase.
 
-Currently, everyone has 10 spell preparation slots. When you prepare an 11th spell, you lose the oldest prepared spell.
+Everyone starts with 10 spell preparation slots. When you prepare an 11th spell, you lose the oldest prepared spell. As you gain more experience points (XP) from casting spells, you'll increase the number of prepared spell slots you have (up to a maximum of 25).
 
 ## Spellcrafting Conduits
 
