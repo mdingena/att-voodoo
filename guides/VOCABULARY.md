@@ -10,7 +10,7 @@
 
 ## Verbal spell component
 
-A verbal spell component is made up of words describing a property and a source. For example, `essence of silica` or `heart of embers`. Each source has its own material spell components associated with it. For example, `silica` targets a glass flask or sandstone, while `embers` targets coal. Some source words target many different materials, some source words are specific to only one or two materials.
+A verbal spell component is made up of words describing a property and a source. For example, `fluid of silica` or `essence of fungi`. Each source has its own material spell components associated with it. For example, `silica` targets a glass flask or sandstone, while `fungi` targets various mushrooms. Some source words target many different materials, some source words are specific to only one or two materials.
 
 You must always connect a property word with a source word using `of`.
 
@@ -34,7 +34,6 @@ All possible source words are:
 - `earth`
 - `embers`
 - `gems`
-- `gotera`
 - `fungi`
 - `produce`
 - `pyre` (like "fire")
@@ -42,10 +41,10 @@ All possible source words are:
 - `salt`
 - `silica`
 - `spriggull`
+- `tera`
 - `turabada`
-- `vermin`
 - `weapon`
-- `wyrm`
+- `wyrm` (like "worm")
 
 Some other example verbal components are:
 
