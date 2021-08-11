@@ -14,7 +14,8 @@ import {
 import config from './config';
 
 /* Configure application instance. */
-configEnv();
+const env = configEnv();
+if (env.error) throw env.error;
 singleInstanceLock(app);
 setUriScheme(app);
 
