@@ -22,10 +22,16 @@
     <item> evoke </item>
     <one-of>
       <item> acid bolt </item>
+      <item> ash tree </item>
+      <item> birch tree </item>
       <item> crystal lance </item>
       <item> crystal pick </item>
       <item> crystal sword </item>
       <item> frost bolt </item>
+      <item> oak tree </item>
+      <item> redwood tree </item>
+      <item> smokescreen </item>
+      <item> walnut tree </item>
     </one-of>
   </rule>
 
