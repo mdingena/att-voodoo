@@ -4,7 +4,7 @@ import isDev from 'electron-is-dev';
 const development = {
   VOODOO_EXE_PATH: path.resolve(__dirname, '../../build/speech/VoodooListener.exe'),
   VOODOO_GRAMMAR_PATH: path.resolve(__dirname, '../../build/speech/grammar.xml'),
-  APP_URL: 'http://localhost:9000/#',
+  APP_URL: 'http://localhost:9001/#',
   API_ENDPOINTS: {
     SESSION: 'http://localhost:3000/session',
     PLAYER: 'http://localhost:3000/player',
