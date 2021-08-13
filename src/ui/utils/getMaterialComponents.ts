@@ -153,8 +153,14 @@ export const getMaterialComponents = (speech: string): string[] => {
         'walnut wedge',
         'ash wedge',
         'redwood wedge',
+        'oak tree seed',
+        'birch tree seed',
+        'walnut tree seed',
+        'ash tree seed',
+        'redwood tree seed',
         'gotera seedling',
-        'redwood gotera core'
+        'redwood gotera core',
+        'healing pod'
       ];
 
     case 'turabada':
