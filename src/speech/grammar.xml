@@ -23,8 +23,8 @@
     <one-of>
       <item> acid bolt </item>
       <item> aptitude </item>
-      <item> ash tree </item>
-      <item> birch tree </item>
+      <!-- <item> ash tree </item> -->
+      <!-- <item> birch tree </item> -->
       <item> crystal lance </item>
       <item> crystal pick </item>
       <item> crystal sword </item>
@@ -34,12 +34,12 @@
       <item> haste </item>
       <item> heal wounds </item>
       <item> heroism </item>
-      <item> oak tree </item>
-      <item> redwood tree </item>
+      <!-- <item> oak tree </item> -->
+      <!-- <item> redwood tree </item> -->
       <item> smokescreen </item>
       <item> stoneskin </item>
       <item> true strike </item>
-      <item> walnut tree </item>
+      <!-- <item> walnut tree </item> -->
     </one-of>
   </rule>
 
