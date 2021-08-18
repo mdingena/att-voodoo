@@ -4,31 +4,48 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Acid Bolt](#acid-bolt)
+- [Anamnesis](#anamnesis)
+- [Aptitude](#aptitude)
 - [Conjure Crystal Lance](#conjure-crystal-lance)
 - [Conjure Crystal Pick](#conjure-crystal-pick)
 - [Conjure Crystal Sword](#conjure-crystal-sword)
 - [Conjure Water](#conjure-water)
 - [Craft Flask](#craft-flask)
+- [Craft Soulbond](#craft-soulbond)
+- [Dart](#dart)
+- [Fire](#fire)
 - [Flask of Endless Teleportation](#flask-of-endless-teleportation)
 - [Flask of Endless Water](#flask-of-endless-water)
 - [Frost Bolt](#frost-bolt)
+- [Haste](#haste)
+- [Heal Wounds](#heal-wounds)
+- [Heroism](#heroism)
 - [Liquate Alloy](#liquate-alloy)
-- [Repair Copper Weapon](#repair-copper-weapon)
-- [Repair Electrum Weapon](#repair-electrum-weapon)
-- [Repair Gold Weapon](#repair-gold-weapon)
-- [Repair Iron Weapon](#repair-iron-weapon)
-- [Repair Mythril Weapon](#repair-mythril-weapon)
-- [Repair Palladium Weapon](#repair-palladium-weapon)
-- [Repair Red Iron Weapon](#repair-red-iron-weapon)
-- [Repair Silver Weapon](#repair-silver-weapon)
-- [Repair Valyan Weapon](#repair-valyan-weapon)
-- [Repair Viridium Weapon](#repair-viridium-weapon)
+- [Repair Ash Device](#repair-ash-device)
+- [Repair Birch Device](#repair-birch-device)
+- [Repair Copper Device](#repair-copper-device)
+- [Repair Electrum Device](#repair-electrum-device)
+- [Repair Gold Device](#repair-gold-device)
+- [Repair Iron Device](#repair-iron-device)
+- [Repair Mythril Device](#repair-mythril-device)
+- [Repair Oak Device](#repair-oak-device)
+- [Repair Palladium Device](#repair-palladium-device)
+- [Repair Red Iron Device](#repair-red-iron-device)
+- [Repair Redwood Device](#repair-redwood-device)
+- [Repair Silver Device](#repair-silver-device)
+- [Repair Valyan Device](#repair-valyan-device)
+- [Repair Viridium Device](#repair-viridium-device)
+- [Repair Walnut Device](#repair-walnut-device)
+- [Smokescreen](#smokescreen)
+- [Stoneskin](#stoneskin)
 - [Transmute Copper To Iron](#transmute-copper-to-iron)
 - [Transmute Gold To Silver](#transmute-gold-to-silver)
 - [Transmute Ingot To Ore](#transmute-ingot-to-ore)
+- [Transmute Iron Handle](#transmute-iron-handle)
 - [Transmute Iron To Gold](#transmute-iron-to-gold)
 - [Transmute Silver To Mythril](#transmute-silver-to-mythril)
 - [Transmute Teleportation Potion](#transmute-teleportation-potion)
+- [True Strike](#true-strike)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -53,6 +70,32 @@ Discovered by **Nael Mossweep** and **Syren_DM**.
 |    Speak | `skin of wyrm`       | `tuft of spriggull`   | `sliver of salt` | `essence of pyre` |
 
 </details>
+
+# Anamnesis
+
+Reverse-age any given produce. Works on all unsliced fruits and vegetables, as well as apple cores and pumpkin pieces.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 2 incantations.
+- Reverse-aging seems to be powered by crystals.
+
+# Aptitude
+
+Temporarily increases your skill XP multiplier. Affects all skill trees except Voodoo.
+
+| School     | Type     |
+| :--------- | :------- |
+| Abjuration | Prepared |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 3 incantations.
+- It's almost as if you're brewing a potion.
 
 # Conjure Crystal Lance
 
@@ -154,6 +197,55 @@ Discovered by **Ethyn Wyrmbane**.
 
 </details>
 
+# Craft Soulbond
+
+Creates an artifact that lets another player bind their soul to you. Once Soulbound, certain spells that affect you also affects them. To Soulbind with someone, you must hand them the artifact. That player must now place the artifact in your belt. You can have up to 4 other players Soulbound to you at once. Touching an artifact bound to another player will break the Soulbond.
+
+| School      | Type    | Casts from |
+| :---------- | :------ | :--------- |
+| Conjuration | Instant | Right hand |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 2 incantations.
+- Rumours say that the artiface is shaped like a key. How poetic...
+
+# Dart
+
+Launches a gotera dart from the palm of your hand.
+
+| School    | Type     | Casts from |
+| :-------- | :------- | :--------- |
+| Evocation | Prepared | Right hand |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 3 incantations.
+- Requires spoils from trees and spriggulls.
+- Do you know the Old Tongue word for "tree"?
+
+# Fire
+
+Creates a fireball in the palm of your hand. This fireball can be placed on the ground to kindle firewood, or thrown to illuminate dark places.
+
+⚠️ Warning: fire is hot.
+
+| School    | Type     | Casts from |
+| :-------- | :------- | :--------- |
+| Evocation | Prepared | Right hand |
+
+<details>
+<summary>Incantations</summary>
+
+Discovered by **Ethyn Wyrmbane**.
+
+|     Dock | ζ                   | δ                  | λ      |
+| -------: | ------------------- | ------------------ | ------ |
+| Material | Grass clump         | Flint              |        |
+|    Speak | `essence of embers` | `fragment of pyre` | `seal` |
+
+</details>
+
 # Flask of Endless Teleportation
 
 Conjures additional servings of teleportation potion inside of a flask already containing teleportation potion.
@@ -220,6 +312,45 @@ Discovered by **Nael Mossweep**, **Syren_DM** and **JoshuaTheTeacup**.
 
 </details>
 
+# Haste
+
+Temporarily increases the movement speed of you and nearby Soulbound players.
+
+| School     | Type     |
+| :--------- | :------- |
+| Abjuration | Prepared |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 4 incantations.
+- It's almost as if you're brewing a potion.
+
+# Heal Wounds
+
+Instantly heals you and nearby Soulbound players.
+
+| School     | Type     |
+| :--------- | :------- |
+| Abjuration | Prepared |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 3 incantations.
+- It's almost as if you're brewing a potion.
+
+# Heroism
+
+Temporarily increases the maximum health of you and nearby Soulbound players.
+
+| School     | Type     |
+| :--------- | :------- |
+| Abjuration | Prepared |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 3 incantations.
+- It's almost as if you're brewing a potion.
+
 # Liquate Alloy
 
 Splits an alloy into its base metals.
@@ -240,9 +371,49 @@ Discovered by **The Pumpking**.
 
 </details>
 
-# Repair Copper Weapon
+# Repair Ash Device
 
-Restores some of the integrity of all copper parts in a weapon.
+Restores some of the integrity of all ash parts in a hilted device.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+<details>
+<summary>Incantations</summary>
+
+Discovered by **Ethyn Wyrmbane**.
+
+|     Dock | ζ                 | δ                  | λ                  | Ω                       |
+| -------: | ----------------- | ------------------ | ------------------ | ----------------------- |
+| Material | Any hilted device | Ash wedge          | Tan leather strips | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `fragment of tera` | `skin of dais`     | `fragment of spriggull` |
+
+</details>
+
+# Repair Birch Device
+
+Restores some of the integrity of all birch parts in a hilted device.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+<details>
+<summary>Incantations</summary>
+
+Discovered by **Ethyn Wyrmbane**.
+
+|     Dock | ζ                 | δ                  | λ                  | Ω                       |
+| -------: | ----------------- | ------------------ | ------------------ | ----------------------- |
+| Material | Any hilted device | Birch wedge        | Tan leather strips | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `fragment of tera` | `skin of dais`     | `fragment of spriggull` |
+
+</details>
+
+# Repair Copper Device
+
+Restores some of the integrity of all copper parts in a hilted device.
 
 | School        | Type    | Casts from |
 | :------------ | :------ | :--------- |
@@ -255,14 +426,14 @@ Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
 |     Dock | ζ                 | δ                   | λ                 | Ω                       |
 | -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any weapon        | Copper ingot        | Coal              | Spriggull bone shard    |
+| Material | Any hilted device | Copper ingot        | Coal              | Spriggull bone shard    |
 |    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
-# Repair Electrum Weapon
+# Repair Electrum Device
 
-Restores some of the integrity of all electrum parts in a weapon.
+Restores some of the integrity of all electrum parts in a hilted device.
 
 | School        | Type    | Casts from |
 | :------------ | :------ | :--------- |
@@ -275,14 +446,14 @@ Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
 |     Dock | ζ                 | δ                   | λ                 | Ω                       |
 | -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any weapon        | Electrum ingot      | Coal              | Spriggull bone shard    |
+| Material | Any hilted device | Electrum ingot      | Coal              | Spriggull bone shard    |
 |    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
-# Repair Gold Weapon
+# Repair Gold Device
 
-Restores some of the integrity of all gold parts in a weapon.
+Restores some of the integrity of all gold parts in a hilted device.
 
 | School        | Type    | Casts from |
 | :------------ | :------ | :--------- |
@@ -295,14 +466,14 @@ Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
 |     Dock | ζ                 | δ                   | λ                 | Ω                       |
 | -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any weapon        | Gold ingot          | Coal              | Spriggull bone shard    |
+| Material | Any hilted device | Gold ingot          | Coal              | Spriggull bone shard    |
 |    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
-# Repair Iron Weapon
+# Repair Iron Device
 
-Restores some of the integrity of all iron parts in a weapon.
+Restores some of the integrity of all iron parts in a hilted device.
 
 | School        | Type    | Casts from |
 | :------------ | :------ | :--------- |
@@ -315,14 +486,14 @@ Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
 |     Dock | ζ                 | δ                   | λ                 | Ω                       |
 | -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any weapon        | Iron ingot          | Coal              | Spriggull bone shard    |
+| Material | Any hilted device | Iron ingot          | Coal              | Spriggull bone shard    |
 |    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
-# Repair Mythril Weapon
+# Repair Mythril Device
 
-Restores some of the integrity of all mythril parts in a weapon.
+Restores some of the integrity of all mythril parts in a hilted device.
 
 | School        | Type    | Casts from |
 | :------------ | :------ | :--------- |
@@ -335,14 +506,34 @@ Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
 |     Dock | ζ                 | δ                   | λ                 | Ω                       |
 | -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any weapon        | Mythril ingot       | Coal              | Spriggull bone shard    |
+| Material | Any hilted device | Mythril ingot       | Coal              | Spriggull bone shard    |
 |    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
-# Repair Palladium Weapon
+# Repair Oak Device
 
-Restores some of the integrity of all palladium parts in a weapon.
+Restores some of the integrity of all oak parts in a hilted device.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+<details>
+<summary>Incantations</summary>
+
+Discovered by **Ethyn Wyrmbane**.
+
+|     Dock | ζ                 | δ                  | λ                  | Ω                       |
+| -------: | ----------------- | ------------------ | ------------------ | ----------------------- |
+| Material | Any hilted device | Oak wedge          | Tan leather strips | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `fragment of tera` | `skin of dais`     | `fragment of spriggull` |
+
+</details>
+
+# Repair Palladium Device
+
+Restores some of the integrity of all palladium parts in a hilted device.
 
 | School        | Type    | Casts from |
 | :------------ | :------ | :--------- |
@@ -355,14 +546,14 @@ Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
 |     Dock | ζ                 | δ                   | λ                 | Ω                       |
 | -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any weapon        | Palladium ingot     | Coal              | Spriggull bone shard    |
+| Material | Any hilted device | Palladium ingot     | Coal              | Spriggull bone shard    |
 |    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
-# Repair Red Iron Weapon
+# Repair Red Iron Device
 
-Restores some of the integrity of all red iron parts in a weapon.
+Restores some of the integrity of all red iron parts in a hilted device.
 
 | School        | Type    | Casts from |
 | :------------ | :------ | :--------- |
@@ -375,14 +566,34 @@ Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
 |     Dock | ζ                 | δ                   | λ                 | Ω                       |
 | -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any weapon        | Red iron ingot      | Coal              | Spriggull bone shard    |
+| Material | Any hilted device | Red iron ingot      | Coal              | Spriggull bone shard    |
 |    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
-# Repair Silver Weapon
+# Repair Redwood Device
 
-Restores some of the integrity of all silver parts in a weapon.
+Restores some of the integrity of all redwood parts in a hilted device.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+<details>
+<summary>Incantations</summary>
+
+Discovered by **Ethyn Wyrmbane**.
+
+|     Dock | ζ                 | δ                  | λ                  | Ω                       |
+| -------: | ----------------- | ------------------ | ------------------ | ----------------------- |
+| Material | Any hilted device | Redwood wedge      | Tan leather strips | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `fragment of tera` | `skin of dais`     | `fragment of spriggull` |
+
+</details>
+
+# Repair Silver Device
+
+Restores some of the integrity of all silver parts in a hilted device.
 
 | School        | Type    | Casts from |
 | :------------ | :------ | :--------- |
@@ -395,14 +606,14 @@ Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
 |     Dock | ζ                 | δ                   | λ                 | Ω                       |
 | -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any weapon        | Silver ingot        | Coal              | Spriggull bone shard    |
+| Material | Any hilted device | Silver ingot        | Coal              | Spriggull bone shard    |
 |    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
-# Repair Valyan Weapon
+# Repair Valyan Device
 
-Restores some of the integrity of all valyan parts in a weapon.
+Restores some of the integrity of all valyan parts in a hilted device.
 
 | School        | Type    | Casts from |
 | :------------ | :------ | :--------- |
@@ -415,14 +626,14 @@ Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
 |     Dock | ζ                 | δ                   | λ                 | Ω                       |
 | -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any weapon        | Valyan ingot        | Coal              | Spriggull bone shard    |
+| Material | Any hilted device | Valyan ingot        | Coal              | Spriggull bone shard    |
 |    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
 
-# Repair Viridium Weapon
+# Repair Viridium Device
 
-Restores some of the integrity of all viridium parts in a weapon.
+Restores some of the integrity of all viridium parts in a hilted device.
 
 | School        | Type    | Casts from |
 | :------------ | :------ | :--------- |
@@ -435,10 +646,55 @@ Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
 
 |     Dock | ζ                 | δ                   | λ                 | Ω                       |
 | -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any weapon        | Viridium ingot      | Coal              | Spriggull bone shard    |
+| Material | Any hilted device | Viridium ingot      | Coal              | Spriggull bone shard    |
 |    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
 
 </details>
+
+# Repair Walnut Device
+
+Restores some of the integrity of all walnut parts in a hilted device.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+<details>
+<summary>Incantations</summary>
+
+Discovered by **Ethyn Wyrmbane**.
+
+|     Dock | ζ                 | δ                  | λ                  | Ω                       |
+| -------: | ----------------- | ------------------ | ------------------ | ----------------------- |
+| Material | Any hilted device | Walnut wedge       | Tan leather strips | Spriggull bone shard    |
+|    Speak | `bonds of weapon` | `fragment of tera` | `skin of dais`     | `fragment of spriggull` |
+
+</details>
+
+# Smokescreen
+
+Create a large temporary stack of smoke that obscures vision.
+
+| School     | Type     |
+| :--------- | :------- |
+| Abjuration | Prepared |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 2 incantations.
+
+# Stoneskin
+
+Temporarily increases the damage protection of you and nearby Soulbound players.
+
+| School     | Type     |
+| :--------- | :------- |
+| Abjuration | Prepared |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 4 incantations.
+- It's almost as if you're brewing a potion.
 
 # Transmute Copper To Iron
 
@@ -497,6 +753,20 @@ Discovered by **Apolo**.
 
 </details>
 
+# Transmute Iron Handle
+
+Transmutes a short or medium wooden handle to its iron equivalent.
+
+| School        | Type    | Casts from |
+| :------------ | :------ | :--------- |
+| Transmutation | Instant | Right hand |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 3 incantations.
+- `ζ` must contain either a short wooden handle or a medium straight wooden handle.
+- The handle gets re-taped in the transmutation process.
+
 # Transmute Iron To Gold
 
 Transmutes an iron ingot to a gold ingot.
@@ -553,3 +823,16 @@ Discovered by **Syren_DM**.
 |    Speak | `fluid of silica`      | `essence of fungi` | `seal` |
 
 </details>
+
+# True Strike
+
+Temporarily increases the damage dealt by you and nearby Soulbound players.
+
+| School     | Type     |
+| :--------- | :------- |
+| Abjuration | Prepared |
+
+⚠️ **Incantations unknown! Research discoveries made so far:**
+
+- Requires 4 incantations.
+- It's almost as if you're brewing a potion.
