@@ -17,11 +17,12 @@ export const UpgradesPanel = (): JSX.Element => {
 
   const closeSpellFinder = () => setSelectedSchool(null);
 
+  const selectAbjuration = () => setSelectedSchool('abjuration');
   const selectConjuration = () => setSelectedSchool('conjuration');
   const selectEvocation = () => setSelectedSchool('evocation');
   const selectTransmutation = () => setSelectedSchool('transmutation');
 
-  const { conjurationXpTotal, evocationXpTotal, transmutationXpTotal, upgrades } = experience;
+  const { abjurationXpTotal, conjurationXpTotal, evocationXpTotal, transmutationXpTotal, upgrades } = experience;
 
   const schoolUpgrades = useMemo(
     () => (school: School) =>
@@ -35,6 +36,7 @@ export const UpgradesPanel = (): JSX.Element => {
     [upgrades, spellbook]
   );
 
+  const abjurationUpgrades = schoolUpgrades('abjuration');
   const conjurationUpgrades = schoolUpgrades('conjuration');
   const evocationUpgrades = schoolUpgrades('evocation');
   const transmutationUpgrades = schoolUpgrades('transmutation');
@@ -54,6 +56,12 @@ export const UpgradesPanel = (): JSX.Element => {
               </p>
               <p>Use the upgrade tracks below to find spells to upgrade.</p>
             </div>
+            <Experience
+              onClick={selectAbjuration}
+              school='Abjuration'
+              total={abjurationXpTotal}
+              upgrades={abjurationUpgrades}
+            />
             <Experience
               onClick={selectConjuration}
               school='Conjuration'
