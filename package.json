@@ -1,6 +1,6 @@
 {
   "name": "att-voodoo",
-  "version": "1.0.0-beta.9",
+  "version": "1.0.0-beta.10",
   "description": "A community-made magic mod for A Township Tale, a VR MMORPG game.",
   "main": "build/ui/main.js",
   "scripts": {
