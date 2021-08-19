@@ -205,10 +205,17 @@ Creates an artifact that lets another player bind their soul to you. Once Soulbo
 | :---------- | :------ | :--------- |
 | Conjuration | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 2 incantations.
-- Rumours say that the artifact is shaped like a key. How poetic...
+Discovered by **Korbsie**, **Bear** and **Xaitr**.
+
+|     Dock | ζ                   | δ                  | λ      |
+| -------: | ------------------- | ------------------ | ------ |
+| Material | Iron ingot          | Blue crystal shard |        |
+|    Speak | `artifact of earth` | `aether of gems`   | `seal` |
+
+</details>
 
 # Dart
 
