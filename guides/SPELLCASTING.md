@@ -28,6 +28,6 @@ Some towns have hauled these crystals from the mines and erected **Spellcrafting
 
 **Soulbinding** is a game mechanic introduced in `v1.0.0-beta.10`.
 
-Casting [**Craft Soulbond**](../spellbook/README.md#craft-soulbond) creates an artifact that lets another player bind their soul to you. Once Soulbound, certain spells that affect you also affects them.
+Casting [**Craft Soulbond**](../spellbook/README.md#craft-soulbond) creates an artifact that lets another player bind their soul to you. Once Soulbound, certain spells that affect you also affect them.
 
 To Soulbind with someone, you must hand them the artifact. That player must now place the artifact in your belt. You can have up to 4 other players Soulbound to you at once. Touching an artifact bound to another player will break the Soulbond.
