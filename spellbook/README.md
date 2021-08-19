@@ -199,7 +199,7 @@ Discovered by **Ethyn Wyrmbane**.
 
 # Craft Soulbond
 
-Creates an artifact that lets another player bind their soul to you. Once Soulbound, certain spells that affect you also affects them. To Soulbind with someone, you must hand them the artifact. That player must now place the artifact in your belt. You can have up to 4 other players Soulbound to you at once. Touching an artifact bound to another player will break the Soulbond.
+Creates an artifact that lets another player bind their soul to you. Once Soulbound, certain spells that affect you also affect them. To Soulbind with someone, you must hand them the artifact. That player must now place the artifact in your belt. You can have up to 4 other players Soulbound to you at once. Touching an artifact bound to another player will break the Soulbond.
 
 | School      | Type    | Casts from |
 | :---------- | :------ | :--------- |
@@ -208,7 +208,7 @@ Creates an artifact that lets another player bind their soul to you. Once Soulbo
 ⚠️ **Incantations unknown! Research discoveries made so far:**
 
 - Requires 2 incantations.
-- Rumours say that the artiface is shaped like a key. How poetic...
+- Rumours say that the artifact is shaped like a key. How poetic...
 
 # Dart
 
@@ -228,7 +228,8 @@ Launches a gotera dart from the palm of your hand.
 
 Creates a fireball in the palm of your hand. This fireball can be placed on the ground to kindle firewood, or thrown to illuminate dark places.
 
-⚠️ Warning: fire is hot.
+| ⚠️  | WARNING: Fire is hot. |
+| --- | :-------------------- |
 
 | School    | Type     | Casts from |
 | :-------- | :------- | :--------- |
