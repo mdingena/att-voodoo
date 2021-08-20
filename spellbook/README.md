@@ -341,10 +341,17 @@ Instantly heals you and nearby Soulbound players.
 | :--------- | :------- |
 | Abjuration | Prepared |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 3 incantations.
-- It's almost as if you're brewing a potion.
+Discovered by **Gasher**.
+
+|     Dock | ζ                      | δ                  | λ                  | Ω      |
+| -------: | ---------------------- | ------------------ | ------------------ | ------ |
+| Material | Flask containing water | Blue crystal shard | Healing pod        |        |
+|    Speak | `fluid of silica`      | `sliver of gems`   | `artifact of tera` | `seal` |
+
+</details>
 
 # Heroism
 
