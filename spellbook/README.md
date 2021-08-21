@@ -335,10 +335,17 @@ Temporarily increases the movement speed of you and nearby Soulbound players.
 | :--------- | :------- |
 | Abjuration | Prepared |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 4 incantations.
-- It's almost as if you're brewing a potion.
+Discovered by **Gasher** and **Szog2332**.
+
+|     Dock | ζ                      | δ                  | λ                 | Ω                     |
+| -------: | ---------------------- | ------------------ | ----------------- | --------------------- |
+| Material | Flask containing water | Blue crystal shard | Burnt dais leg    | Red spriggull feather |
+|    Speak | `fluid of silica`      | `sliver of gems`   | `essence of dais` | `tuft of spriggull`   |
+
+</details>
 
 # Heal Wounds
 
