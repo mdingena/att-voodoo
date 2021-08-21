@@ -713,10 +713,17 @@ Temporarily increases the damage protection of you and nearby Soulbound players.
 | :--------- | :------- |
 | Abjuration | Prepared |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 4 incantations.
-- It's almost as if you're brewing a potion.
+Discovered by **Gasher**.
+
+|     Dock | ζ                      | δ                  | λ                    | Ω                   |
+| -------: | ---------------------- | ------------------ | -------------------- | ------------------- |
+| Material | Flask containing water | Blue crystal shard | Burnt eggplant       | Rock                |
+|    Speak | `fluid of silica`      | `sliver of gems`   | `essence of produce` | `fragment of earth` |
+
+</details>
 
 # Transmute Copper To Iron
 
