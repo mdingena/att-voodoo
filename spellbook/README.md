@@ -79,10 +79,17 @@ Reverse-age any given produce. Works on all unsliced fruits and vegetables, as w
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 2 incantations.
-- Reverse-aging seems to be powered by crystals.
+Discovered by **Zombiehunter494** and **Exouls**.
+
+|     Dock | ζ                  | δ                  | λ      |
+| -------: | ------------------ | ------------------ | ------ |
+| Material | Any produce        | Blue crystal shard |        |
+|    Speak | `heart of produce` | `sliver of gems`   | `seal` |
+
+</details>
 
 # Aptitude
 
