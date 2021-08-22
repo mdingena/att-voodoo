@@ -99,10 +99,17 @@ Temporarily increases your skill XP multiplier. Affects all skill trees except V
 | :--------- | :------- |
 | Abjuration | Prepared |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 3 incantations.
-- It's almost as if you're brewing a potion.
+Discovered by **Szog2332**.
+
+|     Dock | ζ                      | δ                  | λ                    | Ω      |
+| -------: | ---------------------- | ------------------ | -------------------- | ------ |
+| Material | Flask containing water | Blue crystal shard | Burnt onion          |        |
+|    Speak | `fluid of silica`      | `sliver of gems`   | `essence of produce` | `seal` |
+
+</details>
 
 # Conjure Crystal Lance
 
@@ -232,11 +239,17 @@ Launches a gotera dart from the palm of your hand.
 | :-------- | :------- | :--------- |
 | Evocation | Prepared | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 3 incantations.
-- Requires spoils from trees and spriggulls.
-- Do you know the Old Tongue word for "tree"?
+Discovered by **Szog2332**.
+
+|     Dock | ζ              | δ                      | λ               | Ω      |
+| -------: | -------------- | ---------------------- | --------------- | ------ |
+| Material | Oak wedge      | Blue spriggull feather | Gotera seedling |        |
+|    Speak | `skin of tera` | `tuft of spriggull`    | `heart of tera` | `seal` |
+
+</details>
 
 # Fire
 
@@ -375,10 +388,17 @@ Temporarily increases the maximum health of you and nearby Soulbound players.
 | :--------- | :------- |
 | Abjuration | Prepared |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 3 incantations.
-- It's almost as if you're brewing a potion.
+Discovered by **Gasher**.
+
+|     Dock | ζ                      | δ                  | λ                    | Ω      |
+| -------: | ---------------------- | ------------------ | -------------------- | ------ |
+| Material | Flask containing water | Blue crystal shard | Burnt carrot         |        |
+|    Speak | `fluid of silica`      | `sliver of gems`   | `essence of produce` | `seal` |
+
+</details>
 
 # Liquate Alloy
 
@@ -868,7 +888,14 @@ Temporarily increases the damage dealt by you and nearby Soulbound players.
 | :--------- | :------- |
 | Abjuration | Prepared |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 4 incantations.
-- It's almost as if you're brewing a potion.
+Discovered by **Gasher**.
+
+|     Dock | ζ                      | δ                  | λ               | Ω                   |
+| -------: | ---------------------- | ------------------ | --------------- | ------------------- |
+| Material | Flask containing water | Blue crystal shard | Burnt babu leg  | Rusty axe           |
+|    Speak | `fluid of silica`      | `sliver of gems`   | `heart of babu` | `essence of weapon` |
+
+</details>
