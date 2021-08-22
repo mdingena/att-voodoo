@@ -728,9 +728,17 @@ Create a large temporary stack of smoke that obscures vision.
 | :--------- | :------- |
 | Abjuration | Prepared |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 2 incantations.
+Discovered by **ApexAlphaGaming** and **DatWeirdGuy**.
+
+|     Dock | ζ                   | δ                 | λ      |
+| -------: | ------------------- | ----------------- | ------ |
+| Material | Grass clump         | Empty flask       |        |
+|    Speak | `essence of embers` | `bonds of silica` | `seal` |
+
+</details>
 
 # Stoneskin
 
@@ -817,11 +825,17 @@ Transmutes a short or medium wooden handle to its iron equivalent.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
-⚠️ **Incantations unknown! Research discoveries made so far:**
+<details>
+<summary>Incantations</summary>
 
-- Requires 3 incantations.
-- `ζ` must contain either a short wooden handle or a medium straight wooden handle.
-- The handle gets re-taped in the transmutation process.
+Discovered by **ApexAlphaGaming**.
+
+|     Dock | ζ                 | δ                   | λ                  | Ω      |
+| -------: | ----------------- | ------------------- | ------------------ | ------ |
+| Material | Wooden handle     | Iron ingot          | Tan leather strips |        |
+|    Speak | `heart of weapon` | `artifact of earth` | `bonds of dais`    | `seal` |
+
+</details>
 
 # Transmute Iron To Gold
 
