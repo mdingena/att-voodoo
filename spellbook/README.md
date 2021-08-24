@@ -771,7 +771,7 @@ Transmutes a copper ingot to an iron ingot.
 <details>
 <summary>Incantations</summary>
 
-Originally discovered by **The Kronk Creed**.
+Originally discovered by **The Kronk Creed**.  
 Rediscovered by **Szog2332** after balancing update.
 
 |     Dock | ζ                   | δ                 | λ                 | Ω      |
@@ -853,7 +853,7 @@ Transmutes an iron ingot to a gold ingot.
 <details>
 <summary>Incantations</summary>
 
-Originally discovered by **The Kronk Creed**.
+Originally discovered by **The Kronk Creed**.  
 Rediscovered by **Szog2332** after balancing update.
 
 |     Dock | ζ                   | δ                 | λ                 | Ω      |
