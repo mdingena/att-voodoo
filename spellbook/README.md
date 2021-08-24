@@ -768,13 +768,18 @@ Transmutes a copper ingot to an iron ingot.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
+<details>
+<summary>Incantations</summary>
+
 Originally discovered by **The Kronk Creed**.
+Rediscovered by **Szog2332** after balancing update.
 
-⚠️ **Rebalanced incantations unknown! Research discoveries made so far:**
+|     Dock | ζ                   | δ                 | λ                 | Ω      |
+| -------: | ------------------- | ----------------- | ----------------- | ------ |
+| Material | Copper ingot        | Blue crystal gem  | Coal              |        |
+|    Speak | `artifact of earth` | `essence of gems` | `heart of embers` | `seal` |
 
-- Requires 3 incantations.
-- `ζ` must contain a copper ingot.
-- Transmutation process requires heat.
+</details>
 
 # Transmute Gold To Silver
 
@@ -845,13 +850,18 @@ Transmutes an iron ingot to a gold ingot.
 | :------------ | :------ | :--------- |
 | Transmutation | Instant | Right hand |
 
+<details>
+<summary>Incantations</summary>
+
 Originally discovered by **The Kronk Creed**.
+Rediscovered by **Szog2332** after balancing update.
 
-⚠️ **Rebalanced incantations unknown! Research discoveries made so far:**
+|     Dock | ζ                   | δ                 | λ                 | Ω      |
+| -------: | ------------------- | ----------------- | ----------------- | ------ |
+| Material | Iron ingot          | Blue crystal gem  | Coal              |        |
+|    Speak | `artifact of earth` | `essence of gems` | `heart of embers` | `seal` |
 
-- Requires 3 incantations.
-- `ζ` must contain an iron ingot.
-- Transmutation process requires heat.
+</details>
 
 # Transmute Silver To Mythril
 
