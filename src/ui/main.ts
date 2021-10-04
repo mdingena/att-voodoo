@@ -54,7 +54,7 @@ const initialiseApp = async (): Promise<void> => {
   };
 
   /* Prevent window refesh. */
-  if (!isDev && !process.env.DEBUG) {
+  if (!isDev) {
     if (process.platform === 'win32') ui.removeMenu(); // Windows
     if (process.platform === 'darwin') Menu.setApplicationMenu(Menu.buildFromTemplate([]));
   }
@@ -78,8 +78,8 @@ const initialiseApp = async (): Promise<void> => {
   ui.loadURL(config.APP_URL).then(() => setupIPC(ui, speech, logger));
 
   /* Open DevTools window. */
-  if (isDev || process.env.DEBUG) {
-    ui.webContents.openDevTools();
+  if (isDev) {
+    ui.webContents.openDevTools({ mode: 'detach', activate: true });
   }
 };
 
