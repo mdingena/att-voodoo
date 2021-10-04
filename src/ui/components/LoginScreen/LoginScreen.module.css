@@ -59,11 +59,29 @@
   text-shadow: var(--text-shadow-small);
 }
 
+.button {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--font-colour-tertiary);
+  text-shadow: var(--text-shadow-normal);
+  -webkit-font-smoothing: none;
+}
+
 .link {
   color: var(--font-colour-tertiary);
   text-decoration: none;
 }
 
+.button:hover,
 .link:hover {
   color: var(--font-colour-secondary);
+}
+
+.button:focus {
+  outline: none;
 }
