@@ -11,9 +11,11 @@ export const voodooPost = async (accessToken: string, endpoint: string, data: an
       body: JSON.stringify(data)
     });
 
-    if (response.status !== 200 || !response.ok) throw Error(response.statusText);
+    const body = await response.json();
 
-    return await response.json();
+    if (!response.ok) throw new Error(body.error ?? response.statusText);
+
+    return body;
   } catch (error) {
     return { ok: false, error: error.message };
   }
