@@ -70,7 +70,6 @@ export const handleSpeech = async (
     return;
   }
 
-  logger('Recognised speech:', speech);
   const isAwakenPhrase = speech === PHRASES.AWAKEN;
   const isTriggerPhrase = speech.split(' ')[0] === PHRASES.TRIGGER;
 
