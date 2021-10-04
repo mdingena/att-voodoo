@@ -30,9 +30,30 @@
   font-weight: normal;
 }
 
+.servers tr {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .servers td {
-  padding: 0.5rem;
   vertical-align: top;
+}
+
+.servers td:first-child a,
+.servers td:last-child {
+  padding: 0.5rem;
+}
+
+.servers td a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.servers td a:hover {
+  background-color: var(--font-colour-primary);
+  color: var(--colour-green-300);
+  text-shadow: none;
 }
 
 .servers .offline,
