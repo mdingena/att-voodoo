@@ -919,7 +919,7 @@ Discovered by **Gasher**.
 
 |     Dock | ζ                      | δ                  | λ               | Ω                   |
 | -------: | ---------------------- | ------------------ | --------------- | ------------------- |
-| Material | Flask containing water | Blue crystal shard | Burnt babu leg  | Rusty axe           |
+| Material | Flask containing water | Blue crystal shard | Burnt babu leg  | Karimata arrow      |
 |    Speak | `fluid of silica`      | `sliver of gems`   | `heart of babu` | `essence of weapon` |
 
 </details>

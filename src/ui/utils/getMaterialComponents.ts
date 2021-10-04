@@ -182,7 +182,9 @@ export const getMaterialComponents = (speech: string): string[] => {
         'rusty axe',
         'rusty pickaxe',
         'rusty shortsword',
-        'rusty pitchfork'
+        'rusty pitchfork',
+        'karimata arrow',
+        'rusty arrow'
       ];
 
     case 'wyrm':
