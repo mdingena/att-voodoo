@@ -88,69 +88,82 @@ export const Dashboard = (): JSX.Element => {
     setPanel(Panel.Upgrades);
   };
 
-  const handleUpdateServers = (_: Event, { playerJoined }: ServersUpdate) => {
-    setActiveServer(playerJoined);
-  };
+  const handleUpdateServers = useCallback(
+    (_: Event, { playerJoined }: ServersUpdate) => {
+      setActiveServer(playerJoined);
+    },
+    [setActiveServer]
+  );
 
-  const handleVoodooSuppressed = () => {
+  const handleVoodooSuppressed = useCallback(() => {
     setSpeechMode(SpeechMode.Suppressed);
     pingAudio.currentTime = 0;
     pingAudio.play();
-  };
+  }, [setSpeechMode]);
 
   const handleVoodooAwake = useAtomCallback(
-    useCallback(get => {
-      const speechMode = get(speechModeAtom);
-      if (speechMode === SpeechMode.Suppressed) {
-        pingAudio.currentTime = 0;
-        pingAudio.play();
-      }
-      setSpeechMode(SpeechMode.Awake);
-    }, [])
+    useCallback(
+      get => {
+        const speechMode = get(speechModeAtom);
+        if (speechMode === SpeechMode.Suppressed) {
+          pingAudio.currentTime = 0;
+          pingAudio.play();
+        }
+        setSpeechMode(SpeechMode.Awake);
+      },
+      [setSpeechMode]
+    )
   );
 
-  const handleVoodooIncanting = () => {
+  const handleVoodooIncanting = useCallback(() => {
     setSpeechMode(SpeechMode.Incanting);
     chimeAudio.currentTime = 0;
     chimeAudio.play();
-  };
+  }, [setSpeechMode]);
 
-  const handleVoodooPreparedSpellTriggered = (_: Event, newExperience: Experience, preparedSpells: PreparedSpell[]) => {
-    setExperience(newExperience);
-    setPreparedSpells(preparedSpells);
-    castAudio.currentTime = 0;
-    castAudio.play();
-  };
+  const handleVoodooPreparedSpellTriggered = useCallback(
+    (_: Event, newExperience: Experience, preparedSpells: PreparedSpell[]) => {
+      setExperience(newExperience);
+      setPreparedSpells(preparedSpells);
+      castAudio.currentTime = 0;
+      castAudio.play();
+    },
+    [setExperience, setPreparedSpells]
+  );
 
-  const handleVoodooIncantationAborted = (_: Event, incantations: Incantation[]) => {
-    setIncantations(incantations);
-    droneAudio.currentTime = 0;
-    droneAudio.play();
-  };
+  const handleVoodooIncantationAborted = useCallback(
+    (_: Event, incantations: Incantation[]) => {
+      setIncantations(incantations);
+      droneAudio.currentTime = 0;
+      droneAudio.play();
+    },
+    [setIncantations]
+  );
 
-  const handleVoodooIncantationConfirmed = (
-    _: Event,
-    newExperience: Experience,
-    incantations: Incantation[],
-    preparedSpells: PreparedSpell[]
-  ) => {
-    setExperience(newExperience);
-    // @todo The returned incantations are not the up-to-date incantations on the server,
-    // @todo but the incantations used to trigger the spell. This makes it easier to have
-    // @todo a log of incantations later.
-    // setIncantations(incantations);
-    setIncantations([]);
-    if (preparedSpells) setPreparedSpells(preparedSpells);
-    castAudio.currentTime = 0;
-    castAudio.play();
-  };
+  const handleVoodooIncantationConfirmed = useCallback(
+    (_: Event, newExperience: Experience, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
+      setExperience(newExperience);
+      // @todo The returned incantations are not the up-to-date incantations on the server,
+      // @todo but the incantations used to trigger the spell. This makes it easier to have
+      // @todo a log of incantations later.
+      // setIncantations(incantations);
+      setIncantations([]);
+      if (preparedSpells) setPreparedSpells(preparedSpells);
+      castAudio.currentTime = 0;
+      castAudio.play();
+    },
+    [setExperience, setIncantations, setPreparedSpells]
+  );
 
-  const handleVoodooIncantation = (_: Event, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
-    setIncantations(incantations);
-    if (preparedSpells) setPreparedSpells(preparedSpells);
-    dockAudio.currentTime = 0;
-    dockAudio.play();
-  };
+  const handleVoodooIncantation = useCallback(
+    (_: Event, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
+      setIncantations(incantations);
+      if (preparedSpells) setPreparedSpells(preparedSpells);
+      dockAudio.currentTime = 0;
+      dockAudio.play();
+    },
+    [setIncantations, setPreparedSpells]
+  );
 
   useEffect(() => {
     ipcRenderer.on('update-servers', handleUpdateServers);
@@ -185,14 +198,26 @@ export const Dashboard = (): JSX.Element => {
       ipcRenderer.removeListener('voodoo-incantation-aborted', handleVoodooIncantationAborted);
       ipcRenderer.removeListener('voodoo-incantation', handleVoodooIncantation);
     };
-  }, []);
+  }, [
+    accessToken,
+    handleUpdateServers,
+    handleVoodooSuppressed,
+    handleVoodooAwake,
+    handleVoodooIncanting,
+    handleVoodooPreparedSpellTriggered,
+    handleVoodooIncantationAborted,
+    handleVoodooIncantationConfirmed,
+    handleVoodooIncantation,
+    setPreparedSpells,
+    setExperience
+  ]);
 
   useEffect(() => {
     if (activeServer === null) {
       setPreparedSpells([]);
       setAppStage(AppStage.WaitingForServer);
     }
-  }, [activeServer]);
+  }, [activeServer, setAppStage, setPreparedSpells]);
 
   const { conjurationXpTotal, evocationXpTotal, transmutationXpTotal } = experience;
   const xpTotal = conjurationXpTotal + evocationXpTotal + transmutationXpTotal;

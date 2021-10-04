@@ -2,6 +2,7 @@ import { atom } from 'jotai';
 
 type ServerInfo = {
   id: number;
+  groupId: number;
   name: string;
   online: boolean;
   players: number;

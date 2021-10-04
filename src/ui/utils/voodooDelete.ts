@@ -7,9 +7,11 @@ export const voodooDelete = async (accessToken: string, endpoint: string): Promi
       headers: { Authorization: `Bearer ${accessToken}` }
     });
 
-    if (response.status !== 200 || !response.ok) throw Error(response.statusText);
+    const body = await response.json();
 
-    return await response.json();
+    if (!response.ok) throw new Error(body.error ?? response.statusText);
+
+    return body;
   } catch (error) {
     return { ok: false, error: error.message };
   }

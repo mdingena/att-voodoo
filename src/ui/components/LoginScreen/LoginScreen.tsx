@@ -1,3 +1,4 @@
+import { ipcRenderer } from 'electron';
 import { useRef, useState, useEffect } from 'react';
 import { useAtom } from 'jotai';
 import { appStageAtom, AppStage } from '@/atoms';
@@ -6,10 +7,14 @@ import { LoginButton } from '@/components/AltaAuth';
 import styles from './LoginScreen.module.css';
 import packageJson from '@/../../package.json';
 
-export const LoginScreen = () => {
+export const LoginScreen = (): JSX.Element => {
   const transition = useRef<NodeJS.Timeout | null>(null);
   const [isSplashFinished, finishSplash] = useState(false);
   const [appStage, setAppStage] = useAtom(appStageAtom);
+
+  const handleToggleDebug = () => {
+    ipcRenderer.invoke('toggle-dev-tools');
+  };
 
   /**
    * Show the splash screen for at least 4 seconds, even if libraries
@@ -27,7 +32,7 @@ export const LoginScreen = () => {
         setAppStage(AppStage.Ready);
       }, 1000);
     }
-  }, [isSplashFinished, appStage]);
+  }, [isSplashFinished, appStage, setAppStage]);
 
   return (
     <div className={styles.root}>
@@ -49,6 +54,11 @@ export const LoginScreen = () => {
         </div>
       )}
       <div className={styles.footer}>
+        <div className={styles.debug}>
+          <button className={styles.button} onClick={handleToggleDebug}>
+            Toggle debug window
+          </button>
+        </div>
         <div className={styles.discord}>
           <a className={styles.link} href='https://discord.gg/THy2AVBPHX' title='Join the Voodoo Discord server'>
             Join the Voodoo community on Discord

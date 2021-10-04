@@ -1,8 +1,12 @@
 import { ipcRenderer } from 'electron';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useAtom } from 'jotai';
 import { appStageAtom, AppStage, serversAtom, Servers, activeServerAtom, speechModeAtom, SpeechMode } from '@/atoms';
 import styles from './ServersScreen.module.css';
+
+interface LauncherLinkProps {
+  groupId: number;
+}
 
 export type ServersUpdate = {
   playerJoined: number | null;
@@ -11,26 +15,35 @@ export type ServersUpdate = {
 
 let intervalHandle: number | undefined;
 
-export const ServersScreen = () => {
+const LauncherLink: React.FC<LauncherLinkProps> = ({ groupId, children }) => {
+  if (groupId === 0) return <>{children}</>;
+
+  return <a href={`alta://social/group/${groupId}`}>{children}</a>;
+};
+
+export const ServersScreen = (): JSX.Element => {
   const [timeLeft, setTimeLeft] = useState(-3);
   const [servers, setServers] = useAtom(serversAtom);
-  const [activeServer, setActiveServer] = useAtom(activeServerAtom);
-  const [appStage, setAppStage] = useAtom(appStageAtom);
-  const [speechMode, setSpeechMode] = useAtom(speechModeAtom);
+  const [, setActiveServer] = useAtom(activeServerAtom);
+  const [, setAppStage] = useAtom(appStageAtom);
+  const [, setSpeechMode] = useAtom(speechModeAtom);
 
-  const handleUpdateServers = (_: Event, { playerJoined, servers: updatedServers }: ServersUpdate) => {
-    setServers(updatedServers);
+  const handleUpdateServers = useCallback(
+    (_: Event, { playerJoined, servers: updatedServers }: ServersUpdate) => {
+      setServers(updatedServers);
 
-    if (playerJoined) {
-      setActiveServer(playerJoined);
-      ipcRenderer.invoke('server-connected');
-      setAppStage(AppStage.Connected);
-    }
-  };
+      if (playerJoined) {
+        setActiveServer(playerJoined);
+        ipcRenderer.invoke('server-connected');
+        setAppStage(AppStage.Connected);
+      }
+    },
+    [setServers, setActiveServer, setAppStage]
+  );
 
-  const handleVoodooSuppressed = () => {
+  const handleVoodooSuppressed = useCallback(() => {
     setSpeechMode(SpeechMode.Suppressed);
-  };
+  }, [setSpeechMode]);
 
   useEffect(() => {
     ipcRenderer.invoke('server-disconnected');
@@ -41,7 +54,7 @@ export const ServersScreen = () => {
       ipcRenderer.removeListener('update-server', handleUpdateServers);
       ipcRenderer.removeListener('voodoo-suppressed', handleVoodooSuppressed);
     };
-  }, []);
+  }, [handleUpdateServers, handleVoodooSuppressed]);
 
   useEffect(() => {
     setTimeLeft(t => Math.min(15, t + 15));
@@ -63,6 +76,9 @@ export const ServersScreen = () => {
       <small className={styles.instructions}>
         <br />
         Voodoo will automatically connect to the same server you join in-game if that server supports Voodoo.
+        <br />
+        <br />
+        Click a server to open in launcher
       </small>
       <br />
 
@@ -78,11 +94,14 @@ export const ServersScreen = () => {
         <tbody>
           {servers.length ? (
             servers
+              .sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1))
               .sort((a, b) => b.players - a.players)
               .sort((a, b) => Number(b.online) - Number(a.online))
               .map((server, index) => (
                 <tr key={index} className={!server.online ? styles.offline : undefined}>
-                  <td align='left'>{server.name}</td>
+                  <td align='left'>
+                    <LauncherLink groupId={server.groupId}>{server.name}</LauncherLink>
+                  </td>
                   <td align='right'>{server.players}</td>
                 </tr>
               ))

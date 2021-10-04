@@ -13,7 +13,7 @@ interface AuthenticatingProps {
   error?: string;
 }
 
-export const Authenticating = ({ stage, error }: AuthenticatingProps) => {
+export const Authenticating = ({ stage, error }: AuthenticatingProps): JSX.Element | null => {
   switch (stage) {
     case AuthenticatingStage.Authenticating:
       return (

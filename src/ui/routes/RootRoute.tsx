@@ -5,7 +5,7 @@ import { Authenticating, AuthenticatingStage } from '@/components/Authenticating
 import { ServersScreen } from '@/components/ServersScreen';
 import { Dashboard } from '@/components/Dashboard';
 
-export const RootRoute = () => {
+export const RootRoute = (): JSX.Element => {
   const [appStage] = useAtom(appStageAtom);
 
   switch (appStage) {
