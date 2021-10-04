@@ -57,8 +57,8 @@ export const handleSpeech = async (
   ui: BrowserWindow | null,
   speech: string,
   accessToken: string,
-  logger: (...args: any) => void
-) => {
+  logger: (...args: unknown[]) => void
+): Promise<void> => {
   if (isLocked) {
     mode = MODES.SUPPRESSED;
     return;
@@ -72,6 +72,8 @@ export const handleSpeech = async (
 
   const isAwakenPhrase = speech === PHRASES.AWAKEN;
   const isTriggerPhrase = speech.split(' ')[0] === PHRASES.TRIGGER;
+
+  let response;
 
   switch (mode) {
     case MODES.SUPPRESSED:
@@ -127,14 +129,14 @@ export const handleSpeech = async (
           ui?.webContents.send('voodoo-awake');
           logger({ mode });
 
-          const abortResponse = await voodooDelete(accessToken, config.API_ENDPOINTS.INCANTATION);
+          response = await voodooDelete(accessToken, config.API_ENDPOINTS.INCANTATION);
 
-          if (abortResponse.ok) {
-            incantations = abortResponse.result;
+          if (response.ok) {
+            incantations = response.result;
             ui?.webContents.send('voodoo-incantation-aborted', incantations);
             logger({ incantations });
           } else {
-            logger(abortResponse.error);
+            logger(response.error);
           }
           break;
 
@@ -143,16 +145,16 @@ export const handleSpeech = async (
           ui?.webContents.send('voodoo-awake');
           logger({ mode });
 
-          const confirmResponse = await voodooGet(accessToken, config.API_ENDPOINTS.SEAL);
+          response = await voodooGet(accessToken, config.API_ENDPOINTS.SEAL);
 
-          if (confirmResponse.ok) {
-            experience = confirmResponse.result.experience;
-            incantations = confirmResponse.result.incantations;
-            preparedSpells = confirmResponse.result.preparedSpells;
+          if (response.ok) {
+            experience = response.result.experience;
+            incantations = response.result.incantations;
+            preparedSpells = response.result.preparedSpells;
             ui?.webContents.send('voodoo-incantation-confirmed', experience, incantations, preparedSpells);
             logger({ experience, incantations, preparedSpells });
           } else {
-            logger(confirmResponse.error);
+            logger(response.error);
           }
           break;
 

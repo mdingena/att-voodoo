@@ -15,7 +15,7 @@ ipcRenderer.on('speech-error', (_, reason, error) => {
   console.log(reason, error);
 });
 
-export const App = () => {
+export const App = (): JSX.Element => {
   const [hasSession] = useAtom(hasSessionAtom);
 
   return (

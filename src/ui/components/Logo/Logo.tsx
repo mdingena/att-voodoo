@@ -4,13 +4,12 @@ import smallGem1 from '@/images/small-gem-1.png';
 import smallGem2 from '@/images/small-gem-2.png';
 import glow from '@/images/glow.png';
 import particles from '@/images/particles.png';
-import { Event } from 'electron/renderer';
 
 type ImageOnLoadEvent = { currentTarget: HTMLImageElement };
 
 const reveal = ({ currentTarget }: ImageOnLoadEvent) => (currentTarget.style.opacity = '1');
 
-export const Logo = () => (
+export const Logo = (): JSX.Element => (
   <div className={styles.root}>
     <div className={styles.illumination}>
       <div className={styles.shadow}></div>
