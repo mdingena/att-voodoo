@@ -91,6 +91,7 @@ export const ServersScreen = () => {
         <tbody>
           {servers.length ? (
             servers
+              .sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1))
               .sort((a, b) => b.players - a.players)
               .sort((a, b) => Number(b.online) - Number(a.online))
               .map((server, index) => (
