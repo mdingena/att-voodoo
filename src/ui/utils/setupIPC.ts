@@ -1,6 +1,7 @@
 import { ipcMain, BrowserWindow } from 'electron';
 import { ChildProcess } from 'child_process';
 import { startListening } from './startListening';
+import { handleSpeech } from './handleSpeech';
 import { heartbeat } from './heartbeat';
 import { voodooGet } from './voodooGet';
 import { voodooPost } from './voodooPost';
@@ -23,7 +24,14 @@ export const scheduleHeartbeat = (ui: BrowserWindow | null, accessToken: string,
   }, delay.current);
 };
 
-export const setupIPC = (ui: BrowserWindow | null, speech: ChildProcess | null, logger: (...args: any) => void) => {
+export const setupIPC = async (
+  ui: BrowserWindow | null,
+  speech: ChildProcess | null,
+  logger: (...args: unknown[]) => void
+): Promise<void> => {
+  /* Start listening. */
+  const speechProcess = await startListening(ui, speech, logger);
+
   /* Handle session creation. */
   ipcMain.handle('session', async (_, { accessToken }) => {
     const [sessionResponse, spellbookResponse] = await Promise.all([
@@ -33,7 +41,10 @@ export const setupIPC = (ui: BrowserWindow | null, speech: ChildProcess | null, 
 
     if (sessionResponse.ok) {
       if (heartbeatHandle === null) {
-        startListening(ui, speech, accessToken, logger);
+        /* Handle Voodoo speech recognition. */
+        speechProcess?.stdout?.on('data', speech => {
+          handleSpeech(ui, speech, accessToken, logger);
+        });
 
         heartbeatHandle = scheduleHeartbeat(ui, accessToken, config.INTERVALS);
       }
