@@ -4,12 +4,22 @@ import { useAtom } from 'jotai';
 import { appStageAtom, AppStage, serversAtom, Servers, activeServerAtom, speechModeAtom, SpeechMode } from '@/atoms';
 import styles from './ServersScreen.module.css';
 
+interface LauncherLinkProps {
+  groupId: number;
+}
+
 export type ServersUpdate = {
   playerJoined: number | null;
   servers: Servers;
 };
 
 let intervalHandle: number | undefined;
+
+const LauncherLink: React.FC<LauncherLinkProps> = ({ groupId, children }) => {
+  if (groupId === 0) return <>{children}</>;
+
+  return <a href={`alta://social/group/${groupId}`}>{children}</a>;
+};
 
 export const ServersScreen = () => {
   const [timeLeft, setTimeLeft] = useState(-3);
@@ -63,6 +73,9 @@ export const ServersScreen = () => {
       <small className={styles.instructions}>
         <br />
         Voodoo will automatically connect to the same server you join in-game if that server supports Voodoo.
+        <br />
+        <br />
+        Click a server to open in launcher
       </small>
       <br />
 
@@ -82,7 +95,9 @@ export const ServersScreen = () => {
               .sort((a, b) => Number(b.online) - Number(a.online))
               .map((server, index) => (
                 <tr key={index} className={!server.online ? styles.offline : undefined}>
-                  <td align='left'>{server.name}</td>
+                  <td align='left'>
+                    <LauncherLink groupId={server.groupId}>{server.name}</LauncherLink>
+                  </td>
                   <td align='right'>{server.players}</td>
                 </tr>
               ))
