@@ -13,7 +13,7 @@ interface DockProps {
   slot: 0 | 1 | 2 | 3;
 }
 
-export const Dock = ({ slot }: DockProps) => {
+export const Dock = ({ slot }: DockProps): JSX.Element => {
   const [speechMode] = useAtom(speechModeAtom);
   const [incantations] = useAtom(incantationsAtom);
 

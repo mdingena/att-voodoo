@@ -7,7 +7,7 @@ import { LoginButton } from '@/components/AltaAuth';
 import styles from './LoginScreen.module.css';
 import packageJson from '@/../../package.json';
 
-export const LoginScreen = () => {
+export const LoginScreen = (): JSX.Element => {
   const transition = useRef<NodeJS.Timeout | null>(null);
   const [isSplashFinished, finishSplash] = useState(false);
   const [appStage, setAppStage] = useAtom(appStageAtom);
@@ -32,7 +32,7 @@ export const LoginScreen = () => {
         setAppStage(AppStage.Ready);
       }, 1000);
     }
-  }, [isSplashFinished, appStage]);
+  }, [isSplashFinished, appStage, setAppStage]);
 
   return (
     <div className={styles.root}>

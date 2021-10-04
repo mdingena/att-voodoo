@@ -11,11 +11,15 @@ type HeartbeatDelay = { current: number };
 
 let heartbeatHandle: NodeJS.Timeout | null = null;
 
-export const scheduleHeartbeat = (ui: BrowserWindow | null, accessToken: string, delay: HeartbeatDelay) => {
+export const scheduleHeartbeat = (
+  ui: BrowserWindow | null,
+  accessToken: string,
+  delay: HeartbeatDelay
+): NodeJS.Timeout => {
   return setTimeout(() => {
     /**
      * The heartbeat checks in which server you are playing.
-     * It also get a cached copy of the server list with number of players.
+     * It also gets a cached copy of the server list with number of players.
      * This copy is refreshed server-side independently of these heartbeats.
      */
 
