@@ -17,6 +17,10 @@ export const SettingsPanel = (): JSX.Element => {
     setSpeechMode(mode => (mode === SpeechMode.Locked ? SpeechMode.Suppressed : SpeechMode.Locked));
   };
 
+  const toggleDebug = () => {
+    ipcRenderer.invoke('toggle-dev-tools');
+  };
+
   useEffect(() => {
     ipcRenderer.invoke('speech-lock', speechMode === SpeechMode.Locked);
   }, [speechMode]);
@@ -31,6 +35,10 @@ export const SettingsPanel = (): JSX.Element => {
           <Button onClick={toggleLock}>{speechMode === SpeechMode.Locked ? 'Unlock' : 'Lock'} Voodoo</Button>
           <div className={styles.description}>
             Stops all speech recognition. Useful if you notice Voodoo keeps awakening when you don&apos;t want it to.
+          </div>
+          <Button onClick={toggleDebug}>Toggle Debugging</Button>
+          <div className={styles.description}>
+            Opens a &quot;developer tools&quot; window which can assist with troubleshooting problems.
           </div>
         </div>
       </div>
