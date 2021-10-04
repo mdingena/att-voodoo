@@ -72,4 +72,13 @@ export const setupIPC = async (
 
   /* Handle UI focus. */
   ipcMain.handle('focus', () => ui?.focus());
+
+  /* Handle DevTools toggling. */
+  ipcMain.handle('toggle-dev-tools', () => {
+    if (ui?.webContents.isDevToolsOpened()) {
+      ui.webContents.closeDevTools();
+    } else {
+      ui?.webContents.openDevTools({ mode: 'detach', activate: true });
+    }
+  });
 };
