@@ -25,7 +25,7 @@
 
 # ⚠️ Known issues
 
-- Voodoo sometimes doesn't connect to a server even when that server has just invited `Voodoo Mod`. This happens because sometimes the Alta API does not inform the bot of new invites, or otherwise prevents the bot from connecting to the newly added server. When this happens you must wait ~24 hours until Voodoo Mod restarts automatically. When restarting, Voodoo Mod re-accepts all server invites and your server should start working.
+- Voodoo sometimes doesn't connect to a server even when that server has just invited `Voodoo Mod`. This happens because sometimes the Alta API does not inform the bot of new invites, or otherwise prevents the bot from connecting to the newly added server. When this happens you must wait ~90 minutes until Voodoo Mod restarts automatically. When restarting, Voodoo Mod re-accepts all server invites and your server should start working.
 - Voodoo can say "Not near a Spellcrafting Conduit" even when you're standing next to a green crystal cluster. When this happens it means the ATT server's `select find <player>` command has broken and the server needs to be restarted. Joel is aware of this bug.
 - Acid Bolt rarely connects with players or enemies. This doesn't appear to be a bug with Voodoo, as the mod doesn't change any wyrm spit properties.
 - After acquiring a session in Voodoo, the app can sometimes jump back to the `Ready!` screen and get stuck here. [We're currently still investigating](https://github.com/mdingena/att-voodoo/issues/7) what is causing this.  
@@ -46,6 +46,13 @@
 <summary>Why is Voodoo not authenticating? It's stuck.</summary>
 
 Make sure your system time is correct. Voodoo validates tokens retrieved from Alta and it compares the token's expiration date with your system time.
+
+</details>
+
+<details>
+<summary>Why is Voodoo stuck on the Waiting For Server screen?</summary>
+
+Voodoo uses a bot library created by Alta. Currently there are some issues with long-running connections to their API, so after some time passes, Alta stops sending server events to the bot. This means Voodoo does not detect when you join or leave a server, which it uses to connect your Voodoo session to your game session. There isn't much I can do about this, but you could politely ask Alta devs if they could please look into the issues with `js-tale`.
 
 </details>
 
