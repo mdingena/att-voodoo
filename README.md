@@ -25,11 +25,8 @@
 
 # ⚠️ Known issues
 
-- Voodoo sometimes doesn't connect to a server even when that server has just invited `Voodoo Mod`. This happens because sometimes the Alta API does not inform the bot of new invites, or otherwise prevents the bot from connecting to the newly added server. When this happens you must wait ~90 minutes until Voodoo Mod restarts automatically. When restarting, Voodoo Mod re-accepts all server invites and your server should start working.
-- Voodoo can say "Not near a Spellcrafting Conduit" even when you're standing next to a green crystal cluster. When this happens it means the ATT server's `select find <player>` command has broken and the server needs to be restarted. Joel is aware of this bug.
+- Voodoo can say "Not near a Spellcrafting Conduit" even when you're standing next to a green crystal cluster. When this happens it means the ATT server's `select find <player>` command has broken and the server needs to be restarted. Alta is aware of this bug.
 - Acid Bolt rarely connects with players or enemies. This doesn't appear to be a bug with Voodoo, as the mod doesn't change any wyrm spit properties.
-- After acquiring a session in Voodoo, the app can sometimes jump back to the `Ready!` screen and get stuck here. [We're currently still investigating](https://github.com/mdingena/att-voodoo/issues/7) what is causing this.  
-  **Work-around:** restart Voodoo.
 
 # 🚀 Installation & usage
 
