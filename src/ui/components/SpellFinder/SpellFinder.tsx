@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useAtom } from 'jotai';
 import { experienceAtom, spellbookAtom, School, Spell } from '@/atoms';
-import { UpgradeSpell } from '../UpgradeSpell';
+import { SpellDetails } from '../SpellDetails';
 import styles from './SpellFinder.module.css';
 
 interface SpellFinderProps {
@@ -19,7 +19,7 @@ export const SpellFinder = ({ school, onClose }: SpellFinderProps): JSX.Element 
   const [spellbook] = useAtom(spellbookAtom);
   const [experience] = useAtom(experienceAtom);
 
-  const closeSpellUpgrade = () => setSelectedSpell(null);
+  const closeSpellDetails = () => setSelectedSpell(null);
 
   const selectSpellUpgrade = (selection: SelectedSpell) => () => setSelectedSpell(selection);
 
@@ -51,12 +51,7 @@ export const SpellFinder = ({ school, onClose }: SpellFinderProps): JSX.Element 
         </div>
       </div>
       {selectedSpell && (
-        <UpgradeSpell
-          spellKey={selectedSpell.key}
-          spell={selectedSpell.spell}
-          upgrades={experience.upgrades[selectedSpell.key] ?? {}}
-          onClose={closeSpellUpgrade}
-        />
+        <SpellDetails spellKey={selectedSpell.key} spell={selectedSpell.spell} onClose={closeSpellDetails} />
       )}
     </>
   );

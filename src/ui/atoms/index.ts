@@ -9,3 +9,4 @@ export { preparedSpellsAtom, PreparedSpell } from './preparedSpellsAtom';
 export { serversAtom, Servers } from './serversAtom';
 export { speechModeAtom, SpeechMode } from './speechModeAtom';
 export { spellbookAtom, School, Spell, UpgradeConfig } from './spellbookAtom';
+export { studyingAtom } from './studyingAtom';

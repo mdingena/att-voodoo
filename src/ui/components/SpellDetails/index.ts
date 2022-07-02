@@ -1,0 +1,1 @@
+export { SpellDetails } from './SpellDetails';

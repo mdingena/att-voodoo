@@ -22,7 +22,7 @@ import { ServersUpdate } from '@/components/ServersScreen';
 import { Dock } from '@/components/Dock';
 import { SpellTrigger } from '@/components/SpellTrigger';
 import { SettingsPanel } from '../SettingsPanel';
-import { UpgradesPanel } from '../UpgradesPanel';
+import { SpellbookPanel } from '../SpellbookPanel';
 import styles from './Dashboard.module.css';
 import chimeAudioFile from './chime.wav';
 import pingAudioFile from './ping.wav';
@@ -84,8 +84,8 @@ export const Dashboard = (): JSX.Element => {
     setPanel(Panel.Settings);
   };
 
-  const openUpgradesPanel = () => {
-    setPanel(Panel.Upgrades);
+  const openSpellbookPanel = () => {
+    setPanel(Panel.Spellbook);
   };
 
   const handleUpdateServers = useCallback(
@@ -251,13 +251,13 @@ export const Dashboard = (): JSX.Element => {
           <button className={styles.action} onClick={openSettingsPanel}>
             Settings
           </button>
-          <button className={styles.action} onClick={openUpgradesPanel}>
-            Upgrades
+          <button className={styles.action} onClick={openSpellbookPanel}>
+            Spellbook
           </button>
         </div>
       </div>
       <SettingsPanel />
-      <UpgradesPanel />
+      <SpellbookPanel />
     </>
   );
 };
