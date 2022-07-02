@@ -11,11 +11,11 @@
 }
 
 .header {
+  padding: 0 16px;
   background: var(--colour-green-400);
   color: var(--colour-green-700);
   line-height: 2;
   text-align: center;
-  text-transform: uppercase;
   box-shadow: inset 50px 0 50px -50px var(--colour-green-200), inset -50px 0 50px -50px var(--colour-green-200),
     var(--text-shadow-small), 0 8px 16px 0 var(--colour-green-100), 0 -8px 16px 0 var(--colour-green-100);
   transition-property: background-color, color;
@@ -24,35 +24,62 @@
   z-index: 1;
 }
 
-.spells {
+.details {
   display: flex;
   flex-flow: column nowrap;
-  gap: 4px;
-  padding: 16px 0;
+  gap: 12px;
+  padding: 16px;
   overflow-y: auto;
 }
 
-.spell {
-  display: flex;
-  flex-flow: row nowrap;
-  gap: 16px;
-  margin: 0;
-  padding: 4px 16px;
-  background: transparent;
-  border: 1px solid transparent;
-  color: var(--font-colour-primary);
-  font-family: var(--font-family);
+.school::before,
+.type::before,
+.description::before,
+.incantations::before,
+.discover::before {
+  display: block;
   font-size: 1rem;
-  line-height: 1.5;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
+  color: var(--font-colour-secondary);
 }
 
-.spell:hover {
-  background-color: var(--colour-green-300);
-  border-top: 1px solid var(--colour-green-600);
-  border-bottom: 1px solid var(--colour-green-600);
+.school::before {
+  content: 'School';
+}
+
+.school {
+  text-transform: capitalize;
+}
+
+.type::before {
+  content: 'Type';
+}
+
+.description::before {
+  content: 'Description';
+  padding-bottom: 4px;
+}
+
+.description {
+  font-size: 1rem;
+}
+
+.incantations::before {
+  content: 'Incantations';
+  padding-top: 16px;
+}
+
+.incantations {
+  display: grid;
+  gap: 8px;
+}
+
+.discover::before {
+  content: 'Incantations unknown!';
+  padding-bottom: 4px;
+}
+
+.discover {
+  font-size: 1rem;
 }
 
 .upgrades {
@@ -61,28 +88,32 @@
   color: var(--font-colour-secondary);
 }
 
-.close {
-  height: 32px;
-  z-index: 1;
+.actionsHeader {
+  composes: header;
+  background: var(--colour-green-400);
 }
 
-.close button {
-  width: 100%;
+.action {
+  width: 50%;
   height: 100%;
-  line-height: 2;
   border: 0;
   background: transparent;
-  background-color: var(--colour-green-400);
   font-family: var(--font-family);
   color: var(--font-colour-secondary);
   text-shadow: var(--text-shadow-normal);
-  box-shadow: inset 50px 0 50px -50px var(--colour-green-200), inset -50px 0 50px -50px var(--colour-green-200),
-    var(--text-shadow-small), 0 8px 16px 0 var(--colour-green-100), 0 -8px 16px 0 var(--colour-green-100);
   cursor: pointer;
   outline: none;
   vertical-align: top;
 }
 
-.close button:hover {
+.action:hover {
   color: var(--font-colour-primary);
+}
+
+.actionsHeader .action:first-of-type {
+  border-right: 1px solid var(--colour-green-300);
+}
+
+.actionsHeader .action:last-of-type {
+  border-left: 1px solid var(--colour-green-500);
 }

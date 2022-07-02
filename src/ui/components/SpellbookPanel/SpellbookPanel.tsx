@@ -3,9 +3,9 @@ import { useAtom } from 'jotai';
 import { experienceAtom, Panel, panelAtom, School, spellbookAtom } from '@/atoms';
 import { Experience } from '../Experience';
 import { SpellFinder } from '../SpellFinder';
-import styles from './UpgradesPanel.module.css';
+import styles from './SpellbookPanel.module.css';
 
-export const UpgradesPanel = (): JSX.Element => {
+export const SpellbookPanel = (): JSX.Element => {
   const [selectedSchool, setSelectedSchool] = useState<School | null>(null);
   const [experience] = useAtom(experienceAtom);
   const [spellbook] = useAtom(spellbookAtom);
@@ -41,21 +41,17 @@ export const UpgradesPanel = (): JSX.Element => {
   const evocationUpgrades = schoolUpgrades('evocation');
   const transmutationUpgrades = schoolUpgrades('transmutation');
 
-  const isOpen = panel === Panel.Upgrades;
+  const isOpen = panel === Panel.Spellbook;
 
   return (
     <>
       <div className={isOpen ? styles.open : styles.closed}>
         <div>
-          <div className={styles.header}>Upgrades</div>
-          <div className={styles.upgrades}>
-            <div className={styles.description}>
-              <p>
-                You gain experience every time you cast a spell. The type and amount of XP you gain depends on the
-                number of incantations and the spell&apos;s school of magic.
-              </p>
-              <p>Use the upgrade tracks below to find spells to upgrade.</p>
-            </div>
+          <div className={styles.header}>Spellbook</div>
+          <div className={styles.schools}>
+            {/* <div className={styles.description}>
+              <p>Magic schools</p>
+            </div> */}
             <Experience
               onClick={selectAbjuration}
               school='Abjuration'

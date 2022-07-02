@@ -3,7 +3,7 @@ import { atom } from 'jotai';
 export enum Panel {
   None,
   Settings,
-  Upgrades
+  Spellbook
 }
 
 export const panelAtom = atom<Panel>(Panel.None);

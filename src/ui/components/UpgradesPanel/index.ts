@@ -1,1 +1,0 @@
-export { UpgradesPanel } from './UpgradesPanel';

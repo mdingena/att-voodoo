@@ -17,15 +17,26 @@ type UpgradeConfigs = {
   [key: string]: UpgradeConfig;
 };
 
-export type Spell = {
+type CommonSpell = {
   name: string;
   school: School;
+  description: string;
   requiresPreparation: boolean;
   upgrades: UpgradeConfigs;
 };
 
-type Spellbook = {
-  [key: string]: Spell;
+type DiscoveredSpell = CommonSpell & {
+  isDiscovered: true;
+  incantations: [string, string][];
 };
+
+type UndiscoveredSpell = CommonSpell & {
+  isDiscovered: false;
+  incantations: number;
+};
+
+export type Spell = DiscoveredSpell | UndiscoveredSpell;
+
+type Spellbook = Record<string, Spell>;
 
 export const spellbookAtom = atom<Spellbook>({});

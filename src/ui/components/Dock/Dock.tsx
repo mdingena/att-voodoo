@@ -11,15 +11,18 @@ enum Slot {
 
 interface DockProps {
   slot: 0 | 1 | 2 | 3;
+  verbalComponentHint?: string;
+  materialComponentHint?: string;
 }
 
-export const Dock = ({ slot }: DockProps): JSX.Element => {
+export const Dock = ({ slot, verbalComponentHint, materialComponentHint }: DockProps): JSX.Element => {
   const [speechMode] = useAtom(speechModeAtom);
   const [incantations] = useAtom(incantationsAtom);
 
+  const isHinting = verbalComponentHint && materialComponentHint;
   const isIncanting = speechMode === SpeechMode.Incanting;
   const isActiveDock = isIncanting && slot === incantations.length;
-  const incantingStyle = incantations[slot] ? styles.filled : styles.empty;
+  const incantingStyle = incantations[slot] ? styles.filled : isHinting ? styles.disabled : styles.empty;
   const dockStyle = isIncanting ? (isActiveDock ? styles.active : incantingStyle) : styles.disabled;
 
   const dockIncantation = incantations[slot] ?? null;
@@ -37,6 +40,12 @@ export const Dock = ({ slot }: DockProps): JSX.Element => {
             “{verbalComponent}”
             <br />
             {materialComponent}
+          </>
+        ) : isHinting ? (
+          <>
+            “{verbalComponentHint?.toUpperCase()}”
+            <br />
+            {materialComponentHint}
           </>
         ) : isActiveDock ? (
           <>
