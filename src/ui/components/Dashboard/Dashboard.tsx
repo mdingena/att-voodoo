@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { ipcRenderer } from 'electron';
 import { useAtom } from 'jotai';
 import { useAtomCallback } from 'jotai/utils';
@@ -16,7 +16,9 @@ import {
   experienceAtom,
   Panel,
   panelAtom,
-  Experience
+  Experience,
+  spellbookAtom,
+  studyingAtom
 } from '@/atoms';
 import { ServersUpdate } from '@/components/ServersScreen';
 import { Dock } from '@/components/Dock';
@@ -78,7 +80,10 @@ export const Dashboard = (): JSX.Element => {
   const [, setIncantations] = useAtom(incantationsAtom);
   const [preparedSpells, setPreparedSpells] = useAtom(preparedSpellsAtom);
   const [experience, setExperience] = useAtom(experienceAtom);
+  const [spellbook] = useAtom(spellbookAtom);
+  const [studying] = useAtom(studyingAtom);
   const [panel, setPanel] = useAtom(panelAtom);
+  const [shouldClearIncantations, setShouldClearIncantations] = useState<boolean>(true);
 
   const openSettingsPanel = () => {
     setPanel(Panel.Settings);
@@ -116,10 +121,11 @@ export const Dashboard = (): JSX.Element => {
   );
 
   const handleVoodooIncanting = useCallback(() => {
+    if (shouldClearIncantations) setIncantations([]);
     setSpeechMode(SpeechMode.Incanting);
     chimeAudio.currentTime = 0;
     chimeAudio.play();
-  }, [setSpeechMode]);
+  }, [shouldClearIncantations, setIncantations, setSpeechMode]);
 
   const handleVoodooPreparedSpellTriggered = useCallback(
     (_: Event, newExperience: Experience, preparedSpells: PreparedSpell[]) => {
@@ -134,6 +140,7 @@ export const Dashboard = (): JSX.Element => {
   const handleVoodooIncantationAborted = useCallback(
     (_: Event, incantations: Incantation[]) => {
       setIncantations(incantations);
+      setShouldClearIncantations(true);
       droneAudio.currentTime = 0;
       droneAudio.play();
     },
@@ -143,11 +150,8 @@ export const Dashboard = (): JSX.Element => {
   const handleVoodooIncantationConfirmed = useCallback(
     (_: Event, newExperience: Experience, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
       setExperience(newExperience);
-      // @todo The returned incantations are not the up-to-date incantations on the server,
-      // @todo but the incantations used to trigger the spell. This makes it easier to have
-      // @todo a log of incantations later.
-      // setIncantations(incantations);
-      setIncantations([]);
+      setIncantations(incantations);
+      setShouldClearIncantations(true);
       if (preparedSpells) setPreparedSpells(preparedSpells);
       castAudio.currentTime = 0;
       castAudio.play();
@@ -158,6 +162,7 @@ export const Dashboard = (): JSX.Element => {
   const handleVoodooIncantation = useCallback(
     (_: Event, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
       setIncantations(incantations);
+      setShouldClearIncantations(false);
       if (preparedSpells) setPreparedSpells(preparedSpells);
       dockAudio.currentTime = 0;
       dockAudio.play();
@@ -226,11 +231,21 @@ export const Dashboard = (): JSX.Element => {
 
   const isPanelOpen = panel !== Panel.None;
 
+  const studyingSpellName = studying && spellbook[studying].name;
+
   return (
     <>
       <div className={isPanelOpen ? styles.blur : styles.root}>
         <div className={styles[modeStyle]}>{Mode[speechMode]}</div>
-        <div className={styles.incantations}>
+        <div
+          className={styles.incantations}
+          style={
+            {
+              paddingTop: studying ? '16px' : 0,
+              '--studying': studying && `'${studyingSpellName}'`
+            } as React.CSSProperties
+          }
+        >
           <Dock slot={0} />
           <Dock slot={1} />
           <Dock slot={2} />

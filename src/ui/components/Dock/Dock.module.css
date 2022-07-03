@@ -9,7 +9,8 @@
 .disabled,
 .empty,
 .active,
-.filled {
+.filled,
+.feedback {
   composes: root;
 }
 
@@ -50,6 +51,30 @@
   border-color: var(--font-colour-primary);
   box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--font-colour-primary);
   color: var(--font-colour-primary);
+}
+
+.feedbackMismatch,
+.feedbackPartial,
+.feedbackMatch {
+  composes: feedback;
+}
+
+.feedbackMismatch .dock {
+  border-color: var(--colour-feedback-mismatch);
+  box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--colour-feedback-mismatch);
+  color: var(--colour-feedback-mismatch);
+}
+
+.feedbackPartial .dock {
+  border-color: var(--colour-feedback-partial);
+  box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--colour-feedback-partial);
+  color: var(--colour-feedback-partial);
+}
+
+.feedbackMatch .dock {
+  border-color: var(--colour-feedback-match);
+  box-shadow: var(--text-shadow-normal), inset 0 0 10px var(--colour-feedback-match);
+  color: var(--colour-feedback-match);
 }
 
 .description {
