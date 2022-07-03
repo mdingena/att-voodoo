@@ -14,6 +14,9 @@
   --colour-green-800: #bff5f0;
   --colour-green-900: #fafefe;
   --colour-crystal: #50bb87;
+  --colour-feedback-match: greenyellow;
+  --colour-feedback-partial: gold;
+  --colour-feedback-mismatch: tomato;
 
   --font-colour-primary: var(--colour-green-900);
   --font-colour-secondary: var(--colour-green-700);

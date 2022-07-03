@@ -46,6 +46,21 @@
   color: var(--colour-green-900);
 }
 
+.incantations::before {
+  content: var(--studying);
+  position: absolute;
+  top: 32px;
+  width: 100%;
+  padding: 0.5rem 0;
+  background: var(--colour-green-600);
+  box-shadow: inset 50px 0 50px -50px var(--colour-green-200), inset -50px 0 50px -50px var(--colour-green-200),
+    inset var(--text-shadow-small);
+  font-size: 1rem;
+  text-align: center;
+  color: var(--font-colour-primary);
+  z-index: 1;
+}
+
 .incantations {
   display: grid;
   gap: 8px;
