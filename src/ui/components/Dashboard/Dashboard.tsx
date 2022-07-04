@@ -246,10 +246,10 @@ export const Dashboard = (): JSX.Element => {
             } as React.CSSProperties
           }
         >
-          <Dock slot={0} />
-          <Dock slot={1} />
-          <Dock slot={2} />
-          <Dock slot={3} />
+          <Dock slot={0} studying={studying} />
+          <Dock slot={1} studying={studying} />
+          <Dock slot={2} studying={studying} />
+          <Dock slot={3} studying={studying} />
         </div>
         <div className={styles.spellsHeader}>
           Prepared Spells{' '}

@@ -1,5 +1,5 @@
 import { useAtom } from 'jotai';
-import { speechModeAtom, SpeechMode, incantationsAtom, studyingAtom, StudyFeedback } from '@/atoms';
+import { speechModeAtom, SpeechMode, incantationsAtom, StudyFeedback } from '@/atoms';
 import styles from './Dock.module.css';
 
 enum Slot {
@@ -11,49 +11,70 @@ enum Slot {
 
 interface DockProps {
   slot: 0 | 1 | 2 | 3;
-  verbalComponentHint?: string;
-  materialComponentHint?: string;
+  studying?: string | null;
+  hint?: [string, string];
 }
 
-export const Dock = ({ slot, verbalComponentHint, materialComponentHint }: DockProps): JSX.Element => {
+export const Dock = ({ slot, studying, hint }: DockProps): JSX.Element => {
   const [speechMode] = useAtom(speechModeAtom);
   const [incantations] = useAtom(incantationsAtom);
-  const [studying] = useAtom(studyingAtom);
 
-  const isHinting = verbalComponentHint && materialComponentHint;
+  const isStudying = typeof studying !== 'undefined' && studying !== null;
+  const isHinting = typeof hint !== 'undefined';
   const isIncanting = speechMode === SpeechMode.Incanting;
   const isActiveDock = isIncanting && slot === incantations.length;
 
   const dockIncantation = incantations[slot] ?? null;
-  const verbalComponent = dockIncantation?.[0].toUpperCase();
-  const materialComponent = dockIncantation?.[1];
-  const studyFeedback = dockIncantation?.[2];
+  const dockVerbalComponent = dockIncantation?.[0]?.toUpperCase();
+  const dockMaterialComponent = dockIncantation?.[1];
+  const dockStudyFeedback = dockIncantation?.[2];
 
-  const hintingStyle = isHinting ? styles.disabled : styles.empty;
-  const submittedStyle = incantations[slot] ? styles.filled : hintingStyle;
-  const incantingStyle = isActiveDock ? styles.active : submittedStyle;
-  const feedbackStyle =
-    typeof studyFeedback === 'undefined'
-      ? styles.disabled
-      : studyFeedback === StudyFeedback.Match
-      ? styles.feedbackMatch
-      : studyFeedback === StudyFeedback.Mismatch
-      ? styles.feedbackMismatch
-      : styles.feedbackPartial;
-  const disabledStyle = studying ? feedbackStyle : styles.disabled;
+  let dockStyle, dockIcon, verbalComponent, materialComponent;
 
-  const dockStyle = isIncanting ? incantingStyle : disabledStyle;
+  if (isActiveDock) {
+    dockStyle = styles.active;
+    dockIcon = Slot[slot];
+    verbalComponent = isHinting ? `Say “${hint?.[0]?.toUpperCase()}”` ?? '' : 'Speak an incantation or';
+    materialComponent = isHinting ? hint?.[1] ?? '' : 'say “SEAL” or “NULLIFY”.';
+  } else {
+    if (isHinting) {
+      const isMatch = incantations[slot]?.[0] === hint?.[0] && incantations[slot]?.[1] === hint?.[1];
+      const filledStyle = isMatch ? styles.filled : styles.feedbackMismatch;
+      dockStyle = incantations[slot] ? filledStyle : styles.disabled;
+      dockIcon = incantations[slot] ? (isMatch ? Slot[slot] : 'Χ') : Slot[slot];
+      verbalComponent = dockVerbalComponent ?? `“${hint?.[0]?.toUpperCase()}”`;
+      materialComponent = dockMaterialComponent ?? hint?.[1];
+    } else if (isStudying) {
+      switch (dockStudyFeedback) {
+        case StudyFeedback.Match:
+          dockStyle = styles.feedbackMatch;
+          dockIcon = 'Ξ';
+          break;
 
-  const dockIcon =
-    studying && !isIncanting
-      ? typeof studyFeedback === 'undefined'
-        ? Slot[slot]
-        : studyFeedback === StudyFeedback.Match
-        ? 'Ξ'
-        : studyFeedback === StudyFeedback.Mismatch
-        ? 'Χ'
-        : 'θ'
-      : Slot[slot];
+        case StudyFeedback.Partial:
+          dockStyle = styles.feedbackPartial;
+          dockIcon = 'θ';
+          break;
+
+        case StudyFeedback.Mismatch:
+          dockStyle = styles.feedbackMismatch;
+          dockIcon = 'Χ';
+          break;
+
+        default:
+          dockStyle = isIncanting && incantations[slot] ? styles.filled : styles.disabled;
+          dockIcon = Slot[slot];
+      }
+
+      verbalComponent = dockVerbalComponent && `“${dockVerbalComponent?.toUpperCase()}”`;
+      materialComponent = dockMaterialComponent;
+    } else {
+      dockStyle = isIncanting && incantations[slot] ? styles.filled : styles.disabled;
+      dockIcon = Slot[slot];
+      verbalComponent = dockVerbalComponent && `“${dockVerbalComponent?.toUpperCase()}”`;
+      materialComponent = dockMaterialComponent;
+    }
+  }
 
   return (
     <div className={dockStyle}>
@@ -61,25 +82,9 @@ export const Dock = ({ slot, verbalComponentHint, materialComponentHint }: DockP
         <span className={styles.slot}>{dockIcon}</span>
       </div>
       <div className={styles.description}>
-        {dockIncantation ? (
-          <>
-            “{verbalComponent}”
-            <br />
-            {materialComponent}
-          </>
-        ) : isHinting ? (
-          <>
-            “{verbalComponentHint?.toUpperCase()}”
-            <br />
-            {materialComponentHint}
-          </>
-        ) : isActiveDock ? (
-          <>
-            Speak an incantation or
-            <br />
-            say “SEAL” or “NULLIFY”.
-          </>
-        ) : null}
+        {verbalComponent}
+        <br />
+        {materialComponent}
       </div>
     </div>
   );

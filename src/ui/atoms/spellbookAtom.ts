@@ -21,6 +21,7 @@ type CommonSpell = {
   name: string;
   school: School;
   description: string;
+  castsFrom?: string;
   requiresPreparation: boolean;
   upgrades: UpgradeConfigs;
 };
@@ -32,7 +33,7 @@ type DiscoveredSpell = CommonSpell & {
 
 type UndiscoveredSpell = CommonSpell & {
   isDiscovered: false;
-  incantations: number;
+  incantations?: never;
 };
 
 export type Spell = DiscoveredSpell | UndiscoveredSpell;
