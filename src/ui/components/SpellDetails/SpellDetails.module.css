@@ -34,6 +34,7 @@
 
 .school::before,
 .type::before,
+.castsFrom::before,
 .description::before,
 .incantations::before,
 .discover::before {
@@ -52,6 +53,10 @@
 
 .type::before {
   content: 'Type';
+}
+
+.castsFrom::before {
+  content: 'Casts from';
 }
 
 .description::before {
