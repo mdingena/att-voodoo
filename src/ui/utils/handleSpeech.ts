@@ -6,7 +6,15 @@ import { voodooPost } from './voodooPost';
 import { getMaterialComponents } from './getMaterialComponents';
 import config from '../config';
 
-type Incantation = [string, number];
+enum StudyFeedback {
+  Match = 'MATCH',
+  Partial = 'PARTIAL',
+  Mismatch = 'MISMATCH'
+}
+
+type Feedback = StudyFeedback | undefined;
+
+type Incantation = [string, string, Feedback];
 
 type PreparedSpell = {
   name: string;
@@ -52,7 +60,6 @@ let mode = MODES.SUPPRESSED;
 let experience: Experience;
 let incantations: string[] = [];
 let preparedSpells: PreparedSpell[] = [];
-let studyFeedback: string | undefined;
 
 export const handleSpeech = async (
   ui: BrowserWindow | null,
@@ -152,14 +159,7 @@ export const handleSpeech = async (
             experience = response.result.experience;
             incantations = response.result.incantations;
             preparedSpells = response.result.preparedSpells;
-            studyFeedback = response.results.studyFeedback;
-            ui?.webContents.send(
-              'voodoo-incantation-confirmed',
-              experience,
-              incantations,
-              preparedSpells,
-              studyFeedback
-            );
+            ui?.webContents.send('voodoo-incantation-confirmed', experience, incantations, preparedSpells);
             logger({ experience, incantations, preparedSpells });
           } else {
             logger(response.error);
@@ -177,21 +177,14 @@ export const handleSpeech = async (
               experience = response.result.experience;
               incantations = response.result.incantations;
               preparedSpells = response.result.preparedSpells;
-              studyFeedback = response.results.studyFeedback;
 
               if (response.result.incantations.length === 4) {
                 mode = MODES.AWAKE;
-                ui?.webContents.send(
-                  'voodoo-incantation-confirmed',
-                  experience,
-                  incantations,
-                  preparedSpells,
-                  studyFeedback
-                );
+                ui?.webContents.send('voodoo-incantation-confirmed', experience, incantations, preparedSpells);
                 ui?.webContents.send('voodoo-awake');
                 logger({ mode });
               } else {
-                ui?.webContents.send('voodoo-incantation', incantations, preparedSpells, studyFeedback);
+                ui?.webContents.send('voodoo-incantation', incantations, preparedSpells);
               }
 
               logger({ experience, incantations, preparedSpells });
