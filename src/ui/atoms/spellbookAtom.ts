@@ -17,26 +17,17 @@ type UpgradeConfigs = {
   [key: string]: UpgradeConfig;
 };
 
-type CommonSpell = {
+type SpawnFrom = 'eyes' | 'mainHand' | 'offHand' | 'bothHands';
+
+export type Spell = {
   name: string;
   school: School;
   description: string;
-  castsFrom?: string;
+  castsFrom?: SpawnFrom;
   requiresPreparation: boolean;
   upgrades: UpgradeConfigs;
+  incantations?: [string, string][];
 };
-
-type DiscoveredSpell = CommonSpell & {
-  isDiscovered: true;
-  incantations: [string, string][];
-};
-
-type UndiscoveredSpell = CommonSpell & {
-  isDiscovered: false;
-  incantations?: never;
-};
-
-export type Spell = DiscoveredSpell | UndiscoveredSpell;
 
 type Spellbook = Record<string, Spell>;
 
