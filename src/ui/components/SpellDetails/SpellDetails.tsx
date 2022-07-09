@@ -1,10 +1,17 @@
 import { useState } from 'react';
 import { useAtom } from 'jotai';
 import { experienceAtom, incantationsAtom, studyingAtom, Spell } from '@/atoms';
+import { Button } from '../Button';
 import { Dock } from '../Dock';
 import { UpgradeSpell } from '../UpgradeSpell';
 import styles from './SpellDetails.module.css';
-import { Button } from '../Button';
+
+enum CastsFrom {
+  'eyes' = 'Gaze',
+  'mainHand' = 'Main hand',
+  'offHand' = 'Off-hand',
+  'bothHands' = 'Both hands'
+}
 
 interface SpellDetailsProps {
   spellKey: string;
@@ -44,7 +51,9 @@ export const SpellDetails = ({ spellKey, spell, onClose }: SpellDetailsProps): J
         <div className={styles.details}>
           <div className={styles.school}>{spell.school}</div>
           <div className={styles.type}>{spell.requiresPreparation ? 'Prepared' : 'Instant'}</div>
-          {typeof spell.castsFrom === 'undefined' ? null : <div className={styles.castsFrom}>{spell.castsFrom}</div>}
+          {typeof spell.castsFrom === 'undefined' ? null : (
+            <div className={styles.castsFrom}>{CastsFrom[spell.castsFrom]}</div>
+          )}
           <div className={styles.description}>{spell.description}</div>
           {typeof spell.incantations === 'undefined' ? (
             <div className={styles.discover}>
