@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ipcRenderer } from 'electron';
 import { useAtom } from 'jotai';
 import { experienceAtom, incantationsAtom, studyingAtom, Spell } from '@/atoms';
 import { Button } from '../Button';
@@ -32,9 +33,13 @@ export const SpellDetails = ({ spellKey, spell, onClose }: SpellDetailsProps): J
   const startStudying = () => {
     setStudy(spellKey);
     setIncantations([]);
+    ipcRenderer.invoke('study-spell', spellKey);
   };
 
-  const stopStudying = () => setStudy(null);
+  const stopStudying = () => {
+    setStudy(null);
+    ipcRenderer.invoke('study-spell', null);
+  };
 
   const handleStudyClick = () => {
     if (studying === spellKey) {

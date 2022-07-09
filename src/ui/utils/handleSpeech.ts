@@ -61,6 +61,12 @@ let experience: Experience;
 let incantations: string[] = [];
 let preparedSpells: PreparedSpell[] = [];
 
+let studiedSpellKey: string | null = null;
+
+ipcMain.handle('study-spell', (_, spellKey: string) => {
+  studiedSpellKey = spellKey;
+});
+
 export const handleSpeech = async (
   ui: BrowserWindow | null,
   speech: string,
@@ -170,7 +176,8 @@ export const handleSpeech = async (
           if (!isAwakenPhrase && !isTriggerPhrase) {
             const response = await voodooPost(accessToken, config.API_ENDPOINTS.INCANTATION, [
               speech,
-              getMaterialComponents(speech)
+              getMaterialComponents(speech),
+              studiedSpellKey
             ]);
 
             if (response.ok) {
