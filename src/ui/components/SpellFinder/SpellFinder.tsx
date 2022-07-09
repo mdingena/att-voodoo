@@ -23,9 +23,7 @@ export const SpellFinder = ({ school, onClose }: SpellFinderProps): JSX.Element 
 
   const selectSpellUpgrade = (selection: SelectedSpell) => () => setSelectedSpell(selection);
 
-  const spells = Object.entries(spellbook).filter(
-    ([, spell]) => spell.school === school && Object.keys(spell.upgrades).length
-  );
+  const spells = Object.entries(spellbook).filter(([, spell]) => spell.school === school);
 
   return (
     <>

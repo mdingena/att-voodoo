@@ -80,7 +80,11 @@ export const SpellDetails = ({ spellKey, spell, onClose }: SpellDetailsProps): J
           <button className={styles.action} onClick={onClose}>
             &lt; Back
           </button>
-          <button className={styles.action} onClick={openSpellUpgrade}>
+          <button
+            className={styles.action}
+            onClick={openSpellUpgrade}
+            disabled={Object.keys(spell.upgrades).length === 0}
+          >
             Upgrade
           </button>
         </div>
