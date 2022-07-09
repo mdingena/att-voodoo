@@ -21,6 +21,7 @@ module.exports = {
     ]
   },
   output: {
+    hashFunction: 'xxhash64',
     path: path.resolve(__dirname, 'build/ui'),
     filename: 'main.js'
   }
