@@ -25,37 +25,17 @@ module.exports = {
         use: [{ loader: 'ts-loader' }]
       },
       {
-        test: /\.ttf$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: './font/[hash].[ext]'
-            }
-          }
-        ]
+        test: /\.ttf$/i,
+        type: 'asset/resource',
+        dependency: { not: ['url'] }
       },
       {
-        test: /\.png$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: './images/[hash].[ext]'
-            }
-          }
-        ]
+        test: /\.png$/i,
+        type: 'asset/resource'
       },
       {
-        test: /\.wav$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: './audio/[hash].[ext]'
-            }
-          }
-        ]
+        test: /\.wav$/i,
+        type: 'asset/resource'
       },
       {
         test: /\.css$/,
@@ -79,6 +59,7 @@ module.exports = {
     ]
   },
   output: {
+    hashFunction: 'xxhash64',
     path: path.resolve(__dirname, 'build/ui'),
     filename: 'renderer.js'
   },
