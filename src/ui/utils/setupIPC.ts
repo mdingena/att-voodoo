@@ -65,6 +65,11 @@ export const setupIPC = async (
     return await voodooGet(accessToken, config.API_ENDPOINTS.PLAYER);
   });
 
+  /* Handle player preference changes. */
+  ipcMain.handle('apply-settings', async (_, { accessToken, settings }) => {
+    return await voodooPost(accessToken, config.API_ENDPOINTS.SETTINGS, { settings });
+  });
+
   /* Handle spell upgrade. */
   ipcMain.handle('upgrade', async (_, { accessToken, school, spellKey, upgradeKey }) => {
     return await voodooPost(accessToken, config.API_ENDPOINTS.UPGRADE, {

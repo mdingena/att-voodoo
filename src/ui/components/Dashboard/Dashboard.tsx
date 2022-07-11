@@ -18,7 +18,8 @@ import {
   panelAtom,
   Experience,
   spellbookAtom,
-  studyingAtom
+  studyingAtom,
+  dexterityAtom
 } from '@/atoms';
 import { ServersUpdate } from '@/components/ServersScreen';
 import { Dock } from '@/components/Dock';
@@ -80,6 +81,7 @@ export const Dashboard = (): JSX.Element => {
   const [, setIncantations] = useAtom(incantationsAtom);
   const [preparedSpells, setPreparedSpells] = useAtom(preparedSpellsAtom);
   const [experience, setExperience] = useAtom(experienceAtom);
+  const [, setDexterity] = useAtom(dexterityAtom);
   const [spellbook] = useAtom(spellbookAtom);
   const [studying] = useAtom(studyingAtom);
   const [panel, setPanel] = useAtom(panelAtom);
@@ -186,6 +188,7 @@ export const Dashboard = (): JSX.Element => {
         if (response.ok) {
           setPreparedSpells(response.result.preparedSpells);
           setExperience(response.result.experience);
+          setDexterity(response.result.dexterity.split('Hand/'));
         } else {
           console.error(response.error);
         }
@@ -214,7 +217,8 @@ export const Dashboard = (): JSX.Element => {
     handleVoodooIncantationConfirmed,
     handleVoodooIncantation,
     setPreparedSpells,
-    setExperience
+    setExperience,
+    setDexterity
   ]);
 
   useEffect(() => {

@@ -1,6 +1,7 @@
 export { accessTokenAtom } from './accessTokenAtom';
 export { activeServerAtom } from './activeServerAtom';
 export { appStageAtom, AppStage } from './appStageAtom';
+export { dexterityAtom, EvokeAngle, EvokeHandedness } from './dexterityAtom';
 export { experienceAtom, Experience, SpellUpgrades } from './experienceAtom';
 export { hasSessionAtom } from './hasSessionAtom';
 export { incantationsAtom, Incantation, StudyFeedback } from './incantationsAtom';

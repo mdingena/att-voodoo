@@ -115,6 +115,11 @@
   color: var(--font-colour-primary);
 }
 
+.action:disabled {
+  color: var(--font-colour-tertiary);
+  cursor: default;
+}
+
 .actionsHeader .action:first-of-type {
   border-right: 1px solid var(--colour-green-300);
 }
