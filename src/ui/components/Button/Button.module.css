@@ -19,7 +19,21 @@
   color: var(--font-colour-primary);
 }
 
+.root:disabled {
+  color: var(--font-colour-tertiary);
+  cursor: default;
+}
+
 .small {
   composes: root;
   font-size: 1rem;
+}
+
+.busy,
+.muted {
+  color: var(--font-colour-tertiary);
+}
+
+.busy:disabled {
+  cursor: wait !important;
 }

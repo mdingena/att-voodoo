@@ -11,12 +11,14 @@ export const voodooPost = async (accessToken: string, endpoint: string, data: an
       body: JSON.stringify(data)
     });
 
+    if (!response.ok) throw new Error(response.statusText);
+
     const body = await response.json();
 
-    if (!response.ok) throw new Error(body.error ?? response.statusText);
+    if (!body.ok) throw new Error(body.error);
 
     return body;
   } catch (error) {
-    return { ok: false, error: error.message };
+    return { ok: false, error: (error as Error).message };
   }
 };

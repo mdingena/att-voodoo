@@ -35,6 +35,11 @@
   font-size: 1rem;
 }
 
+.group {
+  display: flex;
+  gap: 8px;
+}
+
 .description {
   font-size: 1rem;
   margin-top: 8px;
