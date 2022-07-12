@@ -6,7 +6,7 @@
   grid-template-rows: 1fr min-content;
   width: 100%;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: transform 600ms var(--timing-function);
   backdrop-filter: blur(6px);
 }
@@ -31,8 +31,11 @@
 }
 
 .settings {
+  height: calc(100vh - 64px);
   padding: 16px;
+  border-top: 2px solid var(--colour-green-200);
   font-size: 1rem;
+  overflow-y: auto;
 }
 
 .group {
@@ -52,6 +55,7 @@
 
 .close button {
   width: 100%;
+  height: 32px;
   line-height: 2;
   border: 0;
   background: transparent;

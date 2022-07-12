@@ -7,6 +7,7 @@ type Upgrades = {
 };
 
 export type Experience = {
+  freeResets: number;
   upgrades: Upgrades;
   abjurationXpTotal: number;
   abjurationXpSpent: number;

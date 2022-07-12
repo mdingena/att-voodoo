@@ -5,6 +5,7 @@ import { handleSpeech } from './handleSpeech';
 import { heartbeat } from './heartbeat';
 import { voodooGet } from './voodooGet';
 import { voodooPost } from './voodooPost';
+import { voodooDelete } from './voodooDelete';
 import config from '../config';
 
 type HeartbeatDelay = { current: number };
@@ -77,6 +78,11 @@ export const setupIPC = async (
       spell: spellKey,
       upgrade: upgradeKey
     });
+  });
+
+  /* Handle player preference changes. */
+  ipcMain.handle('reset-upgrades', async (_, { accessToken, useFreeReset }) => {
+    return await voodooDelete(accessToken, config.API_ENDPOINTS.UPGRADE, { useFreeReset });
   });
 
   /* Handle UI focus. */
