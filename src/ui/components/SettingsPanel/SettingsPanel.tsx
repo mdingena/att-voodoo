@@ -106,8 +106,8 @@ export const SettingsPanel = (): JSX.Element => {
               </Button>
             </div>
             <div className={styles.description}>
-              Set preferred &quot;main hand&quot; for casting spells. Some spells also use your &quot;off-hand&quot;, as
-              described in their spell description.
+              Sets preferred &quot;main hand&quot; for casting spells. Some spells also use your &quot;off-hand&quot;,
+              as described in their spell description.
             </div>
             <div className={styles.group}>
               <Button isBusy={isBusy} isMuted={dexterity[1] === 'palm'} onClick={() => setEvokeAngle('index')}>
