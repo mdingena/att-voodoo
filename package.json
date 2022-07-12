@@ -4,6 +4,7 @@
   "description": "A community-made magic mod for A Township Tale, a VR MMORPG game.",
   "main": "build/ui/main.js",
   "scripts": {
+    "compile": "tsc --noEmit",
     "build": "npm run build:speech && npm run build:ui",
     "prebuild:speech": "rimraf ./build/speech",
     "build:speech": "nuget restore src/speech && dotnet build --no-incremental --force --output build/speech src/speech && cp src/speech/grammar.xml build/speech",
