@@ -49,6 +49,28 @@ export const SpellDetails = ({ spellKey, spell, onClose }: SpellDetailsProps): J
     }
   };
 
+  const hasIncantations = typeof spell.incantations !== 'undefined';
+  const incantations = [];
+
+  if (typeof spell.incantations !== 'undefined') {
+    let hasSeal = false;
+
+    for (let i = 0; i < 4; ++i) {
+      const incantation = spell.incantations[i];
+
+      if (typeof incantation === 'undefined') {
+        if (hasSeal) {
+          incantations.push(<Dock key={`dock-${i}`} slot={i as 0 | 1 | 2 | 3} isEmpty />);
+        } else {
+          incantations.push(<Dock key={`dock-${i}`} slot={i as 0 | 1 | 2 | 3} hint={['SEAL', '']} />);
+          hasSeal = true;
+        }
+      } else {
+        incantations.push(<Dock key={`dock-${i}`} slot={i as 0 | 1 | 2 | 3} hint={incantation} />);
+      }
+    }
+  }
+
   return (
     <>
       <div className={styles.root}>
@@ -60,19 +82,12 @@ export const SpellDetails = ({ spellKey, spell, onClose }: SpellDetailsProps): J
             <div className={styles.castsFrom}>{CastsFrom[spell.castsFrom]}</div>
           )}
           <div className={styles.description}>{spell.description}</div>
-          {typeof spell.incantations === 'undefined' ? (
+          {hasIncantations ? (
+            <div className={styles.incantations}>{incantations}</div>
+          ) : (
             <div className={styles.discover}>
               <p>This spell&apos;s incantations are unknown. You can study this spell to discover its incantations.</p>
               <Button onClick={handleStudyClick}>{studying === spellKey ? 'Stop studying' : 'Study spell'}</Button>
-            </div>
-          ) : (
-            <div className={styles.incantations}>
-              {spell.incantations.map(([verbalComponent, materialComponent], index) => (
-                <Dock key={`dock-${index}`} slot={index as 0 | 1 | 2 | 3} hint={[verbalComponent, materialComponent]} />
-              ))}
-              {spell.incantations.length < 4 ? (
-                <Dock slot={spell.incantations.length as 1 | 2 | 3} hint={['SEAL', '']} />
-              ) : null}
             </div>
           )}
         </div>
