@@ -122,13 +122,13 @@ export const SettingsPanel = (): JSX.Element => {
               However, some projectile spells must be aimed. You can choose to evoke these from your hand palm or index
               finger.
             </div>
-            <Button onClick={openResetModal}>Reset Upgrades</Button>
+            <Button onClick={openResetModal}>Reset upgrades</Button>
             <div className={styles.description}>
               Resets all your spell upgrades for the cost of reducing your XP total by 10%. You currently have{' '}
               {hasFreeResets ? freeResets : 'no'} free reset
               {freeResets === 1 ? '' : 's'} that allow{freeResets === 1 ? 's' : ''} you to avoid paying this cost.
             </div>
-            <Button onClick={toggleDebug}>Toggle Debugging</Button>
+            <Button onClick={toggleDebug}>Toggle debugging</Button>
             <div className={styles.description}>
               Opens a &quot;developer tools&quot; window which can assist with troubleshooting problems.
             </div>
