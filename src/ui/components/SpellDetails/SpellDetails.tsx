@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ipcRenderer } from 'electron';
 import { useAtom } from 'jotai';
-import { experienceAtom, incantationsAtom, studyingAtom, Spell } from '@/atoms';
+import { experienceAtom, incantationsAtom, studyingAtom, Spell, speechModeAtom, SpeechMode } from '@/atoms';
 import { Button } from '../Button';
 import { Dock } from '../Dock';
 import { UpgradeSpell } from '../UpgradeSpell';
@@ -25,6 +25,7 @@ export const SpellDetails = ({ spellKey, spell, onClose }: SpellDetailsProps): J
   const [studying, setStudy] = useAtom(studyingAtom);
   const [, setIncantations] = useAtom(incantationsAtom);
   const [experience] = useAtom(experienceAtom);
+  const [speechMode] = useAtom(speechModeAtom);
 
   const closeSpellUpgrade = () => setIsUpgradesOpen(false);
 
@@ -87,7 +88,13 @@ export const SpellDetails = ({ spellKey, spell, onClose }: SpellDetailsProps): J
           ) : (
             <div className={styles.discover}>
               <p>This spell&apos;s incantations are unknown. You can study this spell to discover its incantations.</p>
-              <Button onClick={handleStudyClick}>{studying === spellKey ? 'Stop studying' : 'Study spell'}</Button>
+              <Button onClick={handleStudyClick} isBusy={speechMode === SpeechMode.Incanting}>
+                {speechMode === SpeechMode.Incanting
+                  ? 'Finish incanting'
+                  : studying === spellKey
+                  ? 'Stop studying'
+                  : 'Study spell'}
+              </Button>
             </div>
           )}
         </div>
