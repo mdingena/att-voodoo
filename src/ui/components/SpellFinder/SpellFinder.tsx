@@ -31,6 +31,7 @@ export const SpellFinder = ({ school, onClose }: SpellFinderProps): JSX.Element 
         <div className={styles.header}>{school}</div>
         <div className={styles.spells}>
           {spells.map(([spellKey, spell]) => {
+            const spellHasUpgrades = Object.keys(spell.upgrades).length > 0;
             const upgrades = Object.values(experience.upgrades[spellKey] ?? {}).reduce(
               (sum, upgrade) => sum + upgrade,
               0
@@ -38,7 +39,7 @@ export const SpellFinder = ({ school, onClose }: SpellFinderProps): JSX.Element 
 
             return (
               <button key={spellKey} className={styles.spell} onClick={selectSpellUpgrade({ key: spellKey, spell })}>
-                <span className={styles.upgrades}>{upgrades}</span>
+                <span className={styles.upgrades}>{spellHasUpgrades ? upgrades : <>\</>}</span>
                 <span className={styles.name}>{spell.name}</span>
               </button>
             );
