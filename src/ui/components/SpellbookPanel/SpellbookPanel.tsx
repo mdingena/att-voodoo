@@ -49,9 +49,17 @@ export const SpellbookPanel = (): JSX.Element => {
         <div>
           <div className={styles.header}>Spellbook</div>
           <div className={styles.schools}>
-            {/* <div className={styles.description}>
-              <p>Magic schools</p>
-            </div> */}
+            <div className={styles.description}>
+              <p>
+                The spellbook contains a list of spells grouped by their school of magic. Discovered spells have their
+                incantations documented on their spell page. Undiscovered spells can be studied to reveal their hidden
+                incantations.
+              </p>
+              <p>
+                You gain experience every time you cast a spell. The type and amount of XP you gain depends on the
+                number of incantations and the spell&apos;s school of magic.
+              </p>
+            </div>
             <Experience
               onClick={selectAbjuration}
               school='Abjuration'
