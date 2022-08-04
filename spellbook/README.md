@@ -1,925 +1,1402 @@
 # 📖 Spellbook
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+The spellbook contains a list of spells grouped by their school of magic. Discovered spells have their incantations documented on their spell page. Undiscovered spells can be studied to reveal their hidden incantations.
 
-- [Acid Bolt](#acid-bolt)
-- [Anamnesis](#anamnesis)
-- [Aptitude](#aptitude)
-- [Conjure Crystal Lance](#conjure-crystal-lance)
-- [Conjure Crystal Pick](#conjure-crystal-pick)
-- [Conjure Crystal Sword](#conjure-crystal-sword)
-- [Conjure Water](#conjure-water)
-- [Craft Flask](#craft-flask)
-- [Craft Soulbond](#craft-soulbond)
-- [Dart](#dart)
-- [Fire](#fire)
-- [Flask of Endless Teleportation](#flask-of-endless-teleportation)
-- [Flask of Endless Water](#flask-of-endless-water)
-- [Frost Bolt](#frost-bolt)
-- [Haste](#haste)
-- [Heal Wounds](#heal-wounds)
-- [Heroism](#heroism)
-- [Liquate Alloy](#liquate-alloy)
-- [Repair Ash Device](#repair-ash-device)
-- [Repair Birch Device](#repair-birch-device)
-- [Repair Copper Device](#repair-copper-device)
-- [Repair Electrum Device](#repair-electrum-device)
-- [Repair Gold Device](#repair-gold-device)
-- [Repair Iron Device](#repair-iron-device)
-- [Repair Mythril Device](#repair-mythril-device)
-- [Repair Oak Device](#repair-oak-device)
-- [Repair Palladium Device](#repair-palladium-device)
-- [Repair Red Iron Device](#repair-red-iron-device)
-- [Repair Redwood Device](#repair-redwood-device)
-- [Repair Silver Device](#repair-silver-device)
-- [Repair Valyan Device](#repair-valyan-device)
-- [Repair Viridium Device](#repair-viridium-device)
-- [Repair Walnut Device](#repair-walnut-device)
-- [Smokescreen](#smokescreen)
-- [Stoneskin](#stoneskin)
-- [Transmute Copper To Iron](#transmute-copper-to-iron)
-- [Transmute Gold To Silver](#transmute-gold-to-silver)
-- [Transmute Ingot To Ore](#transmute-ingot-to-ore)
-- [Transmute Iron Handle](#transmute-iron-handle)
-- [Transmute Iron To Gold](#transmute-iron-to-gold)
-- [Transmute Silver To Mythril](#transmute-silver-to-mythril)
-- [Transmute Teleportation Potion](#transmute-teleportation-potion)
-- [True Strike](#true-strike)
+You gain experience every time you cast a spell. The type and amount of XP you gain depends on the number of incantations and the spell's school of magic.
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
----
-
-# Acid Bolt
-
-Launches a large ball of acid from the palm of your hand.
-
-| School    | Type     | Casts from |
-| :-------- | :------- | :--------- |
-| Evocation | Prepared | Right hand |
+# 🛡 Abjuration
 
 <details>
-<summary>Incantations</summary>
+<summary>Aptitude</summary>
+<blockquote>
+<h2>Aptitude</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Abjuration</dd>
 
-Discovered by **Nael Mossweep** and **Syren_DM**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                    | δ                     | λ                | Ω                 |
-| -------: | -------------------- | --------------------- | ---------------- | ----------------- |
-| Material | Green leather strips | Red spriggull feather | Salt             | Firework          |
-|    Speak | `skin of wyrm`       | `tuft of spriggull`   | `sliver of salt` | `essence of pyre` |
+  <dt>Description</dt>
+  <dd>Temporarily increases your skill XP multiplier. Affects all skill trees except Voodoo.</dd>
 
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Anamnesis
-
-Reverse-age any given produce. Works on all unsliced fruits and vegetables, as well as apple cores and pumpkin pieces.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Haste</summary>
+<blockquote>
+<h2>Haste</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Abjuration</dd>
 
-Discovered by **Zombiehunter494** and **Exouls**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                  | δ                  | λ      |
-| -------: | ------------------ | ------------------ | ------ |
-| Material | Any produce        | Blue crystal shard |        |
-|    Speak | `heart of produce` | `sliver of gems`   | `seal` |
+  <dt>Description</dt>
+  <dd>Temporarily increases the movement speed of you and nearby Soulbound players.</dd>
 
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Aptitude
-
-Temporarily increases your skill XP multiplier. Affects all skill trees except Voodoo.
-
-| School     | Type     |
-| :--------- | :------- |
-| Abjuration | Prepared |
-
 <details>
-<summary>Incantations</summary>
+<summary>Heal Wounds</summary>
+<blockquote>
+<h2>Heal Wounds</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Abjuration</dd>
 
-Discovered by **Szog2332**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                      | δ                  | λ                    | Ω      |
-| -------: | ---------------------- | ------------------ | -------------------- | ------ |
-| Material | Flask containing water | Blue crystal shard | Burnt onion          |        |
-|    Speak | `fluid of silica`      | `sliver of gems`   | `essence of produce` | `seal` |
+  <dt>Description</dt>
+  <dd>Instantly heals you and nearby Soulbound players.</dd>
 
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Conjure Crystal Lance
-
-Conjures a blue crystal lance that can be wielded like a weapon.
-
-| School      | Type     | Casts from |
-| :---------- | :------- | :--------- |
-| Conjuration | Prepared | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Heroism</summary>
+<blockquote>
+<h2>Heroism</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Abjuration</dd>
 
-Discovered by **Gasher**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                             | δ                | λ                   | Ω      |
-| -------: | ----------------------------- | ---------------- | ------------------- | ------ |
-| Material | Medium straight wooden handle | Blue crystal gem | Electrum ingot      |        |
-|    Speak | `heart of weapon`             | `aether of gems` | `artifact of earth` | `seal` |
+  <dt>Description</dt>
+  <dd>Temporarily increases the maximum health of you and nearby Soulbound players.</dd>
 
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Conjure Crystal Pick
-
-Conjures a blue crystal pickaxe that can be wielded like a weapon.
-
-| School      | Type     | Casts from |
-| :---------- | :------- | :--------- |
-| Conjuration | Prepared | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Smokescreen</summary>
+<blockquote>
+<h2>Smokescreen</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Abjuration</dd>
 
-Discovered by **Gasher**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                   | δ                | λ                   | Ω      |
-| -------: | ------------------- | ---------------- | ------------------- | ------ |
-| Material | Short wooden handle | Blue crystal gem | Silver ingot        |        |
-|    Speak | `heart of weapon`   | `aether of gems` | `artifact of earth` | `seal` |
+  <dt>Description</dt>
+  <dd>Creates a large temporary stack of smoke that obscures vision.</dd>
 
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Conjure Crystal Sword
-
-Conjures a blue crystal sword that can be wielded like a weapon.
-
-| School      | Type     | Casts from |
-| :---------- | :------- | :--------- |
-| Conjuration | Prepared | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Stoneskin</summary>
+<blockquote>
+<h2>Stoneskin</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Abjuration</dd>
 
-Discovered by **Gasher**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                   | δ                | λ                   | Ω      |
-| -------: | ------------------- | ---------------- | ------------------- | ------ |
-| Material | Short wooden handle | Blue crystal gem | Palladium ingot     |        |
-|    Speak | `heart of weapon`   | `aether of gems` | `artifact of earth` | `seal` |
+  <dt>Description</dt>
+  <dd>Creates a large temporary stack of smoke that obscures vision.Temporarily increases the damage protection of you and nearby Soulbound players.</dd>
 
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Conjure Water
-
-Conjures a single serving of water inside of an empty flask.
-
-| School      | Type    | Casts from |
-| :---------- | :------ | :--------- |
-| Conjuration | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>True Strike</summary>
+<blockquote>
+<h2>True Strike</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Abjuration</dd>
 
-Discovered by **Ethyn Wyrmbane**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                 | δ                  | λ      |
-| -------: | ----------------- | ------------------ | ------ |
-| Material | Empty flask       | Ripe blueberry     |        |
-|    Speak | `bonds of silica` | `fluid of produce` | `seal` |
+  <dt>Description</dt>
+  <dd>Temporarily increases the damage dealt by you and nearby Soulbound players.</dd>
 
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Craft Flask
-
-Conjures a small glass container used to hold various liquids.
-
-| School      | Type    | Casts from |
-| :---------- | :------ | :--------- |
-| Conjuration | Instant | Right hand |
+# 🌱 Conjuration
 
 <details>
-<summary>Incantations</summary>
+<summary>Conjure Crystal Lance</summary>
+<blockquote>
+<h2>Conjure Crystal Lance</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
 
-Discovered by **Ethyn Wyrmbane**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                   | δ                 | λ      |
-| -------: | ------------------- | ----------------- | ------ |
-| Material | Sandstone           | Coal              |        |
-|    Speak | `essence of silica` | `heart of embers` | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Conjures a blue crystal lance that can be wielded like a weapon.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Craft Soulbond
-
-Creates an artifact that lets another player bind their soul to you. Once Soulbound, certain spells that affect you also affect them. To Soulbind with someone, you must hand them the artifact. That player must now place the artifact in your belt. You can have up to 4 other players Soulbound to you at once. Touching an artifact bound to another player will break the Soulbond.
-
-| School      | Type    | Casts from |
-| :---------- | :------ | :--------- |
-| Conjuration | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Conjure Crystal Pick</summary>
+<blockquote>
+<h2>Conjure Crystal Pick</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
 
-Discovered by **Korbsie**, **Bear** and **Xaitr**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                   | δ                  | λ      |
-| -------: | ------------------- | ------------------ | ------ |
-| Material | Iron ingot          | Blue crystal shard |        |
-|    Speak | `artifact of earth` | `aether of gems`   | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Conjures a blue crystal pickaxe that can be wielded like a weapon.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Dart
-
-Launches a gotera dart from the palm of your hand.
-
-| School    | Type     | Casts from |
-| :-------- | :------- | :--------- |
-| Evocation | Prepared | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Conjure Crystal Sword</summary>
+<blockquote>
+<h2>Conjure Crystal Sword</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
 
-Discovered by **Szog2332**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ              | δ                      | λ               | Ω      |
-| -------: | -------------- | ---------------------- | --------------- | ------ |
-| Material | Oak wedge      | Blue spriggull feather | Gotera seedling |        |
-|    Speak | `skin of tera` | `tuft of spriggull`    | `heart of tera` | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Conjures a blue crystal sword that can be wielded like a weapon.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Fire
-
-Creates a fireball in the palm of your hand. This fireball can be placed on the ground to kindle firewood, or thrown to illuminate dark places.
-
-| ⚠️  | WARNING: Fire is hot. |
-| --- | :-------------------- |
-
-| School    | Type     | Casts from |
-| :-------- | :------- | :--------- |
-| Evocation | Prepared | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Conjure Water</summary>
+<blockquote>
+<h2>Conjure Water</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
 
-Discovered by **Ethyn Wyrmbane**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                   | δ                  | λ      |
-| -------: | ------------------- | ------------------ | ------ |
-| Material | Grass clump         | Flint              |        |
-|    Speak | `essence of embers` | `fragment of pyre` | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Conjures a single serving of water inside of an empty flask.</dd>
+
+  <dt>Incantations</dt>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "BONDS OF SILICA"
+            <br />
+            empty flask
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FLUID OF PRODUCE"
+            <br />
+            ripe blueberry
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "SEAL"
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
+</dl>
+</blockquote>
 </details>
 
-# Flask of Endless Teleportation
-
-Conjures additional servings of teleportation potion inside of a flask already containing teleportation potion.
-
-| ⚠️  | KNOWN ISSUE: Flask contents are invisible when there are an even number of servings held within. |
-| --- | :----------------------------------------------------------------------------------------------- |
-
-| School      | Type    | Casts from |
-| :---------- | :------ | :--------- |
-| Conjuration | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Craft Flask</summary>
+<blockquote>
+<h2>Craft Flask</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
 
-Discovered by **Nael Mossweep**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                                     | δ                  | λ      |
-| -------: | ------------------------------------- | ------------------ | ------ |
-| Material | Flask containing teleportation potion | Burnt red mushroom |        |
-|    Speak | `fluid of silica`                     | `essence of fungi` | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Conjures a small glass container used to hold various liquids.</dd>
+
+  <dt>Incantations</dt>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "ESSENCE OF SILICA"
+            <br />
+            sandstone
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "HEART OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "SEAL"
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
+</dl>
+</blockquote>
 </details>
 
-# Flask of Endless Water
-
-Conjures additional servings of water inside of a flask already containing water.
-
-| ⚠️  | KNOWN ISSUE: Flask contents are invisible when there are an even number of servings held within. |
-| --- | :----------------------------------------------------------------------------------------------- |
-
-| School      | Type    | Casts from |
-| :---------- | :------ | :--------- |
-| Conjuration | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Craft Soulbond</summary>
+<blockquote>
+<h2>Craft Soulbond</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
 
-Discovered by **Syren_DM**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                      | δ                  | λ      |
-| -------: | ---------------------- | ------------------ | ------ |
-| Material | Flask containing water | Ripe blueberry     |        |
-|    Speak | `fluid of silica`      | `fluid of produce` | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Creates an artifact that lets another player bind their soul to you. Once Soulbound, certain spells that affect you also affect them. To Soulbind with someone, the other player must place the artifact in one of your belt docks. You can have up to 4 other players Soulbound to you at once. Touching an artifact bound to another player will break the Soulbond.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Frost Bolt
-
-Launches a large ball of icy crystals from the palm of your hand.
-
-| School    | Type     | Casts from |
-| :-------- | :------- | :--------- |
-| Evocation | Prepared | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Flask of Endless Teleportation</summary>
+<blockquote>
+<h2>Flask of Endless Teleportation</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
 
-Discovered by **Nael Mossweep**, **Syren_DM** and **JoshuaTheTeacup**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                  | δ                      | λ                | Ω                 |
-| -------: | ------------------ | ---------------------- | ---------------- | ----------------- |
-| Material | Green leather roll | Blue spriggull feather | Blue crystal gem | Dynamite          |
-|    Speak | `skin of wyrm`     | `tuft of spriggull`    | `aether of gems` | `essence of pyre` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Conjures additional servings of teleportation potion inside of a flask already containing teleportation potion.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Haste
-
-Temporarily increases the movement speed of you and nearby Soulbound players.
-
-| School     | Type     |
-| :--------- | :------- |
-| Abjuration | Prepared |
-
 <details>
-<summary>Incantations</summary>
+<summary>Flask of Endless Water</summary>
+<blockquote>
+<h2>Flask of Endless Water</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
 
-Discovered by **Gasher** and **Szog2332**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                      | δ                  | λ                 | Ω                     |
-| -------: | ---------------------- | ------------------ | ----------------- | --------------------- |
-| Material | Flask containing water | Blue crystal shard | Burnt dais leg    | Red spriggull feather |
-|    Speak | `fluid of silica`      | `sliver of gems`   | `essence of dais` | `tuft of spriggull`   |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Conjures additional servings of water inside of a flask already containing water.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Heal Wounds
-
-Instantly heals you and nearby Soulbound players.
-
-| School     | Type     |
-| :--------- | :------- |
-| Abjuration | Prepared |
-
 <details>
-<summary>Incantations</summary>
+<summary>Raise Tree (ash)</summary>
+<blockquote>
+<h2>Raise Tree (ash)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
 
-Discovered by **Gasher**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                      | δ                  | λ                  | Ω      |
-| -------: | ---------------------- | ------------------ | ------------------ | ------ |
-| Material | Flask containing water | Blue crystal shard | Healing pod        |        |
-|    Speak | `fluid of silica`      | `sliver of gems`   | `artifact of tera` | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Conjures a unique ash tree.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Heroism
-
-Temporarily increases the maximum health of you and nearby Soulbound players.
-
-| School     | Type     |
-| :--------- | :------- |
-| Abjuration | Prepared |
-
 <details>
-<summary>Incantations</summary>
+<summary>Raise Tree (birch)</summary>
+<blockquote>
+<h2>Raise Tree (birch)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
 
-Discovered by **Gasher**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                      | δ                  | λ                    | Ω      |
-| -------: | ---------------------- | ------------------ | -------------------- | ------ |
-| Material | Flask containing water | Blue crystal shard | Burnt carrot         |        |
-|    Speak | `fluid of silica`      | `sliver of gems`   | `essence of produce` | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Conjures a unique birch tree.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Liquate Alloy
-
-Splits an alloy into its base metals.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Both hands |
-
 <details>
-<summary>Incantations</summary>
+<summary>Raise Tree (oak)</summary>
+<blockquote>
+<h2>Raise Tree (oak)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
 
-Discovered by **The Pumpking**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                   | δ                  | λ                 |
-| -------: | ------------------- | ------------------ | ----------------- |
-| Material | Any alloy ingot     | Blue crystal shard | Coal              |
-|    Speak | `artifact of earth` | `fragment of gems` | `heart of embers` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Conjures a unique oak tree.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Ash Device
-
-Restores some of the integrity of all ash parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Raise Tree (redwood)</summary>
+<blockquote>
+<h2>Raise Tree (redwood)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
 
-Discovered by **Ethyn Wyrmbane**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                 | δ                  | λ                  | Ω                       |
-| -------: | ----------------- | ------------------ | ------------------ | ----------------------- |
-| Material | Any hilted device | Ash wedge          | Tan leather strips | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `fragment of tera` | `skin of dais`     | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Conjures a unique redwood tree.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Birch Device
-
-Restores some of the integrity of all birch parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Raise Tree (walnut)</summary>
+<blockquote>
+<h2>Raise Tree (walnut)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
 
-Discovered by **Ethyn Wyrmbane**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                 | δ                  | λ                  | Ω                       |
-| -------: | ----------------- | ------------------ | ------------------ | ----------------------- |
-| Material | Any hilted device | Birch wedge        | Tan leather strips | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `fragment of tera` | `skin of dais`     | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Conjures a walnut birch tree.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Copper Device
-
-Restores some of the integrity of all copper parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
+# ⚡️ Evocation
 
 <details>
-<summary>Incantations</summary>
+<summary>Acid Bolt</summary>
+<blockquote>
+<h2>Acid Bolt</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Evocation</dd>
 
-Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                 | δ                   | λ                 | Ω                       |
-| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any hilted device | Copper ingot        | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Launches a large ball of acid from your hand.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Electrum Device
-
-Restores some of the integrity of all electrum parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Dart</summary>
+<blockquote>
+<h2>Dart</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Evocation</dd>
 
-Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                 | δ                   | λ                 | Ω                       |
-| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any hilted device | Electrum ingot      | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Launches a gotera dart from your hand.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Gold Device
-
-Restores some of the integrity of all gold parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Fire</summary>
+<blockquote>
+<h2>Fire</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Evocation</dd>
 
-Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                 | δ                   | λ                 | Ω                       |
-| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any hilted device | Gold ingot          | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Creates a fireball in the palm of your hand. This fireball can be placed on the ground to kindle firewood, or thrown to illuminate dark places.</dd>
+
+  <dt>Incantations</dt>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "ESSENCE OF EMBERS"
+            <br />
+            grass clump
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FRAGMENT OF PYRE"
+            <br />
+            flint
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "SEAL"
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Iron Device
-
-Restores some of the integrity of all iron parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Frost Bolt</summary>
+<blockquote>
+<h2>Frost Bolt</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Evocation</dd>
 
-Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                 | δ                   | λ                 | Ω                       |
-| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any hilted device | Iron ingot          | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Launches a large ball of icy crystals from your hand.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Mythril Device
-
-Restores some of the integrity of all mythril parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
+# 🪄 Transmutation
 
 <details>
-<summary>Incantations</summary>
+<summary>Anamnesis</summary>
+<blockquote>
+<h2>Anamnesis</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                 | δ                   | λ                 | Ω                       |
-| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any hilted device | Mythril ingot       | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Reverse-age any given produce. Works on all unsliced fruits and vegetables, as well as apple cores and pumpkin pieces.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Oak Device
-
-Restores some of the integrity of all oak parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Liquate Alloy (electrum)</summary>
+<blockquote>
+<h2>Liquate Alloy (electrum)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **Ethyn Wyrmbane**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                 | δ                  | λ                  | Ω                       |
-| -------: | ----------------- | ------------------ | ------------------ | ----------------------- |
-| Material | Any hilted device | Oak wedge          | Tan leather strips | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `fragment of tera` | `skin of dais`     | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Both hands</dd>
 
+  <dt>Description</dt>
+  <dd>Splits an electrum ingot into its base metals.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Palladium Device
-
-Restores some of the integrity of all palladium parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Liquate Alloy (palladium)</summary>
+<blockquote>
+<h2>Liquate Alloy (palladium)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                 | δ                   | λ                 | Ω                       |
-| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any hilted device | Palladium ingot     | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Both hands</dd>
 
+  <dt>Description</dt>
+  <dd>Splits a palladium ingot into its base metals.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Red Iron Device
-
-Restores some of the integrity of all red iron parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Liquate Alloy (red iron)</summary>
+<blockquote>
+<h2>Liquate Alloy (red iron)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                 | δ                   | λ                 | Ω                       |
-| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any hilted device | Red iron ingot      | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Both hands</dd>
 
+  <dt>Description</dt>
+  <dd>Splits a red iron ingot into its base metals.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Redwood Device
-
-Restores some of the integrity of all redwood parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Liquate Alloy (valyan)</summary>
+<blockquote>
+<h2>Liquate Alloy (valyan)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **Ethyn Wyrmbane**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                 | δ                  | λ                  | Ω                       |
-| -------: | ----------------- | ------------------ | ------------------ | ----------------------- |
-| Material | Any hilted device | Redwood wedge      | Tan leather strips | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `fragment of tera` | `skin of dais`     | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Both hands</dd>
 
+  <dt>Description</dt>
+  <dd>Splits a valyan ingot into its base metals.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Silver Device
-
-Restores some of the integrity of all silver parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Liquate Alloy (viridium)</summary>
+<blockquote>
+<h2>Liquate Alloy (viridium)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+  <dt>Type</dt>
+  <dd>Prepared</dd>
 
-|     Dock | ζ                 | δ                   | λ                 | Ω                       |
-| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any hilted device | Silver ingot        | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Both hands</dd>
 
+  <dt>Description</dt>
+  <dd>Splits a viridium ingot into its base metals.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Valyan Device
-
-Restores some of the integrity of all valyan parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Repair Device (ash wood)</summary>
+<blockquote>
+<h2>Repair Device (ash wood)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                 | δ                   | λ                 | Ω                       |
-| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any hilted device | Valyan ingot        | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all ash wood parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Viridium Device
-
-Restores some of the integrity of all viridium parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Repair Device (birch wood)</summary>
+<blockquote>
+<h2>Repair Device (birch wood)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **Gasher**, **Nael Mossweep**, **Syren_DM** and **Cornish**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                 | δ                   | λ                 | Ω                       |
-| -------: | ----------------- | ------------------- | ----------------- | ----------------------- |
-| Material | Any hilted device | Viridium ingot      | Coal              | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `artifact of earth` | `heart of embers` | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all birch wood parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Repair Walnut Device
-
-Restores some of the integrity of all walnut parts in a hilted device.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Repair Device (copper)</summary>
+<blockquote>
+<h2>Repair Device (copper)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **Ethyn Wyrmbane**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                 | δ                  | λ                  | Ω                       |
-| -------: | ----------------- | ------------------ | ------------------ | ----------------------- |
-| Material | Any hilted device | Walnut wedge       | Tan leather strips | Spriggull bone shard    |
-|    Speak | `bonds of weapon` | `fragment of tera` | `skin of dais`     | `fragment of spriggull` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all copper parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Smokescreen
-
-Create a large temporary stack of smoke that obscures vision.
-
-| School     | Type     |
-| :--------- | :------- |
-| Abjuration | Prepared |
-
 <details>
-<summary>Incantations</summary>
+<summary>Repair Device (electrum)</summary>
+<blockquote>
+<h2>Repair Device (electrum)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **ApexAlphaGaming** and **DatWeirdGuy**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                   | δ                 | λ      |
-| -------: | ------------------- | ----------------- | ------ |
-| Material | Grass clump         | Empty flask       |        |
-|    Speak | `essence of embers` | `bonds of silica` | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all electrum parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Stoneskin
-
-Temporarily increases the damage protection of you and nearby Soulbound players.
-
-| School     | Type     |
-| :--------- | :------- |
-| Abjuration | Prepared |
-
 <details>
-<summary>Incantations</summary>
+<summary>Repair Device (gold)</summary>
+<blockquote>
+<h2>Repair Device (gold)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **Gasher**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                      | δ                  | λ                    | Ω                   |
-| -------: | ---------------------- | ------------------ | -------------------- | ------------------- |
-| Material | Flask containing water | Blue crystal shard | Burnt eggplant       | Rock                |
-|    Speak | `fluid of silica`      | `sliver of gems`   | `essence of produce` | `fragment of earth` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all gold parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Transmute Copper To Iron
-
-Transmutes a copper ingot to an iron ingot.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Repair Device (iron)</summary>
+<blockquote>
+<h2>Repair Device (iron)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Originally discovered by **The Kronk Creed**.  
-Rediscovered by **Szog2332** after balancing update.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                   | δ                 | λ                 | Ω      |
-| -------: | ------------------- | ----------------- | ----------------- | ------ |
-| Material | Copper ingot        | Blue crystal gem  | Coal              |        |
-|    Speak | `artifact of earth` | `essence of gems` | `heart of embers` | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all iron parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Transmute Gold To Silver
-
-Transmutes a gold ingot to a silver ingot.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Repair Device (mythril)</summary>
+<blockquote>
+<h2>Repair Device (mythril)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Originally discovered by **The Kronk Creed**.  
-Rediscovered by **Pink** after balancing update.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                   | δ                | λ               | Ω      |
-| -------: | ------------------- | ---------------- | --------------- | ------ |
-| Material | Gold ingot          | Blue crystal gem | Molten core     |        |
-|    Speak | `artifact of earth` | `aether of gems` | `heart of pyre` | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all mythril parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Transmute Ingot To Ore
-
-Transmutes any non-alloy ingot to ore at a ratio of 1 ingot to 2 ore.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Both hands |
-
 <details>
-<summary>Incantations</summary>
+<summary>Repair Device (oak wood)</summary>
+<blockquote>
+<h2>Repair Device (oak wood)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **Apolo**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                   | δ                |
-| -------: | ------------------- | ---------------- |
-| Material | Any non-alloy ingot | Rock             |
-|    Speak | `artifact of earth` | `bonds of earth` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all oak wood parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Transmute Iron Handle
-
-Transmutes a short or medium wooden handle to its iron equivalent.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Repair Device (palladium)</summary>
+<blockquote>
+<h2>Repair Device (palladium)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **ApexAlphaGaming**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                 | δ                   | λ                  | Ω      |
-| -------: | ----------------- | ------------------- | ------------------ | ------ |
-| Material | Wooden handle     | Iron ingot          | Tan leather strips |        |
-|    Speak | `heart of weapon` | `artifact of earth` | `bonds of dais`    | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all palladium parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Transmute Iron To Gold
-
-Transmutes an iron ingot to a gold ingot.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Repair Device (red iron)</summary>
+<blockquote>
+<h2>Repair Device (red iron)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Originally discovered by **The Kronk Creed**.  
-Rediscovered by **Szog2332** after balancing update.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                   | δ                 | λ                 | Ω      |
-| -------: | ------------------- | ----------------- | ----------------- | ------ |
-| Material | Iron ingot          | Blue crystal gem  | Coal              |        |
-|    Speak | `artifact of earth` | `essence of gems` | `heart of embers` | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all red iron parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Transmute Silver To Mythril
-
-Transmutes a silver ingot to a mythril ingot.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Repair Device (redwood)</summary>
+<blockquote>
+<h2>Repair Device (redwood)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Originally discovered by **The Kronk Creed**.  
-Rediscovered by **Pink** after balancing update.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                   | δ                | λ               | Ω      |
-| -------: | ------------------- | ---------------- | --------------- | ------ |
-| Material | Silver ingot        | Blue crystal gem | Fuel core       |        |
-|    Speak | `artifact of earth` | `aether of gems` | `heart of pyre` | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all redwood parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# Transmute Teleportation Potion
-
-Transmutes a flask containing one or more servings of water into teleportation potion.
-
-| School        | Type    | Casts from |
-| :------------ | :------ | :--------- |
-| Transmutation | Instant | Right hand |
-
 <details>
-<summary>Incantations</summary>
+<summary>Repair Device (silver)</summary>
+<blockquote>
+<h2>Repair Device (silver)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **Syren_DM**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                      | δ                  | λ      |
-| -------: | ---------------------- | ------------------ | ------ |
-| Material | Flask containing water | Burnt red mushroom |        |
-|    Speak | `fluid of silica`      | `essence of fungi` | `seal` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all silver parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
 
-# True Strike
+<details>
+<summary>Repair Device (valyan)</summary>
+<blockquote>
+<h2>Repair Device (valyan)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Temporarily increases the damage dealt by you and nearby Soulbound players.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-| School     | Type     |
-| :--------- | :------- |
-| Abjuration | Prepared |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
+
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all valyan parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
 
 <details>
-<summary>Incantations</summary>
+<summary>Repair Device (viridium)</summary>
+<blockquote>
+<h2>Repair Device (viridium)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
 
-Discovered by **Gasher**.
+  <dt>Type</dt>
+  <dd>Instant</dd>
 
-|     Dock | ζ                      | δ                  | λ               | Ω                   |
-| -------: | ---------------------- | ------------------ | --------------- | ------------------- |
-| Material | Flask containing water | Blue crystal shard | Burnt babu leg  | Karimata arrow      |
-|    Speak | `fluid of silica`      | `sliver of gems`   | `heart of babu` | `essence of weapon` |
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
 
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all viridium parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
+<summary>Repair Device (walnut wood)</summary>
+<blockquote>
+<h2>Repair Device (walnut wood)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
+
+  <dt>Type</dt>
+  <dd>Instant</dd>
+
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
+
+  <dt>Description</dt>
+  <dd>Restores some of the integrity of all walnut wood parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
+<summary>Transmute Copper To Iron</summary>
+<blockquote>
+<h2>Transmute Copper To Iron</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
+
+  <dt>Type</dt>
+  <dd>Instant</dd>
+
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
+
+  <dt>Description</dt>
+  <dd>Transmutes a copper ingot to an iron ingot.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
+<summary>Transmute Gold To Silver</summary>
+<blockquote>
+<h2>Transmute Gold To Silver</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
+
+  <dt>Type</dt>
+  <dd>Instant</dd>
+
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
+
+  <dt>Description</dt>
+  <dd>Transmutes a gold ingot to a silver ingot.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
+<summary>Transmute Ingot To Ore (copper)</summary>
+<blockquote>
+<h2>Transmute Ingot To Ore (copper)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
+
+  <dt>Type</dt>
+  <dd>Instant</dd>
+
+  <dt>Casts from</dt>
+  <dd>Both hands</dd>
+
+  <dt>Description</dt>
+  <dd>Transmutes a copper ingot to ore at a ratio of 1 ingot to 2 ore.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
+<summary>Transmute Ingot To Ore (gold)</summary>
+<blockquote>
+<h2>Transmute Ingot To Ore (gold)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
+
+  <dt>Type</dt>
+  <dd>Instant</dd>
+
+  <dt>Casts from</dt>
+  <dd>Both hands</dd>
+
+  <dt>Description</dt>
+  <dd>Transmutes a gold ingot to ore at a ratio of 1 ingot to 2 ore.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
+<summary>Transmute Ingot To Ore (iron)</summary>
+<blockquote>
+<h2>Transmute Ingot To Ore (iron)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
+
+  <dt>Type</dt>
+  <dd>Instant</dd>
+
+  <dt>Casts from</dt>
+  <dd>Both hands</dd>
+
+  <dt>Description</dt>
+  <dd>Transmutes a iron ingot to ore at a ratio of 1 ingot to 2 ore.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
+<summary>Transmute Ingot To Ore (mythril)</summary>
+<blockquote>
+<h2>Transmute Ingot To Ore (mythril)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
+
+  <dt>Type</dt>
+  <dd>Instant</dd>
+
+  <dt>Casts from</dt>
+  <dd>Both hands</dd>
+
+  <dt>Description</dt>
+  <dd>Transmutes a mythril ingot to ore at a ratio of 1 ingot to 2 ore.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
+<summary>Transmute Ingot To Ore (silver)</summary>
+<blockquote>
+<h2>Transmute Ingot To Ore (silver)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
+
+  <dt>Type</dt>
+  <dd>Instant</dd>
+
+  <dt>Casts from</dt>
+  <dd>Both hands</dd>
+
+  <dt>Description</dt>
+  <dd>Transmutes a silver ingot to ore at a ratio of 1 ingot to 2 ore.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
+<summary>Transmute Iron Handle (medium)</summary>
+<blockquote>
+<h2>Transmute Iron Handle (medium)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
+
+  <dt>Type</dt>
+  <dd>Instant</dd>
+
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
+
+  <dt>Description</dt>
+  <dd>Transmutes a medium wooden handle to its iron equivalent.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
+<summary>Transmute Iron Handle (short)</summary>
+<blockquote>
+<h2>Transmute Iron Handle (short)</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
+
+  <dt>Type</dt>
+  <dd>Instant</dd>
+
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
+
+  <dt>Description</dt>
+  <dd>Transmutes a short wooden handle to its iron equivalent.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
+<summary>Transmute Iron To Gold</summary>
+<blockquote>
+<h2>Transmute Iron To Gold</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
+
+  <dt>Type</dt>
+  <dd>Instant</dd>
+
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
+
+  <dt>Description</dt>
+  <dd>Transmutes an iron ingot to a gold ingot.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
+<summary>Transmute Silver To Mythril</summary>
+<blockquote>
+<h2>Transmute Silver To Mythril</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
+
+  <dt>Type</dt>
+  <dd>Instant</dd>
+
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
+
+  <dt>Description</dt>
+  <dd>Transmutes a silver ingot to a mythril ingot.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
+<summary>Transmute Teleportation Potion</summary>
+<blockquote>
+<h2>Transmute Teleportation Potion</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Transmutation</dd>
+
+  <dt>Type</dt>
+  <dd>Instant</dd>
+
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
+
+  <dt>Description</dt>
+  <dd>Transmutes a flask containing one or more servings of water into teleportation potion.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
 </details>
