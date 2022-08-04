@@ -47,13 +47,6 @@ Make sure your system time is correct. Voodoo validates tokens retrieved from Al
 </details>
 
 <details>
-<summary>Why is Voodoo stuck on the Waiting For Server screen?</summary>
-
-Voodoo uses a bot library created by Alta. Currently there are some issues with long-running connections to their API, so after some time passes, Alta stops sending server events to the bot. This means Voodoo does not detect when you join or leave a server, which it uses to connect your Voodoo session to your game session. There isn't much I can do about this, but you could politely ask Alta devs if they could please look into the issues with `js-tale`.
-
-</details>
-
-<details>
 <summary>I can't awaken Voodoo. Why is it not picking up my voice?</summary>
 
 Voodoo currently relies on Windows speech recognition which uses Windows language packs. Make sure you have **English (United States)** configured as one of your Windows languages. To configure your Windows languages:

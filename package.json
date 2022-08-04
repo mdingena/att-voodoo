@@ -19,7 +19,7 @@
     "extends": null,
     "appId": "com.marcdingena.townshiptale.voodoo",
     "productName": "Voodoo",
-    "copyright": "Copyright © 2021 ${author}",
+    "copyright": "Copyright © 2021-2022 ${author}",
     "mac": {
       "category": "public.app-category.utilities"
     },
@@ -54,7 +54,6 @@
     "@typescript-eslint/parser": "^4.26.1",
     "concurrently": "^6.0.1",
     "css-loader": "^6.7.1",
-    "doctoc": "^2.0.1",
     "dotenv": "^8.2.0",
     "electron": "^19.0.8",
     "electron-builder": "^23.1.0",
