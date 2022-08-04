@@ -20,6 +20,7 @@ export type Experience = {
 };
 
 export const experienceAtom = atom<Experience>({
+  freeResets: 0,
   upgrades: {},
   abjurationXpTotal: 0,
   abjurationXpSpent: 0,
