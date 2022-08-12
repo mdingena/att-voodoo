@@ -13,6 +13,7 @@ const development = {
     UPGRADE: 'http://localhost:3000/upgrade',
     HEARTBEAT: 'http://localhost:3000/heartbeat',
     INCANTATION: 'http://localhost:3000/incantation',
+    BLOOD_INCANTATION: 'http://localhost:3000/blood-incantation',
     SEAL: 'http://localhost:3000/seal',
     TRIGGER: 'http://localhost:3000/trigger'
   },
@@ -35,6 +36,7 @@ const production = {
     UPGRADE: 'https://att-voodoo-server.herokuapp.com/upgrade',
     HEARTBEAT: 'https://att-voodoo-server.herokuapp.com/heartbeat',
     INCANTATION: 'https://att-voodoo-server.herokuapp.com/incantation',
+    BLOOD_INCANTATION: 'https://att-voodoo-server.herokuapp.com/blood-incantation',
     SEAL: 'https://att-voodoo-server.herokuapp.com/seal',
     TRIGGER: 'https://att-voodoo-server.herokuapp.com/trigger'
   },

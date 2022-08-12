@@ -122,7 +122,7 @@ export const getMaterialComponents = (speech: string): string[] => {
       return ['dynamite', 'firework', 'flint', 'fuel core', 'molten core'];
 
     case 'revenant':
-      return ['cursed hand guard'];
+      return ['cursed hand guard', 'soulbond'];
 
     case 'salt':
       return ['salt'];

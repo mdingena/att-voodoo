@@ -129,6 +129,13 @@ export const Dashboard = (): JSX.Element => {
     chimeAudio.play();
   }, [shouldClearIncantations, setIncantations, setSpeechMode]);
 
+  const handleVoodooEnergizing = useCallback(() => {
+    if (shouldClearIncantations) setIncantations([]);
+    setSpeechMode(SpeechMode.Energizing);
+    chimeAudio.currentTime = 0;
+    chimeAudio.play();
+  }, [shouldClearIncantations, setIncantations, setSpeechMode]);
+
   const handleVoodooPreparedSpellTriggered = useCallback(
     (_: Event, newExperience: Experience, preparedSpells: PreparedSpell[]) => {
       setExperience(newExperience);
@@ -177,6 +184,7 @@ export const Dashboard = (): JSX.Element => {
     ipcRenderer.on('voodoo-suppressed', handleVoodooSuppressed);
     ipcRenderer.on('voodoo-awake', handleVoodooAwake);
     ipcRenderer.on('voodoo-incanting', handleVoodooIncanting);
+    ipcRenderer.on('voodoo-energizing', handleVoodooEnergizing);
     ipcRenderer.on('voodoo-prepared-spell-triggered', handleVoodooPreparedSpellTriggered);
     ipcRenderer.on('voodoo-incantation-aborted', handleVoodooIncantationAborted);
     ipcRenderer.on('voodoo-incantation-confirmed', handleVoodooIncantationConfirmed);
@@ -212,6 +220,7 @@ export const Dashboard = (): JSX.Element => {
     handleVoodooSuppressed,
     handleVoodooAwake,
     handleVoodooIncanting,
+    handleVoodooEnergizing,
     handleVoodooPreparedSpellTriggered,
     handleVoodooIncantationAborted,
     handleVoodooIncantationConfirmed,
