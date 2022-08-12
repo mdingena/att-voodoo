@@ -25,6 +25,7 @@ type PreparedSpell = {
 const MODES = {
   AWAKE: 'AWAKE',
   INCANTING: 'INCANTING',
+  ENERGIZING: 'ENERGIZING',
   SUPPRESSED: 'SUPPRESSED'
 };
 
@@ -35,8 +36,13 @@ const PHRASES = {
     CONFIRM: 'seal',
     ABORT: 'nullify'
   },
+  ENERGIZE: {
+    START: 'sanguinem magicae',
+    ABORT: 'nullify'
+  },
   SUPPRESS: 'suppress voodoo',
-  TRIGGER: 'evoke'
+  TRIGGER: 'evoke',
+  BLOOD_TRIGGER: 'excio'
 };
 
 let hasServerConnection = false;
@@ -60,8 +66,8 @@ let mode = MODES.SUPPRESSED;
 let experience: Experience;
 let incantations: string[] = [];
 let preparedSpells: PreparedSpell[] = [];
-
 let studiedSpellKey: string | null = null;
+let energizingResponse: any;
 
 ipcMain.handle('study-spell', (_, spellKey: string) => {
   studiedSpellKey = spellKey;
@@ -86,6 +92,7 @@ export const handleSpeech = async (
 
   const isAwakenPhrase = speech === PHRASES.AWAKEN;
   const isTriggerPhrase = speech.split(' ')[0] === PHRASES.TRIGGER;
+  const isBloodTriggerPhrase = speech.split(' ')[0] === PHRASES.BLOOD_TRIGGER;
 
   let response;
 
@@ -112,9 +119,21 @@ export const handleSpeech = async (
           logger({ mode });
           break;
 
+        case PHRASES.ENERGIZE.START:
+          energizingResponse = await voodooGet(accessToken, config.API_ENDPOINTS.BLOOD_INCANTATION);
+
+          if (energizingResponse.ok && energizingResponse.result) {
+            mode = MODES.ENERGIZING;
+            ui?.webContents.send('voodoo-energizing');
+            logger({ mode });
+          } else {
+            logger(energizingResponse.error);
+          }
+          break;
+
         default:
-          if (isTriggerPhrase) {
-            const verbalTrigger = speech.replace(`${PHRASES.TRIGGER} `, '');
+          if (isTriggerPhrase || isBloodTriggerPhrase) {
+            const verbalTrigger = speech.replace(`${PHRASES.TRIGGER} `, '').replace(`${PHRASES.BLOOD_TRIGGER} `, '');
             const response = await voodooPost(accessToken, config.API_ENDPOINTS.TRIGGER, [verbalTrigger]);
 
             if (response.ok) {
@@ -173,12 +192,62 @@ export const handleSpeech = async (
           break;
 
         default:
-          if (!isAwakenPhrase && !isTriggerPhrase) {
+          if (!isAwakenPhrase && !isTriggerPhrase && !isBloodTriggerPhrase) {
             const response = await voodooPost(accessToken, config.API_ENDPOINTS.INCANTATION, [
               speech,
               getMaterialComponents(speech),
               studiedSpellKey
             ]);
+
+            if (response.ok) {
+              experience = response.result.experience;
+              incantations = response.result.incantations;
+              preparedSpells = response.result.preparedSpells;
+
+              if (response.result.incantations.length === 4) {
+                mode = MODES.AWAKE;
+                ui?.webContents.send('voodoo-incantation-confirmed', experience, incantations, preparedSpells);
+                ui?.webContents.send('voodoo-awake');
+                logger({ mode });
+              } else {
+                ui?.webContents.send('voodoo-incantation', incantations, preparedSpells);
+              }
+
+              logger({ experience, incantations, preparedSpells });
+            } else {
+              logger(response.error);
+            }
+          }
+      }
+      break;
+
+    case MODES.ENERGIZING:
+      switch (speech) {
+        case PHRASES.SUPPRESS:
+          mode = MODES.SUPPRESSED;
+          ui?.webContents.send('voodoo-suppressed');
+          logger({ mode });
+          break;
+
+        case PHRASES.ENERGIZE.ABORT:
+          mode = MODES.AWAKE;
+          ui?.webContents.send('voodoo-awake');
+          logger({ mode });
+
+          response = await voodooDelete(accessToken, config.API_ENDPOINTS.BLOOD_INCANTATION);
+
+          if (response.ok) {
+            incantations = response.result;
+            ui?.webContents.send('voodoo-incantation-aborted', incantations);
+            logger({ incantations });
+          } else {
+            logger(response.error);
+          }
+          break;
+
+        default:
+          if (!isAwakenPhrase && !isTriggerPhrase && !isBloodTriggerPhrase) {
+            const response = await voodooPost(accessToken, config.API_ENDPOINTS.BLOOD_INCANTATION, [speech]);
 
             if (response.ok) {
               experience = response.result.experience;
