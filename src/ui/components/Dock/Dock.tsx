@@ -22,7 +22,8 @@ export const Dock = ({ slot, studying, hint, isEmpty = false }: DockProps): JSX.
 
   const isStudying = typeof studying !== 'undefined' && studying !== null;
   const isHinting = typeof hint !== 'undefined';
-  const isIncanting = speechMode === SpeechMode.Incanting;
+  const isIncanting =
+    speechMode === SpeechMode.Incanting || speechMode === SpeechMode.Conjuring || speechMode === SpeechMode.Energizing;
   const isActiveDock = isIncanting && slot === incantations.length;
 
   const dockIncantation = incantations[slot] ?? null;
@@ -33,10 +34,22 @@ export const Dock = ({ slot, studying, hint, isEmpty = false }: DockProps): JSX.
   let dockStyle, dockIcon, verbalComponent, materialComponent;
 
   if (isActiveDock) {
+    const instructionTop =
+      speechMode === SpeechMode.Conjuring
+        ? 'Say the Heartfruit passphrase'
+        : speechMode === SpeechMode.Energizing
+        ? 'Speak an incantation to'
+        : 'Speak an incantation or';
+    const instructionBottom =
+      speechMode === SpeechMode.Conjuring
+        ? 'or say “NULLIFY”.'
+        : speechMode === SpeechMode.Energizing
+        ? 'energize a Blood Conduit.'
+        : 'say “SEAL” or “NULLIFY”.';
     dockStyle = styles.active;
     dockIcon = Slot[slot];
-    verbalComponent = isEmpty ? 'EMPTY' : isHinting ? `Say “${hint?.[0].toUpperCase()}”` : 'Speak an incantation or';
-    materialComponent = isEmpty ? '' : isHinting ? hint?.[1] ?? '' : 'say “SEAL” or “NULLIFY”.';
+    verbalComponent = isEmpty ? 'EMPTY' : isHinting ? `Say “${hint?.[0].toUpperCase()}”` : instructionTop;
+    materialComponent = isEmpty ? '' : isHinting ? hint?.[1] ?? '' : instructionBottom;
   } else {
     if (isEmpty) {
       dockStyle = isIncanting && incantations[slot] ? styles.filled : styles.disabled;

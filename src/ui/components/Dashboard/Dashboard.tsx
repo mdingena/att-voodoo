@@ -70,7 +70,9 @@ enum Mode {
   Locked = SpeechMode.Locked,
   Suppressed = SpeechMode.Suppressed,
   Ready = SpeechMode.Awake,
-  Attuning = SpeechMode.Incanting
+  Attuning = SpeechMode.Incanting,
+  Energizing = SpeechMode.Energizing,
+  Conjuring = SpeechMode.Conjuring
 }
 
 export const Dashboard = (): JSX.Element => {
@@ -157,15 +159,22 @@ export const Dashboard = (): JSX.Element => {
   );
 
   const handleVoodooIncantationConfirmed = useCallback(
-    (_: Event, newExperience: Experience, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
+    (
+      _: Event,
+      newExperience: Experience,
+      incantations: Incantation[],
+      preparedSpells: PreparedSpell[],
+      isCastingHeartfruit: boolean
+    ) => {
       setExperience(newExperience);
       setIncantations(incantations);
       setShouldClearIncantations(true);
       if (preparedSpells) setPreparedSpells(preparedSpells);
+      if (isCastingHeartfruit) setSpeechMode(SpeechMode.Conjuring);
       castAudio.currentTime = 0;
       castAudio.play();
     },
-    [setExperience, setIncantations, setPreparedSpells]
+    [setExperience, setIncantations, setPreparedSpells, setSpeechMode]
   );
 
   const handleVoodooIncantation = useCallback(
@@ -246,9 +255,12 @@ export const Dashboard = (): JSX.Element => {
 
   const studyingSpellName = studying && spellbook[studying].name;
 
+  const rootStyle =
+    speechMode === SpeechMode.Conjuring || speechMode === SpeechMode.Energizing ? styles.sanguinem : styles.root;
+
   return (
     <>
-      <div className={isPanelOpen ? styles.blur : styles.root}>
+      <div className={isPanelOpen ? styles.blur : rootStyle}>
         <div className={styles[modeStyle]}>{Mode[speechMode]}</div>
         <div
           className={styles.incantations}

@@ -5,7 +5,8 @@ export enum SpeechMode {
   Suppressed,
   Awake,
   Incanting,
-  Energizing
+  Energizing,
+  Conjuring
 }
 
 export const speechModeAtom = atom<SpeechMode>(SpeechMode.Suppressed);

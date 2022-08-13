@@ -66,6 +66,7 @@ let mode = MODES.SUPPRESSED;
 let experience: Experience;
 let incantations: string[] = [];
 let preparedSpells: PreparedSpell[] = [];
+let isCastingHeartfruit = false;
 let studiedSpellKey: string | null = null;
 let energizingResponse: any;
 
@@ -184,8 +185,15 @@ export const handleSpeech = async (
             experience = response.result.experience;
             incantations = response.result.incantations;
             preparedSpells = response.result.preparedSpells;
-            ui?.webContents.send('voodoo-incantation-confirmed', experience, incantations, preparedSpells);
-            logger({ experience, incantations, preparedSpells });
+            isCastingHeartfruit = response.result.conjureHeartfruit;
+            ui?.webContents.send(
+              'voodoo-incantation-confirmed',
+              experience,
+              incantations,
+              preparedSpells,
+              isCastingHeartfruit
+            );
+            logger({ experience, incantations, preparedSpells, isCastingHeartfruit });
           } else {
             logger(response.error);
           }
