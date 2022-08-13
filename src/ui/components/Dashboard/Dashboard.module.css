@@ -9,6 +9,28 @@
   will-change: filter;
 }
 
+.sanguinem {
+  /* Override with Blood Magic theme. */
+  composes: root;
+  --colour-green-100: #0a0101;
+  --colour-green-200: #180404;
+  --colour-green-300: #270606;
+  --colour-green-400: #530d0d;
+  --colour-green-500: #7f1414;
+  --colour-green-600: #ab1a1a;
+  --colour-green-700: #de2b2b;
+  --colour-green-800: #f5bfbf;
+  --colour-green-900: #fefafa;
+  --colour-crystal: #bb5050;
+
+  --font-colour-primary: var(--colour-green-900);
+  --font-colour-secondary: var(--colour-green-700);
+  --font-colour-tertiary: var(--colour-green-500);
+
+  --text-shadow-normal: 0 3px 2px var(--colour-green-100);
+  --text-shadow-small: 0 2px 2px var(--colour-green-100);
+}
+
 .blur {
   composes: root;
   filter: brightness(50%);
@@ -29,7 +51,9 @@
 .locked,
 .suppressed,
 .awake,
-.incanting {
+.incanting,
+.conjuring,
+.energizing {
   composes: header;
   margin-bottom: 16px;
 }
@@ -41,7 +65,9 @@
   color: var(--colour-green-700);
 }
 
-.incanting {
+.incanting,
+.conjuring,
+.energizing {
   background: var(--colour-green-600);
   color: var(--colour-green-900);
 }
