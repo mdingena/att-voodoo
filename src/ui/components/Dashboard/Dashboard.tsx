@@ -188,6 +188,20 @@ export const Dashboard = (): JSX.Element => {
     [setIncantations, setPreparedSpells]
   );
 
+  const handleVoodooConjureHeartfruit = useCallback(
+    (_: Event, ok: boolean) => {
+      if (ok) {
+        castAudio.currentTime = 0;
+        castAudio.play();
+      } else {
+        droneAudio.currentTime = 0;
+        droneAudio.play();
+      }
+      setSpeechMode(SpeechMode.Awake);
+    },
+    [setSpeechMode]
+  );
+
   useEffect(() => {
     ipcRenderer.on('update-servers', handleUpdateServers);
     ipcRenderer.on('voodoo-suppressed', handleVoodooSuppressed);
@@ -198,6 +212,7 @@ export const Dashboard = (): JSX.Element => {
     ipcRenderer.on('voodoo-incantation-aborted', handleVoodooIncantationAborted);
     ipcRenderer.on('voodoo-incantation-confirmed', handleVoodooIncantationConfirmed);
     ipcRenderer.on('voodoo-incantation', handleVoodooIncantation);
+    ipcRenderer.on('voodoo-conjure-heartfruit', handleVoodooConjureHeartfruit);
 
     ipcRenderer
       .invoke('update-player', { accessToken })
@@ -215,13 +230,16 @@ export const Dashboard = (): JSX.Element => {
       });
 
     return () => {
-      ipcRenderer.removeListener('update-server', handleUpdateServers);
+      ipcRenderer.removeListener('update-servers', handleUpdateServers);
       ipcRenderer.removeListener('voodoo-suppressed', handleVoodooSuppressed);
       ipcRenderer.removeListener('voodoo-awake', handleVoodooAwake);
       ipcRenderer.removeListener('voodoo-incanting', handleVoodooIncanting);
+      ipcRenderer.removeListener('voodoo-energizing', handleVoodooEnergizing);
       ipcRenderer.removeListener('voodoo-prepared-spell-triggered', handleVoodooPreparedSpellTriggered);
       ipcRenderer.removeListener('voodoo-incantation-aborted', handleVoodooIncantationAborted);
+      ipcRenderer.removeListener('voodoo-incantation-confirmed', handleVoodooIncantationConfirmed);
       ipcRenderer.removeListener('voodoo-incantation', handleVoodooIncantation);
+      ipcRenderer.removeListener('voodoo-conjure-heartfruit', handleVoodooConjureHeartfruit);
     };
   }, [
     accessToken,
@@ -234,6 +252,7 @@ export const Dashboard = (): JSX.Element => {
     handleVoodooIncantationAborted,
     handleVoodooIncantationConfirmed,
     handleVoodooIncantation,
+    handleVoodooConjureHeartfruit,
     setPreparedSpells,
     setExperience,
     setDexterity
