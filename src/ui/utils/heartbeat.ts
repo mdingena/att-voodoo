@@ -24,7 +24,7 @@ export const heartbeat = async (ui: BrowserWindow | null, accessToken: string): 
   try {
     response = await voodooGet(accessToken, config.API_ENDPOINTS.HEARTBEAT);
   } catch (error) {
-    response = { ok: false, error: error.message };
+    response = { ok: false, error: (error as Error).message };
   }
 
   if (response.ok) {
