@@ -80,7 +80,7 @@ export const Dashboard = (): JSX.Element => {
   const [activeServer, setActiveServer] = useAtom(activeServerAtom);
   const [, setAppStage] = useAtom(appStageAtom);
   const [accessToken] = useAtom(accessTokenAtom);
-  const [, setIncantations] = useAtom(incantationsAtom);
+  const [currentIncantations, setIncantations] = useAtom(incantationsAtom);
   const [preparedSpells, setPreparedSpells] = useAtom(preparedSpellsAtom);
   const [experience, setExperience] = useAtom(experienceAtom);
   const [, setDexterity] = useAtom(dexterityAtom);
@@ -189,7 +189,11 @@ export const Dashboard = (): JSX.Element => {
   );
 
   const handleVoodooConjureHeartfruit = useCallback(
-    (_: Event, ok: boolean) => {
+    (_: Event, ok: boolean, passphrase: string[]) => {
+      setIncantations([
+        ...currentIncantations,
+        ...passphrase.map<[string, string, undefined]>(word => [word, '', undefined])
+      ]);
       if (ok) {
         castAudio.currentTime = 0;
         castAudio.play();
@@ -199,7 +203,7 @@ export const Dashboard = (): JSX.Element => {
       }
       setSpeechMode(SpeechMode.Awake);
     },
-    [setSpeechMode]
+    [currentIncantations, setIncantations, setSpeechMode]
   );
 
   useEffect(() => {
