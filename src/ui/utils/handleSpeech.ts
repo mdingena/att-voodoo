@@ -186,7 +186,7 @@ export const handleSpeech = async (
             experience = response.result.experience;
             incantations = response.result.incantations;
             preparedSpells = response.result.preparedSpells;
-            isCastingHeartfruit = response.result.conjureHeartfruit;
+            isCastingHeartfruit = response.result.isCastingHeartfruit;
 
             if (isCastingHeartfruit) {
               mode = MODES.CONJURING;
@@ -302,16 +302,41 @@ export const handleSpeech = async (
     }
 
     case MODES.CONJURING: {
-      const response = await voodooPost(accessToken, config.API_ENDPOINTS.BLOOD_INCANTATION, [speech]);
+      switch (speech) {
+        case PHRASES.INCANTATION.ABORT: {
+          mode = MODES.AWAKE;
+          ui?.webContents.send('voodoo-awake');
+          logger({ mode });
 
-      mode = MODES.AWAKE;
-      ui?.webContents.send('voodoo-conjure-heartfruit', response.ok);
-      logger({ mode });
+          const response = await voodooDelete(accessToken, config.API_ENDPOINTS.INCANTATION);
 
-      if (!response.ok) {
-        logger(response.error);
+          if (response.ok) {
+            incantations = response.result;
+            ui?.webContents.send('voodoo-incantation-aborted', incantations);
+            logger({ incantations });
+          } else {
+            logger(response.error);
+          }
+          break;
+        }
+
+        default: {
+          const passphrase = speech.split(' ');
+
+          if (passphrase.length !== 3) return;
+
+          const response = await voodooPost(accessToken, config.API_ENDPOINTS.HEARTFRUIT, passphrase);
+
+          mode = MODES.AWAKE;
+          ui?.webContents.send('voodoo-conjure-heartfruit', response.ok, passphrase);
+          logger({ mode });
+
+          if (!response.ok) {
+            logger(response.error);
+          }
+          break;
+        }
       }
-      break;
     }
   }
 };
