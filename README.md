@@ -5,7 +5,7 @@
 <h1 align="center">Voodoo — Magic mod for <i>A Township Tale</i></h3></h1>
 
 <p align="center">
-  <a href="#"><img alt="Chat with the Voodoo community on Discord" src="https://img.shields.io/discord/855827702992863242?style=for-the-badge" /></a>
+  <a href="https://discord.gg/THy2AVBPHX" target="_blank"><img alt="Chat with the Voodoo community on Discord" src="https://img.shields.io/discord/855827702992863242?style=for-the-badge" /></a>
   <a href="CODE-OF-CONDUCT.md"><img alt="contributor covenant v2.0 adopted" src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?style=for-the-badge" /></a>
 </p>
 
