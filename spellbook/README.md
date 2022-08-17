@@ -370,7 +370,40 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Conjures additional servings of teleportation potion inside of a flask already containing teleportation potion.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "FLUID OF SILICA"
+            <br />
+            teleportation flask
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSANCE OF FUNGI"
+            <br />
+            burnt red spotted mushroom
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "SEAL"
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -393,7 +426,40 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Conjures additional servings of water inside of a flask already containing water.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "FLUID OF SILICA"
+            <br />
+            water flask
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FLUID OF PRODUCE"
+            <br />
+            ripe blueberry
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "SEAL"
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -640,7 +706,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
 </blockquote>
 </details>
 
-# 🪄 Transmutation
+# ➡ Transmutation
 
 <details>
 <summary>Anamnesis</summary>
@@ -752,7 +818,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Splits a valyan ingot into its base metals.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "HEART OF WEAPON"
+            <br />
+            targeted weapon
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSANCE OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF EARTH"
+            <br />
+            valyan ingot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FLUID OF SPRIGGULL"
+            <br />
+            bone shard
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -844,7 +953,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Restores some of the integrity of all copper parts in a hilted device.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "HEART OF WEAPON"
+            <br />
+            targeted weapon
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSANCE OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF EARTH"
+            <br />
+            copper ingot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FLUID OF SPRIGGULL"
+            <br />
+            bone shard
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -867,7 +1019,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Restores some of the integrity of all electrum parts in a hilted device.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "HEART OF WEAPON"
+            <br />
+            targeted weapon
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSANCE OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF EARTH"
+            <br />
+            electrum ingot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FLUID OF SPRIGGULL"
+            <br />
+            bone shard
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -890,7 +1085,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Restores some of the integrity of all gold parts in a hilted device.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "HEART OF WEAPON"
+            <br />
+            targeted weapon
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSANCE OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF EARTH"
+            <br />
+            gold ingot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FLUID OF SPRIGGULL"
+            <br />
+            bone shard
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -913,7 +1151,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Restores some of the integrity of all iron parts in a hilted device.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "HEART OF WEAPON"
+            <br />
+            targeted weapon
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSANCE OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF EARTH"
+            <br />
+            iron ingot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FLUID OF SPRIGGULL"
+            <br />
+            bone shard
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -936,7 +1217,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Restores some of the integrity of all mythril parts in a hilted device.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "HEART OF WEAPON"
+            <br />
+            targeted weapon
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSANCE OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF EARTH"
+            <br />
+            mythril ingot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FLUID OF SPRIGGULL"
+            <br />
+            bone shard
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -982,7 +1306,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Restores some of the integrity of all palladium parts in a hilted device.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "HEART OF WEAPON"
+            <br />
+            targeted weapon
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSANCE OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF EARTH"
+            <br />
+            palladium ingot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FLUID OF SPRIGGULL"
+            <br />
+            bone shart
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -1005,7 +1372,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Restores some of the integrity of all red iron parts in a hilted device.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "HEART OF WEAPON"
+            <br />
+            targeted weapon
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSANCE OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF EARTH"
+            <br />
+            red iron ingot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FLUID OF SPRIGGULL"
+            <br />
+            bone shard
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -1051,7 +1461,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Restores some of the integrity of all silver parts in a hilted device.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "HEART OF WEAPON"
+            <br />
+            targeted weapon
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSANCE OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF EARTH"
+            <br />
+            silver ingot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FLUID OF SPRIGGULL"
+            <br />
+            bone shard
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -1074,7 +1527,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Restores some of the integrity of all valyan parts in a hilted device.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "HEART OF WEAPON"
+            <br />
+            targeted weapon
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSANCE OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF EARTH"
+            <br />
+            valyan ingot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FLUID OF SPRIGGULL"
+            <br />
+            bone shard
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -1097,7 +1593,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Restores some of the integrity of all viridium parts in a hilted device.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "HEART OF WEAPON"
+            <br />
+            targeted weapon
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSANCE OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF EARTH"
+            <br />
+            viridium ingot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "FLUID OF SPRIGGULL"
+            <br />
+            bone shard
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -1143,7 +1682,48 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Transmutes a copper ingot to an iron ingot.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "ESSANCE OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF EARTH"
+            <br />
+            copper ingot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "HEART OF GEMS"
+            <br />
+            crystal gem
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "SEAL"
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -1350,7 +1930,48 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Transmutes an iron ingot to a gold ingot.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "ESSANCE OF EMBERS"
+            <br />
+            coal
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF EARTH"
+            <br />
+            iron ingot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "HEART OF GEMS"
+            <br />
+            crystal gem
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "SEAL"
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -1396,7 +2017,40 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Transmutes a flask containing one or more servings of water into teleportation potion.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "FLUID OF SILICA"
+            <br />
+            water flask
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSANCE OF FUNGI"
+            <br />
+            burnt red spotted mushroom
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "SEAL"
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
