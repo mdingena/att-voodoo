@@ -384,15 +384,15 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "FLUID OF SILICA"
             <br />
-            teleportation flask
+            flask containing teleportation potion
           </td>
         </tr>
         <tr>
           <td align="center"><code>δ</code></td>
           <td>
-            "ESSANCE OF FUNGI"
+            "ESSENCE OF FUNGI"
             <br />
-            burnt red spotted mushroom
+            burnt red mushroom
           </td>
         </tr>
         <tr>
@@ -440,7 +440,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "FLUID OF SILICA"
             <br />
-            water flask
+            flask containing water
           </td>
         </tr>
         <tr>
@@ -706,7 +706,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
 </blockquote>
 </details>
 
-# ➡ Transmutation
+# 🪄 Transmutation
 
 <details>
 <summary>Anamnesis</summary>
@@ -818,50 +818,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Splits a valyan ingot into its base metals.</dd>
 
   <dt>Incantations</dt>
-  <dd>
-    <table>
-      <thead>
-        <tr>
-          <th>Dock</th>
-          <th>Incantation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td align="center"><code>ζ</code></td>
-          <td>
-            "HEART OF WEAPON"
-            <br />
-            targeted weapon
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
-            "ESSANCE OF EMBERS"
-            <br />
-            coal
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
-            "ARTIFACT OF EARTH"
-            <br />
-            valyan ingot
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
-            "FLUID OF SPRIGGULL"
-            <br />
-            bone shard
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </dd>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
 </dl>
 </blockquote>
 </details>
@@ -967,19 +924,19 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF WEAPON"
             <br />
-            targeted weapon
+            hilted apparatus
           </td>
         </tr>
         <tr>
           <td align="center"><code>δ</code></td>
           <td>
-            "ESSANCE OF EMBERS"
+            "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -987,11 +944,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
       </tbody>
@@ -1033,19 +990,19 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF WEAPON"
             <br />
-            targeted weapon
+            hilted apparatus
           </td>
         </tr>
         <tr>
           <td align="center"><code>δ</code></td>
           <td>
-            "ESSANCE OF EMBERS"
+            "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -1053,11 +1010,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
       </tbody>
@@ -1099,19 +1056,19 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF WEAPON"
             <br />
-            targeted weapon
+            hilted apparatus
           </td>
         </tr>
         <tr>
           <td align="center"><code>δ</code></td>
           <td>
-            "ESSANCE OF EMBERS"
+            "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -1119,11 +1076,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
       </tbody>
@@ -1165,19 +1122,19 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF WEAPON"
             <br />
-            targeted weapon
+            hilted apparatus
           </td>
         </tr>
         <tr>
           <td align="center"><code>δ</code></td>
           <td>
-            "ESSANCE OF EMBERS"
+            "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -1185,11 +1142,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
       </tbody>
@@ -1231,19 +1188,19 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF WEAPON"
             <br />
-            targeted weapon
+            hilted apparatus
           </td>
         </tr>
         <tr>
           <td align="center"><code>δ</code></td>
           <td>
-            "ESSANCE OF EMBERS"
+            "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -1251,11 +1208,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
       </tbody>
@@ -1320,19 +1277,19 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF WEAPON"
             <br />
-            targeted weapon
+            hilted apparatus
           </td>
         </tr>
         <tr>
           <td align="center"><code>δ</code></td>
           <td>
-            "ESSANCE OF EMBERS"
+            "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -1340,11 +1297,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shart
+            spriggull bone shard
           </td>
         </tr>
       </tbody>
@@ -1386,19 +1343,19 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF WEAPON"
             <br />
-            targeted weapon
+            hilted apparatus
           </td>
         </tr>
         <tr>
           <td align="center"><code>δ</code></td>
           <td>
-            "ESSANCE OF EMBERS"
+            "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -1406,11 +1363,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
       </tbody>
@@ -1475,19 +1432,19 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF WEAPON"
             <br />
-            targeted weapon
+            hilted apparatus
           </td>
         </tr>
         <tr>
           <td align="center"><code>δ</code></td>
           <td>
-            "ESSANCE OF EMBERS"
+            "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -1495,11 +1452,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
       </tbody>
@@ -1541,19 +1498,19 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF WEAPON"
             <br />
-            targeted weapon
+            hilted apparatus
           </td>
         </tr>
         <tr>
           <td align="center"><code>δ</code></td>
           <td>
-            "ESSANCE OF EMBERS"
+            "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -1561,11 +1518,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
       </tbody>
@@ -1607,19 +1564,19 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF WEAPON"
             <br />
-            targeted weapon
+            hilted apparatus
           </td>
         </tr>
         <tr>
           <td align="center"><code>δ</code></td>
           <td>
-            "ESSANCE OF EMBERS"
+            "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -1627,11 +1584,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
       </tbody>
@@ -1694,7 +1651,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "ESSANCE OF EMBERS"
+            "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
@@ -1708,15 +1665,15 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "HEART OF GEMS"
             <br />
-            crystal gem
+            blue crystal gem
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "SEAL"
           </td>
@@ -1942,7 +1899,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "ESSANCE OF EMBERS"
+            "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
@@ -1956,15 +1913,15 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "HEART OF GEMS"
             <br />
-            crystal gem
+            blue crystal gem
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "SEAL"
           </td>
@@ -2031,15 +1988,15 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "FLUID OF SILICA"
             <br />
-            water flask
+            flask containing water
           </td>
         </tr>
         <tr>
           <td align="center"><code>δ</code></td>
           <td>
-            "ESSANCE OF FUNGI"
+            "ESSENCE OF FUNGI"
             <br />
-            burnt red spotted mushroom
+            burnt red mushroom
           </td>
         </tr>
         <tr>
