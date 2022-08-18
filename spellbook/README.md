@@ -21,7 +21,48 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Temporarily increases your skill XP multiplier. Affects all skill trees except Voodoo.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "FLUID OF SILICA"
+            <br />
+            flask containing water
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSENCE OF PRODUCE"
+            <br />
+            burnt onion
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "AETHER OF GEMS"
+            <br />
+            blue crystal shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -41,7 +82,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Temporarily increases the movement speed of you and nearby Soulbound players.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "FLUID OF SILICA"
+            <br />
+            flask containing water
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSENCE OF DAIS"
+            <br />
+            burnt dais leg
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "AETHER OF GEMS"
+            <br />
+            blue crystal shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "TUFT OF SPRIGGULL"
+            <br />
+            red spriggull feather
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -81,7 +165,48 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Temporarily increases the maximum health of you and nearby Soulbound players.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "FLUID OF SILICA"
+            <br />
+            flask containing water
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSENCE OF PRODUCE"
+            <br />
+            burnt carrot
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "AETHER OF GEMS"
+            <br />
+            blue crystal shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -101,7 +226,40 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Creates a large temporary stack of smoke that obscures vision.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "BONDS OF SILICA"
+            <br />
+            empty flask
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSENCE OF EMBERS"
+            <br />
+            grass clump
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "SEAL"
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -121,7 +279,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Creates a large temporary stack of smoke that obscures vision.Temporarily increases the damage protection of you and nearby Soulbound players.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "FLUID OF SILICA"
+            <br />
+            flask containing water
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSENCE OF PRODUCE"
+            <br />
+            burnt eggplant
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "AETHER OF GEMS"
+            <br />
+            blue crystal shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SKIN OF EARTH"
+            <br />
+            rock
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
@@ -141,7 +342,50 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Temporarily increases the damage dealt by you and nearby Soulbound players.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "FLUID OF SILICA"
+            <br />
+            flask containing water
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ESSENCE OF BABU"
+            <br />
+            burnt babu leg
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "AETHER OF GEMS"
+            <br />
+            blue crystal shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "ARTIFACT OF WEAPON"
+            <br />
+            karimata arrow
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
