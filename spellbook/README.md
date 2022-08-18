@@ -21,7 +21,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Temporarily increases your skill XP multiplier. Affects all skill trees except Voodoo.</dd>
 
   <dt>Incantations</dt>
-  <dd>Discovered by <b>KennyeSpring</b>
+  <dd>
     <table>
       <thead>
         <tr>
@@ -82,7 +82,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Temporarily increases the movement speed of you and nearby Soulbound players.</dd>
 
   <dt>Incantations</dt>
-  <dd>Discovered by <b>KennyeSpring</b>
+  <dd>
     <table>
       <thead>
         <tr>
@@ -165,7 +165,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Temporarily increases the maximum health of you and nearby Soulbound players.</dd>
 
   <dt>Incantations</dt>
-  <dd>Discovered by <b>KennyeSpring</b>
+  <dd>
     <table>
       <thead>
         <tr>
@@ -226,7 +226,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Creates a large temporary stack of smoke that obscures vision.</dd>
 
   <dt>Incantations</dt>
-  <dd>Discovered by <b>CrossbowCat</b>
+  <dd>
     <table>
       <thead>
         <tr>
@@ -279,7 +279,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Creates a large temporary stack of smoke that obscures vision.Temporarily increases the damage protection of you and nearby Soulbound players.</dd>
 
   <dt>Incantations</dt>
-  <dd>Discovered by <b>KennyeSpring</b>
+  <dd>
     <table>
       <thead>
         <tr>
@@ -342,7 +342,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Temporarily increases the damage dealt by you and nearby Soulbound players.</dd>
 
   <dt>Incantations</dt>
-  <dd>Discovered by <b>KennyeSpring</b>
+  <dd>
     <table>
       <thead>
         <tr>
