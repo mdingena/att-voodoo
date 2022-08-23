@@ -49,10 +49,24 @@
   <rule id="bloodTrigger">
     <item> excio </item>
     <one-of>
+      <item> aureola gladiorum </item>
+      <item> cultellus magnus </item>
+      <item> cultellus magnus daemonis </item>
+      <item> frixum apri </item>
+      <item> frixum cervi </item>
       <item> frixum volucri </item>
+      <item> gladius brevis </item>
+      <item> gladius brevis daemonis </item>
+      <item> gladius longus </item>
+      <item> gladius longus daemonis </item>
+      <item> gladius magnus </item>
+      <item> gladius magnus daemonis </item>
       <item> malum somnium </item>
       <item> nubilum acidum </item>
+      <item> nubilum electricae </item>
       <item> nubilum glacies </item>
+      <item> nubilum renovatio </item>
+      <item> nubilum tormentum </item>
       <item> prismatica ruptis </item>
       <item> saxum </item>
       <item> subitus infernus </item>
