@@ -70,7 +70,9 @@ enum Mode {
   Locked = SpeechMode.Locked,
   Suppressed = SpeechMode.Suppressed,
   Ready = SpeechMode.Awake,
-  Attuning = SpeechMode.Incanting
+  Attuning = SpeechMode.Incanting,
+  Energizing = SpeechMode.Energizing,
+  Conjuring = SpeechMode.Conjuring
 }
 
 export const Dashboard = (): JSX.Element => {
@@ -78,7 +80,7 @@ export const Dashboard = (): JSX.Element => {
   const [activeServer, setActiveServer] = useAtom(activeServerAtom);
   const [, setAppStage] = useAtom(appStageAtom);
   const [accessToken] = useAtom(accessTokenAtom);
-  const [, setIncantations] = useAtom(incantationsAtom);
+  const [currentIncantations, setIncantations] = useAtom(incantationsAtom);
   const [preparedSpells, setPreparedSpells] = useAtom(preparedSpellsAtom);
   const [experience, setExperience] = useAtom(experienceAtom);
   const [, setDexterity] = useAtom(dexterityAtom);
@@ -129,6 +131,13 @@ export const Dashboard = (): JSX.Element => {
     chimeAudio.play();
   }, [shouldClearIncantations, setIncantations, setSpeechMode]);
 
+  const handleVoodooEnergizing = useCallback(() => {
+    if (shouldClearIncantations) setIncantations([]);
+    setSpeechMode(SpeechMode.Energizing);
+    chimeAudio.currentTime = 0;
+    chimeAudio.play();
+  }, [shouldClearIncantations, setIncantations, setSpeechMode]);
+
   const handleVoodooPreparedSpellTriggered = useCallback(
     (_: Event, newExperience: Experience, preparedSpells: PreparedSpell[]) => {
       setExperience(newExperience);
@@ -150,15 +159,22 @@ export const Dashboard = (): JSX.Element => {
   );
 
   const handleVoodooIncantationConfirmed = useCallback(
-    (_: Event, newExperience: Experience, incantations: Incantation[], preparedSpells: PreparedSpell[]) => {
+    (
+      _: Event,
+      newExperience: Experience,
+      incantations: Incantation[],
+      preparedSpells: PreparedSpell[],
+      isCastingHeartfruit: boolean
+    ) => {
       setExperience(newExperience);
       setIncantations(incantations);
       setShouldClearIncantations(true);
       if (preparedSpells) setPreparedSpells(preparedSpells);
+      if (isCastingHeartfruit) setSpeechMode(SpeechMode.Conjuring);
       castAudio.currentTime = 0;
       castAudio.play();
     },
-    [setExperience, setIncantations, setPreparedSpells]
+    [setExperience, setIncantations, setPreparedSpells, setSpeechMode]
   );
 
   const handleVoodooIncantation = useCallback(
@@ -172,15 +188,35 @@ export const Dashboard = (): JSX.Element => {
     [setIncantations, setPreparedSpells]
   );
 
+  const handleVoodooConjureHeartfruit = useCallback(
+    (_: Event, ok: boolean, passphrase: string[]) => {
+      setIncantations([
+        ...currentIncantations,
+        ...passphrase.map<[string, string, undefined]>(word => [word, '', undefined])
+      ]);
+      if (ok) {
+        castAudio.currentTime = 0;
+        castAudio.play();
+      } else {
+        droneAudio.currentTime = 0;
+        droneAudio.play();
+      }
+      setSpeechMode(SpeechMode.Awake);
+    },
+    [currentIncantations, setIncantations, setSpeechMode]
+  );
+
   useEffect(() => {
     ipcRenderer.on('update-servers', handleUpdateServers);
     ipcRenderer.on('voodoo-suppressed', handleVoodooSuppressed);
     ipcRenderer.on('voodoo-awake', handleVoodooAwake);
     ipcRenderer.on('voodoo-incanting', handleVoodooIncanting);
+    ipcRenderer.on('voodoo-energizing', handleVoodooEnergizing);
     ipcRenderer.on('voodoo-prepared-spell-triggered', handleVoodooPreparedSpellTriggered);
     ipcRenderer.on('voodoo-incantation-aborted', handleVoodooIncantationAborted);
     ipcRenderer.on('voodoo-incantation-confirmed', handleVoodooIncantationConfirmed);
     ipcRenderer.on('voodoo-incantation', handleVoodooIncantation);
+    ipcRenderer.on('voodoo-conjure-heartfruit', handleVoodooConjureHeartfruit);
 
     ipcRenderer
       .invoke('update-player', { accessToken })
@@ -198,13 +234,16 @@ export const Dashboard = (): JSX.Element => {
       });
 
     return () => {
-      ipcRenderer.removeListener('update-server', handleUpdateServers);
+      ipcRenderer.removeListener('update-servers', handleUpdateServers);
       ipcRenderer.removeListener('voodoo-suppressed', handleVoodooSuppressed);
       ipcRenderer.removeListener('voodoo-awake', handleVoodooAwake);
       ipcRenderer.removeListener('voodoo-incanting', handleVoodooIncanting);
+      ipcRenderer.removeListener('voodoo-energizing', handleVoodooEnergizing);
       ipcRenderer.removeListener('voodoo-prepared-spell-triggered', handleVoodooPreparedSpellTriggered);
       ipcRenderer.removeListener('voodoo-incantation-aborted', handleVoodooIncantationAborted);
+      ipcRenderer.removeListener('voodoo-incantation-confirmed', handleVoodooIncantationConfirmed);
       ipcRenderer.removeListener('voodoo-incantation', handleVoodooIncantation);
+      ipcRenderer.removeListener('voodoo-conjure-heartfruit', handleVoodooConjureHeartfruit);
     };
   }, [
     accessToken,
@@ -212,10 +251,12 @@ export const Dashboard = (): JSX.Element => {
     handleVoodooSuppressed,
     handleVoodooAwake,
     handleVoodooIncanting,
+    handleVoodooEnergizing,
     handleVoodooPreparedSpellTriggered,
     handleVoodooIncantationAborted,
     handleVoodooIncantationConfirmed,
     handleVoodooIncantation,
+    handleVoodooConjureHeartfruit,
     setPreparedSpells,
     setExperience,
     setDexterity
@@ -237,9 +278,12 @@ export const Dashboard = (): JSX.Element => {
 
   const studyingSpellName = studying && spellbook[studying].name;
 
+  const rootStyle =
+    speechMode === SpeechMode.Conjuring || speechMode === SpeechMode.Energizing ? styles.sanguinem : styles.root;
+
   return (
     <>
-      <div className={isPanelOpen ? styles.blur : styles.root}>
+      <div className={isPanelOpen ? styles.blur : rootStyle}>
         <div className={styles[modeStyle]}>{Mode[speechMode]}</div>
         <div
           className={styles.incantations}

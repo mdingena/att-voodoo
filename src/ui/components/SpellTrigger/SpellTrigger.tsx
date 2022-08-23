@@ -9,7 +9,7 @@ interface SpellTriggerProps {
 export const SpellTrigger = ({ spell }: SpellTriggerProps): JSX.Element => {
   const [speechMode] = useAtom(speechModeAtom);
 
-  const { name, verbalTrigger, charges } = spell;
+  const { name, school, verbalTrigger, charges } = spell;
   const triggerStyle = { opacity: Number(speechMode === SpeechMode.Awake) };
 
   return (
@@ -18,7 +18,7 @@ export const SpellTrigger = ({ spell }: SpellTriggerProps): JSX.Element => {
         {name} <span className={styles.charges}>×{charges ?? 1}</span>
       </div>
       <div className={styles.trigger} style={triggerStyle}>
-        Cast with “EVOKE {verbalTrigger.toUpperCase()}”
+        Cast with “{school === 'sanguinem magicae' ? 'EXCIO' : 'EVOKE'} {verbalTrigger.toUpperCase()}”
       </div>
     </div>
   );

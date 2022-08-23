@@ -4,6 +4,7 @@
     <one-of>
       <item> <ruleref uri="#command" /> </item>
       <item> <ruleref uri="#incantation" /> </item>
+      <item> <ruleref uri="#unlockHeartfruit" /> </item>
     </one-of>
   </rule>
 
@@ -12,9 +13,11 @@
       <item> suppress voodoo </item> <!-- Disable sending recognised speech to Voodoo Server. -->
       <item> awaken voodoo </item> <!-- Enable sending recognised speech to Voodoo Server. -->
       <item> attune voodoo </item> <!-- Begin incanting. -->
+      <item> sanguinem magicae </item> <!-- Begin energizing. -->
       <item> nullify </item> <!-- Abort incantation. -->
       <item> seal </item> <!-- Confirm short incantation. -->
       <item> <ruleref uri="#trigger" /> </item>
+      <item> <ruleref uri="#bloodTrigger" /> </item>
     </one-of>
   </rule>
 
@@ -43,10 +46,56 @@
     </one-of>
   </rule>
 
+  <rule id="bloodTrigger">
+    <item> excio </item>
+    <one-of>
+      <item> aureola gladiorum </item>
+      <item> cultellus magnus </item>
+      <item> cultellus magnus daemonis </item>
+      <item> frixum apri </item>
+      <item> frixum cervi </item>
+      <item> frixum volucri </item>
+      <item> gladius brevis </item>
+      <item> gladius brevis daemonis </item>
+      <item> gladius longus </item>
+      <item> gladius longus daemonis </item>
+      <item> gladius magnus </item>
+      <item> gladius magnus daemonis </item>
+      <item> malum somnium </item>
+      <item> nubilum acidum </item>
+      <item> nubilum electricae </item>
+      <item> nubilum glacies </item>
+      <item> nubilum renovatio </item>
+      <item> nubilum tormentum </item>
+      <item> prismatica ruptis </item>
+      <item> saxum </item>
+      <item> subitus infernus </item>
+    </one-of>
+  </rule>
+
   <rule id="incantation">
-    <ruleref uri="#property" />
-    <item> of </item>
-    <ruleref uri="#source" />
+    <one-of>
+      <item>
+        <ruleref uri="#property" />
+        <item> of </item>
+        <ruleref uri="#source" />
+      </item>
+      <item> aerugo </item>
+      <item> aeternus </item>
+      <item> alimentum </item>
+      <item> auxilium </item>
+      <item> circulus </item>
+      <item> creatio </item>
+      <item> diluvium </item>
+      <item> fluxus </item>
+      <item> gladius </item>
+      <item> instrumentum </item>
+      <item> interitus </item>
+      <item> noxa </item>
+      <item> pyramidis </item>
+      <item> vicaria </item>
+      <item> sagitta </item>
+    </one-of>
   </rule>
 
   <rule id="property">
@@ -82,6 +131,23 @@
       <item> turabada </item>
       <item> weapon </item>
       <item> wyrm </item>
+    </one-of>
+  </rule>
+
+  <rule id="unlockHeartfruit">
+    <item> <ruleref uri="#heartfruitWord" /> </item>
+    <item> <ruleref uri="#heartfruitWord" /> </item>
+    <item> <ruleref uri="#heartfruitWord" /> </item>
+  </rule>
+
+  <rule id="heartfruitWord">
+    <one-of>
+      <item> adamas </item>
+      <item> argentum </item>
+      <item> aurum </item>
+      <item> ferrum </item>
+      <item> lapis </item>
+      <item> stannum </item>
     </one-of>
   </rule>
 

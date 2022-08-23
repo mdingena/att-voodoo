@@ -25,6 +25,8 @@ type PreparedSpell = {
 const MODES = {
   AWAKE: 'AWAKE',
   INCANTING: 'INCANTING',
+  CONJURING: 'CONJURING',
+  ENERGIZING: 'ENERGIZING',
   SUPPRESSED: 'SUPPRESSED'
 };
 
@@ -35,8 +37,13 @@ const PHRASES = {
     CONFIRM: 'seal',
     ABORT: 'nullify'
   },
+  ENERGIZE: {
+    START: 'sanguinem magicae',
+    ABORT: 'nullify'
+  },
   SUPPRESS: 'suppress voodoo',
-  TRIGGER: 'evoke'
+  TRIGGER: 'evoke',
+  BLOOD_TRIGGER: 'excio'
 };
 
 let hasServerConnection = false;
@@ -60,7 +67,7 @@ let mode = MODES.SUPPRESSED;
 let experience: Experience;
 let incantations: string[] = [];
 let preparedSpells: PreparedSpell[] = [];
-
+let isCastingHeartfruit = false;
 let studiedSpellKey: string | null = null;
 
 ipcMain.handle('study-spell', (_, spellKey: string) => {
@@ -86,35 +93,50 @@ export const handleSpeech = async (
 
   const isAwakenPhrase = speech === PHRASES.AWAKEN;
   const isTriggerPhrase = speech.split(' ')[0] === PHRASES.TRIGGER;
-
-  let response;
+  const isBloodTriggerPhrase = speech.split(' ')[0] === PHRASES.BLOOD_TRIGGER;
 
   switch (mode) {
-    case MODES.SUPPRESSED:
+    case MODES.SUPPRESSED: {
       if (isAwakenPhrase) {
         mode = MODES.AWAKE;
         ui?.webContents.send('voodoo-awake');
         logger({ mode });
       }
       break;
+    }
 
-    case MODES.AWAKE:
+    case MODES.AWAKE: {
       switch (speech) {
-        case PHRASES.SUPPRESS:
+        case PHRASES.SUPPRESS: {
           mode = MODES.SUPPRESSED;
           ui?.webContents.send('voodoo-suppressed');
           logger({ mode });
           break;
+        }
 
-        case PHRASES.INCANTATION.START:
+        case PHRASES.INCANTATION.START: {
           mode = MODES.INCANTING;
           ui?.webContents.send('voodoo-incanting');
           logger({ mode });
           break;
+        }
 
-        default:
-          if (isTriggerPhrase) {
-            const verbalTrigger = speech.replace(`${PHRASES.TRIGGER} `, '');
+        case PHRASES.ENERGIZE.START: {
+          const response = await voodooGet(accessToken, config.API_ENDPOINTS.BLOOD_INCANTATION);
+
+          if (response.ok && response.result) {
+            mode = MODES.ENERGIZING;
+            ui?.webContents.send('voodoo-energizing');
+            logger({ mode });
+          } else {
+            logger(response.error);
+          }
+          break;
+        }
+
+        default: {
+          if (isTriggerPhrase || isBloodTriggerPhrase) {
+            const verbalTrigger = speech.replace(`${PHRASES.TRIGGER} `, '').replace(`${PHRASES.BLOOD_TRIGGER} `, '');
             const response = await voodooPost(accessToken, config.API_ENDPOINTS.TRIGGER, [verbalTrigger]);
 
             if (response.ok) {
@@ -126,24 +148,26 @@ export const handleSpeech = async (
               logger(response.error);
             }
           }
-          break;
+        }
       }
       break;
+    }
 
-    case MODES.INCANTING:
+    case MODES.INCANTING: {
       switch (speech) {
-        case PHRASES.SUPPRESS:
+        case PHRASES.SUPPRESS: {
           mode = MODES.SUPPRESSED;
           ui?.webContents.send('voodoo-suppressed');
           logger({ mode });
           break;
+        }
 
-        case PHRASES.INCANTATION.ABORT:
+        case PHRASES.INCANTATION.ABORT: {
           mode = MODES.AWAKE;
           ui?.webContents.send('voodoo-awake');
           logger({ mode });
 
-          response = await voodooDelete(accessToken, config.API_ENDPOINTS.INCANTATION);
+          const response = await voodooDelete(accessToken, config.API_ENDPOINTS.INCANTATION);
 
           if (response.ok) {
             incantations = response.result;
@@ -153,27 +177,46 @@ export const handleSpeech = async (
             logger(response.error);
           }
           break;
+        }
 
-        case PHRASES.INCANTATION.CONFIRM:
-          mode = MODES.AWAKE;
-          ui?.webContents.send('voodoo-awake');
-          logger({ mode });
-
-          response = await voodooGet(accessToken, config.API_ENDPOINTS.SEAL);
+        case PHRASES.INCANTATION.CONFIRM: {
+          const response = await voodooGet(accessToken, config.API_ENDPOINTS.SEAL);
 
           if (response.ok) {
             experience = response.result.experience;
             incantations = response.result.incantations;
             preparedSpells = response.result.preparedSpells;
-            ui?.webContents.send('voodoo-incantation-confirmed', experience, incantations, preparedSpells);
-            logger({ experience, incantations, preparedSpells });
+            isCastingHeartfruit = response.result.isCastingHeartfruit;
+
+            if (isCastingHeartfruit) {
+              mode = MODES.CONJURING;
+            } else {
+              mode = MODES.AWAKE;
+              ui?.webContents.send('voodoo-awake');
+            }
+
+            ui?.webContents.send(
+              'voodoo-incantation-confirmed',
+              experience,
+              incantations,
+              preparedSpells,
+              isCastingHeartfruit
+            );
+
+            logger({ experience, incantations, preparedSpells, isCastingHeartfruit });
           } else {
+            mode = MODES.AWAKE;
+            ui?.webContents.send('voodoo-awake');
+
             logger(response.error);
           }
-          break;
 
-        default:
-          if (!isAwakenPhrase && !isTriggerPhrase) {
+          logger({ mode });
+          break;
+        }
+
+        default: {
+          if (!isAwakenPhrase && !isTriggerPhrase && !isBloodTriggerPhrase) {
             const response = await voodooPost(accessToken, config.API_ENDPOINTS.INCANTATION, [
               speech,
               getMaterialComponents(speech),
@@ -199,6 +242,101 @@ export const handleSpeech = async (
               logger(response.error);
             }
           }
+        }
       }
+      break;
+    }
+
+    case MODES.ENERGIZING: {
+      switch (speech) {
+        case PHRASES.SUPPRESS: {
+          mode = MODES.SUPPRESSED;
+          ui?.webContents.send('voodoo-suppressed');
+          logger({ mode });
+          break;
+        }
+
+        case PHRASES.ENERGIZE.ABORT: {
+          mode = MODES.AWAKE;
+          ui?.webContents.send('voodoo-awake');
+          logger({ mode });
+
+          const response = await voodooDelete(accessToken, config.API_ENDPOINTS.BLOOD_INCANTATION);
+
+          if (response.ok) {
+            incantations = response.result;
+            ui?.webContents.send('voodoo-incantation-aborted', incantations);
+            logger({ incantations });
+          } else {
+            logger(response.error);
+          }
+          break;
+        }
+
+        default: {
+          if (!isAwakenPhrase && !isTriggerPhrase && !isBloodTriggerPhrase) {
+            const response = await voodooPost(accessToken, config.API_ENDPOINTS.BLOOD_INCANTATION, [speech]);
+
+            if (response.ok) {
+              experience = response.result.experience;
+              incantations = response.result.incantations;
+              preparedSpells = response.result.preparedSpells;
+
+              if (response.result.incantations.length === 4) {
+                mode = MODES.AWAKE;
+                ui?.webContents.send('voodoo-incantation-confirmed', experience, incantations, preparedSpells);
+                ui?.webContents.send('voodoo-awake');
+                logger({ mode });
+              } else {
+                ui?.webContents.send('voodoo-incantation', incantations, preparedSpells);
+              }
+
+              logger({ experience, incantations, preparedSpells });
+            } else {
+              logger(response.error);
+            }
+          }
+        }
+      }
+      break;
+    }
+
+    case MODES.CONJURING: {
+      switch (speech) {
+        case PHRASES.INCANTATION.ABORT: {
+          mode = MODES.AWAKE;
+          ui?.webContents.send('voodoo-awake');
+          logger({ mode });
+
+          const response = await voodooDelete(accessToken, config.API_ENDPOINTS.INCANTATION);
+
+          if (response.ok) {
+            incantations = response.result;
+            ui?.webContents.send('voodoo-incantation-aborted', incantations);
+            logger({ incantations });
+          } else {
+            logger(response.error);
+          }
+          break;
+        }
+
+        default: {
+          const passphrase = speech.split(' ');
+
+          if (passphrase.length !== 3) return;
+
+          const response = await voodooPost(accessToken, config.API_ENDPOINTS.HEARTFRUIT, passphrase);
+
+          mode = MODES.AWAKE;
+          ui?.webContents.send('voodoo-conjure-heartfruit', response.ok, passphrase);
+          logger({ mode });
+
+          if (!response.ok) {
+            logger(response.error);
+          }
+          break;
+        }
+      }
+    }
   }
 };
