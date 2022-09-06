@@ -19,7 +19,8 @@ import {
   Experience,
   spellbookAtom,
   studyingAtom,
-  dexterityAtom
+  dexterityAtom,
+  patreonTierAtom
 } from '@/atoms';
 import { ServersUpdate } from '@/components/ServersScreen';
 import { Dock } from '@/components/Dock';
@@ -39,11 +40,11 @@ const PREPARED_SPELLS_CONFIG = {
   constant: 0.0000343
 };
 
-const calcPreparedSpells = (xpTotal: number): number => {
+const calcPreparedSpells = (xpTotal: number, patreonTier: number): number => {
   const { min, max, constant } = PREPARED_SPELLS_CONFIG;
   const preparedSpells = max - (max - min) * Math.exp(-constant * xpTotal);
 
-  return Math.round(preparedSpells);
+  return Math.round(preparedSpells) + patreonTier * 5;
 };
 
 const VOLUME_EXPONENT = 3; /* Linear volume adjustments are evil! */
@@ -84,6 +85,7 @@ export const Dashboard = (): JSX.Element => {
   const [preparedSpells, setPreparedSpells] = useAtom(preparedSpellsAtom);
   const [experience, setExperience] = useAtom(experienceAtom);
   const [, setDexterity] = useAtom(dexterityAtom);
+  const [patreonTier, setPatreonTier] = useAtom(patreonTierAtom);
   const [spellbook] = useAtom(spellbookAtom);
   const [studying] = useAtom(studyingAtom);
   const [panel, setPanel] = useAtom(panelAtom);
@@ -225,6 +227,7 @@ export const Dashboard = (): JSX.Element => {
           setPreparedSpells(response.result.preparedSpells);
           setExperience(response.result.experience);
           setDexterity(response.result.dexterity.split('Hand/'));
+          setPatreonTier(response.result.patreonTier ?? 0);
         } else {
           console.error(response.error);
         }
@@ -259,7 +262,8 @@ export const Dashboard = (): JSX.Element => {
     handleVoodooConjureHeartfruit,
     setPreparedSpells,
     setExperience,
-    setDexterity
+    setDexterity,
+    setPatreonTier
   ]);
 
   useEffect(() => {
@@ -302,7 +306,7 @@ export const Dashboard = (): JSX.Element => {
         <div className={styles.spellsHeader}>
           Prepared Spells{' '}
           <span className={styles.spellSlots}>
-            {preparedSpells.length}/{calcPreparedSpells(xpTotal)}
+            {preparedSpells.length}/{calcPreparedSpells(xpTotal, patreonTier)}
           </span>
         </div>
         <div className={styles.spells}>
