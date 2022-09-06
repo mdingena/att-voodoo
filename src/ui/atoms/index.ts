@@ -6,6 +6,7 @@ export { experienceAtom, Experience, SpellUpgrades } from './experienceAtom';
 export { hasSessionAtom } from './hasSessionAtom';
 export { incantationsAtom, Incantation, StudyFeedback } from './incantationsAtom';
 export { panelAtom, Panel } from './panelAtom';
+export { patreonTierAtom } from './patreonTierAtom';
 export { preparedSpellsAtom, PreparedSpell } from './preparedSpellsAtom';
 export { serversAtom, Servers } from './serversAtom';
 export { speechModeAtom, SpeechMode } from './speechModeAtom';
