@@ -7,7 +7,7 @@ import { Dashboard } from '@/components/Dashboard';
 
 export const RootRoute = (): JSX.Element => {
   const [appStage] = useAtom(appStageAtom);
-  return <Dashboard />;
+
   switch (appStage) {
     case AppStage.Connected:
       return <Dashboard />;
