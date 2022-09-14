@@ -145,7 +145,42 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Instantly heals you and nearby Soulbound players.</dd>
 
   <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+  <dd>
+    <table>
+      <thead>
+        <tr>
+          <th>Dock</th>
+          <th>Incantation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"><code>ζ</code></td>
+          <td>
+            "FLUID OF SILICA"
+            <br />
+            flask containing water
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>δ</code></td>
+          <td>
+            "ARTIFACT OF TERRA"
+            <br />
+            healing pod
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>λ</code></td>
+          <td>
+            "AETHER OF GEMS"
+            <br />
+            blue crystal shard
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
 </dl>
 </blockquote>
 </details>
