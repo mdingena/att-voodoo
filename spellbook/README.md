@@ -465,7 +465,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "FRAGMENT OF WEAPON"
             <br />
-            strait medium handle
+            medium straight wooden handle
           </td>
         </tr>
         <tr>
@@ -473,7 +473,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF GEMS"
             <br />
-            blue crystal
+            blue crystal gem
           </td>
         </tr>
         <tr>
@@ -481,7 +481,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "ARTIFACT OF EARTH"
             <br />
-            Electrum Ingot
+            electrum ingot
           </td>
         </tr>
         <tr>
@@ -529,7 +529,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "FRAGMENT OF WEAPON"
             <br />
-            short handle
+            short wooden handle
           </td>
         </tr>
         <tr>
@@ -537,7 +537,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF GEMS"
             <br />
-            blue crystal
+            blue crystal gem
           </td>
         </tr>
         <tr>
@@ -545,7 +545,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "ARTIFACT OF EARTH"
             <br />
-            silver Ingot
+            silver ingot
           </td>
         </tr>
         <tr>
@@ -593,7 +593,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "FRAGMENT OF WEAPON"
             <br />
-            short handle
+            short wooden handle
           </td>
         </tr>
         <tr>
@@ -601,7 +601,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF GEMS"
             <br />
-            blue crystal
+            blue crystal gem
           </td>
         </tr>
         <tr>
@@ -609,7 +609,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "ARTIFACT OF EARTH"
             <br />
-            palladium Ingot
+            palladium ingot
           </td>
         </tr>
         <tr>
@@ -769,7 +769,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "BONDS OF EARTH"
             <br />
-            stone
+            rock
           </td>
         </tr>
         <tr>
@@ -781,7 +781,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "SEAL"
           </td>
@@ -951,7 +951,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>λ</code></td>
           <td>
-            "ESSANCE OF SILICA"
+            "ESSENCE OF SILICA"
             <br />
             flask containing teleportation potion
           </td>
@@ -1001,7 +1001,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "FRAGMENT OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
         <tr>
@@ -1015,7 +1015,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>λ</code></td>
           <td>
-            "ESSANCE OF SILICA"
+            "ESSENCE OF SILICA"
             <br />
             flask containing teleportation potion
           </td>
@@ -1065,7 +1065,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "FRAGMENT OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
         <tr>
@@ -1079,7 +1079,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>λ</code></td>
           <td>
-            "ESSANCE OF SILICA"
+            "ESSENCE OF SILICA"
             <br />
             flask containing teleportation potion
           </td>
@@ -1143,7 +1143,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>λ</code></td>
           <td>
-            "ESSANCE OF SILICA"
+            "ESSENCE OF SILICA"
             <br />
             flask containing teleportation potion
           </td>
@@ -1207,7 +1207,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>λ</code></td>
           <td>
-            "ESSANCE OF SILICA"
+            "ESSENCE OF SILICA"
             <br />
             flask containing teleportation potion
           </td>
@@ -1267,7 +1267,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "SKIN OF WYRM"
             <br />
-            green leather strip
+            green leather strips
           </td>
         </tr>
         <tr>
@@ -1323,7 +1323,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "ARTIFACT OF TERA"
             <br />
-            gotera seedling orb
+            gotera seedling
           </td>
         </tr>
         <tr>
@@ -1331,7 +1331,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "TUFT OF SPRIGGULL"
             <br />
-            blue feather
+            blue spriggull feather
           </td>
         </tr>
         <tr>
@@ -1339,7 +1339,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "SKIN OF TERA"
             <br />
-            oak wood wedge
+            oak wedge
           </td>
         </tr>
         <tr>
@@ -1443,7 +1443,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF GEMS"
             <br />
-            crystal
+            blue crystal gem
           </td>
         </tr>
         <tr>
@@ -1451,23 +1451,23 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "SKIN OF WYRM"
             <br />
-            green leather strip
+            green leather strips
           </td>
         </tr>
         <tr>
           <td align="center"><code>λ</code></td>
           <td>
-            "ESSANCE OF PYRE"
+            "ESSENCE OF PYRE"
             <br />
             dynamite
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "TUFT OF SPRIGGULL"
             <br />
-            blue feather
+            blue spriggull feather
           </td>
         </tr>
       </tbody>
@@ -1519,11 +1519,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF PRODUCE"
             <br />
-            choice of produce
+            any produce
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "SEAL"
           </td>
@@ -1885,9 +1885,9 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPONS"
+            "HEART OF WEAPON"
             <br />
-            aparatis
+            hilted apparatus
           </td>
         </tr>
         <tr>
@@ -1895,7 +1895,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "ARTIFACT OF TERA"
             <br />
-            ash wood wedge
+            ash wedge
           </td>
         </tr>
         <tr>
@@ -1903,15 +1903,15 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "BONDS OF DAIS"
             <br />
-            tan leather strip
+            tan leather strips
           </td>
         </tr>
       </tbody>
@@ -1951,9 +1951,9 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPONS"
+            "HEART OF WEAPON"
             <br />
-            aparatis
+            hilted apparatus
           </td>
         </tr>
         <tr>
@@ -1961,7 +1961,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "ARTIFACT OF TERA"
             <br />
-            birch wood wedge
+            birch wedge
           </td>
         </tr>
         <tr>
@@ -1969,15 +1969,15 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "BONDS OF DAIS"
             <br />
-            tan leather strip
+            tan leather strips
           </td>
         </tr>
       </tbody>
@@ -2347,9 +2347,9 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPONS"
+            "HEART OF WEAPON"
             <br />
-            aparatis
+            hilted apparatus
           </td>
         </tr>
         <tr>
@@ -2357,7 +2357,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "ARTIFACT OF TERA"
             <br />
-            oak wood wedge
+            oak wedge
           </td>
         </tr>
         <tr>
@@ -2365,15 +2365,15 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "BONDS OF DAIS"
             <br />
-            tan leather strip
+            tan leather strips
           </td>
         </tr>
       </tbody>
@@ -2530,6 +2530,9 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
+  <dd>Restores some of the integrity of all redwood parts in a hilted device.</dd>
+
+  <dt>Incantations</dt>
   <dd>
     <table>
       <thead>
@@ -2542,9 +2545,9 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPONS"
+            "HEART OF WEAPON"
             <br />
-            aparatis
+            hilted apparatus
           </td>
         </tr>
         <tr>
@@ -2560,23 +2563,20 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "BONDS OF DAIS"
             <br />
-            tan leather strip
+            tan leather strips
           </td>
         </tr>
       </tbody>
     </table>
   </dd>
-
-  <dt>Incantations</dt>
-  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
 </dl>
 </blockquote>
 </details>
@@ -2809,9 +2809,9 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPONS"
+            "HEART OF WEAPON"
             <br />
-            aparatis
+            hilted apparatus
           </td>
         </tr>
         <tr>
@@ -2819,7 +2819,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "ARTIFACT OF TERA"
             <br />
-            walnut wood wedge
+            walnut wedge
           </td>
         </tr>
         <tr>
@@ -2827,15 +2827,15 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "FLUID OF SPRIGGULL"
             <br />
-            bone shard
+            spriggull bone shard
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>Ω</code></td>
           <td>
             "BONDS OF DAIS"
             <br />
-            tan leather strip
+            tan leather strips
           </td>
         </tr>
       </tbody>
@@ -2957,7 +2957,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF GEMS"
             <br />
-            blue crystal
+            blue crystal gem
           </td>
         </tr>
         <tr>
@@ -3013,11 +3013,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "BONDS OF EARTH"
             <br />
-            stone
+            rock
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "SEAL"
           </td>
@@ -3069,11 +3069,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "BONDS OF EARTH"
             <br />
-            stone
+            rock
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "SEAL"
           </td>
@@ -3125,11 +3125,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "BONDS OF EARTH"
             <br />
-            stone
+            rock
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "SEAL"
           </td>
@@ -3181,11 +3181,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "BONDS OF EARTH"
             <br />
-            stone
+            rock
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "SEAL"
           </td>
@@ -3237,11 +3237,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "BONDS OF EARTH"
             <br />
-            stone
+            rock
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "SEAL"
           </td>
@@ -3285,7 +3285,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF WEAPON"
             <br />
-            strait medium handle
+            medium straight wooden handle
           </td>
         </tr>
         <tr>
@@ -3293,11 +3293,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "BONDS OF DAIS"
             <br />
-            tan leather strip
+            tan leather strips
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -3349,7 +3349,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "HEART OF WEAPON"
             <br />
-            short handle
+            short wooden handle
           </td>
         </tr>
         <tr>
@@ -3357,11 +3357,11 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           <td>
             "BONDS OF DAIS"
             <br />
-            tan leather strip
+            tan leather strips
           </td>
         </tr>
         <tr>
-          <td align="center"><code>δ</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
