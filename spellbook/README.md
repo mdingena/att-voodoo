@@ -906,6 +906,29 @@ You gain experience every time you cast a spell. The type and amount of XP you g
 </details>
 
 <details>
+<summary>Pocket Dimension</summary>
+<blockquote>
+<h2>Pocket Dimension</h2>
+<dl>
+  <dt>School</dt>
+  <dd>Conjuration</dd>
+
+  <dt>Type</dt>
+  <dd>Prepared</dd>
+
+  <dt>Casts from</dt>
+  <dd>Main hand</dd>
+
+  <dt>Description</dt>
+  <dd>Stow a held item into a pocket dimension, and simultaneously equip a stowed item from it.</dd>
+
+  <dt>Incantations</dt>
+  <dd>This spell's incantations are unknown. You can study this spell to discover its incantations.</dd>
+</dl>
+</blockquote>
+</details>
+
+<details>
 <summary>Raise Tree (ash)</summary>
 <blockquote>
 <h2>Raise Tree (ash)</h2>
@@ -1870,7 +1893,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all ash wood parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all ash wood parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -1885,21 +1908,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ARTIFACT OF TERA"
             <br />
             ash wedge
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
@@ -1907,11 +1922,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "BONDS OF DAIS"
             <br />
             tan leather strips
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -1936,7 +1957,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all birch wood parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all birch wood parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -1951,21 +1972,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ARTIFACT OF TERA"
             <br />
             birch wedge
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
@@ -1973,11 +1986,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "BONDS OF DAIS"
             <br />
             tan leather strips
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -2002,7 +2021,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all copper parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all copper parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -2017,21 +2036,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -2039,11 +2050,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
             spriggull bone shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -2068,7 +2085,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all electrum parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all electrum parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -2083,21 +2100,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -2105,11 +2114,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
             spriggull bone shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -2134,7 +2149,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all gold parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all gold parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -2149,21 +2164,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -2171,11 +2178,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
             spriggull bone shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -2200,7 +2213,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all iron parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all iron parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -2215,21 +2228,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -2237,11 +2242,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
             spriggull bone shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -2266,7 +2277,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all mythril parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all mythril parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -2281,21 +2292,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -2303,11 +2306,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
             spriggull bone shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -2332,7 +2341,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all oak wood parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all oak wood parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -2347,21 +2356,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ARTIFACT OF TERA"
             <br />
             oak wedge
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
@@ -2369,11 +2370,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "BONDS OF DAIS"
             <br />
             tan leather strips
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -2398,7 +2405,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all palladium parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all palladium parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -2413,21 +2420,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -2435,11 +2434,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
             spriggull bone shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -2464,7 +2469,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all red iron parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all red iron parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -2479,21 +2484,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -2501,11 +2498,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
             spriggull bone shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -2530,7 +2533,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all redwood parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all redwood parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -2545,21 +2548,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ARTIFACT OF TERA"
             <br />
             redwood wedge
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
@@ -2567,11 +2562,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "BONDS OF DAIS"
             <br />
             tan leather strips
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -2596,7 +2597,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all silver parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all silver parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -2611,21 +2612,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -2633,11 +2626,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
             spriggull bone shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -2662,7 +2661,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all valyan parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all valyan parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -2677,21 +2676,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -2699,11 +2690,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
             spriggull bone shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -2728,7 +2725,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all viridium parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all viridium parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -2743,21 +2740,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ESSENCE OF EMBERS"
             <br />
             coal
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "ARTIFACT OF EARTH"
             <br />
@@ -2765,11 +2754,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
             spriggull bone shard
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
@@ -2794,7 +2789,7 @@ You gain experience every time you cast a spell. The type and amount of XP you g
   <dd>Main hand</dd>
 
   <dt>Description</dt>
-  <dd>Restores some of the integrity of all walnut wood parts in a hilted device.</dd>
+  <dd>Restores some of the integrity of all walnut wood parts in a hilted device held in your main casting hand.</dd>
 
   <dt>Incantations</dt>
   <dd>
@@ -2809,21 +2804,13 @@ You gain experience every time you cast a spell. The type and amount of XP you g
         <tr>
           <td align="center"><code>ζ</code></td>
           <td>
-            "HEART OF WEAPON"
-            <br />
-            hilted apparatus
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><code>δ</code></td>
-          <td>
             "ARTIFACT OF TERA"
             <br />
             walnut wedge
           </td>
         </tr>
         <tr>
-          <td align="center"><code>λ</code></td>
+          <td align="center"><code>δ</code></td>
           <td>
             "FLUID OF SPRIGGULL"
             <br />
@@ -2831,11 +2818,17 @@ You gain experience every time you cast a spell. The type and amount of XP you g
           </td>
         </tr>
         <tr>
-          <td align="center"><code>Ω</code></td>
+          <td align="center"><code>λ</code></td>
           <td>
             "BONDS OF DAIS"
             <br />
             tan leather strips
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><code>Ω</code></td>
+          <td>
+            "SEAL"
           </td>
         </tr>
       </tbody>
