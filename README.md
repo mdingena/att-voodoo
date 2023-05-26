@@ -1,3 +1,7 @@
+# :warning: Discontinuation Notice
+
+After flagging a breaking change to the A Township Tale's API service with the Alta team and hearing nothing for 90 days, I have decided to discontinue the Voodoo Mod. It was never a secret that Alta doesn't prioritise the support for bot development by the community, and so I took on a risk. A risk I thought was worth it for the last **two years** of running Voodoo. But after the breaking changes introduced late February 2023, I have lost faith that bot developers for this game are supported appropriately or will be in the future. I've poured uncountable hours of my free time into this project, so it's with a heavy heart that I decided to abandon it. My appetite for maintaining Voodoo has soured to the point where I just don't experience satisfaction from working on it compared to the frustrations I'm facing when interacting with Alta. Thank you all for enjoying Voodoo when it worked. It was never perfect, but I like to think that it brought you all some additional gameplay while it lasted.
+
 <p align="center">
   <img width="240" src="./src/ui/images/Voodoo.png" alt="Voodoo Logo" />
 </p>
